@@ -1,0 +1,13 @@
+# EmployeeMeta
+
+Metadata information for the Employee
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           | Example                                                                               |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `CreatedAt`                                                                           | [DateTime](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) | :heavy_check_mark:                                                                    | Timestamp when the resource was created                                               | 2024-01-15T10:30:00Z                                                                  |
+| `CreatedBy`                                                                           | *string*                                                                              | :heavy_minus_sign:                                                                    | User who created the resource                                                         | 987fcdeb-51a2-43d1-b567-123456789abc                                                  |
+| `UpdatedAt`                                                                           | [DateTime](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) | :heavy_minus_sign:                                                                    | Timestamp when the resource was last updated                                          | 2024-01-15T14:45:00Z                                                                  |
+| `UpdatedBy`                                                                           | *string*                                                                              | :heavy_minus_sign:                                                                    | User who last updated the resource                                                    | 987fcdeb-51a2-43d1-b567-123456789abc                                                  |

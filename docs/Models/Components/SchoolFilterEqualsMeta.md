@@ -1,0 +1,13 @@
+# SchoolFilterEqualsMeta
+
+Metadata information for the School
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           | Example                                                                               |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `CreatedAt`                                                                           | [DateTime](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) | :heavy_minus_sign:                                                                    | Timestamp when the resource was created                                               | 2024-01-15T10:30:00Z                                                                  |
+| `CreatedBy`                                                                           | *string*                                                                              | :heavy_minus_sign:                                                                    | User who created the resource                                                         | 123e4567-e89b-12d3-a456-426614174000                                                  |
+| `UpdatedAt`                                                                           | [DateTime](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) | :heavy_minus_sign:                                                                    | Timestamp when the resource was last updated                                          | 2024-01-15T10:30:00Z                                                                  |
+| `UpdatedBy`                                                                           | *string*                                                                              | :heavy_minus_sign:                                                                    | User who last updated the resource                                                    | 123e4567-e89b-12d3-a456-426614174000                                                  |

@@ -1,0 +1,37 @@
+speakeasyVersion: 1.634.1
+sources:
+    Directory API:
+        sourceNamespace: directory-api
+        sourceRevisionDigest: sha256:e59e83a331587092eeb9a22e73ec57e4d8f6a5a97927dc652b2ecfacf2454608
+        sourceBlobDigest: sha256:1dbbb030ad9477afc1e51a1d6ca018d276cc6dcefbffbd0f9d285e1937219df3
+        tags:
+            - latest
+            - v1
+targets:
+    meitner:
+        source: Directory API
+        sourceNamespace: directory-api
+        sourceRevisionDigest: sha256:e59e83a331587092eeb9a22e73ec57e4d8f6a5a97927dc652b2ecfacf2454608
+        sourceBlobDigest: sha256:1dbbb030ad9477afc1e51a1d6ca018d276cc6dcefbffbd0f9d285e1937219df3
+        codeSamplesNamespace: directory-api-csharp-code-samples
+        codeSamplesRevisionDigest: sha256:db69bd2c9f1ae2c6e0498c9a9a4d3a850293e66b76e02fddaa88e6954cf1143d
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        Directory API:
+            inputs:
+                - location: https://api.staging.meitner.se/directory/v1/openapi.json
+            output: .speakeasy/out.openapi.yaml
+            registry:
+                location: registry.speakeasyapi.dev/meitner-2u8/api/directory-api
+    targets:
+        meitner:
+            target: csharp
+            source: Directory API
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/meitner-2u8/api/directory-api-csharp-code-samples
+                labelOverride:
+                    fixedValue: Csharp (SDK)
+                blocking: false
