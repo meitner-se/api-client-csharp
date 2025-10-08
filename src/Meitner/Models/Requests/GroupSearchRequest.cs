@@ -31,6 +31,6 @@ namespace Meitner.Models.Requests
         /// Request body
         /// </summary>
         [SpeakeasyMetadata("request:mediaType=application/json")]
-        public GroupFilter? GroupFilter { get; set; }
+        public GroupSearchRequestBody GroupSearch { get; set; } = default!;
     }
 }

@@ -145,7 +145,6 @@ Search for `Students` with filtering capabilities.
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
-using Meitner.Models.Requests;
 using System;
 using System.Collections.Generic;
 
@@ -154,316 +153,318 @@ var sdk = new MeitnerSDK(security: new Security() {
     ClientSecret = "<YOUR_API_KEY_HERE>",
 });
 
-StudentSearchResponse? res = await sdk.Students.SearchAsync(
+Models.Requests.StudentSearchResponse? res = await sdk.Students.SearchAsync(
+    studentSearch: new StudentSearchRequestBody() {
+        Filter = new StudentSearchFilter() {
+            Equals = new StudentSearchEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new StudentSearchEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new StudentSearchEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                IdentityNumber = "example",
+                IdentityTemporary = true,
+                FirstName = "example",
+                LastName = "example",
+                DateOfBirth = DateOnly.Parse("2024-01-15"),
+                Address = new StudentSearchEqualsAddress() {
+                    PostalAddress = "example",
+                    PostalCode = "example",
+                    PostalCity = "example",
+                    CountryCode = "example",
+                    MunicipalityCode = "example",
+                },
+                EmailAddress1 = "example",
+                EmailAddress2 = "example",
+                PhoneNumber1 = "example",
+                PhoneNumber2 = "example",
+            },
+            NotEquals = new StudentSearchNotEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new StudentSearchNotEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new StudentSearchNotEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                IdentityNumber = "example",
+                IdentityTemporary = true,
+                FirstName = "example",
+                LastName = "example",
+                DateOfBirth = DateOnly.Parse("2024-01-15"),
+                Address = new StudentSearchNotEqualsAddress() {
+                    PostalAddress = "example",
+                    PostalCode = "example",
+                    PostalCity = "example",
+                    CountryCode = "example",
+                    MunicipalityCode = "example",
+                },
+                EmailAddress1 = "example",
+                EmailAddress2 = "example",
+                PhoneNumber1 = "example",
+                PhoneNumber2 = "example",
+            },
+            GreaterThan = new StudentSearchGreaterThan() {
+                Meta = new StudentSearchGreaterThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                DateOfBirth = DateOnly.Parse("2024-01-15"),
+            },
+            SmallerThan = new StudentSearchSmallerThan() {
+                Meta = new StudentSearchSmallerThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                DateOfBirth = DateOnly.Parse("2024-01-15"),
+            },
+            GreaterOrEqual = new StudentSearchGreaterOrEqual() {
+                Meta = new StudentSearchGreaterOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                DateOfBirth = DateOnly.Parse("2024-01-15"),
+            },
+            SmallerOrEqual = new StudentSearchSmallerOrEqual() {
+                Meta = new StudentSearchSmallerOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                DateOfBirth = DateOnly.Parse("2024-01-15"),
+            },
+            Contains = new StudentSearchContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new StudentSearchContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new StudentSearchContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                IdentityNumber = new List<string>() {
+                    "example",
+                },
+                IdentityTemporary = new List<bool>() {
+                    true,
+                },
+                FirstName = new List<string>() {
+                    "example",
+                },
+                LastName = new List<string>() {
+                    "example",
+                },
+                DateOfBirth = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                Address = new StudentSearchContainsAddress() {
+                    PostalAddress = new List<string>() {
+                        "example",
+                    },
+                    PostalCode = new List<string>() {
+                        "example",
+                    },
+                    PostalCity = new List<string>() {
+                        "example",
+                    },
+                    CountryCode = new List<string>() {
+                        "example",
+                    },
+                    MunicipalityCode = new List<string>() {
+                        "example",
+                    },
+                },
+                EmailAddress1 = new List<string>() {
+                    "example",
+                },
+                EmailAddress2 = new List<string>() {
+                    "example",
+                },
+                PhoneNumber1 = new List<string>() {
+                    "example",
+                },
+                PhoneNumber2 = new List<string>() {
+                    "example",
+                },
+            },
+            NotContains = new StudentSearchNotContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new StudentSearchNotContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new StudentSearchNotContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                IdentityNumber = new List<string>() {
+                    "example",
+                },
+                IdentityTemporary = new List<bool>() {
+                    true,
+                },
+                FirstName = new List<string>() {
+                    "example",
+                },
+                LastName = new List<string>() {
+                    "example",
+                },
+                DateOfBirth = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                Address = new StudentSearchNotContainsAddress() {
+                    PostalAddress = new List<string>() {
+                        "example",
+                    },
+                    PostalCode = new List<string>() {
+                        "example",
+                    },
+                    PostalCity = new List<string>() {
+                        "example",
+                    },
+                    CountryCode = new List<string>() {
+                        "example",
+                    },
+                    MunicipalityCode = new List<string>() {
+                        "example",
+                    },
+                },
+                EmailAddress1 = new List<string>() {
+                    "example",
+                },
+                EmailAddress2 = new List<string>() {
+                    "example",
+                },
+                PhoneNumber1 = new List<string>() {
+                    "example",
+                },
+                PhoneNumber2 = new List<string>() {
+                    "example",
+                },
+            },
+            Like = new StudentSearchLike() {
+                External = new StudentSearchLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                IdentityNumber = "example",
+                FirstName = "example",
+                LastName = "example",
+                Address = new StudentSearchLikeAddress() {
+                    PostalAddress = "example",
+                    PostalCode = "example",
+                    PostalCity = "example",
+                    CountryCode = "example",
+                    MunicipalityCode = "example",
+                },
+                EmailAddress1 = "example",
+                EmailAddress2 = "example",
+                PhoneNumber1 = "example",
+                PhoneNumber2 = "example",
+            },
+            NotLike = new StudentSearchNotLike() {
+                External = new StudentSearchNotLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                IdentityNumber = "example",
+                FirstName = "example",
+                LastName = "example",
+                Address = new StudentSearchNotLikeAddress() {
+                    PostalAddress = "example",
+                    PostalCode = "example",
+                    PostalCity = "example",
+                    CountryCode = "example",
+                    MunicipalityCode = "example",
+                },
+                EmailAddress1 = "example",
+                EmailAddress2 = "example",
+                PhoneNumber1 = "example",
+                PhoneNumber2 = "example",
+            },
+            Null = new StudentSearchNull() {
+                Meta = new StudentSearchNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new StudentSearchNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                Gender = true,
+                DateOfBirth = true,
+                Address = new StudentSearchNullAddress() {
+                    PostalAddress = true,
+                    PostalCode = true,
+                    PostalCity = true,
+                    CountryCode = true,
+                    MunicipalityCode = true,
+                },
+                EmailAddress1 = true,
+                EmailAddress2 = true,
+                PhoneNumber1 = true,
+                PhoneNumber2 = true,
+            },
+            NotNull = new StudentSearchNotNull() {
+                Meta = new StudentSearchNotNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new StudentSearchNotNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                Gender = true,
+                DateOfBirth = true,
+                Address = new StudentSearchNotNullAddress() {
+                    PostalAddress = true,
+                    PostalCode = true,
+                    PostalCity = true,
+                    CountryCode = true,
+                    MunicipalityCode = true,
+                },
+                EmailAddress1 = true,
+                EmailAddress2 = true,
+                PhoneNumber1 = true,
+                PhoneNumber2 = true,
+            },
+            OrCondition = true,
+        },
+    },
     limit: 1,
-    offset: 0,
-    studentFilter: new StudentFilter() {
-        Equals = new StudentFilterEquals() {
-            Id = "123e4567-e89b-12d3-a456-426614174000",
-            Meta = new StudentFilterEqualsMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
-            },
-            External = new StudentFilterEqualsExternal() {
-                SourceID = "example",
-                Source = "example",
-            },
-            IdentityNumber = "example",
-            IdentityTemporary = true,
-            FirstName = "example",
-            LastName = "example",
-            DateOfBirth = DateOnly.Parse("2024-01-15"),
-            Address = new StudentFilterEqualsAddress() {
-                PostalAddress = "example",
-                PostalCode = "example",
-                PostalCity = "example",
-                CountryCode = "example",
-                MunicipalityCode = "example",
-            },
-            EmailAddress1 = "example",
-            EmailAddress2 = "example",
-            PhoneNumber1 = "example",
-            PhoneNumber2 = "example",
-        },
-        NotEquals = new StudentFilterNotEquals() {
-            Id = "123e4567-e89b-12d3-a456-426614174000",
-            Meta = new StudentFilterNotEqualsMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
-            },
-            External = new StudentFilterNotEqualsExternal() {
-                SourceID = "example",
-                Source = "example",
-            },
-            IdentityNumber = "example",
-            IdentityTemporary = true,
-            FirstName = "example",
-            LastName = "example",
-            DateOfBirth = DateOnly.Parse("2024-01-15"),
-            Address = new StudentFilterNotEqualsAddress() {
-                PostalAddress = "example",
-                PostalCode = "example",
-                PostalCity = "example",
-                CountryCode = "example",
-                MunicipalityCode = "example",
-            },
-            EmailAddress1 = "example",
-            EmailAddress2 = "example",
-            PhoneNumber1 = "example",
-            PhoneNumber2 = "example",
-        },
-        GreaterThan = new StudentFilterGreaterThan() {
-            Meta = new StudentFilterGreaterThanMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-            },
-            DateOfBirth = DateOnly.Parse("2024-01-15"),
-        },
-        SmallerThan = new StudentFilterSmallerThan() {
-            Meta = new StudentFilterSmallerThanMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-            },
-            DateOfBirth = DateOnly.Parse("2024-01-15"),
-        },
-        GreaterOrEqual = new StudentFilterGreaterOrEqual() {
-            Meta = new StudentFilterGreaterOrEqualMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-            },
-            DateOfBirth = DateOnly.Parse("2024-01-15"),
-        },
-        SmallerOrEqual = new StudentFilterSmallerOrEqual() {
-            Meta = new StudentFilterSmallerOrEqualMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-            },
-            DateOfBirth = DateOnly.Parse("2024-01-15"),
-        },
-        Contains = new StudentFilterContains() {
-            Id = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-            Meta = new StudentFilterContainsMeta() {
-                CreatedBy = new List<string>() {
-                    "123e4567-e89b-12d3-a456-426614174000",
-                },
-                UpdatedBy = new List<string>() {
-                    "123e4567-e89b-12d3-a456-426614174000",
-                },
-            },
-            External = new StudentFilterContainsExternal() {
-                SourceID = new List<string>() {
-                    "example",
-                },
-                Source = new List<string>() {
-                    "example",
-                },
-            },
-            IdentityNumber = new List<string>() {
-                "example",
-            },
-            IdentityTemporary = new List<bool>() {
-                true,
-            },
-            FirstName = new List<string>() {
-                "example",
-            },
-            LastName = new List<string>() {
-                "example",
-            },
-            DateOfBirth = new List<DateOnly>() {
-                DateOnly.Parse("2024-01-15"),
-            },
-            Address = new StudentFilterContainsAddress() {
-                PostalAddress = new List<string>() {
-                    "example",
-                },
-                PostalCode = new List<string>() {
-                    "example",
-                },
-                PostalCity = new List<string>() {
-                    "example",
-                },
-                CountryCode = new List<string>() {
-                    "example",
-                },
-                MunicipalityCode = new List<string>() {
-                    "example",
-                },
-            },
-            EmailAddress1 = new List<string>() {
-                "example",
-            },
-            EmailAddress2 = new List<string>() {
-                "example",
-            },
-            PhoneNumber1 = new List<string>() {
-                "example",
-            },
-            PhoneNumber2 = new List<string>() {
-                "example",
-            },
-        },
-        NotContains = new StudentFilterNotContains() {
-            Id = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-            Meta = new StudentFilterNotContainsMeta() {
-                CreatedBy = new List<string>() {
-                    "123e4567-e89b-12d3-a456-426614174000",
-                },
-                UpdatedBy = new List<string>() {
-                    "123e4567-e89b-12d3-a456-426614174000",
-                },
-            },
-            External = new StudentFilterNotContainsExternal() {
-                SourceID = new List<string>() {
-                    "example",
-                },
-                Source = new List<string>() {
-                    "example",
-                },
-            },
-            IdentityNumber = new List<string>() {
-                "example",
-            },
-            IdentityTemporary = new List<bool>() {
-                true,
-            },
-            FirstName = new List<string>() {
-                "example",
-            },
-            LastName = new List<string>() {
-                "example",
-            },
-            DateOfBirth = new List<DateOnly>() {
-                DateOnly.Parse("2024-01-15"),
-            },
-            Address = new StudentFilterNotContainsAddress() {
-                PostalAddress = new List<string>() {
-                    "example",
-                },
-                PostalCode = new List<string>() {
-                    "example",
-                },
-                PostalCity = new List<string>() {
-                    "example",
-                },
-                CountryCode = new List<string>() {
-                    "example",
-                },
-                MunicipalityCode = new List<string>() {
-                    "example",
-                },
-            },
-            EmailAddress1 = new List<string>() {
-                "example",
-            },
-            EmailAddress2 = new List<string>() {
-                "example",
-            },
-            PhoneNumber1 = new List<string>() {
-                "example",
-            },
-            PhoneNumber2 = new List<string>() {
-                "example",
-            },
-        },
-        Like = new StudentFilterLike() {
-            External = new StudentFilterLikeExternal() {
-                SourceID = "example",
-                Source = "example",
-            },
-            IdentityNumber = "example",
-            FirstName = "example",
-            LastName = "example",
-            Address = new StudentFilterLikeAddress() {
-                PostalAddress = "example",
-                PostalCode = "example",
-                PostalCity = "example",
-                CountryCode = "example",
-                MunicipalityCode = "example",
-            },
-            EmailAddress1 = "example",
-            EmailAddress2 = "example",
-            PhoneNumber1 = "example",
-            PhoneNumber2 = "example",
-        },
-        NotLike = new StudentFilterNotLike() {
-            External = new StudentFilterNotLikeExternal() {
-                SourceID = "example",
-                Source = "example",
-            },
-            IdentityNumber = "example",
-            FirstName = "example",
-            LastName = "example",
-            Address = new StudentFilterNotLikeAddress() {
-                PostalAddress = "example",
-                PostalCode = "example",
-                PostalCity = "example",
-                CountryCode = "example",
-                MunicipalityCode = "example",
-            },
-            EmailAddress1 = "example",
-            EmailAddress2 = "example",
-            PhoneNumber1 = "example",
-            PhoneNumber2 = "example",
-        },
-        Null = new StudentFilterNull() {
-            Meta = new StudentFilterNullMeta() {
-                CreatedBy = true,
-                UpdatedAt = true,
-                UpdatedBy = true,
-            },
-            External = new StudentFilterNullExternal() {
-                SourceID = true,
-                Source = true,
-            },
-            Gender = true,
-            DateOfBirth = true,
-            Address = new StudentFilterNullAddress() {
-                PostalAddress = true,
-                PostalCode = true,
-                PostalCity = true,
-                CountryCode = true,
-                MunicipalityCode = true,
-            },
-            EmailAddress1 = true,
-            EmailAddress2 = true,
-            PhoneNumber1 = true,
-            PhoneNumber2 = true,
-        },
-        NotNull = new StudentFilterNotNull() {
-            Meta = new StudentFilterNotNullMeta() {
-                CreatedBy = true,
-                UpdatedAt = true,
-                UpdatedBy = true,
-            },
-            External = new StudentFilterNotNullExternal() {
-                SourceID = true,
-                Source = true,
-            },
-            Gender = true,
-            DateOfBirth = true,
-            Address = new StudentFilterNotNullAddress() {
-                PostalAddress = true,
-                PostalCode = true,
-                PostalCity = true,
-                CountryCode = true,
-                MunicipalityCode = true,
-            },
-            EmailAddress1 = true,
-            EmailAddress2 = true,
-            PhoneNumber1 = true,
-            PhoneNumber2 = true,
-        },
-        OrCondition = true,
-    }
+    offset: 0
 );
 
 while(res != null)
@@ -478,13 +479,13 @@ while(res != null)
 
 | Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           | Example                                                                                               |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `StudentSearch`                                                                                       | [StudentSearchRequestBody](../../Models/Components/StudentSearchRequestBody.md)                       | :heavy_check_mark:                                                                                    | Request body                                                                                          |                                                                                                       |
 | `Limit`                                                                                               | *long*                                                                                                | :heavy_minus_sign:                                                                                    | The maximum number of Students to return (default: 50) when searching Students                        | 1                                                                                                     |
 | `Offset`                                                                                              | *long*                                                                                                | :heavy_minus_sign:                                                                                    | The number of Students to skip before starting to return results (default: 0) when searching Students | 0                                                                                                     |
-| `StudentFilter`                                                                                       | [StudentFilter](../../Models/Components/StudentFilter.md)                                             | :heavy_minus_sign:                                                                                    | Request body                                                                                          |                                                                                                       |
 
 ### Response
 
-**[StudentSearchResponse](../../Models/Requests/StudentSearchResponse.md)**
+**[Models.Requests.StudentSearchResponse](../../Models/Requests/StudentSearchResponse.md)**
 
 ### Errors
 

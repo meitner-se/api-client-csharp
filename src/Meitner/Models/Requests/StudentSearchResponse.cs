@@ -25,6 +25,6 @@ namespace Meitner.Models.Requests
         /// <summary>
         /// Response for Student Search operation - returns filtered Student results
         /// </summary>
-        public StudentSearch? StudentSearch { get; set; }
+        public Models.Components.StudentSearchResponse? StudentSearch { get; set; }
     }
 }

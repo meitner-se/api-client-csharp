@@ -138,7 +138,6 @@ Search for `EmployeePlacements` with filtering capabilities.
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
-using Meitner.Models.Requests;
 using System;
 using System.Collections.Generic;
 
@@ -147,226 +146,228 @@ var sdk = new MeitnerSDK(security: new Security() {
     ClientSecret = "<YOUR_API_KEY_HERE>",
 });
 
-EmployeePlacementSearchResponse? res = await sdk.EmployeePlacements.SearchAsync(
+Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlacements.SearchAsync(
+    employeePlacementSearch: new EmployeePlacementSearchRequestBody() {
+        Filter = new EmployeePlacementSearchFilter() {
+            Equals = new EmployeePlacementSearchEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new EmployeePlacementSearchEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new EmployeePlacementSearchEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                EmployeeID = "123e4567-e89b-12d3-a456-426614174000",
+                SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+                Signature = "example",
+                Title = "example",
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchiveYear = "example",
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            NotEquals = new EmployeePlacementSearchNotEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new EmployeePlacementSearchNotEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new EmployeePlacementSearchNotEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                EmployeeID = "123e4567-e89b-12d3-a456-426614174000",
+                SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+                Signature = "example",
+                Title = "example",
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchiveYear = "example",
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            GreaterThan = new EmployeePlacementSearchGreaterThan() {
+                Meta = new EmployeePlacementSearchGreaterThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            SmallerThan = new EmployeePlacementSearchSmallerThan() {
+                Meta = new EmployeePlacementSearchSmallerThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            GreaterOrEqual = new EmployeePlacementSearchGreaterOrEqual() {
+                Meta = new EmployeePlacementSearchGreaterOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            SmallerOrEqual = new EmployeePlacementSearchSmallerOrEqual() {
+                Meta = new EmployeePlacementSearchSmallerOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            Contains = new EmployeePlacementSearchContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new EmployeePlacementSearchContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new EmployeePlacementSearchContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                EmployeeID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                SchoolID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Signature = new List<string>() {
+                    "example",
+                },
+                Title = new List<string>() {
+                    "example",
+                },
+                StartDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                EndDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                ArchiveYear = new List<string>() {
+                    "example",
+                },
+            },
+            NotContains = new EmployeePlacementSearchNotContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new EmployeePlacementSearchNotContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new EmployeePlacementSearchNotContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                EmployeeID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                SchoolID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Signature = new List<string>() {
+                    "example",
+                },
+                Title = new List<string>() {
+                    "example",
+                },
+                StartDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                EndDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                ArchiveYear = new List<string>() {
+                    "example",
+                },
+            },
+            Like = new EmployeePlacementSearchLike() {
+                External = new EmployeePlacementSearchLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Signature = "example",
+                Title = "example",
+                ArchiveYear = "example",
+            },
+            NotLike = new EmployeePlacementSearchNotLike() {
+                External = new EmployeePlacementSearchNotLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Signature = "example",
+                Title = "example",
+                ArchiveYear = "example",
+            },
+            Null = new EmployeePlacementSearchNull() {
+                Meta = new EmployeePlacementSearchNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new EmployeePlacementSearchNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                Signature = true,
+                Title = true,
+                Roles = true,
+                EndDate = true,
+                ArchiveYear = true,
+                ArchivedAt = true,
+            },
+            NotNull = new EmployeePlacementSearchNotNull() {
+                Meta = new EmployeePlacementSearchNotNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new EmployeePlacementSearchNotNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                Signature = true,
+                Title = true,
+                Roles = true,
+                EndDate = true,
+                ArchiveYear = true,
+                ArchivedAt = true,
+            },
+            OrCondition = true,
+        },
+    },
     limit: 1,
-    offset: 0,
-    employeePlacementFilter: new EmployeePlacementFilter() {
-        Equals = new EmployeePlacementFilterEquals() {
-            Id = "123e4567-e89b-12d3-a456-426614174000",
-            Meta = new EmployeePlacementFilterEqualsMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
-            },
-            External = new EmployeePlacementFilterEqualsExternal() {
-                SourceID = "example",
-                Source = "example",
-            },
-            EmployeeID = "123e4567-e89b-12d3-a456-426614174000",
-            SchoolID = "123e4567-e89b-12d3-a456-426614174000",
-            Signature = "example",
-            Title = "example",
-            StartDate = DateOnly.Parse("2024-01-15"),
-            EndDate = DateOnly.Parse("2024-01-15"),
-            ArchiveYear = "example",
-            ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-        },
-        NotEquals = new EmployeePlacementFilterNotEquals() {
-            Id = "123e4567-e89b-12d3-a456-426614174000",
-            Meta = new EmployeePlacementFilterNotEqualsMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
-            },
-            External = new EmployeePlacementFilterNotEqualsExternal() {
-                SourceID = "example",
-                Source = "example",
-            },
-            EmployeeID = "123e4567-e89b-12d3-a456-426614174000",
-            SchoolID = "123e4567-e89b-12d3-a456-426614174000",
-            Signature = "example",
-            Title = "example",
-            StartDate = DateOnly.Parse("2024-01-15"),
-            EndDate = DateOnly.Parse("2024-01-15"),
-            ArchiveYear = "example",
-            ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-        },
-        GreaterThan = new EmployeePlacementFilterGreaterThan() {
-            Meta = new EmployeePlacementFilterGreaterThanMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-            },
-            StartDate = DateOnly.Parse("2024-01-15"),
-            EndDate = DateOnly.Parse("2024-01-15"),
-            ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-        },
-        SmallerThan = new EmployeePlacementFilterSmallerThan() {
-            Meta = new EmployeePlacementFilterSmallerThanMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-            },
-            StartDate = DateOnly.Parse("2024-01-15"),
-            EndDate = DateOnly.Parse("2024-01-15"),
-            ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-        },
-        GreaterOrEqual = new EmployeePlacementFilterGreaterOrEqual() {
-            Meta = new EmployeePlacementFilterGreaterOrEqualMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-            },
-            StartDate = DateOnly.Parse("2024-01-15"),
-            EndDate = DateOnly.Parse("2024-01-15"),
-            ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-        },
-        SmallerOrEqual = new EmployeePlacementFilterSmallerOrEqual() {
-            Meta = new EmployeePlacementFilterSmallerOrEqualMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-            },
-            StartDate = DateOnly.Parse("2024-01-15"),
-            EndDate = DateOnly.Parse("2024-01-15"),
-            ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-        },
-        Contains = new EmployeePlacementFilterContains() {
-            Id = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-            Meta = new EmployeePlacementFilterContainsMeta() {
-                CreatedBy = new List<string>() {
-                    "123e4567-e89b-12d3-a456-426614174000",
-                },
-                UpdatedBy = new List<string>() {
-                    "123e4567-e89b-12d3-a456-426614174000",
-                },
-            },
-            External = new EmployeePlacementFilterContainsExternal() {
-                SourceID = new List<string>() {
-                    "example",
-                },
-                Source = new List<string>() {
-                    "example",
-                },
-            },
-            EmployeeID = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-            SchoolID = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-            Signature = new List<string>() {
-                "example",
-            },
-            Title = new List<string>() {
-                "example",
-            },
-            StartDate = new List<DateOnly>() {
-                DateOnly.Parse("2024-01-15"),
-            },
-            EndDate = new List<DateOnly>() {
-                DateOnly.Parse("2024-01-15"),
-            },
-            ArchiveYear = new List<string>() {
-                "example",
-            },
-        },
-        NotContains = new EmployeePlacementFilterNotContains() {
-            Id = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-            Meta = new EmployeePlacementFilterNotContainsMeta() {
-                CreatedBy = new List<string>() {
-                    "123e4567-e89b-12d3-a456-426614174000",
-                },
-                UpdatedBy = new List<string>() {
-                    "123e4567-e89b-12d3-a456-426614174000",
-                },
-            },
-            External = new EmployeePlacementFilterNotContainsExternal() {
-                SourceID = new List<string>() {
-                    "example",
-                },
-                Source = new List<string>() {
-                    "example",
-                },
-            },
-            EmployeeID = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-            SchoolID = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-            Signature = new List<string>() {
-                "example",
-            },
-            Title = new List<string>() {
-                "example",
-            },
-            StartDate = new List<DateOnly>() {
-                DateOnly.Parse("2024-01-15"),
-            },
-            EndDate = new List<DateOnly>() {
-                DateOnly.Parse("2024-01-15"),
-            },
-            ArchiveYear = new List<string>() {
-                "example",
-            },
-        },
-        Like = new EmployeePlacementFilterLike() {
-            External = new EmployeePlacementFilterLikeExternal() {
-                SourceID = "example",
-                Source = "example",
-            },
-            Signature = "example",
-            Title = "example",
-            ArchiveYear = "example",
-        },
-        NotLike = new EmployeePlacementFilterNotLike() {
-            External = new EmployeePlacementFilterNotLikeExternal() {
-                SourceID = "example",
-                Source = "example",
-            },
-            Signature = "example",
-            Title = "example",
-            ArchiveYear = "example",
-        },
-        Null = new EmployeePlacementFilterNull() {
-            Meta = new EmployeePlacementFilterNullMeta() {
-                CreatedBy = true,
-                UpdatedAt = true,
-                UpdatedBy = true,
-            },
-            External = new EmployeePlacementFilterNullExternal() {
-                SourceID = true,
-                Source = true,
-            },
-            Signature = true,
-            Title = true,
-            Roles = true,
-            EndDate = true,
-            ArchiveYear = true,
-            ArchivedAt = true,
-        },
-        NotNull = new EmployeePlacementFilterNotNull() {
-            Meta = new EmployeePlacementFilterNotNullMeta() {
-                CreatedBy = true,
-                UpdatedAt = true,
-                UpdatedBy = true,
-            },
-            External = new EmployeePlacementFilterNotNullExternal() {
-                SourceID = true,
-                Source = true,
-            },
-            Signature = true,
-            Title = true,
-            Roles = true,
-            EndDate = true,
-            ArchiveYear = true,
-            ArchivedAt = true,
-        },
-        OrCondition = true,
-    }
+    offset: 0
 );
 
 while(res != null)
@@ -381,13 +382,13 @@ while(res != null)
 
 | Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               | Example                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `EmployeePlacementSearch`                                                                                                 | [EmployeePlacementSearchRequestBody](../../Models/Components/EmployeePlacementSearchRequestBody.md)                       | :heavy_check_mark:                                                                                                        | Request body                                                                                                              |                                                                                                                           |
 | `Limit`                                                                                                                   | *long*                                                                                                                    | :heavy_minus_sign:                                                                                                        | The maximum number of EmployeePlacements to return (default: 50) when searching EmployeePlacements                        | 1                                                                                                                         |
 | `Offset`                                                                                                                  | *long*                                                                                                                    | :heavy_minus_sign:                                                                                                        | The number of EmployeePlacements to skip before starting to return results (default: 0) when searching EmployeePlacements | 0                                                                                                                         |
-| `EmployeePlacementFilter`                                                                                                 | [EmployeePlacementFilter](../../Models/Components/EmployeePlacementFilter.md)                                             | :heavy_minus_sign:                                                                                                        | Request body                                                                                                              |                                                                                                                           |
 
 ### Response
 
-**[EmployeePlacementSearchResponse](../../Models/Requests/EmployeePlacementSearchResponse.md)**
+**[Models.Requests.EmployeePlacementSearchResponse](../../Models/Requests/EmployeePlacementSearchResponse.md)**
 
 ### Errors
 

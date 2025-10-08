@@ -25,6 +25,6 @@ namespace Meitner.Models.Requests
         /// <summary>
         /// Response for Group Search operation - returns filtered Group results
         /// </summary>
-        public GroupSearch? GroupSearch { get; set; }
+        public Models.Components.GroupSearchResponse? GroupSearch { get; set; }
     }
 }

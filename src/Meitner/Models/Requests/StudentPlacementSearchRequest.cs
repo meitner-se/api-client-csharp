@@ -31,6 +31,6 @@ namespace Meitner.Models.Requests
         /// Request body
         /// </summary>
         [SpeakeasyMetadata("request:mediaType=application/json")]
-        public StudentPlacementFilter? StudentPlacementFilter { get; set; }
+        public StudentPlacementSearchRequestBody StudentPlacementSearch { get; set; } = default!;
     }
 }

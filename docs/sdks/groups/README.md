@@ -139,7 +139,6 @@ Search for `Groups` with filtering capabilities.
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
-using Meitner.Models.Requests;
 using System;
 using System.Collections.Generic;
 
@@ -148,178 +147,180 @@ var sdk = new MeitnerSDK(security: new Security() {
     ClientSecret = "<YOUR_API_KEY_HERE>",
 });
 
-GroupSearchResponse? res = await sdk.Groups.SearchAsync(
+Models.Requests.GroupSearchResponse? res = await sdk.Groups.SearchAsync(
+    groupSearch: new GroupSearchRequestBody() {
+        Filter = new GroupSearchFilter() {
+            Equals = new GroupSearchEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new GroupSearchEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new GroupSearchEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+                Title = "example",
+                ModeratorIDs = "123e4567-e89b-12d3-a456-426614174000",
+                MemberIDs = "123e4567-e89b-12d3-a456-426614174000",
+            },
+            NotEquals = new GroupSearchNotEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new GroupSearchNotEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new GroupSearchNotEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+                Title = "example",
+                ModeratorIDs = "123e4567-e89b-12d3-a456-426614174000",
+                MemberIDs = "123e4567-e89b-12d3-a456-426614174000",
+            },
+            GreaterThan = new GroupSearchGreaterThan() {
+                Meta = new GroupSearchGreaterThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            SmallerThan = new GroupSearchSmallerThan() {
+                Meta = new GroupSearchSmallerThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            GreaterOrEqual = new GroupSearchGreaterOrEqual() {
+                Meta = new GroupSearchGreaterOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            SmallerOrEqual = new GroupSearchSmallerOrEqual() {
+                Meta = new GroupSearchSmallerOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            Contains = new GroupSearchContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new GroupSearchContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new GroupSearchContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                SchoolID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Title = new List<string>() {
+                    "example",
+                },
+                ModeratorIDs = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                MemberIDs = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+            },
+            NotContains = new GroupSearchNotContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new GroupSearchNotContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new GroupSearchNotContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                SchoolID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Title = new List<string>() {
+                    "example",
+                },
+                ModeratorIDs = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                MemberIDs = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+            },
+            Like = new GroupSearchLike() {
+                External = new GroupSearchLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Title = "example",
+            },
+            NotLike = new GroupSearchNotLike() {
+                External = new GroupSearchNotLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Title = "example",
+            },
+            Null = new GroupSearchNull() {
+                Meta = new GroupSearchNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new GroupSearchNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                Types = true,
+                ModeratorIDs = true,
+                MemberIDs = true,
+            },
+            NotNull = new GroupSearchNotNull() {
+                Meta = new GroupSearchNotNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new GroupSearchNotNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                Types = true,
+                ModeratorIDs = true,
+                MemberIDs = true,
+            },
+            OrCondition = true,
+        },
+    },
     limit: 1,
-    offset: 0,
-    groupFilter: new GroupFilter() {
-        Equals = new GroupFilterEquals() {
-            Id = "123e4567-e89b-12d3-a456-426614174000",
-            Meta = new GroupFilterEqualsMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
-            },
-            External = new GroupFilterEqualsExternal() {
-                SourceID = "example",
-                Source = "example",
-            },
-            SchoolID = "123e4567-e89b-12d3-a456-426614174000",
-            Title = "example",
-            ModeratorIDs = "123e4567-e89b-12d3-a456-426614174000",
-            MemberIDs = "123e4567-e89b-12d3-a456-426614174000",
-        },
-        NotEquals = new GroupFilterNotEquals() {
-            Id = "123e4567-e89b-12d3-a456-426614174000",
-            Meta = new GroupFilterNotEqualsMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
-            },
-            External = new GroupFilterNotEqualsExternal() {
-                SourceID = "example",
-                Source = "example",
-            },
-            SchoolID = "123e4567-e89b-12d3-a456-426614174000",
-            Title = "example",
-            ModeratorIDs = "123e4567-e89b-12d3-a456-426614174000",
-            MemberIDs = "123e4567-e89b-12d3-a456-426614174000",
-        },
-        GreaterThan = new GroupFilterGreaterThan() {
-            Meta = new GroupFilterGreaterThanMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-            },
-        },
-        SmallerThan = new GroupFilterSmallerThan() {
-            Meta = new GroupFilterSmallerThanMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-            },
-        },
-        GreaterOrEqual = new GroupFilterGreaterOrEqual() {
-            Meta = new GroupFilterGreaterOrEqualMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-            },
-        },
-        SmallerOrEqual = new GroupFilterSmallerOrEqual() {
-            Meta = new GroupFilterSmallerOrEqualMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-            },
-        },
-        Contains = new GroupFilterContains() {
-            Id = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-            Meta = new GroupFilterContainsMeta() {
-                CreatedBy = new List<string>() {
-                    "123e4567-e89b-12d3-a456-426614174000",
-                },
-                UpdatedBy = new List<string>() {
-                    "123e4567-e89b-12d3-a456-426614174000",
-                },
-            },
-            External = new GroupFilterContainsExternal() {
-                SourceID = new List<string>() {
-                    "example",
-                },
-                Source = new List<string>() {
-                    "example",
-                },
-            },
-            SchoolID = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-            Title = new List<string>() {
-                "example",
-            },
-            ModeratorIDs = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-            MemberIDs = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-        },
-        NotContains = new GroupFilterNotContains() {
-            Id = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-            Meta = new GroupFilterNotContainsMeta() {
-                CreatedBy = new List<string>() {
-                    "123e4567-e89b-12d3-a456-426614174000",
-                },
-                UpdatedBy = new List<string>() {
-                    "123e4567-e89b-12d3-a456-426614174000",
-                },
-            },
-            External = new GroupFilterNotContainsExternal() {
-                SourceID = new List<string>() {
-                    "example",
-                },
-                Source = new List<string>() {
-                    "example",
-                },
-            },
-            SchoolID = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-            Title = new List<string>() {
-                "example",
-            },
-            ModeratorIDs = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-            MemberIDs = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-        },
-        Like = new GroupFilterLike() {
-            External = new GroupFilterLikeExternal() {
-                SourceID = "example",
-                Source = "example",
-            },
-            Title = "example",
-        },
-        NotLike = new GroupFilterNotLike() {
-            External = new GroupFilterNotLikeExternal() {
-                SourceID = "example",
-                Source = "example",
-            },
-            Title = "example",
-        },
-        Null = new GroupFilterNull() {
-            Meta = new GroupFilterNullMeta() {
-                CreatedBy = true,
-                UpdatedAt = true,
-                UpdatedBy = true,
-            },
-            External = new GroupFilterNullExternal() {
-                SourceID = true,
-                Source = true,
-            },
-            Types = true,
-            ModeratorIDs = true,
-            MemberIDs = true,
-        },
-        NotNull = new GroupFilterNotNull() {
-            Meta = new GroupFilterNotNullMeta() {
-                CreatedBy = true,
-                UpdatedAt = true,
-                UpdatedBy = true,
-            },
-            External = new GroupFilterNotNullExternal() {
-                SourceID = true,
-                Source = true,
-            },
-            Types = true,
-            ModeratorIDs = true,
-            MemberIDs = true,
-        },
-        OrCondition = true,
-    }
+    offset: 0
 );
 
 while(res != null)
@@ -334,13 +335,13 @@ while(res != null)
 
 | Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       | Example                                                                                           |
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `GroupSearch`                                                                                     | [GroupSearchRequestBody](../../Models/Components/GroupSearchRequestBody.md)                       | :heavy_check_mark:                                                                                | Request body                                                                                      |                                                                                                   |
 | `Limit`                                                                                           | *long*                                                                                            | :heavy_minus_sign:                                                                                | The maximum number of Groups to return (default: 50) when searching Groups                        | 1                                                                                                 |
 | `Offset`                                                                                          | *long*                                                                                            | :heavy_minus_sign:                                                                                | The number of Groups to skip before starting to return results (default: 0) when searching Groups | 0                                                                                                 |
-| `GroupFilter`                                                                                     | [GroupFilter](../../Models/Components/GroupFilter.md)                                             | :heavy_minus_sign:                                                                                | Request body                                                                                      |                                                                                                   |
 
 ### Response
 
-**[GroupSearchResponse](../../Models/Requests/GroupSearchResponse.md)**
+**[Models.Requests.GroupSearchResponse](../../Models/Requests/GroupSearchResponse.md)**
 
 ### Errors
 

@@ -51,7 +51,7 @@ namespace Meitner.Models.Components
         /// </remarks>
         /// </summary>
         [JsonProperty("category")]
-        public EqualsCategory? Category { get; set; } = null;
+        public GroupFilterEqualsCategory? Category { get; set; } = null;
 
         /// <summary>
         /// The title of the group, must be unique within the school.
@@ -63,7 +63,7 @@ namespace Meitner.Models.Components
         /// The types of the group
         /// </summary>
         [JsonProperty("types")]
-        public EqualsTypes? Types { get; set; } = null;
+        public GroupFilterEqualsTypes? Types { get; set; } = null;
 
         /// <summary>
         /// The IDs of the moderators of the group.  Can be any user type (Student, Employee, Guardian) if the Category is Other. If the Category is Education, the Moderators have to be employees of the school.<br/>

@@ -60,7 +60,7 @@ namespace Meitner.Models.Components
         /// The school year the student is placed in
         /// </summary>
         [JsonProperty("schoolYear")]
-        public NotEqualsSchoolYear? SchoolYear { get; set; } = null;
+        public StudentPlacementFilterNotEqualsSchoolYear? SchoolYear { get; set; } = null;
 
         /// <summary>
         /// Whether the student has childcare

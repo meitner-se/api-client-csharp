@@ -18,12 +18,12 @@ namespace Meitner.Models.Components
     /// </summary>
     public enum SchoolType
     {
-        [JsonProperty("Grundskola")]
-        Grundskola,
-        [JsonProperty("Gymnasieskola")]
-        Gymnasieskola,
-        [JsonProperty("Förskola")]
-        Forskola,
+        [JsonProperty("GR")]
+        Gr,
+        [JsonProperty("GY")]
+        Gy,
+        [JsonProperty("FS")]
+        Fs,
     }
 
     public static class SchoolTypeExtension

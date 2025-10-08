@@ -31,6 +31,6 @@ namespace Meitner.Models.Requests
         /// Request body
         /// </summary>
         [SpeakeasyMetadata("request:mediaType=application/json")]
-        public EmployeeFilter? EmployeeFilter { get; set; }
+        public EmployeeSearchRequestBody EmployeeSearch { get; set; } = default!;
     }
 }

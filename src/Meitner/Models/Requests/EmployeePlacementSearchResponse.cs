@@ -25,6 +25,6 @@ namespace Meitner.Models.Requests
         /// <summary>
         /// Response for EmployeePlacement Search operation - returns filtered EmployeePlacement results
         /// </summary>
-        public EmployeePlacementSearch? EmployeePlacementSearch { get; set; }
+        public Models.Components.EmployeePlacementSearchResponse? EmployeePlacementSearch { get; set; }
     }
 }

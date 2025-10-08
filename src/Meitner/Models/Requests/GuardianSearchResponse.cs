@@ -25,6 +25,6 @@ namespace Meitner.Models.Requests
         /// <summary>
         /// Response for Guardian Search operation - returns filtered Guardian results
         /// </summary>
-        public GuardianSearch? GuardianSearch { get; set; }
+        public Models.Components.GuardianSearchResponse? GuardianSearch { get; set; }
     }
 }

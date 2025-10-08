@@ -25,6 +25,6 @@ namespace Meitner.Models.Requests
         /// <summary>
         /// Response for StudentPlacement Search operation - returns filtered StudentPlacement results
         /// </summary>
-        public StudentPlacementSearch? StudentPlacementSearch { get; set; }
+        public Models.Components.StudentPlacementSearchResponse? StudentPlacementSearch { get; set; }
     }
 }

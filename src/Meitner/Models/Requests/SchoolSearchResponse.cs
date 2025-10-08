@@ -25,6 +25,6 @@ namespace Meitner.Models.Requests
         /// <summary>
         /// Response for School Search operation - returns filtered School results
         /// </summary>
-        public SchoolSearch? SchoolSearch { get; set; }
+        public Models.Components.SchoolSearchResponse? SchoolSearch { get; set; }
     }
 }
