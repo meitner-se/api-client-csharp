@@ -42,7 +42,7 @@ namespace Meitner.Models.Components
         /// The type of resource the event occured for
         /// </summary>
         [JsonProperty("resource")]
-        public NotEqualsResource? Resource { get; set; } = null;
+        public AuditEventFilterNotEqualsResource? Resource { get; set; } = null;
 
         /// <summary>
         /// The ID of the resource the event belongs to
@@ -54,6 +54,6 @@ namespace Meitner.Models.Components
         /// The type of the audit event
         /// </summary>
         [JsonProperty("type")]
-        public NotEqualsType? Type { get; set; } = null;
+        public AuditEventFilterNotEqualsType? Type { get; set; } = null;
     }
 }

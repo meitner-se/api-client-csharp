@@ -161,7 +161,6 @@ while(res != null)
 * [Delete](docs/sdks/guardians/README.md#delete) - Delete a Guardian
 * [Update](docs/sdks/guardians/README.md#update) - Update a Guardian
 
-
 ### [Schools](docs/sdks/schools/README.md)
 
 * [List](docs/sdks/schools/README.md#list) - List Schools

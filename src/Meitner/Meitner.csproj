@@ -3,10 +3,12 @@
   <PropertyGroup>
     <IsPackable>true</IsPackable>
     <PackageId>Meitner</PackageId>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <TargetFramework>net8.0</TargetFramework>
     <Authors>Speakeasy</Authors>
     <Copyright>Copyright (c) Speakeasy 2025</Copyright>
+    <RepositoryUrl>https://github.com/meitner-se/api-client-csharp.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
     <Description>Directory API: Generated API documentation</Description>
   </PropertyGroup>
 

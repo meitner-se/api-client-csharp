@@ -53,7 +53,7 @@ namespace Meitner
         /// Search for `StudentPlacements` with filtering capabilities.
         /// </remarks>
         /// </summary>
-        Task<StudentPlacementSearchResponse> SearchAsync(long? limit = 50, long? offset = 0, StudentPlacementFilter? studentPlacementFilter = null, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        Task<Models.Requests.StudentPlacementSearchResponse> SearchAsync(StudentPlacementSearchRequestBody studentPlacementSearch, long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Get a StudentPlacement
@@ -97,8 +97,8 @@ namespace Meitner
     {
         public SDKConfig SDKConfiguration { get; private set; }
         private const string _language = "csharp";
-        private const string _sdkVersion = "0.0.1";
-        private const string _sdkGenVersion = "2.721.0";
+        private const string _sdkVersion = "0.0.2";
+        private const string _sdkGenVersion = "2.723.4";
         private const string _openapiDocVersion = "v1";
 
         public StudentPlacements(SDKConfig config)
@@ -124,7 +124,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "StudentPlacementList", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "StudentPlacementList", null, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -469,7 +469,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "StudentPlacementCreate", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "StudentPlacementCreate", null, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -791,13 +791,13 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<StudentPlacementSearchResponse> SearchAsync(long? limit = 50, long? offset = 0, StudentPlacementFilter? studentPlacementFilter = null, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+        public async Task<Models.Requests.StudentPlacementSearchResponse> SearchAsync(StudentPlacementSearchRequestBody studentPlacementSearch, long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
         {
             var request = new StudentPlacementSearchRequest()
             {
+                StudentPlacementSearch = studentPlacementSearch,
                 Limit = limit,
                 Offset = offset,
-                StudentPlacementFilter = studentPlacementFilter,
             };
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
             var urlString = URLBuilder.Build(baseUrl, "/student-placement/_search", request);
@@ -805,7 +805,7 @@ namespace Meitner
             var httpRequest = new HttpRequestMessage(HttpMethod.Post, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
 
-            var serializedBody = RequestBodySerializer.Serialize(request, "StudentPlacementFilter", "json", false, true);
+            var serializedBody = RequestBodySerializer.Serialize(request, "StudentPlacementSearch", "json", false, false);
             if (serializedBody != null)
             {
                 httpRequest.Content = serializedBody;
@@ -816,7 +816,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "StudentPlacementSearch", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "StudentPlacementSearch", null, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -887,10 +887,10 @@ namespace Meitner
 
             httpResponse = await this.SDKConfiguration.Hooks.AfterSuccessAsync(new AfterSuccessContext(hookCtx), httpResponse);
 
-            Func<Task<StudentPlacementSearchResponse?>> nextFunc = async delegate()
+            Func<Task<Models.Requests.StudentPlacementSearchResponse?>> nextFunc = async delegate()
             {
                 var body = JObject.Parse(await httpResponse.Content.ReadAsStringAsync());
-                var offset = request?.StudentPlacementFilter?.Offset ?? 0;
+                var offset = request.Offset;
                 var firstResult = body.SelectToken("$.data.resultArray");
                 if (firstResult == null)
                 {
@@ -901,7 +901,7 @@ namespace Meitner
                 {
                     return null;
                 }
-                var limit = request?.StudentPlacementFilter?.Limit ?? 50;
+                var limit = request.Limit;
                 if (firstResult.Children().Count() < limit)
                 {
                     return null;
@@ -911,7 +911,7 @@ namespace Meitner
                 return await SearchAsync (
                     limit: limit,
                     offset: newOffset,
-                    studentPlacementFilter: studentPlacementFilter,
+                    studentPlacementSearch: studentPlacementSearch,
                     retryConfig: retryConfig
                 );
             };
@@ -923,17 +923,17 @@ namespace Meitner
                 if(Utilities.IsContentTypeMatch("application/json", contentType))
                 {
                     var httpResponseBody = await httpResponse.Content.ReadAsStringAsync();
-                    StudentPlacementSearch obj;
+                    Models.Components.StudentPlacementSearchResponse obj;
                     try
                     {
-                        obj = ResponseBodyDeserializer.DeserializeNotNull<StudentPlacementSearch>(httpResponseBody, NullValueHandling.Include);
+                        obj = ResponseBodyDeserializer.DeserializeNotNull<Models.Components.StudentPlacementSearchResponse>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
-                        throw new ResponseValidationException("Failed to deserialize response body into StudentPlacementSearch.", httpRequest, httpResponse, httpResponseBody, ex);
+                        throw new ResponseValidationException("Failed to deserialize response body into Models.Components.StudentPlacementSearchResponse.", httpRequest, httpResponse, httpResponseBody, ex);
                     }
 
-                    var response = new StudentPlacementSearchResponse()
+                    var response = new Models.Requests.StudentPlacementSearchResponse()
                     {
                         HttpMeta = new Models.Components.HTTPMetadata()
                         {
@@ -956,7 +956,7 @@ namespace Meitner
                     Error400ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error400ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error400ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -982,7 +982,7 @@ namespace Meitner
                     Error401ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error401ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error401ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -1008,7 +1008,7 @@ namespace Meitner
                     Error403ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error403ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error403ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -1034,7 +1034,7 @@ namespace Meitner
                     Error404ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error404ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error404ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -1060,7 +1060,7 @@ namespace Meitner
                     Error409ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error409ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error409ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -1086,7 +1086,7 @@ namespace Meitner
                     StudentPlacementSearch422ResponseBodyExceptionPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<StudentPlacementSearch422ResponseBodyExceptionPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<StudentPlacementSearch422ResponseBodyExceptionPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -1112,7 +1112,7 @@ namespace Meitner
                     Error429ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error429ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error429ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -1138,7 +1138,7 @@ namespace Meitner
                     Error500ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error500ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error500ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -1185,7 +1185,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "StudentPlacementGet", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "StudentPlacementGet", null, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -1498,7 +1498,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "StudentPlacementDelete", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "StudentPlacementDelete", null, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -1800,7 +1800,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "StudentPlacementUpdate", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "StudentPlacementUpdate", null, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -2139,7 +2139,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "StudentPlacementArchive", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "StudentPlacementArchive", null, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -2452,7 +2452,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "StudentPlacementRestore", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "StudentPlacementRestore", null, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)

@@ -40,7 +40,7 @@ namespace Meitner.Models.Components
         /// </remarks>
         /// </summary>
         [JsonProperty("category")]
-        public CategoryRequestBody? Category { get; set; } = Meitner.Models.Components.CategoryRequestBody.Education;
+        public GroupCreateCategory? Category { get; set; } = Meitner.Models.Components.GroupCreateCategory.Education;
 
         /// <summary>
         /// The title of the group, must be unique within the school.

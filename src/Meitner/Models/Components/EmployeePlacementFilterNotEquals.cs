@@ -66,7 +66,7 @@ namespace Meitner.Models.Components
         /// The roles of the employee
         /// </summary>
         [JsonProperty("roles")]
-        public NotEqualsRoles? Roles { get; set; } = null;
+        public EmployeePlacementFilterNotEqualsRoles? Roles { get; set; } = null;
 
         /// <summary>
         /// The start date of the placement for the employee

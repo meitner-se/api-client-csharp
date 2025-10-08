@@ -53,7 +53,7 @@ namespace Meitner
         /// Search for `Groups` with filtering capabilities.
         /// </remarks>
         /// </summary>
-        Task<GroupSearchResponse> SearchAsync(long? limit = 50, long? offset = 0, GroupFilter? groupFilter = null, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        Task<Models.Requests.GroupSearchResponse> SearchAsync(GroupSearchRequestBody groupSearch, long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Get a Group
@@ -87,8 +87,8 @@ namespace Meitner
     {
         public SDKConfig SDKConfiguration { get; private set; }
         private const string _language = "csharp";
-        private const string _sdkVersion = "0.0.1";
-        private const string _sdkGenVersion = "2.721.0";
+        private const string _sdkVersion = "0.0.2";
+        private const string _sdkGenVersion = "2.723.4";
         private const string _openapiDocVersion = "v1";
 
         public Groups(SDKConfig config)
@@ -114,7 +114,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupList", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupList", null, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -459,7 +459,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupCreate", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupCreate", null, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -781,13 +781,13 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<GroupSearchResponse> SearchAsync(long? limit = 50, long? offset = 0, GroupFilter? groupFilter = null, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+        public async Task<Models.Requests.GroupSearchResponse> SearchAsync(GroupSearchRequestBody groupSearch, long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
         {
             var request = new GroupSearchRequest()
             {
+                GroupSearch = groupSearch,
                 Limit = limit,
                 Offset = offset,
-                GroupFilter = groupFilter,
             };
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
             var urlString = URLBuilder.Build(baseUrl, "/group/_search", request);
@@ -795,7 +795,7 @@ namespace Meitner
             var httpRequest = new HttpRequestMessage(HttpMethod.Post, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
 
-            var serializedBody = RequestBodySerializer.Serialize(request, "GroupFilter", "json", false, true);
+            var serializedBody = RequestBodySerializer.Serialize(request, "GroupSearch", "json", false, false);
             if (serializedBody != null)
             {
                 httpRequest.Content = serializedBody;
@@ -806,7 +806,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupSearch", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupSearch", null, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -877,10 +877,10 @@ namespace Meitner
 
             httpResponse = await this.SDKConfiguration.Hooks.AfterSuccessAsync(new AfterSuccessContext(hookCtx), httpResponse);
 
-            Func<Task<GroupSearchResponse?>> nextFunc = async delegate()
+            Func<Task<Models.Requests.GroupSearchResponse?>> nextFunc = async delegate()
             {
                 var body = JObject.Parse(await httpResponse.Content.ReadAsStringAsync());
-                var offset = request?.GroupFilter?.Offset ?? 0;
+                var offset = request.Offset;
                 var firstResult = body.SelectToken("$.data.resultArray");
                 if (firstResult == null)
                 {
@@ -891,7 +891,7 @@ namespace Meitner
                 {
                     return null;
                 }
-                var limit = request?.GroupFilter?.Limit ?? 50;
+                var limit = request.Limit;
                 if (firstResult.Children().Count() < limit)
                 {
                     return null;
@@ -901,7 +901,7 @@ namespace Meitner
                 return await SearchAsync (
                     limit: limit,
                     offset: newOffset,
-                    groupFilter: groupFilter,
+                    groupSearch: groupSearch,
                     retryConfig: retryConfig
                 );
             };
@@ -913,17 +913,17 @@ namespace Meitner
                 if(Utilities.IsContentTypeMatch("application/json", contentType))
                 {
                     var httpResponseBody = await httpResponse.Content.ReadAsStringAsync();
-                    GroupSearch obj;
+                    Models.Components.GroupSearchResponse obj;
                     try
                     {
-                        obj = ResponseBodyDeserializer.DeserializeNotNull<GroupSearch>(httpResponseBody, NullValueHandling.Include);
+                        obj = ResponseBodyDeserializer.DeserializeNotNull<Models.Components.GroupSearchResponse>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
-                        throw new ResponseValidationException("Failed to deserialize response body into GroupSearch.", httpRequest, httpResponse, httpResponseBody, ex);
+                        throw new ResponseValidationException("Failed to deserialize response body into Models.Components.GroupSearchResponse.", httpRequest, httpResponse, httpResponseBody, ex);
                     }
 
-                    var response = new GroupSearchResponse()
+                    var response = new Models.Requests.GroupSearchResponse()
                     {
                         HttpMeta = new Models.Components.HTTPMetadata()
                         {
@@ -946,7 +946,7 @@ namespace Meitner
                     Error400ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error400ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error400ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -972,7 +972,7 @@ namespace Meitner
                     Error401ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error401ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error401ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -998,7 +998,7 @@ namespace Meitner
                     Error403ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error403ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error403ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -1024,7 +1024,7 @@ namespace Meitner
                     Error404ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error404ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error404ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -1050,7 +1050,7 @@ namespace Meitner
                     Error409ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error409ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error409ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -1076,7 +1076,7 @@ namespace Meitner
                     GroupSearch422ResponseBodyExceptionPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<GroupSearch422ResponseBodyExceptionPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<GroupSearch422ResponseBodyExceptionPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -1102,7 +1102,7 @@ namespace Meitner
                     Error429ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error429ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error429ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -1128,7 +1128,7 @@ namespace Meitner
                     Error500ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error500ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error500ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -1175,7 +1175,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupGet", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupGet", null, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -1488,7 +1488,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupDelete", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupDelete", null, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -1790,7 +1790,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupUpdate", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupUpdate", null, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)

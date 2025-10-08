@@ -1,0 +1,11 @@
+# AuditEventSearchGreaterThan
+
+Greater than filters for AuditEvent
+
+
+## Fields
+
+| Field                                                                                         | Type                                                                                          | Required                                                                                      | Description                                                                                   | Example                                                                                       |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `Meta`                                                                                        | [AuditEventSearchGreaterThanMeta](../../Models/Components/AuditEventSearchGreaterThanMeta.md) | :heavy_minus_sign:                                                                            | Metadata information for the AuditEvent                                                       | {<br/>"createdAt": "2024-01-15T10:30:00Z",<br/>"updatedAt": "2024-01-15T10:30:00Z"<br/>}      |
+| `Timestamp`                                                                                   | [DateTime](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0)         | :heavy_minus_sign:                                                                            | The timestamp of the event                                                                    | 2024-01-15T10:30:00Z                                                                          |

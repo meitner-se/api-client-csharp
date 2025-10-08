@@ -53,7 +53,7 @@ namespace Meitner
         /// Search for `Schools` with filtering capabilities.
         /// </remarks>
         /// </summary>
-        Task<SchoolSearchResponse> SearchAsync(long? limit = 50, long? offset = 0, SchoolFilter? schoolFilter = null, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        Task<Models.Requests.SchoolSearchResponse> SearchAsync(SchoolSearchRequestBody schoolSearch, long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Get a School
@@ -78,8 +78,8 @@ namespace Meitner
     {
         public SDKConfig SDKConfiguration { get; private set; }
         private const string _language = "csharp";
-        private const string _sdkVersion = "0.0.1";
-        private const string _sdkGenVersion = "2.721.0";
+        private const string _sdkVersion = "0.0.2";
+        private const string _sdkGenVersion = "2.723.4";
         private const string _openapiDocVersion = "v1";
 
         public Schools(SDKConfig config)
@@ -105,7 +105,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "SchoolList", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "SchoolList", null, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -450,7 +450,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "SchoolCreate", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "SchoolCreate", null, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -772,13 +772,13 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<SchoolSearchResponse> SearchAsync(long? limit = 50, long? offset = 0, SchoolFilter? schoolFilter = null, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+        public async Task<Models.Requests.SchoolSearchResponse> SearchAsync(SchoolSearchRequestBody schoolSearch, long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
         {
             var request = new SchoolSearchRequest()
             {
+                SchoolSearch = schoolSearch,
                 Limit = limit,
                 Offset = offset,
-                SchoolFilter = schoolFilter,
             };
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
             var urlString = URLBuilder.Build(baseUrl, "/school/_search", request);
@@ -786,7 +786,7 @@ namespace Meitner
             var httpRequest = new HttpRequestMessage(HttpMethod.Post, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
 
-            var serializedBody = RequestBodySerializer.Serialize(request, "SchoolFilter", "json", false, true);
+            var serializedBody = RequestBodySerializer.Serialize(request, "SchoolSearch", "json", false, false);
             if (serializedBody != null)
             {
                 httpRequest.Content = serializedBody;
@@ -797,7 +797,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "SchoolSearch", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "SchoolSearch", null, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -868,10 +868,10 @@ namespace Meitner
 
             httpResponse = await this.SDKConfiguration.Hooks.AfterSuccessAsync(new AfterSuccessContext(hookCtx), httpResponse);
 
-            Func<Task<SchoolSearchResponse?>> nextFunc = async delegate()
+            Func<Task<Models.Requests.SchoolSearchResponse?>> nextFunc = async delegate()
             {
                 var body = JObject.Parse(await httpResponse.Content.ReadAsStringAsync());
-                var offset = request?.SchoolFilter?.Offset ?? 0;
+                var offset = request.Offset;
                 var firstResult = body.SelectToken("$.data.resultArray");
                 if (firstResult == null)
                 {
@@ -882,7 +882,7 @@ namespace Meitner
                 {
                     return null;
                 }
-                var limit = request?.SchoolFilter?.Limit ?? 50;
+                var limit = request.Limit;
                 if (firstResult.Children().Count() < limit)
                 {
                     return null;
@@ -892,7 +892,7 @@ namespace Meitner
                 return await SearchAsync (
                     limit: limit,
                     offset: newOffset,
-                    schoolFilter: schoolFilter,
+                    schoolSearch: schoolSearch,
                     retryConfig: retryConfig
                 );
             };
@@ -904,17 +904,17 @@ namespace Meitner
                 if(Utilities.IsContentTypeMatch("application/json", contentType))
                 {
                     var httpResponseBody = await httpResponse.Content.ReadAsStringAsync();
-                    SchoolSearch obj;
+                    Models.Components.SchoolSearchResponse obj;
                     try
                     {
-                        obj = ResponseBodyDeserializer.DeserializeNotNull<SchoolSearch>(httpResponseBody, NullValueHandling.Include);
+                        obj = ResponseBodyDeserializer.DeserializeNotNull<Models.Components.SchoolSearchResponse>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
-                        throw new ResponseValidationException("Failed to deserialize response body into SchoolSearch.", httpRequest, httpResponse, httpResponseBody, ex);
+                        throw new ResponseValidationException("Failed to deserialize response body into Models.Components.SchoolSearchResponse.", httpRequest, httpResponse, httpResponseBody, ex);
                     }
 
-                    var response = new SchoolSearchResponse()
+                    var response = new Models.Requests.SchoolSearchResponse()
                     {
                         HttpMeta = new Models.Components.HTTPMetadata()
                         {
@@ -937,7 +937,7 @@ namespace Meitner
                     Error400ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error400ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error400ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -963,7 +963,7 @@ namespace Meitner
                     Error401ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error401ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error401ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -989,7 +989,7 @@ namespace Meitner
                     Error403ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error403ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error403ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -1015,7 +1015,7 @@ namespace Meitner
                     Error404ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error404ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error404ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -1041,7 +1041,7 @@ namespace Meitner
                     Error409ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error409ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error409ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -1067,7 +1067,7 @@ namespace Meitner
                     SchoolSearch422ResponseBodyExceptionPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<SchoolSearch422ResponseBodyExceptionPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<SchoolSearch422ResponseBodyExceptionPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -1093,7 +1093,7 @@ namespace Meitner
                     Error429ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error429ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error429ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -1119,7 +1119,7 @@ namespace Meitner
                     Error500ResponseBodyPayload payload;
                     try
                     {
-                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error500ResponseBodyPayload>(httpResponseBody, NullValueHandling.Include);
+                        payload = ResponseBodyDeserializer.DeserializeNotNull<Error500ResponseBodyPayload>(httpResponseBody, NullValueHandling.Ignore);
                     }
                     catch (Exception ex)
                     {
@@ -1166,7 +1166,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "SchoolGet", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "SchoolGet", null, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -1486,7 +1486,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "SchoolUpdate", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "SchoolUpdate", null, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)

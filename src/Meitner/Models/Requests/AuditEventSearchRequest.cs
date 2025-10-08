@@ -31,6 +31,6 @@ namespace Meitner.Models.Requests
         /// Request body
         /// </summary>
         [SpeakeasyMetadata("request:mediaType=application/json")]
-        public AuditEventFilter? AuditEventFilter { get; set; }
+        public AuditEventSearchRequestBody AuditEventSearch { get; set; } = default!;
     }
 }

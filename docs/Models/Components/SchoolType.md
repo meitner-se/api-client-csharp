@@ -5,8 +5,8 @@ The type of schooling provided at the school
 
 ## Values
 
-| Name            | Value           |
-| --------------- | --------------- |
-| `Grundskola`    | Grundskola      |
-| `Gymnasieskola` | Gymnasieskola   |
-| `Forskola`      | Förskola        |
+| Name  | Value |
+| ----- | ----- |
+| `Gr`  | GR    |
+| `Gy`  | GY    |
+| `Fs`  | FS    |

@@ -25,6 +25,6 @@ namespace Meitner.Models.Requests
         /// <summary>
         /// Response for AuditEvent Search operation - returns filtered AuditEvent results
         /// </summary>
-        public AuditEventSearch? AuditEventSearch { get; set; }
+        public Models.Components.AuditEventSearchResponse? AuditEventSearch { get; set; }
     }
 }

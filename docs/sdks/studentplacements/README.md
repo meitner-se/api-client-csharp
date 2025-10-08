@@ -138,7 +138,6 @@ Search for `StudentPlacements` with filtering capabilities.
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
-using Meitner.Models.Requests;
 using System;
 using System.Collections.Generic;
 
@@ -147,222 +146,224 @@ var sdk = new MeitnerSDK(security: new Security() {
     ClientSecret = "<YOUR_API_KEY_HERE>",
 });
 
-StudentPlacementSearchResponse? res = await sdk.StudentPlacements.SearchAsync(
+Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacements.SearchAsync(
+    studentPlacementSearch: new StudentPlacementSearchRequestBody() {
+        Filter = new StudentPlacementSearchFilter() {
+            Equals = new StudentPlacementSearchEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new StudentPlacementSearchEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new StudentPlacementSearchEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                StudentID = "123e4567-e89b-12d3-a456-426614174000",
+                SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+                HasChildcare = true,
+                MotherTongue = "example",
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchiveYear = "example",
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            NotEquals = new StudentPlacementSearchNotEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new StudentPlacementSearchNotEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new StudentPlacementSearchNotEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                StudentID = "123e4567-e89b-12d3-a456-426614174000",
+                SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+                HasChildcare = true,
+                MotherTongue = "example",
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchiveYear = "example",
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            GreaterThan = new StudentPlacementSearchGreaterThan() {
+                Meta = new StudentPlacementSearchGreaterThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            SmallerThan = new StudentPlacementSearchSmallerThan() {
+                Meta = new StudentPlacementSearchSmallerThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            GreaterOrEqual = new StudentPlacementSearchGreaterOrEqual() {
+                Meta = new StudentPlacementSearchGreaterOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            SmallerOrEqual = new StudentPlacementSearchSmallerOrEqual() {
+                Meta = new StudentPlacementSearchSmallerOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            Contains = new StudentPlacementSearchContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new StudentPlacementSearchContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new StudentPlacementSearchContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                StudentID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                SchoolID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                HasChildcare = new List<bool>() {
+                    true,
+                },
+                MotherTongue = new List<string>() {
+                    "example",
+                },
+                StartDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                EndDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                ArchiveYear = new List<string>() {
+                    "example",
+                },
+            },
+            NotContains = new StudentPlacementSearchNotContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new StudentPlacementSearchNotContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new StudentPlacementSearchNotContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                StudentID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                SchoolID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                HasChildcare = new List<bool>() {
+                    true,
+                },
+                MotherTongue = new List<string>() {
+                    "example",
+                },
+                StartDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                EndDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                ArchiveYear = new List<string>() {
+                    "example",
+                },
+            },
+            Like = new StudentPlacementSearchLike() {
+                External = new StudentPlacementSearchLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                MotherTongue = "example",
+                ArchiveYear = "example",
+            },
+            NotLike = new StudentPlacementSearchNotLike() {
+                External = new StudentPlacementSearchNotLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                MotherTongue = "example",
+                ArchiveYear = "example",
+            },
+            Null = new StudentPlacementSearchNull() {
+                Meta = new StudentPlacementSearchNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new StudentPlacementSearchNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                SchoolYear = true,
+                MotherTongue = true,
+                EndDate = true,
+                ArchiveYear = true,
+                ArchivedAt = true,
+            },
+            NotNull = new StudentPlacementSearchNotNull() {
+                Meta = new StudentPlacementSearchNotNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new StudentPlacementSearchNotNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                SchoolYear = true,
+                MotherTongue = true,
+                EndDate = true,
+                ArchiveYear = true,
+                ArchivedAt = true,
+            },
+            OrCondition = true,
+        },
+    },
     limit: 1,
-    offset: 0,
-    studentPlacementFilter: new StudentPlacementFilter() {
-        Equals = new StudentPlacementFilterEquals() {
-            Id = "123e4567-e89b-12d3-a456-426614174000",
-            Meta = new StudentPlacementFilterEqualsMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
-            },
-            External = new StudentPlacementFilterEqualsExternal() {
-                SourceID = "example",
-                Source = "example",
-            },
-            StudentID = "123e4567-e89b-12d3-a456-426614174000",
-            SchoolID = "123e4567-e89b-12d3-a456-426614174000",
-            HasChildcare = true,
-            MotherTongue = "example",
-            StartDate = DateOnly.Parse("2024-01-15"),
-            EndDate = DateOnly.Parse("2024-01-15"),
-            ArchiveYear = "example",
-            ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-        },
-        NotEquals = new StudentPlacementFilterNotEquals() {
-            Id = "123e4567-e89b-12d3-a456-426614174000",
-            Meta = new StudentPlacementFilterNotEqualsMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
-            },
-            External = new StudentPlacementFilterNotEqualsExternal() {
-                SourceID = "example",
-                Source = "example",
-            },
-            StudentID = "123e4567-e89b-12d3-a456-426614174000",
-            SchoolID = "123e4567-e89b-12d3-a456-426614174000",
-            HasChildcare = true,
-            MotherTongue = "example",
-            StartDate = DateOnly.Parse("2024-01-15"),
-            EndDate = DateOnly.Parse("2024-01-15"),
-            ArchiveYear = "example",
-            ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-        },
-        GreaterThan = new StudentPlacementFilterGreaterThan() {
-            Meta = new StudentPlacementFilterGreaterThanMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-            },
-            StartDate = DateOnly.Parse("2024-01-15"),
-            EndDate = DateOnly.Parse("2024-01-15"),
-            ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-        },
-        SmallerThan = new StudentPlacementFilterSmallerThan() {
-            Meta = new StudentPlacementFilterSmallerThanMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-            },
-            StartDate = DateOnly.Parse("2024-01-15"),
-            EndDate = DateOnly.Parse("2024-01-15"),
-            ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-        },
-        GreaterOrEqual = new StudentPlacementFilterGreaterOrEqual() {
-            Meta = new StudentPlacementFilterGreaterOrEqualMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-            },
-            StartDate = DateOnly.Parse("2024-01-15"),
-            EndDate = DateOnly.Parse("2024-01-15"),
-            ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-        },
-        SmallerOrEqual = new StudentPlacementFilterSmallerOrEqual() {
-            Meta = new StudentPlacementFilterSmallerOrEqualMeta() {
-                CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-            },
-            StartDate = DateOnly.Parse("2024-01-15"),
-            EndDate = DateOnly.Parse("2024-01-15"),
-            ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-        },
-        Contains = new StudentPlacementFilterContains() {
-            Id = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-            Meta = new StudentPlacementFilterContainsMeta() {
-                CreatedBy = new List<string>() {
-                    "123e4567-e89b-12d3-a456-426614174000",
-                },
-                UpdatedBy = new List<string>() {
-                    "123e4567-e89b-12d3-a456-426614174000",
-                },
-            },
-            External = new StudentPlacementFilterContainsExternal() {
-                SourceID = new List<string>() {
-                    "example",
-                },
-                Source = new List<string>() {
-                    "example",
-                },
-            },
-            StudentID = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-            SchoolID = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-            HasChildcare = new List<bool>() {
-                true,
-            },
-            MotherTongue = new List<string>() {
-                "example",
-            },
-            StartDate = new List<DateOnly>() {
-                DateOnly.Parse("2024-01-15"),
-            },
-            EndDate = new List<DateOnly>() {
-                DateOnly.Parse("2024-01-15"),
-            },
-            ArchiveYear = new List<string>() {
-                "example",
-            },
-        },
-        NotContains = new StudentPlacementFilterNotContains() {
-            Id = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-            Meta = new StudentPlacementFilterNotContainsMeta() {
-                CreatedBy = new List<string>() {
-                    "123e4567-e89b-12d3-a456-426614174000",
-                },
-                UpdatedBy = new List<string>() {
-                    "123e4567-e89b-12d3-a456-426614174000",
-                },
-            },
-            External = new StudentPlacementFilterNotContainsExternal() {
-                SourceID = new List<string>() {
-                    "example",
-                },
-                Source = new List<string>() {
-                    "example",
-                },
-            },
-            StudentID = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-            SchoolID = new List<string>() {
-                "123e4567-e89b-12d3-a456-426614174000",
-            },
-            HasChildcare = new List<bool>() {
-                true,
-            },
-            MotherTongue = new List<string>() {
-                "example",
-            },
-            StartDate = new List<DateOnly>() {
-                DateOnly.Parse("2024-01-15"),
-            },
-            EndDate = new List<DateOnly>() {
-                DateOnly.Parse("2024-01-15"),
-            },
-            ArchiveYear = new List<string>() {
-                "example",
-            },
-        },
-        Like = new StudentPlacementFilterLike() {
-            External = new StudentPlacementFilterLikeExternal() {
-                SourceID = "example",
-                Source = "example",
-            },
-            MotherTongue = "example",
-            ArchiveYear = "example",
-        },
-        NotLike = new StudentPlacementFilterNotLike() {
-            External = new StudentPlacementFilterNotLikeExternal() {
-                SourceID = "example",
-                Source = "example",
-            },
-            MotherTongue = "example",
-            ArchiveYear = "example",
-        },
-        Null = new StudentPlacementFilterNull() {
-            Meta = new StudentPlacementFilterNullMeta() {
-                CreatedBy = true,
-                UpdatedAt = true,
-                UpdatedBy = true,
-            },
-            External = new StudentPlacementFilterNullExternal() {
-                SourceID = true,
-                Source = true,
-            },
-            SchoolYear = true,
-            MotherTongue = true,
-            EndDate = true,
-            ArchiveYear = true,
-            ArchivedAt = true,
-        },
-        NotNull = new StudentPlacementFilterNotNull() {
-            Meta = new StudentPlacementFilterNotNullMeta() {
-                CreatedBy = true,
-                UpdatedAt = true,
-                UpdatedBy = true,
-            },
-            External = new StudentPlacementFilterNotNullExternal() {
-                SourceID = true,
-                Source = true,
-            },
-            SchoolYear = true,
-            MotherTongue = true,
-            EndDate = true,
-            ArchiveYear = true,
-            ArchivedAt = true,
-        },
-        OrCondition = true,
-    }
+    offset: 0
 );
 
 while(res != null)
@@ -377,13 +378,13 @@ while(res != null)
 
 | Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             | Example                                                                                                                 |
 | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `StudentPlacementSearch`                                                                                                | [StudentPlacementSearchRequestBody](../../Models/Components/StudentPlacementSearchRequestBody.md)                       | :heavy_check_mark:                                                                                                      | Request body                                                                                                            |                                                                                                                         |
 | `Limit`                                                                                                                 | *long*                                                                                                                  | :heavy_minus_sign:                                                                                                      | The maximum number of StudentPlacements to return (default: 50) when searching StudentPlacements                        | 1                                                                                                                       |
 | `Offset`                                                                                                                | *long*                                                                                                                  | :heavy_minus_sign:                                                                                                      | The number of StudentPlacements to skip before starting to return results (default: 0) when searching StudentPlacements | 0                                                                                                                       |
-| `StudentPlacementFilter`                                                                                                | [StudentPlacementFilter](../../Models/Components/StudentPlacementFilter.md)                                             | :heavy_minus_sign:                                                                                                      | Request body                                                                                                            |                                                                                                                         |
 
 ### Response
 
-**[StudentPlacementSearchResponse](../../Models/Requests/StudentPlacementSearchResponse.md)**
+**[Models.Requests.StudentPlacementSearchResponse](../../Models/Requests/StudentPlacementSearchResponse.md)**
 
 ### Errors
 

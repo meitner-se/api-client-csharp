@@ -31,6 +31,6 @@ namespace Meitner.Models.Requests
         /// Request body
         /// </summary>
         [SpeakeasyMetadata("request:mediaType=application/json")]
-        public GuardianFilter? GuardianFilter { get; set; }
+        public GuardianSearchRequestBody GuardianSearch { get; set; } = default!;
     }
 }

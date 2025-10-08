@@ -14,10 +14,10 @@ namespace Meitner.Models.Components
     public class Security
     {
 
-        [SpeakeasyMetadata("security:scheme=true,type=apiKey,subType=header,name=ClientID")]
+        [SpeakeasyMetadata("security:scheme=true,type=apiKey,subType=header,name=Client-ID")]
         public string ClientCredentials { get; set; } = default!;
 
-        [SpeakeasyMetadata("security:scheme=true,type=apiKey,subType=header,name=ClientSecret")]
+        [SpeakeasyMetadata("security:scheme=true,type=apiKey,subType=header,name=Client-Secret")]
         public string ClientSecret { get; set; } = default!;
     }
 }
