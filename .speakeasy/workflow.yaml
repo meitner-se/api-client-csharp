@@ -11,6 +11,9 @@ targets:
     meitner:
         target: csharp
         source: Directory API
+        publish:
+            nuget:
+                apiKey: $nuget_api_key
         codeSamples:
             registry:
                 location: registry.speakeasyapi.dev/meitner-2u8/api/directory-api-csharp-code-samples
