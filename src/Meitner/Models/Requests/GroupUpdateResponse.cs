@@ -12,6 +12,7 @@ namespace Meitner.Models.Requests
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
+    using System.Collections.Generic;
     
     public class GroupUpdateResponse
     {
@@ -23,5 +24,7 @@ namespace Meitner.Models.Requests
         /// Response for Group Update operation - returns the updated Group
         /// </summary>
         public Group? Group { get; set; }
+
+        public Dictionary<string, List<string>> Headers { get; set; } = default!;
     }
 }

@@ -12,6 +12,7 @@ namespace Meitner.Models.Requests
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
+    using System.Collections.Generic;
     
     public class EmployeePlacementGetResponse
     {
@@ -23,5 +24,7 @@ namespace Meitner.Models.Requests
         /// Response for EmployeePlacement Get operation - returns the requested EmployeePlacement
         /// </summary>
         public EmployeePlacement? EmployeePlacement { get; set; }
+
+        public Dictionary<string, List<string>> Headers { get; set; } = default!;
     }
 }

@@ -12,6 +12,7 @@ namespace Meitner.Models.Requests
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
+    using System.Collections.Generic;
     
     public class AuditEventGetResponse
     {
@@ -23,5 +24,7 @@ namespace Meitner.Models.Requests
         /// Response for AuditEvent Get operation - returns the requested AuditEvent
         /// </summary>
         public AuditEvent? AuditEvent { get; set; }
+
+        public Dictionary<string, List<string>> Headers { get; set; } = default!;
     }
 }

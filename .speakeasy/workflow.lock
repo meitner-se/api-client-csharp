@@ -1,21 +1,21 @@
-speakeasyVersion: 1.636.1
+speakeasyVersion: 1.636.2
 sources:
     Directory API:
         sourceNamespace: directory-api
-        sourceRevisionDigest: sha256:0a625a31ee8f2b641592646565a74b778025f1e0cdb3f727a22a391b57d70946
-        sourceBlobDigest: sha256:0b0cfc057075d49345f7b70f3cb34af0db955a7c0d73461e9e19d566f5a009c5
+        sourceRevisionDigest: sha256:b77021ddfd410c14f4770314f39cf8d75b8687126874d398ef1bc50d82179caa
+        sourceBlobDigest: sha256:820c7576c79f734a3839ef7a7a5efa4b71db82e278ecf93c7a331c54277732ce
         tags:
             - latest
-            - speakeasy-sdk-regen-1759916708
+            - speakeasy-sdk-regen-1759969691
             - v1
 targets:
     meitner:
         source: Directory API
         sourceNamespace: directory-api
-        sourceRevisionDigest: sha256:0a625a31ee8f2b641592646565a74b778025f1e0cdb3f727a22a391b57d70946
-        sourceBlobDigest: sha256:0b0cfc057075d49345f7b70f3cb34af0db955a7c0d73461e9e19d566f5a009c5
+        sourceRevisionDigest: sha256:b77021ddfd410c14f4770314f39cf8d75b8687126874d398ef1bc50d82179caa
+        sourceBlobDigest: sha256:820c7576c79f734a3839ef7a7a5efa4b71db82e278ecf93c7a331c54277732ce
         codeSamplesNamespace: directory-api-csharp-code-samples
-        codeSamplesRevisionDigest: sha256:b6127bd869695a2f6f7a37b1f73572900664412b7be6122c4464bcd2e61c47eb
+        codeSamplesRevisionDigest: sha256:c2028c6c5c8640098a7bd8bd5f879345c5a08853a07cc0ef0144be92ce03fb89
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -30,6 +30,9 @@ workflow:
         meitner:
             target: csharp
             source: Directory API
+            publish:
+                nuget:
+                    apiKey: $nuget_api_key
             codeSamples:
                 registry:
                     location: registry.speakeasyapi.dev/meitner-2u8/api/directory-api-csharp-code-samples

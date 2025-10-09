@@ -13,6 +13,7 @@ namespace Meitner.Models.Requests
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
     
     public class AuditEventSearchResponse
@@ -26,5 +27,7 @@ namespace Meitner.Models.Requests
         /// Response for AuditEvent Search operation - returns filtered AuditEvent results
         /// </summary>
         public Models.Components.AuditEventSearchResponse? AuditEventSearch { get; set; }
+
+        public Dictionary<string, List<string>> Headers { get; set; } = default!;
     }
 }

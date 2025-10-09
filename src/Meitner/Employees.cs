@@ -87,8 +87,8 @@ namespace Meitner
     {
         public SDKConfig SDKConfiguration { get; private set; }
         private const string _language = "csharp";
-        private const string _sdkVersion = "0.0.2";
-        private const string _sdkGenVersion = "2.723.4";
+        private const string _sdkVersion = "0.0.3";
+        private const string _sdkGenVersion = "2.723.8";
         private const string _openapiDocVersion = "v1";
 
         public Employees(SDKConfig config)

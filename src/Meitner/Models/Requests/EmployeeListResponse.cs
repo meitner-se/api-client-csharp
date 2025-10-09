@@ -13,6 +13,7 @@ namespace Meitner.Models.Requests
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
     
     public class EmployeeListResponse
@@ -26,5 +27,7 @@ namespace Meitner.Models.Requests
         /// Response for Employee List operation - returns a paginated list of Employee
         /// </summary>
         public EmployeeList? EmployeeList { get; set; }
+
+        public Dictionary<string, List<string>> Headers { get; set; } = default!;
     }
 }
