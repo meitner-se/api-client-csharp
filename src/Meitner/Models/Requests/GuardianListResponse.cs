@@ -13,6 +13,7 @@ namespace Meitner.Models.Requests
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
     
     public class GuardianListResponse
@@ -26,5 +27,7 @@ namespace Meitner.Models.Requests
         /// Response for Guardian List operation - returns a paginated list of Guardian
         /// </summary>
         public GuardianList? GuardianList { get; set; }
+
+        public Dictionary<string, List<string>> Headers { get; set; } = default!;
     }
 }

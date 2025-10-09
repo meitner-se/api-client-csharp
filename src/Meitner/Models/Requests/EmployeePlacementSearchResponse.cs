@@ -13,6 +13,7 @@ namespace Meitner.Models.Requests
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
     
     public class EmployeePlacementSearchResponse
@@ -26,5 +27,7 @@ namespace Meitner.Models.Requests
         /// Response for EmployeePlacement Search operation - returns filtered EmployeePlacement results
         /// </summary>
         public Models.Components.EmployeePlacementSearchResponse? EmployeePlacementSearch { get; set; }
+
+        public Dictionary<string, List<string>> Headers { get; set; } = default!;
     }
 }

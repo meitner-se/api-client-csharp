@@ -12,11 +12,14 @@ namespace Meitner.Models.Requests
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
+    using System.Collections.Generic;
     
     public class GuardianDeleteResponse
     {
 
         [JsonProperty("-")]
         public HTTPMetadata HttpMeta { get; set; } = default!;
+
+        public Dictionary<string, List<string>> Headers { get; set; } = default!;
     }
 }

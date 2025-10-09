@@ -12,6 +12,7 @@ namespace Meitner.Models.Requests
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
+    using System.Collections.Generic;
     
     public class EmployeeUpdateResponse
     {
@@ -23,5 +24,7 @@ namespace Meitner.Models.Requests
         /// Response for Employee Update operation - returns the updated Employee
         /// </summary>
         public Employee? Employee { get; set; }
+
+        public Dictionary<string, List<string>> Headers { get; set; } = default!;
     }
 }

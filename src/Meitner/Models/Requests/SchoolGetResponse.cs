@@ -12,6 +12,7 @@ namespace Meitner.Models.Requests
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
+    using System.Collections.Generic;
     
     public class SchoolGetResponse
     {
@@ -23,5 +24,7 @@ namespace Meitner.Models.Requests
         /// Response for School Get operation - returns the requested School
         /// </summary>
         public School? School { get; set; }
+
+        public Dictionary<string, List<string>> Headers { get; set; } = default!;
     }
 }

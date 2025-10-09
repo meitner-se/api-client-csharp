@@ -1,13 +1,14 @@
 lockVersion: 2.0.0
 id: 91388079-51e0-4fb6-b48a-dd78e186eddb
 management:
-  docChecksum: 4f52d5996cb471229cd6d335ee2ca5d1
+  docChecksum: 5e8370ebbd9b700f19c3f9fb03b85421
   docVersion: v1
-  speakeasyVersion: 1.636.1
-  generationVersion: 2.723.4
-  releaseVersion: 0.0.2
-  configChecksum: 3e75b23bae03adc05d11a8951e0838e6
+  speakeasyVersion: 1.636.2
+  generationVersion: 2.723.8
+  releaseVersion: 0.0.3
+  configChecksum: cc376448b723dbbd65a49fdc466d6dbd
   repoURL: https://github.com/meitner-se/api-client-csharp.git
+  published: true
 features:
   csharp:
     additionalDependencies: 0.1.0
@@ -30,6 +31,7 @@ features:
 generatedFiles:
   - .gitattributes
   - Meitner.sln
+  - NUGET.md
   - USAGE.md
   - docs/Models/Components/AuditEvent.md
   - docs/Models/Components/AuditEventFilter.md
@@ -3982,13 +3984,3 @@ examples:
         "500":
           application/json: {"error": {"code": "Internal", "message": "An unexpected server error occurred", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
 examplesVersion: 1.0.2
-releaseNotes: |
-  ## Csharp SDK Changes Detected:
-  * `Meitner.Schools.Search()`:  `request` **Changed** **Breaking** :warning:
-  * `Meitner.Groups.Search()`:  `request` **Changed** **Breaking** :warning:
-  * `Meitner.Employees.Search()`:  `request` **Changed** **Breaking** :warning:
-  * `Meitner.EmployeePlacements.Search()`:  `request` **Changed** **Breaking** :warning:
-  * `Meitner.Guardians.Search()`:  `request` **Changed** **Breaking** :warning:
-  * `Meitner.Students.Search()`:  `request` **Changed** **Breaking** :warning:
-  * `Meitner.StudentPlacements.Search()`:  `request` **Changed** **Breaking** :warning:
-  * `Meitner.AuditEvents.Search()`:  `request` **Changed** **Breaking** :warning:

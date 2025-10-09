@@ -13,6 +13,7 @@ namespace Meitner.Models.Requests
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
     
     public class GroupSearchResponse
@@ -26,5 +27,7 @@ namespace Meitner.Models.Requests
         /// Response for Group Search operation - returns filtered Group results
         /// </summary>
         public Models.Components.GroupSearchResponse? GroupSearch { get; set; }
+
+        public Dictionary<string, List<string>> Headers { get; set; } = default!;
     }
 }
