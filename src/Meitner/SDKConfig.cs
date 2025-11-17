@@ -52,7 +52,7 @@ namespace Meitner
             Client = client ?? new MeitnerHttpClient();
             ServerUrl = "";
             ServerName = null;
-            UserAgent = "speakeasy-sdk/csharp 0.0.3 2.723.8 v1 Meitner";
+            UserAgent = "speakeasy-sdk/csharp 0.1.0 2.755.6 v1 Meitner";
             SecuritySource = null;
             Hooks = new SDKHooks();
             RetryConfig = null;

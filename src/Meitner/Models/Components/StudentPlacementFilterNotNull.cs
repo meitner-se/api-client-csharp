@@ -38,7 +38,7 @@ namespace Meitner.Models.Components
         public bool? SchoolYear { get; set; } = null;
 
         /// <summary>
-        /// The mother tongue of the student
+        /// The mother tongue of the student. Language codes follow the ISO 639-3 standard (three-letter codes).
         /// </summary>
         [JsonProperty("motherTongue")]
         public bool? MotherTongue { get; set; } = null;

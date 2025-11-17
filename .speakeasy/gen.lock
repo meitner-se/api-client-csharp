@@ -1,29 +1,29 @@
 lockVersion: 2.0.0
 id: 91388079-51e0-4fb6-b48a-dd78e186eddb
 management:
-  docChecksum: 5e8370ebbd9b700f19c3f9fb03b85421
+  docChecksum: c3498ffb25cb875dfda085e34d15c67e
   docVersion: v1
-  speakeasyVersion: 1.636.2
-  generationVersion: 2.723.8
-  releaseVersion: 0.0.3
-  configChecksum: cc376448b723dbbd65a49fdc466d6dbd
+  speakeasyVersion: 1.658.1
+  generationVersion: 2.755.6
+  releaseVersion: 0.1.0
+  configChecksum: 7a42c4c5fbd28db3e125cbe6312ded74
   repoURL: https://github.com/meitner-se/api-client-csharp.git
   published: true
 features:
   csharp:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.0.1
-    core: 3.13.0
+    core: 3.15.4
     flattening: 2.81.3
     globalSecurity: 2.83.8
     globalSecurityCallbacks: 0.1.0
-    globalServerURLs: 2.82.4
+    globalServerURLs: 2.83.0
     groups: 2.81.3
     intellisenseMarkdownSupport: 0.1.0
     methodArguments: 0.2.1
     nameOverrides: 2.81.2
     nullables: 0.1.1
-    pagination: 0.2.7
+    pagination: 0.2.9
     responseFormat: 0.0.4
     retries: 0.0.1
     sdkHooks: 0.2.0

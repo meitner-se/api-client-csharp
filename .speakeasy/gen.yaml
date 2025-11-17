@@ -19,12 +19,15 @@ generation:
     hoistGlobalSecurity: true
   inferSSEOverload: true
   sdkHooksConfigAccess: true
+  schemas:
+    allOfMergeStrategy: shallowMerge
+  requestBodyFieldName: ""
   tests:
     generateTests: false
     generateNewTests: true
     skipResponseBodyAssertions: false
 csharp:
-  version: 0.0.3
+  version: 0.1.0
   additionalDependencies: []
   author: Speakeasy
   baseErrorName: MeitnerException

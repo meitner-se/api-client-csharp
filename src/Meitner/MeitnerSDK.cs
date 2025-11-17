@@ -45,8 +45,8 @@ namespace Meitner
         public SDKConfig SDKConfiguration { get; private set; }
 
         private const string _language = "csharp";
-        private const string _sdkVersion = "0.0.3";
-        private const string _sdkGenVersion = "2.723.8";
+        private const string _sdkVersion = "0.1.0";
+        private const string _sdkGenVersion = "2.755.6";
         private const string _openapiDocVersion = "v1";
         public ISchools Schools { get; private set; }
         public IGroups Groups { get; private set; }
@@ -79,6 +79,16 @@ namespace Meitner
             AuditEvents = new AuditEvents(SDKConfiguration);
         }
 
+        /// <summary>
+        /// Initializes a new instance of the SDK with optional configuration parameters.
+        /// </summary>
+        /// <param name="security">The security configuration to use for API requests. If provided, this will be used as a static security configuration.</param>
+        /// <param name="securitySource">A function that returns the security configuration dynamically. This takes precedence over the static security parameter if both are provided.</param>
+        /// <param name="server">The server to use from the predefined server list.</param>
+        /// <param name="serverUrl">A custom server URL to use instead of the predefined server list. If provided with urlParams, the URL will be templated with the provided parameters.</param>
+        /// <param name="urlParams">A dictionary of parameters to use for templating the serverUrl. Only used when serverUrl is provided.</param>
+        /// <param name="client">A custom HTTP client implementation to use for making API requests. If not provided, the default MeitnerHttpClient will be used.</param>
+        /// <param name="retryConfig">Configuration for retry behavior when API requests fail. Defines retry strategies, backoff policies, and maximum retry attempts.</param>
         public MeitnerSDK(Meitner.Models.Components.Security? security = null, Func<Meitner.Models.Components.Security>? securitySource = null, SDKConfig.Server? server = null, string? serverUrl = null, Dictionary<string, string>? urlParams = null, IMeitnerHttpClient? client = null, RetryConfig? retryConfig = null)
         {
 
