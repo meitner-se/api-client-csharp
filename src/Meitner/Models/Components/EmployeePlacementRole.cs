@@ -24,6 +24,8 @@ namespace Meitner.Models.Components
         CareTeam,
         [JsonProperty("Manager")]
         Manager,
+        [JsonProperty("MealPlanner")]
+        MealPlanner,
         [JsonProperty("OtherPersonnel")]
         OtherPersonnel,
         [JsonProperty("Scheduler")]
