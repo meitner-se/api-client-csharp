@@ -5,14 +5,14 @@ management:
   docVersion: v1
   speakeasyVersion: 1.697.1
   generationVersion: 2.799.0
-  releaseVersion: 0.2.1
-  configChecksum: 11f4ab4d26231ec1fb6ea8055461ba0d
+  releaseVersion: 0.3.0
+  configChecksum: 2671b899750f32343e5d69d1588393f8
   repoURL: https://github.com/meitner-se/api-client-csharp.git
   published: true
 persistentEdits:
-  generation_id: 97647325-083c-4ef4-91d8-476219a93294
-  pristine_commit_hash: bd4b9fbeb054e900d8feb7df4d45a667fefc1282
-  pristine_tree_hash: 3078a7a831ab76b3c76d75a5bc4c25b759e4572a
+  generation_id: bbbceb68-2aba-4646-be7d-cf89fde007b4
+  pristine_commit_hash: 12454bea17e23b0e731303d870494b285123b78f
+  pristine_tree_hash: 370d36a4b87a0d41f4d436082271b1994414bd55
 features:
   csharp:
     additionalDependencies: 0.1.0
@@ -3927,8 +3927,8 @@ trackedFiles:
     pristine_git_object: a5bb9367ec1ec9b3a85521d6c88069a263447ae3
   src/Meitner/Meitner.csproj:
     id: a4d633b7165a
-    last_write_checksum: sha1:fbfc5244fdb67ce25bded72986078f4200206077
-    pristine_git_object: 61ff3d723b889ebc5327af8909279871e0c40f69
+    last_write_checksum: sha1:bede32e9bd74fd1c2971c9867c8868fdb530b7f9
+    pristine_git_object: 860808b4c72776625f855ab9198fe3aee455f530
   src/Meitner/MeitnerSDK.cs:
     id: df60ef816859
     last_write_checksum: sha1:ec6fce100bf9bfb1deed494deb0858091c4a206c
@@ -7759,8 +7759,8 @@ trackedFiles:
     pristine_git_object: c91471cfe1c1807e784fb862f69ff08893dd934c
   src/Meitner/SDKConfig.cs:
     id: 76b7b2320f7e
-    last_write_checksum: sha1:50e71ff559c5b91b826410b2a3953ad9d3558ebf
-    pristine_git_object: bc0e88f9530a64c4c62ec768073de98a9ddc6726
+    last_write_checksum: sha1:3c9754799eb81ff3cfe07a3dfaa95e4bc8604c4e
+    pristine_git_object: d24c546e395ef82c496ca2c2c282a587e5564489
   src/Meitner/Schools.cs:
     id: 123ea3045683
     last_write_checksum: sha1:738fa78b8f8551f5261c0f58ec271ef0d3d6e165
@@ -7783,8 +7783,8 @@ trackedFiles:
     pristine_git_object: b6fc27aa15229bb5ebefc4d9b9820f2b09458034
   src/Meitner/Utils/Constants.cs:
     id: 7bbeab0ba4b4
-    last_write_checksum: sha1:235ca09d3ec97e2773c5a9fbbba67694ff6e7b23
-    pristine_git_object: 53b1d996ed56d45b9f9e64abafaf2d67d7155564
+    last_write_checksum: sha1:f6fa59ed2128391c8a8fb2a8599b5efa50845d4d
+    pristine_git_object: f0302ff02fbec55e76ad21ac16327809c38d5666
   src/Meitner/Utils/DecimalStrConverter.cs:
     id: 42954e25c852
     last_write_checksum: sha1:e64015d0352c7041f3ec262e188f9c75ccc298f5
