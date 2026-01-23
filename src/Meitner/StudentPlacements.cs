@@ -27,94 +27,285 @@ namespace Meitner
 
     public interface IStudentPlacements
     {
-
         /// <summary>
-        /// List StudentPlacements
-        /// 
+        /// List StudentPlacements.
+        /// </summary>
         /// <remarks>
         /// Returns a paginated list of all `StudentPlacements` in your organization.
         /// </remarks>
-        /// </summary>
-        Task<StudentPlacementListResponse> ListAsync(long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <param name="limit">The maximum number of StudentPlacements to return (default: 50) when listing StudentPlacements.</param>
+        /// <param name="offset">The number of StudentPlacements to skip before starting to return results (default: 0) when listing StudentPlacements.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentPlacementListResponse"/> response envelope when completed.</returns>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for StudentPlacement List operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for StudentPlacement List operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for StudentPlacement List operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for StudentPlacement List operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for StudentPlacement List operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for StudentPlacement List operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for StudentPlacement List operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<StudentPlacementListResponse> ListAsync(
+            long? limit = 50,
+            long? offset = 0,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
 
         /// <summary>
-        /// Create a new StudentPlacement
-        /// 
+        /// Create a new StudentPlacement.
+        /// </summary>
         /// <remarks>
-        /// Create a new StudentPlacement
+        /// Create a new StudentPlacement.
         /// </remarks>
-        /// </summary>
-        Task<StudentPlacementCreateResponse> CreateAsync(StudentPlacementCreate request, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <param name="request">Request body.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentPlacementCreateResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="request"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for StudentPlacement Create operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for StudentPlacement Create operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for StudentPlacement Create operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for StudentPlacement Create operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for StudentPlacement Create operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="StudentPlacementCreate422ResponseBodyException">Validation error for StudentPlacement Create operation - request data failed validation. Thrown when the API returns a 422 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for StudentPlacement Create operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for StudentPlacement Create operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<StudentPlacementCreateResponse> CreateAsync(
+            StudentPlacementCreate request,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
 
         /// <summary>
-        /// Search StudentPlacements
-        /// 
+        /// Search StudentPlacements.
+        /// </summary>
         /// <remarks>
         /// Search for `StudentPlacements` with filtering capabilities.
         /// </remarks>
-        /// </summary>
-        Task<Models.Requests.StudentPlacementSearchResponse> SearchAsync(StudentPlacementSearchRequestBody studentPlacementSearch, long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <param name="studentPlacementSearch">Request body.</param>
+        /// <param name="limit">The maximum number of StudentPlacements to return (default: 50) when searching StudentPlacements.</param>
+        /// <param name="offset">The number of StudentPlacements to skip before starting to return results (default: 0) when searching StudentPlacements.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="Models.Requests.StudentPlacementSearchResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="studentPlacementSearch"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for StudentPlacement Search operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for StudentPlacement Search operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for StudentPlacement Search operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for StudentPlacement Search operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for StudentPlacement Search operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="StudentPlacementSearch422ResponseBodyException">Validation error for StudentPlacement Search operation - request data failed validation. Thrown when the API returns a 422 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for StudentPlacement Search operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for StudentPlacement Search operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<Models.Requests.StudentPlacementSearchResponse> SearchAsync(
+            StudentPlacementSearchRequestBody studentPlacementSearch,
+            long? limit = 50,
+            long? offset = 0,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
 
         /// <summary>
-        /// Get a StudentPlacement
-        /// 
+        /// Get a StudentPlacement.
+        /// </summary>
         /// <remarks>
         /// Retrieves the `StudentPlacement` with the given ID.
         /// </remarks>
-        /// </summary>
-        Task<StudentPlacementGetResponse> GetAsync(string id, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <param name="id">The unique identifier of the StudentPlacement to retrieve.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentPlacementGetResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="id"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for StudentPlacement Get operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for StudentPlacement Get operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for StudentPlacement Get operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for StudentPlacement Get operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for StudentPlacement Get operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for StudentPlacement Get operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for StudentPlacement Get operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<StudentPlacementGetResponse> GetAsync(
+            string id,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
 
         /// <summary>
-        /// Delete a StudentPlacement
-        /// 
+        /// Delete a StudentPlacement.
+        /// </summary>
         /// <remarks>
-        /// Delete a StudentPlacement
+        /// Delete a StudentPlacement.
         /// </remarks>
-        /// </summary>
-        Task<StudentPlacementDeleteResponse> DeleteAsync(string id, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <param name="id">The unique identifier of the StudentPlacement to delete.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentPlacementDeleteResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="id"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for StudentPlacement Delete operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for StudentPlacement Delete operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for StudentPlacement Delete operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for StudentPlacement Delete operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for StudentPlacement Delete operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for StudentPlacement Delete operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for StudentPlacement Delete operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<StudentPlacementDeleteResponse> DeleteAsync(
+            string id,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
 
         /// <summary>
-        /// Update a StudentPlacement
-        /// 
+        /// Update a StudentPlacement.
+        /// </summary>
         /// <remarks>
-        /// Update a StudentPlacement
+        /// Update a StudentPlacement.
         /// </remarks>
-        /// </summary>
-        Task<StudentPlacementUpdateResponse> UpdateAsync(string id, StudentPlacementUpdate studentPlacementUpdate, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <param name="id">The unique identifier of the StudentPlacement to update.</param>
+        /// <param name="studentPlacementUpdate">Request body.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentPlacementUpdateResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">One of <paramref name="id"/> or <paramref name="studentPlacementUpdate"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for StudentPlacement Update operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for StudentPlacement Update operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for StudentPlacement Update operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for StudentPlacement Update operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for StudentPlacement Update operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="StudentPlacementUpdate422ResponseBodyException">Validation error for StudentPlacement Update operation - request data failed validation. Thrown when the API returns a 422 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for StudentPlacement Update operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for StudentPlacement Update operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<StudentPlacementUpdateResponse> UpdateAsync(
+            string id,
+            StudentPlacementUpdate studentPlacementUpdate,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
 
         /// <summary>
-        /// Archive a student placement
+        /// Archive a student placement.
         /// </summary>
-        Task<StudentPlacementArchiveResponse> ArchiveAsync(string id, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <param name="id">The ID of the student placement to archive.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentPlacementArchiveResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="id"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for StudentPlacement Archive operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for StudentPlacement Archive operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for StudentPlacement Archive operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for StudentPlacement Archive operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for StudentPlacement Archive operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for StudentPlacement Archive operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for StudentPlacement Archive operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<StudentPlacementArchiveResponse> ArchiveAsync(
+            string id,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
 
         /// <summary>
-        /// Restore an archived student placement
+        /// Restore an archived student placement.
         /// </summary>
-        Task<StudentPlacementRestoreResponse> RestoreAsync(string id, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <param name="id">The ID of the student placement to restore.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentPlacementRestoreResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="id"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for StudentPlacement Restore operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for StudentPlacement Restore operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for StudentPlacement Restore operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for StudentPlacement Restore operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for StudentPlacement Restore operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for StudentPlacement Restore operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for StudentPlacement Restore operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<StudentPlacementRestoreResponse> RestoreAsync(
+            string id,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
     }
 
     public class StudentPlacements: IStudentPlacements
     {
+        /// <summary>
+        /// SDK Configuration.
+        /// <see cref="SDKConfig"/>
+        /// </summary>
         public SDKConfig SDKConfiguration { get; private set; }
-        private const string _language = "csharp";
-        private const string _sdkVersion = "0.1.0";
-        private const string _sdkGenVersion = "2.755.6";
-        private const string _openapiDocVersion = "v1";
 
         public StudentPlacements(SDKConfig config)
         {
             SDKConfiguration = config;
         }
 
-        public async Task<StudentPlacementListResponse> ListAsync(long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+        /// <summary>
+        /// List StudentPlacements.
+        /// </summary>
+        /// <remarks>
+        /// Returns a paginated list of all `StudentPlacements` in your organization.
+        /// </remarks>
+        /// <param name="limit">The maximum number of StudentPlacements to return (default: 50) when listing StudentPlacements.</param>
+        /// <param name="offset">The number of StudentPlacements to skip before starting to return results (default: 0) when listing StudentPlacements.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentPlacementListResponse"/> response envelope when completed.</returns>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for StudentPlacement List operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for StudentPlacement List operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for StudentPlacement List operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for StudentPlacement List operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for StudentPlacement List operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for StudentPlacement List operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for StudentPlacement List operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<StudentPlacementListResponse> ListAsync(
+            long? limit = 50,
+            long? offset = 0,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
         {
             var request = new StudentPlacementListRequest()
             {
                 Limit = limit,
                 Offset = offset,
             };
+
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
-            var urlString = URLBuilder.Build(baseUrl, "/student-placement", request);
+            var urlString = URLBuilder.Build(baseUrl, "/student-placement", request, null);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Get, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
@@ -171,7 +362,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -449,10 +640,39 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<StudentPlacementCreateResponse> CreateAsync(StudentPlacementCreate request, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
-        {
-            string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
 
+        /// <summary>
+        /// Create a new StudentPlacement.
+        /// </summary>
+        /// <remarks>
+        /// Create a new StudentPlacement.
+        /// </remarks>
+        /// <param name="request">Request body.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentPlacementCreateResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="request"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for StudentPlacement Create operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for StudentPlacement Create operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for StudentPlacement Create operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for StudentPlacement Create operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for StudentPlacement Create operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="StudentPlacementCreate422ResponseBodyException">Validation error for StudentPlacement Create operation - request data failed validation. Thrown when the API returns a 422 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for StudentPlacement Create operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for StudentPlacement Create operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<StudentPlacementCreateResponse> CreateAsync(
+            StudentPlacementCreate request,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
+        {
+            if (request == null) throw new ArgumentNullException(nameof(request));
+
+            string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
             var urlString = baseUrl + "/student-placement";
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Post, urlString);
@@ -516,7 +736,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 422 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -791,16 +1011,51 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<Models.Requests.StudentPlacementSearchResponse> SearchAsync(StudentPlacementSearchRequestBody studentPlacementSearch, long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+
+        /// <summary>
+        /// Search StudentPlacements.
+        /// </summary>
+        /// <remarks>
+        /// Search for `StudentPlacements` with filtering capabilities.
+        /// </remarks>
+        /// <param name="studentPlacementSearch">Request body.</param>
+        /// <param name="limit">The maximum number of StudentPlacements to return (default: 50) when searching StudentPlacements.</param>
+        /// <param name="offset">The number of StudentPlacements to skip before starting to return results (default: 0) when searching StudentPlacements.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="Models.Requests.StudentPlacementSearchResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="studentPlacementSearch"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for StudentPlacement Search operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for StudentPlacement Search operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for StudentPlacement Search operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for StudentPlacement Search operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for StudentPlacement Search operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="StudentPlacementSearch422ResponseBodyException">Validation error for StudentPlacement Search operation - request data failed validation. Thrown when the API returns a 422 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for StudentPlacement Search operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for StudentPlacement Search operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<Models.Requests.StudentPlacementSearchResponse> SearchAsync(
+            StudentPlacementSearchRequestBody studentPlacementSearch,
+            long? limit = 50,
+            long? offset = 0,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
         {
+            if (studentPlacementSearch == null) throw new ArgumentNullException(nameof(studentPlacementSearch));
+
             var request = new StudentPlacementSearchRequest()
             {
                 StudentPlacementSearch = studentPlacementSearch,
                 Limit = limit,
                 Offset = offset,
             };
+
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
-            var urlString = URLBuilder.Build(baseUrl, "/student-placement/_search", request);
+            var urlString = URLBuilder.Build(baseUrl, "/student-placement/_search", request, null);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Post, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
@@ -863,7 +1118,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 422 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -1168,14 +1423,44 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<StudentPlacementGetResponse> GetAsync(string id, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+
+        /// <summary>
+        /// Get a StudentPlacement.
+        /// </summary>
+        /// <remarks>
+        /// Retrieves the `StudentPlacement` with the given ID.
+        /// </remarks>
+        /// <param name="id">The unique identifier of the StudentPlacement to retrieve.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentPlacementGetResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="id"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for StudentPlacement Get operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for StudentPlacement Get operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for StudentPlacement Get operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for StudentPlacement Get operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for StudentPlacement Get operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for StudentPlacement Get operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for StudentPlacement Get operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<StudentPlacementGetResponse> GetAsync(
+            string id,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
         {
+            if (id == null) throw new ArgumentNullException(nameof(id));
+
             var request = new StudentPlacementGetRequest()
             {
                 Id = id,
             };
+
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
-            var urlString = URLBuilder.Build(baseUrl, "/student-placement/{id}", request);
+            var urlString = URLBuilder.Build(baseUrl, "/student-placement/{id}", request, null);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Get, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
@@ -1232,7 +1517,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -1481,14 +1766,44 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<StudentPlacementDeleteResponse> DeleteAsync(string id, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+
+        /// <summary>
+        /// Delete a StudentPlacement.
+        /// </summary>
+        /// <remarks>
+        /// Delete a StudentPlacement.
+        /// </remarks>
+        /// <param name="id">The unique identifier of the StudentPlacement to delete.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentPlacementDeleteResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="id"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for StudentPlacement Delete operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for StudentPlacement Delete operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for StudentPlacement Delete operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for StudentPlacement Delete operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for StudentPlacement Delete operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for StudentPlacement Delete operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for StudentPlacement Delete operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<StudentPlacementDeleteResponse> DeleteAsync(
+            string id,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
         {
+            if (id == null) throw new ArgumentNullException(nameof(id));
+
             var request = new StudentPlacementDeleteRequest()
             {
                 Id = id,
             };
+
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
-            var urlString = URLBuilder.Build(baseUrl, "/student-placement/{id}", request);
+            var urlString = URLBuilder.Build(baseUrl, "/student-placement/{id}", request, null);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Delete, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
@@ -1545,7 +1860,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -1776,15 +2091,49 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<StudentPlacementUpdateResponse> UpdateAsync(string id, StudentPlacementUpdate studentPlacementUpdate, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+
+        /// <summary>
+        /// Update a StudentPlacement.
+        /// </summary>
+        /// <remarks>
+        /// Update a StudentPlacement.
+        /// </remarks>
+        /// <param name="id">The unique identifier of the StudentPlacement to update.</param>
+        /// <param name="studentPlacementUpdate">Request body.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentPlacementUpdateResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">One of <paramref name="id"/> or <paramref name="studentPlacementUpdate"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for StudentPlacement Update operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for StudentPlacement Update operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for StudentPlacement Update operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for StudentPlacement Update operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for StudentPlacement Update operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="StudentPlacementUpdate422ResponseBodyException">Validation error for StudentPlacement Update operation - request data failed validation. Thrown when the API returns a 422 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for StudentPlacement Update operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for StudentPlacement Update operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<StudentPlacementUpdateResponse> UpdateAsync(
+            string id,
+            StudentPlacementUpdate studentPlacementUpdate,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
         {
+            if (id == null) throw new ArgumentNullException(nameof(id));
+            if (studentPlacementUpdate == null) throw new ArgumentNullException(nameof(studentPlacementUpdate));
+
             var request = new StudentPlacementUpdateRequest()
             {
                 Id = id,
                 StudentPlacementUpdate = studentPlacementUpdate,
             };
+
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
-            var urlString = URLBuilder.Build(baseUrl, "/student-placement/{id}", request);
+            var urlString = URLBuilder.Build(baseUrl, "/student-placement/{id}", request, null);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Patch, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
@@ -1847,7 +2196,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 422 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -2122,14 +2471,41 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<StudentPlacementArchiveResponse> ArchiveAsync(string id, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+
+        /// <summary>
+        /// Archive a student placement.
+        /// </summary>
+        /// <param name="id">The ID of the student placement to archive.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentPlacementArchiveResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="id"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for StudentPlacement Archive operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for StudentPlacement Archive operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for StudentPlacement Archive operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for StudentPlacement Archive operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for StudentPlacement Archive operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for StudentPlacement Archive operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for StudentPlacement Archive operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<StudentPlacementArchiveResponse> ArchiveAsync(
+            string id,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
         {
+            if (id == null) throw new ArgumentNullException(nameof(id));
+
             var request = new StudentPlacementArchiveRequest()
             {
                 Id = id,
             };
+
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
-            var urlString = URLBuilder.Build(baseUrl, "/student-placement/{id}/archive", request);
+            var urlString = URLBuilder.Build(baseUrl, "/student-placement/{id}/archive", request, null);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Patch, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
@@ -2186,7 +2562,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -2435,14 +2811,41 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<StudentPlacementRestoreResponse> RestoreAsync(string id, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+
+        /// <summary>
+        /// Restore an archived student placement.
+        /// </summary>
+        /// <param name="id">The ID of the student placement to restore.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentPlacementRestoreResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="id"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for StudentPlacement Restore operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for StudentPlacement Restore operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for StudentPlacement Restore operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for StudentPlacement Restore operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for StudentPlacement Restore operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for StudentPlacement Restore operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for StudentPlacement Restore operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<StudentPlacementRestoreResponse> RestoreAsync(
+            string id,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
         {
+            if (id == null) throw new ArgumentNullException(nameof(id));
+
             var request = new StudentPlacementRestoreRequest()
             {
                 Id = id,
             };
+
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
-            var urlString = URLBuilder.Build(baseUrl, "/student-placement/{id}/restore", request);
+            var urlString = URLBuilder.Build(baseUrl, "/student-placement/{id}/restore", request, null);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Patch, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
@@ -2499,7 +2902,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -2747,5 +3150,6 @@ namespace Meitner
 
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
+
     }
 }

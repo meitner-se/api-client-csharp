@@ -12,15 +12,14 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// NOT LIKE filters for Group
+    /// NOT LIKE filters for Group.
     /// </summary>
     public class GroupFilterNotLike
     {
-
         /// <summary>
-        /// Metadata information for the Group
+        /// Metadata information for the Group.
         /// </summary>
         [JsonProperty("meta")]
         public GroupFilterNotLikeMeta? Meta { get; set; } = null;

@@ -10,12 +10,11 @@
 namespace Meitner.Models.Requests
 {
     using Meitner.Utils;
-    
+
     public class StudentPlacementRestoreRequest
     {
-
         /// <summary>
-        /// The ID of the student placement to restore
+        /// The ID of the student placement to restore.
         /// </summary>
         [SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")]
         public string Id { get; set; } = default!;

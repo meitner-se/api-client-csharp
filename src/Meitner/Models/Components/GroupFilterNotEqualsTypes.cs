@@ -12,9 +12,9 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// The types of the group
+    /// The types of the group. Note: For preschools (FS), Class and Childcare types are automatically paired. Adding Class will automatically include Childcare, and adding Childcare will automatically include Class.
     /// </summary>
     public enum GroupFilterNotEqualsTypes
     {
@@ -58,5 +58,4 @@ namespace Meitner.Models.Components
             throw new Exception($"Unknown value {value} for enum GroupFilterNotEqualsTypes");
         }
     }
-
 }

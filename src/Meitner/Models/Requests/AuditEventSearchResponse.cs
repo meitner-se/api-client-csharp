@@ -15,16 +15,15 @@ namespace Meitner.Models.Requests
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    
+
     public class AuditEventSearchResponse
     {
         public Func<Task<AuditEventSearchResponse?>>? Next {get;set;}
-
         [JsonProperty("-")]
         public HTTPMetadata HttpMeta { get; set; } = default!;
 
         /// <summary>
-        /// Response for AuditEvent Search operation - returns filtered AuditEvent results
+        /// Response for AuditEvent Search operation - returns filtered AuditEvent results.
         /// </summary>
         public Models.Components.AuditEventSearchResponse? AuditEventSearch { get; set; }
 

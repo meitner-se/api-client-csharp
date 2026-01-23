@@ -11,18 +11,17 @@ namespace Meitner.Models.Requests
 {
     using Meitner.Models.Components;
     using Meitner.Utils;
-    
+
     public class SchoolUpdateRequest
     {
-
         /// <summary>
-        /// The unique identifier of the School to update
+        /// The unique identifier of the School to update.
         /// </summary>
         [SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")]
         public string Id { get; set; } = default!;
 
         /// <summary>
-        /// Request body
+        /// Request body.
         /// </summary>
         [SpeakeasyMetadata("request:mediaType=application/json")]
         public SchoolUpdate SchoolUpdate { get; set; } = default!;

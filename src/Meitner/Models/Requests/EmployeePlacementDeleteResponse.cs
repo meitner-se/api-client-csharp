@@ -13,10 +13,9 @@ namespace Meitner.Models.Requests
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     public class EmployeePlacementDeleteResponse
     {
-
         [JsonProperty("-")]
         public HTTPMetadata HttpMeta { get; set; } = default!;
 

@@ -10,12 +10,11 @@
 namespace Meitner.Models.Requests
 {
     using Meitner.Utils;
-    
+
     public class StudentPlacementArchiveRequest
     {
-
         /// <summary>
-        /// The ID of the student placement to archive
+        /// The ID of the student placement to archive.
         /// </summary>
         [SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")]
         public string Id { get; set; } = default!;

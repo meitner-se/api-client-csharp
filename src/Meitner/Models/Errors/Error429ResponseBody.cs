@@ -25,7 +25,7 @@ namespace Meitner.Models.Errors
     }
 
     /// <summary>
-    /// Too Many Requests - When the rate limit has been exceeded
+    /// Too Many Requests - When the rate limit has been exceeded.
     /// </summary>
     public class Error429ResponseBody : MeitnerException
     {
@@ -66,5 +66,4 @@ namespace Meitner.Models.Errors
            #pragma warning restore CS0618
         }
     }
-
 }

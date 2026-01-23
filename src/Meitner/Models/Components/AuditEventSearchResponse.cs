@@ -13,21 +13,20 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Response for AuditEvent Search operation - returns filtered AuditEvent results
+    /// Response for AuditEvent Search operation - returns filtered AuditEvent results.
     /// </summary>
     public class AuditEventSearchResponse
     {
-
         /// <summary>
-        /// Array of AuditEvent objects
+        /// Array of AuditEvent objects.
         /// </summary>
         [JsonProperty("data")]
         public List<AuditEvent>? Data { get; set; }
 
         /// <summary>
-        /// Pagination information
+        /// Pagination information.
         /// </summary>
         [JsonProperty("pagination")]
         public AuditEventSearchPagination? Pagination { get; set; }

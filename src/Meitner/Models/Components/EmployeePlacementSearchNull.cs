@@ -12,15 +12,14 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// Null filters for EmployeePlacement
+    /// Null filters for EmployeePlacement.
     /// </summary>
     public class EmployeePlacementSearchNull
     {
-
         /// <summary>
-        /// Metadata information for the EmployeePlacement
+        /// Metadata information for the EmployeePlacement.
         /// </summary>
         [JsonProperty("meta")]
         public EmployeePlacementSearchNullMeta? Meta { get; set; } = null;
@@ -32,25 +31,25 @@ namespace Meitner.Models.Components
         public EmployeePlacementSearchNullExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The signature of the employee
+        /// The signature of the employee.
         /// </summary>
         [JsonProperty("signature")]
         public bool? Signature { get; set; } = null;
 
         /// <summary>
-        /// The title of the employee
+        /// The title of the employee.
         /// </summary>
         [JsonProperty("title")]
         public bool? Title { get; set; } = null;
 
         /// <summary>
-        /// The roles of the employee
+        /// The roles of the employee.
         /// </summary>
         [JsonProperty("roles")]
         public bool? Roles { get; set; } = null;
 
         /// <summary>
-        /// The end date of the placement for the employee
+        /// The end date of the placement for the employee.
         /// </summary>
         [JsonProperty("endDate")]
         public bool? EndDate { get; set; } = null;
@@ -62,7 +61,7 @@ namespace Meitner.Models.Components
         public bool? ArchiveYear { get; set; } = null;
 
         /// <summary>
-        /// The timestamp the placement was archived for the employee
+        /// The timestamp the placement was archived for the employee.
         /// </summary>
         [JsonProperty("archivedAt")]
         public bool? ArchivedAt { get; set; } = null;

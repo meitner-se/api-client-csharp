@@ -14,13 +14,12 @@ namespace Meitner.Models.Components
     using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Request body
+    /// Request body.
     /// </summary>
     public class EmployeePlacementCreate
     {
-
         /// <summary>
         /// External is the External-object used on Update and Create operations, since it should only be allowed to set SourceID for the guardian, the Source-field is not included.
         /// </summary>
@@ -28,43 +27,43 @@ namespace Meitner.Models.Components
         public EmployeePlacementCreateExternal? External { get; set; }
 
         /// <summary>
-        /// The ID of the employee the placement belongs to
+        /// The ID of the employee the placement belongs to.
         /// </summary>
         [JsonProperty("employeeID")]
         public string EmployeeID { get; set; } = default!;
 
         /// <summary>
-        /// The ID of the school the placement belongs to
+        /// The ID of the school the placement belongs to.
         /// </summary>
         [JsonProperty("schoolID")]
         public string SchoolID { get; set; } = default!;
 
         /// <summary>
-        /// The signature of the employee
+        /// The signature of the employee.
         /// </summary>
         [JsonProperty("signature")]
         public string? Signature { get; set; } = null;
 
         /// <summary>
-        /// The title of the employee
+        /// The title of the employee.
         /// </summary>
         [JsonProperty("title")]
         public string? Title { get; set; } = null;
 
         /// <summary>
-        /// The roles of the employee
+        /// The roles of the employee.
         /// </summary>
         [JsonProperty("roles")]
         public List<EmployeePlacementRole>? Roles { get; set; }
 
         /// <summary>
-        /// The start date of the placement for the employee
+        /// The start date of the placement for the employee.
         /// </summary>
         [JsonProperty("startDate")]
         public DateOnly StartDate { get; set; } = default!;
 
         /// <summary>
-        /// The end date of the placement for the employee
+        /// The end date of the placement for the employee.
         /// </summary>
         [JsonProperty("endDate")]
         public DateOnly? EndDate { get; set; } = null;

@@ -12,15 +12,14 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// Null filters for StudentPlacement
+    /// Null filters for StudentPlacement.
     /// </summary>
     public class StudentPlacementSearchNull
     {
-
         /// <summary>
-        /// Metadata information for the StudentPlacement
+        /// Metadata information for the StudentPlacement.
         /// </summary>
         [JsonProperty("meta")]
         public StudentPlacementSearchNullMeta? Meta { get; set; } = null;
@@ -32,7 +31,7 @@ namespace Meitner.Models.Components
         public StudentPlacementSearchNullExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The school year the student is placed in
+        /// The school year the student is placed in.
         /// </summary>
         [JsonProperty("schoolYear")]
         public bool? SchoolYear { get; set; } = null;
@@ -44,7 +43,7 @@ namespace Meitner.Models.Components
         public bool? MotherTongue { get; set; } = null;
 
         /// <summary>
-        /// The end date of the placement
+        /// The end date of the placement.
         /// </summary>
         [JsonProperty("endDate")]
         public bool? EndDate { get; set; } = null;
@@ -56,7 +55,7 @@ namespace Meitner.Models.Components
         public bool? ArchiveYear { get; set; } = null;
 
         /// <summary>
-        /// The timestamp the placement was archived for the student
+        /// The timestamp the placement was archived for the student.
         /// </summary>
         [JsonProperty("archivedAt")]
         public bool? ArchivedAt { get; set; } = null;

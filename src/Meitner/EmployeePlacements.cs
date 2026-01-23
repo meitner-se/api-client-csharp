@@ -27,84 +27,235 @@ namespace Meitner
 
     public interface IEmployeePlacements
     {
-
         /// <summary>
-        /// List EmployeePlacements
-        /// 
+        /// List EmployeePlacements.
+        /// </summary>
         /// <remarks>
         /// Returns a paginated list of all `EmployeePlacements` in your organization.
         /// </remarks>
-        /// </summary>
-        Task<EmployeePlacementListResponse> ListAsync(long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <param name="limit">The maximum number of EmployeePlacements to return (default: 50) when listing EmployeePlacements.</param>
+        /// <param name="offset">The number of EmployeePlacements to skip before starting to return results (default: 0) when listing EmployeePlacements.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="EmployeePlacementListResponse"/> response envelope when completed.</returns>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for EmployeePlacement List operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for EmployeePlacement List operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for EmployeePlacement List operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for EmployeePlacement List operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for EmployeePlacement List operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for EmployeePlacement List operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for EmployeePlacement List operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<EmployeePlacementListResponse> ListAsync(
+            long? limit = 50,
+            long? offset = 0,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
 
         /// <summary>
-        /// Create a new EmployeePlacement
-        /// 
+        /// Create a new EmployeePlacement.
+        /// </summary>
         /// <remarks>
-        /// Create a new EmployeePlacement
+        /// Create a new EmployeePlacement.
         /// </remarks>
-        /// </summary>
-        Task<EmployeePlacementCreateResponse> CreateAsync(EmployeePlacementCreate request, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <param name="request">Request body.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="EmployeePlacementCreateResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="request"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for EmployeePlacement Create operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for EmployeePlacement Create operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for EmployeePlacement Create operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for EmployeePlacement Create operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for EmployeePlacement Create operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="EmployeePlacementCreate422ResponseBodyException">Validation error for EmployeePlacement Create operation - request data failed validation. Thrown when the API returns a 422 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for EmployeePlacement Create operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for EmployeePlacement Create operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<EmployeePlacementCreateResponse> CreateAsync(
+            EmployeePlacementCreate request,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
 
         /// <summary>
-        /// Search EmployeePlacements
-        /// 
+        /// Search EmployeePlacements.
+        /// </summary>
         /// <remarks>
         /// Search for `EmployeePlacements` with filtering capabilities.
         /// </remarks>
-        /// </summary>
-        Task<Models.Requests.EmployeePlacementSearchResponse> SearchAsync(EmployeePlacementSearchRequestBody employeePlacementSearch, long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <param name="employeePlacementSearch">Request body.</param>
+        /// <param name="limit">The maximum number of EmployeePlacements to return (default: 50) when searching EmployeePlacements.</param>
+        /// <param name="offset">The number of EmployeePlacements to skip before starting to return results (default: 0) when searching EmployeePlacements.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="Models.Requests.EmployeePlacementSearchResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="employeePlacementSearch"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for EmployeePlacement Search operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for EmployeePlacement Search operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for EmployeePlacement Search operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for EmployeePlacement Search operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for EmployeePlacement Search operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="EmployeePlacementSearch422ResponseBodyException">Validation error for EmployeePlacement Search operation - request data failed validation. Thrown when the API returns a 422 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for EmployeePlacement Search operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for EmployeePlacement Search operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<Models.Requests.EmployeePlacementSearchResponse> SearchAsync(
+            EmployeePlacementSearchRequestBody employeePlacementSearch,
+            long? limit = 50,
+            long? offset = 0,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
 
         /// <summary>
-        /// Get a EmployeePlacement
-        /// 
+        /// Get a EmployeePlacement.
+        /// </summary>
         /// <remarks>
         /// Retrieves the `EmployeePlacement` with the given ID.
         /// </remarks>
-        /// </summary>
-        Task<EmployeePlacementGetResponse> GetAsync(string id, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <param name="id">The unique identifier of the EmployeePlacement to retrieve.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="EmployeePlacementGetResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="id"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for EmployeePlacement Get operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for EmployeePlacement Get operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for EmployeePlacement Get operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for EmployeePlacement Get operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for EmployeePlacement Get operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for EmployeePlacement Get operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for EmployeePlacement Get operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<EmployeePlacementGetResponse> GetAsync(
+            string id,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
 
         /// <summary>
-        /// Delete a EmployeePlacement
-        /// 
-        /// <remarks>
-        /// Delete a EmployeePlacement
-        /// </remarks>
+        /// Delete a EmployeePlacement.
         /// </summary>
-        Task<EmployeePlacementDeleteResponse> DeleteAsync(string id, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <remarks>
+        /// Delete a EmployeePlacement.
+        /// </remarks>
+        /// <param name="id">The unique identifier of the EmployeePlacement to delete.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="EmployeePlacementDeleteResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="id"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for EmployeePlacement Delete operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for EmployeePlacement Delete operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for EmployeePlacement Delete operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for EmployeePlacement Delete operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for EmployeePlacement Delete operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for EmployeePlacement Delete operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for EmployeePlacement Delete operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<EmployeePlacementDeleteResponse> DeleteAsync(
+            string id,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
 
         /// <summary>
-        /// Update a EmployeePlacement
-        /// 
-        /// <remarks>
-        /// Update a EmployeePlacement
-        /// </remarks>
+        /// Update a EmployeePlacement.
         /// </summary>
-        Task<EmployeePlacementUpdateResponse> UpdateAsync(string id, EmployeePlacementUpdate employeePlacementUpdate, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <remarks>
+        /// Update a EmployeePlacement.
+        /// </remarks>
+        /// <param name="id">The unique identifier of the EmployeePlacement to update.</param>
+        /// <param name="employeePlacementUpdate">Request body.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="EmployeePlacementUpdateResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">One of <paramref name="id"/> or <paramref name="employeePlacementUpdate"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for EmployeePlacement Update operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for EmployeePlacement Update operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for EmployeePlacement Update operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for EmployeePlacement Update operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for EmployeePlacement Update operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="EmployeePlacementUpdate422ResponseBodyException">Validation error for EmployeePlacement Update operation - request data failed validation. Thrown when the API returns a 422 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for EmployeePlacement Update operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for EmployeePlacement Update operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<EmployeePlacementUpdateResponse> UpdateAsync(
+            string id,
+            EmployeePlacementUpdate employeePlacementUpdate,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
     }
 
     public class EmployeePlacements: IEmployeePlacements
     {
+        /// <summary>
+        /// SDK Configuration.
+        /// <see cref="SDKConfig"/>
+        /// </summary>
         public SDKConfig SDKConfiguration { get; private set; }
-        private const string _language = "csharp";
-        private const string _sdkVersion = "0.1.0";
-        private const string _sdkGenVersion = "2.755.6";
-        private const string _openapiDocVersion = "v1";
 
         public EmployeePlacements(SDKConfig config)
         {
             SDKConfiguration = config;
         }
 
-        public async Task<EmployeePlacementListResponse> ListAsync(long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+        /// <summary>
+        /// List EmployeePlacements.
+        /// </summary>
+        /// <remarks>
+        /// Returns a paginated list of all `EmployeePlacements` in your organization.
+        /// </remarks>
+        /// <param name="limit">The maximum number of EmployeePlacements to return (default: 50) when listing EmployeePlacements.</param>
+        /// <param name="offset">The number of EmployeePlacements to skip before starting to return results (default: 0) when listing EmployeePlacements.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="EmployeePlacementListResponse"/> response envelope when completed.</returns>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for EmployeePlacement List operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for EmployeePlacement List operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for EmployeePlacement List operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for EmployeePlacement List operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for EmployeePlacement List operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for EmployeePlacement List operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for EmployeePlacement List operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<EmployeePlacementListResponse> ListAsync(
+            long? limit = 50,
+            long? offset = 0,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
         {
             var request = new EmployeePlacementListRequest()
             {
                 Limit = limit,
                 Offset = offset,
             };
+
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
-            var urlString = URLBuilder.Build(baseUrl, "/employee-placement", request);
+            var urlString = URLBuilder.Build(baseUrl, "/employee-placement", request, null);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Get, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
@@ -161,7 +312,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -439,10 +590,39 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<EmployeePlacementCreateResponse> CreateAsync(EmployeePlacementCreate request, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
-        {
-            string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
 
+        /// <summary>
+        /// Create a new EmployeePlacement.
+        /// </summary>
+        /// <remarks>
+        /// Create a new EmployeePlacement.
+        /// </remarks>
+        /// <param name="request">Request body.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="EmployeePlacementCreateResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="request"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for EmployeePlacement Create operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for EmployeePlacement Create operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for EmployeePlacement Create operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for EmployeePlacement Create operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for EmployeePlacement Create operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="EmployeePlacementCreate422ResponseBodyException">Validation error for EmployeePlacement Create operation - request data failed validation. Thrown when the API returns a 422 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for EmployeePlacement Create operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for EmployeePlacement Create operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<EmployeePlacementCreateResponse> CreateAsync(
+            EmployeePlacementCreate request,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
+        {
+            if (request == null) throw new ArgumentNullException(nameof(request));
+
+            string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
             var urlString = baseUrl + "/employee-placement";
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Post, urlString);
@@ -506,7 +686,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 422 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -781,16 +961,51 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<Models.Requests.EmployeePlacementSearchResponse> SearchAsync(EmployeePlacementSearchRequestBody employeePlacementSearch, long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+
+        /// <summary>
+        /// Search EmployeePlacements.
+        /// </summary>
+        /// <remarks>
+        /// Search for `EmployeePlacements` with filtering capabilities.
+        /// </remarks>
+        /// <param name="employeePlacementSearch">Request body.</param>
+        /// <param name="limit">The maximum number of EmployeePlacements to return (default: 50) when searching EmployeePlacements.</param>
+        /// <param name="offset">The number of EmployeePlacements to skip before starting to return results (default: 0) when searching EmployeePlacements.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="Models.Requests.EmployeePlacementSearchResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="employeePlacementSearch"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for EmployeePlacement Search operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for EmployeePlacement Search operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for EmployeePlacement Search operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for EmployeePlacement Search operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for EmployeePlacement Search operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="EmployeePlacementSearch422ResponseBodyException">Validation error for EmployeePlacement Search operation - request data failed validation. Thrown when the API returns a 422 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for EmployeePlacement Search operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for EmployeePlacement Search operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<Models.Requests.EmployeePlacementSearchResponse> SearchAsync(
+            EmployeePlacementSearchRequestBody employeePlacementSearch,
+            long? limit = 50,
+            long? offset = 0,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
         {
+            if (employeePlacementSearch == null) throw new ArgumentNullException(nameof(employeePlacementSearch));
+
             var request = new EmployeePlacementSearchRequest()
             {
                 EmployeePlacementSearch = employeePlacementSearch,
                 Limit = limit,
                 Offset = offset,
             };
+
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
-            var urlString = URLBuilder.Build(baseUrl, "/employee-placement/_search", request);
+            var urlString = URLBuilder.Build(baseUrl, "/employee-placement/_search", request, null);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Post, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
@@ -853,7 +1068,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 422 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -1158,14 +1373,44 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<EmployeePlacementGetResponse> GetAsync(string id, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+
+        /// <summary>
+        /// Get a EmployeePlacement.
+        /// </summary>
+        /// <remarks>
+        /// Retrieves the `EmployeePlacement` with the given ID.
+        /// </remarks>
+        /// <param name="id">The unique identifier of the EmployeePlacement to retrieve.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="EmployeePlacementGetResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="id"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for EmployeePlacement Get operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for EmployeePlacement Get operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for EmployeePlacement Get operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for EmployeePlacement Get operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for EmployeePlacement Get operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for EmployeePlacement Get operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for EmployeePlacement Get operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<EmployeePlacementGetResponse> GetAsync(
+            string id,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
         {
+            if (id == null) throw new ArgumentNullException(nameof(id));
+
             var request = new EmployeePlacementGetRequest()
             {
                 Id = id,
             };
+
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
-            var urlString = URLBuilder.Build(baseUrl, "/employee-placement/{id}", request);
+            var urlString = URLBuilder.Build(baseUrl, "/employee-placement/{id}", request, null);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Get, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
@@ -1222,7 +1467,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -1471,14 +1716,44 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<EmployeePlacementDeleteResponse> DeleteAsync(string id, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+
+        /// <summary>
+        /// Delete a EmployeePlacement.
+        /// </summary>
+        /// <remarks>
+        /// Delete a EmployeePlacement.
+        /// </remarks>
+        /// <param name="id">The unique identifier of the EmployeePlacement to delete.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="EmployeePlacementDeleteResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="id"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for EmployeePlacement Delete operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for EmployeePlacement Delete operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for EmployeePlacement Delete operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for EmployeePlacement Delete operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for EmployeePlacement Delete operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for EmployeePlacement Delete operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for EmployeePlacement Delete operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<EmployeePlacementDeleteResponse> DeleteAsync(
+            string id,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
         {
+            if (id == null) throw new ArgumentNullException(nameof(id));
+
             var request = new EmployeePlacementDeleteRequest()
             {
                 Id = id,
             };
+
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
-            var urlString = URLBuilder.Build(baseUrl, "/employee-placement/{id}", request);
+            var urlString = URLBuilder.Build(baseUrl, "/employee-placement/{id}", request, null);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Delete, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
@@ -1535,7 +1810,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -1766,15 +2041,49 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<EmployeePlacementUpdateResponse> UpdateAsync(string id, EmployeePlacementUpdate employeePlacementUpdate, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+
+        /// <summary>
+        /// Update a EmployeePlacement.
+        /// </summary>
+        /// <remarks>
+        /// Update a EmployeePlacement.
+        /// </remarks>
+        /// <param name="id">The unique identifier of the EmployeePlacement to update.</param>
+        /// <param name="employeePlacementUpdate">Request body.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="EmployeePlacementUpdateResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">One of <paramref name="id"/> or <paramref name="employeePlacementUpdate"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for EmployeePlacement Update operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for EmployeePlacement Update operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for EmployeePlacement Update operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for EmployeePlacement Update operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for EmployeePlacement Update operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="EmployeePlacementUpdate422ResponseBodyException">Validation error for EmployeePlacement Update operation - request data failed validation. Thrown when the API returns a 422 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for EmployeePlacement Update operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for EmployeePlacement Update operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<EmployeePlacementUpdateResponse> UpdateAsync(
+            string id,
+            EmployeePlacementUpdate employeePlacementUpdate,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
         {
+            if (id == null) throw new ArgumentNullException(nameof(id));
+            if (employeePlacementUpdate == null) throw new ArgumentNullException(nameof(employeePlacementUpdate));
+
             var request = new EmployeePlacementUpdateRequest()
             {
                 Id = id,
                 EmployeePlacementUpdate = employeePlacementUpdate,
             };
+
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
-            var urlString = URLBuilder.Build(baseUrl, "/employee-placement/{id}", request);
+            var urlString = URLBuilder.Build(baseUrl, "/employee-placement/{id}", request, null);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Patch, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
@@ -1837,7 +2146,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 422 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -2111,5 +2420,6 @@ namespace Meitner
 
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
+
     }
 }

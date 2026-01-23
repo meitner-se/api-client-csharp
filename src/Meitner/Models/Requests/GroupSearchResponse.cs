@@ -15,16 +15,15 @@ namespace Meitner.Models.Requests
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    
+
     public class GroupSearchResponse
     {
         public Func<Task<GroupSearchResponse?>>? Next {get;set;}
-
         [JsonProperty("-")]
         public HTTPMetadata HttpMeta { get; set; } = default!;
 
         /// <summary>
-        /// Response for Group Search operation - returns filtered Group results
+        /// Response for Group Search operation - returns filtered Group results.
         /// </summary>
         public Models.Components.GroupSearchResponse? GroupSearch { get; set; }
 

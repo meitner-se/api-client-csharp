@@ -11,27 +11,26 @@ namespace Meitner.Models.Components
 {
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// Metadata information for the Student
+    /// Metadata information for the Student.
     /// </summary>
     public class StudentSearchNullMeta
     {
-
         /// <summary>
-        /// User who created the resource
+        /// User who created the resource.
         /// </summary>
         [JsonProperty("createdBy")]
         public bool? CreatedBy { get; set; } = null;
 
         /// <summary>
-        /// Timestamp when the resource was last updated
+        /// Timestamp when the resource was last updated.
         /// </summary>
         [JsonProperty("updatedAt")]
         public bool? UpdatedAt { get; set; } = null;
 
         /// <summary>
-        /// User who last updated the resource
+        /// User who last updated the resource.
         /// </summary>
         [JsonProperty("updatedBy")]
         public bool? UpdatedBy { get; set; } = null;

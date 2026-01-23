@@ -13,21 +13,20 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Response for Group List operation - returns a paginated list of Group
+    /// Response for Group List operation - returns a paginated list of Group.
     /// </summary>
     public class GroupList
     {
-
         /// <summary>
-        /// Array of Group objects
+        /// Array of Group objects.
         /// </summary>
         [JsonProperty("data")]
         public List<Group>? Data { get; set; }
 
         /// <summary>
-        /// Pagination information
+        /// Pagination information.
         /// </summary>
         [JsonProperty("pagination")]
         public GroupListPagination? Pagination { get; set; }

@@ -12,13 +12,12 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// Request body
+    /// Request body.
     /// </summary>
     public class SchoolUpdate
     {
-
         /// <summary>
         /// External is the External-object used on Update and Create operations, since it should only be allowed to set SourceID for the school, the Source-field is not included.
         /// </summary>
@@ -26,25 +25,25 @@ namespace Meitner.Models.Components
         public SchoolUpdateExternal? External { get; set; }
 
         /// <summary>
-        /// The title of the school
+        /// The title of the school.
         /// </summary>
         [JsonProperty("title")]
         public string Title { get; set; } = default!;
 
         /// <summary>
-        /// The School Unit Code provided by SCB, is used in reports and printed on grade documents
+        /// The School Unit Code provided by SCB, is used in reports and printed on grade documents.
         /// </summary>
         [JsonProperty("unitCode")]
         public string? UnitCode { get; set; } = null;
 
         /// <summary>
-        /// The School Code provided by CSN, required for reports to CSN
+        /// The School Code provided by CSN, required for reports to CSN.
         /// </summary>
         [JsonProperty("csnSchoolCode")]
         public string? CsnSchoolCode { get; set; } = null;
 
         /// <summary>
-        /// Municipality code of the school, is used in reports and printed on grade documents
+        /// Municipality code of the school, is used in reports and printed on grade documents.
         /// </summary>
         [JsonProperty("municipalityCode")]
         public string? MunicipalityCode { get; set; } = null;

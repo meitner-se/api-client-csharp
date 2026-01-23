@@ -25,7 +25,7 @@ namespace Meitner.Models.Errors
     }
 
     /// <summary>
-    /// Validation error for Guardian Update operation - request data failed validation
+    /// Validation error for Guardian Update operation - request data failed validation.
     /// </summary>
     public class GuardianUpdate422ResponseBodyException : MeitnerException
     {
@@ -66,5 +66,4 @@ namespace Meitner.Models.Errors
            #pragma warning restore CS0618
         }
     }
-
 }

@@ -12,21 +12,20 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Metadata information for the Guardian
+    /// Metadata information for the Guardian.
     /// </summary>
     public class GuardianSearchContainsMeta
     {
-
         /// <summary>
-        /// User who created the resource
+        /// User who created the resource.
         /// </summary>
         [JsonProperty("createdBy")]
         public List<string>? CreatedBy { get; set; }
 
         /// <summary>
-        /// User who last updated the resource
+        /// User who last updated the resource.
         /// </summary>
         [JsonProperty("updatedBy")]
         public List<string>? UpdatedBy { get; set; }

@@ -12,15 +12,14 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// NOT LIKE filters for StudentPlacement
+    /// NOT LIKE filters for StudentPlacement.
     /// </summary>
     public class StudentPlacementFilterNotLike
     {
-
         /// <summary>
-        /// Metadata information for the StudentPlacement
+        /// Metadata information for the StudentPlacement.
         /// </summary>
         [JsonProperty("meta")]
         public StudentPlacementFilterNotLikeMeta? Meta { get; set; } = null;

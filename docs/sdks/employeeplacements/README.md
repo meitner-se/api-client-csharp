@@ -1,5 +1,4 @@
 # EmployeePlacements
-(*EmployeePlacements*)
 
 ## Overview
 

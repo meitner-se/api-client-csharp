@@ -11,18 +11,17 @@ namespace Meitner.Models.Requests
 {
     using Meitner.Models.Components;
     using Meitner.Utils;
-    
+
     public class GroupUpdateRequest
     {
-
         /// <summary>
-        /// The unique identifier of the Group to update
+        /// The unique identifier of the Group to update.
         /// </summary>
         [SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")]
         public string Id { get; set; } = default!;
 
         /// <summary>
-        /// Request body
+        /// Request body.
         /// </summary>
         [SpeakeasyMetadata("request:mediaType=application/json")]
         public GroupUpdate GroupUpdate { get; set; } = default!;

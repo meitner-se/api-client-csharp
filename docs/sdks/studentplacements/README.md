@@ -1,5 +1,4 @@
 # StudentPlacements
-(*StudentPlacements*)
 
 ## Overview
 

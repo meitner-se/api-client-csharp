@@ -11,15 +11,14 @@ namespace Meitner.Models.Components
 {
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
     /// External is the External-object used on Update and Create operations, since it should only be allowed to set SourceID for the school, the Source-field is not included.
     /// </summary>
     public class SchoolCreateExternal
     {
-
         /// <summary>
-        /// The ID of the external source
+        /// The ID of the external source.
         /// </summary>
         [JsonProperty("sourceID")]
         public string SourceID { get; set; } = default!;

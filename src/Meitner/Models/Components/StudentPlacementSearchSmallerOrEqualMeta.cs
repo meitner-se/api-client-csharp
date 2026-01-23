@@ -12,21 +12,20 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// Metadata information for the StudentPlacement
+    /// Metadata information for the StudentPlacement.
     /// </summary>
     public class StudentPlacementSearchSmallerOrEqualMeta
     {
-
         /// <summary>
-        /// Timestamp when the resource was created
+        /// Timestamp when the resource was created.
         /// </summary>
         [JsonProperty("createdAt")]
         public DateTime? CreatedAt { get; set; } = null;
 
         /// <summary>
-        /// Timestamp when the resource was last updated
+        /// Timestamp when the resource was last updated.
         /// </summary>
         [JsonProperty("updatedAt")]
         public DateTime? UpdatedAt { get; set; } = null;

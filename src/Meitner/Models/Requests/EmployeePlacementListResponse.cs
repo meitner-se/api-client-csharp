@@ -15,16 +15,15 @@ namespace Meitner.Models.Requests
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    
+
     public class EmployeePlacementListResponse
     {
         public Func<Task<EmployeePlacementListResponse?>>? Next {get;set;}
-
         [JsonProperty("-")]
         public HTTPMetadata HttpMeta { get; set; } = default!;
 
         /// <summary>
-        /// Response for EmployeePlacement List operation - returns a paginated list of EmployeePlacement
+        /// Response for EmployeePlacement List operation - returns a paginated list of EmployeePlacement.
         /// </summary>
         public EmployeePlacementList? EmployeePlacementList { get; set; }
 

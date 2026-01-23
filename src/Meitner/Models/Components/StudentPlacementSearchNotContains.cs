@@ -14,21 +14,20 @@ namespace Meitner.Models.Components
     using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Not contains filters for StudentPlacement
+    /// Not contains filters for StudentPlacement.
     /// </summary>
     public class StudentPlacementSearchNotContains
     {
-
         /// <summary>
-        /// Unique identifier for the StudentPlacement
+        /// Unique identifier for the StudentPlacement.
         /// </summary>
         [JsonProperty("id")]
         public List<string>? Id { get; set; }
 
         /// <summary>
-        /// Metadata information for the StudentPlacement
+        /// Metadata information for the StudentPlacement.
         /// </summary>
         [JsonProperty("meta")]
         public StudentPlacementSearchNotContainsMeta? Meta { get; set; } = null;
@@ -40,13 +39,13 @@ namespace Meitner.Models.Components
         public StudentPlacementSearchNotContainsExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The ID of the student the placement belongs to
+        /// The ID of the student the placement belongs to.
         /// </summary>
         [JsonProperty("studentID")]
         public List<string>? StudentID { get; set; }
 
         /// <summary>
-        /// The ID of the school the student is placed in
+        /// The ID of the school the student is placed in.
         /// </summary>
         [JsonProperty("schoolID")]
         public List<string>? SchoolID { get; set; }
@@ -58,13 +57,13 @@ namespace Meitner.Models.Components
         public List<StudentPlacementSchoolType>? SchoolType { get; set; }
 
         /// <summary>
-        /// The school year the student is placed in
+        /// The school year the student is placed in.
         /// </summary>
         [JsonProperty("schoolYear")]
         public List<SchoolYear>? SchoolYear { get; set; }
 
         /// <summary>
-        /// Whether the student has childcare
+        /// Whether the student has childcare.
         /// </summary>
         [JsonProperty("hasChildcare")]
         public List<bool>? HasChildcare { get; set; }
@@ -76,13 +75,13 @@ namespace Meitner.Models.Components
         public List<string>? MotherTongue { get; set; }
 
         /// <summary>
-        /// The start date of the placement
+        /// The start date of the placement.
         /// </summary>
         [JsonProperty("startDate")]
         public List<DateOnly>? StartDate { get; set; }
 
         /// <summary>
-        /// The end date of the placement
+        /// The end date of the placement.
         /// </summary>
         [JsonProperty("endDate")]
         public List<DateOnly>? EndDate { get; set; }

@@ -27,84 +27,235 @@ namespace Meitner
 
     public interface IStudents
     {
-
         /// <summary>
-        /// List Students
-        /// 
+        /// List Students.
+        /// </summary>
         /// <remarks>
         /// Returns a paginated list of all `Students` in your organization.
         /// </remarks>
-        /// </summary>
-        Task<StudentListResponse> ListAsync(long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <param name="limit">The maximum number of Students to return (default: 50) when listing Students.</param>
+        /// <param name="offset">The number of Students to skip before starting to return results (default: 0) when listing Students.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentListResponse"/> response envelope when completed.</returns>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for Student List operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for Student List operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for Student List operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for Student List operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for Student List operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for Student List operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for Student List operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<StudentListResponse> ListAsync(
+            long? limit = 50,
+            long? offset = 0,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
 
         /// <summary>
-        /// Create a new Student
-        /// 
+        /// Create a new Student.
+        /// </summary>
         /// <remarks>
-        /// Create a new Student
+        /// Create a new Student.
         /// </remarks>
-        /// </summary>
-        Task<StudentCreateResponse> CreateAsync(StudentCreate request, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <param name="request">Request body.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentCreateResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="request"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for Student Create operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for Student Create operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for Student Create operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for Student Create operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for Student Create operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="StudentCreate422ResponseBodyException">Validation error for Student Create operation - request data failed validation. Thrown when the API returns a 422 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for Student Create operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for Student Create operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<StudentCreateResponse> CreateAsync(
+            StudentCreate request,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
 
         /// <summary>
-        /// Search Students
-        /// 
+        /// Search Students.
+        /// </summary>
         /// <remarks>
         /// Search for `Students` with filtering capabilities.
         /// </remarks>
-        /// </summary>
-        Task<Models.Requests.StudentSearchResponse> SearchAsync(StudentSearchRequestBody studentSearch, long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <param name="studentSearch">Request body.</param>
+        /// <param name="limit">The maximum number of Students to return (default: 50) when searching Students.</param>
+        /// <param name="offset">The number of Students to skip before starting to return results (default: 0) when searching Students.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="Models.Requests.StudentSearchResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="studentSearch"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for Student Search operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for Student Search operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for Student Search operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for Student Search operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for Student Search operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="StudentSearch422ResponseBodyException">Validation error for Student Search operation - request data failed validation. Thrown when the API returns a 422 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for Student Search operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for Student Search operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<Models.Requests.StudentSearchResponse> SearchAsync(
+            StudentSearchRequestBody studentSearch,
+            long? limit = 50,
+            long? offset = 0,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
 
         /// <summary>
-        /// Get a Student
-        /// 
+        /// Get a Student.
+        /// </summary>
         /// <remarks>
         /// Retrieves the `Student` with the given ID.
         /// </remarks>
-        /// </summary>
-        Task<StudentGetResponse> GetAsync(string id, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <param name="id">The unique identifier of the Student to retrieve.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentGetResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="id"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for Student Get operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for Student Get operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for Student Get operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for Student Get operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for Student Get operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for Student Get operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for Student Get operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<StudentGetResponse> GetAsync(
+            string id,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
 
         /// <summary>
-        /// Delete a Student
-        /// 
-        /// <remarks>
-        /// Delete a Student
-        /// </remarks>
+        /// Delete a Student.
         /// </summary>
-        Task<StudentDeleteResponse> DeleteAsync(string id, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <remarks>
+        /// Delete a Student.
+        /// </remarks>
+        /// <param name="id">The unique identifier of the Student to delete.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentDeleteResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="id"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for Student Delete operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for Student Delete operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for Student Delete operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for Student Delete operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for Student Delete operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for Student Delete operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for Student Delete operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<StudentDeleteResponse> DeleteAsync(
+            string id,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
 
         /// <summary>
-        /// Update a Student
-        /// 
-        /// <remarks>
-        /// Update a Student
-        /// </remarks>
+        /// Update a Student.
         /// </summary>
-        Task<StudentUpdateResponse> UpdateAsync(string id, StudentUpdate studentUpdate, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <remarks>
+        /// Update a Student.
+        /// </remarks>
+        /// <param name="id">The unique identifier of the Student to update.</param>
+        /// <param name="studentUpdate">Request body.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentUpdateResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">One of <paramref name="id"/> or <paramref name="studentUpdate"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for Student Update operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for Student Update operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for Student Update operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for Student Update operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for Student Update operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="StudentUpdate422ResponseBodyException">Validation error for Student Update operation - request data failed validation. Thrown when the API returns a 422 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for Student Update operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for Student Update operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<StudentUpdateResponse> UpdateAsync(
+            string id,
+            StudentUpdate studentUpdate,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
     }
 
     public class Students: IStudents
     {
+        /// <summary>
+        /// SDK Configuration.
+        /// <see cref="SDKConfig"/>
+        /// </summary>
         public SDKConfig SDKConfiguration { get; private set; }
-        private const string _language = "csharp";
-        private const string _sdkVersion = "0.1.0";
-        private const string _sdkGenVersion = "2.755.6";
-        private const string _openapiDocVersion = "v1";
 
         public Students(SDKConfig config)
         {
             SDKConfiguration = config;
         }
 
-        public async Task<StudentListResponse> ListAsync(long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+        /// <summary>
+        /// List Students.
+        /// </summary>
+        /// <remarks>
+        /// Returns a paginated list of all `Students` in your organization.
+        /// </remarks>
+        /// <param name="limit">The maximum number of Students to return (default: 50) when listing Students.</param>
+        /// <param name="offset">The number of Students to skip before starting to return results (default: 0) when listing Students.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentListResponse"/> response envelope when completed.</returns>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for Student List operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for Student List operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for Student List operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for Student List operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for Student List operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for Student List operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for Student List operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<StudentListResponse> ListAsync(
+            long? limit = 50,
+            long? offset = 0,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
         {
             var request = new StudentListRequest()
             {
                 Limit = limit,
                 Offset = offset,
             };
+
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
-            var urlString = URLBuilder.Build(baseUrl, "/student", request);
+            var urlString = URLBuilder.Build(baseUrl, "/student", request, null);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Get, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
@@ -161,7 +312,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -439,10 +590,39 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<StudentCreateResponse> CreateAsync(StudentCreate request, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
-        {
-            string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
 
+        /// <summary>
+        /// Create a new Student.
+        /// </summary>
+        /// <remarks>
+        /// Create a new Student.
+        /// </remarks>
+        /// <param name="request">Request body.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentCreateResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="request"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for Student Create operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for Student Create operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for Student Create operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for Student Create operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for Student Create operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="StudentCreate422ResponseBodyException">Validation error for Student Create operation - request data failed validation. Thrown when the API returns a 422 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for Student Create operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for Student Create operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<StudentCreateResponse> CreateAsync(
+            StudentCreate request,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
+        {
+            if (request == null) throw new ArgumentNullException(nameof(request));
+
+            string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
             var urlString = baseUrl + "/student";
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Post, urlString);
@@ -506,7 +686,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 422 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -781,16 +961,51 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<Models.Requests.StudentSearchResponse> SearchAsync(StudentSearchRequestBody studentSearch, long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+
+        /// <summary>
+        /// Search Students.
+        /// </summary>
+        /// <remarks>
+        /// Search for `Students` with filtering capabilities.
+        /// </remarks>
+        /// <param name="studentSearch">Request body.</param>
+        /// <param name="limit">The maximum number of Students to return (default: 50) when searching Students.</param>
+        /// <param name="offset">The number of Students to skip before starting to return results (default: 0) when searching Students.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="Models.Requests.StudentSearchResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="studentSearch"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for Student Search operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for Student Search operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for Student Search operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for Student Search operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for Student Search operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="StudentSearch422ResponseBodyException">Validation error for Student Search operation - request data failed validation. Thrown when the API returns a 422 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for Student Search operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for Student Search operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<Models.Requests.StudentSearchResponse> SearchAsync(
+            StudentSearchRequestBody studentSearch,
+            long? limit = 50,
+            long? offset = 0,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
         {
+            if (studentSearch == null) throw new ArgumentNullException(nameof(studentSearch));
+
             var request = new StudentSearchRequest()
             {
                 StudentSearch = studentSearch,
                 Limit = limit,
                 Offset = offset,
             };
+
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
-            var urlString = URLBuilder.Build(baseUrl, "/student/_search", request);
+            var urlString = URLBuilder.Build(baseUrl, "/student/_search", request, null);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Post, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
@@ -853,7 +1068,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 422 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -1158,14 +1373,44 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<StudentGetResponse> GetAsync(string id, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+
+        /// <summary>
+        /// Get a Student.
+        /// </summary>
+        /// <remarks>
+        /// Retrieves the `Student` with the given ID.
+        /// </remarks>
+        /// <param name="id">The unique identifier of the Student to retrieve.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentGetResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="id"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for Student Get operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for Student Get operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for Student Get operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for Student Get operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for Student Get operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for Student Get operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for Student Get operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<StudentGetResponse> GetAsync(
+            string id,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
         {
+            if (id == null) throw new ArgumentNullException(nameof(id));
+
             var request = new StudentGetRequest()
             {
                 Id = id,
             };
+
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
-            var urlString = URLBuilder.Build(baseUrl, "/student/{id}", request);
+            var urlString = URLBuilder.Build(baseUrl, "/student/{id}", request, null);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Get, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
@@ -1222,7 +1467,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -1471,14 +1716,44 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<StudentDeleteResponse> DeleteAsync(string id, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+
+        /// <summary>
+        /// Delete a Student.
+        /// </summary>
+        /// <remarks>
+        /// Delete a Student.
+        /// </remarks>
+        /// <param name="id">The unique identifier of the Student to delete.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentDeleteResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="id"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for Student Delete operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for Student Delete operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for Student Delete operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for Student Delete operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for Student Delete operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for Student Delete operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for Student Delete operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<StudentDeleteResponse> DeleteAsync(
+            string id,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
         {
+            if (id == null) throw new ArgumentNullException(nameof(id));
+
             var request = new StudentDeleteRequest()
             {
                 Id = id,
             };
+
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
-            var urlString = URLBuilder.Build(baseUrl, "/student/{id}", request);
+            var urlString = URLBuilder.Build(baseUrl, "/student/{id}", request, null);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Delete, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
@@ -1535,7 +1810,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -1766,15 +2041,49 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<StudentUpdateResponse> UpdateAsync(string id, StudentUpdate studentUpdate, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+
+        /// <summary>
+        /// Update a Student.
+        /// </summary>
+        /// <remarks>
+        /// Update a Student.
+        /// </remarks>
+        /// <param name="id">The unique identifier of the Student to update.</param>
+        /// <param name="studentUpdate">Request body.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="StudentUpdateResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">One of <paramref name="id"/> or <paramref name="studentUpdate"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for Student Update operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for Student Update operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for Student Update operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for Student Update operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for Student Update operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="StudentUpdate422ResponseBodyException">Validation error for Student Update operation - request data failed validation. Thrown when the API returns a 422 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for Student Update operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for Student Update operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<StudentUpdateResponse> UpdateAsync(
+            string id,
+            StudentUpdate studentUpdate,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
         {
+            if (id == null) throw new ArgumentNullException(nameof(id));
+            if (studentUpdate == null) throw new ArgumentNullException(nameof(studentUpdate));
+
             var request = new StudentUpdateRequest()
             {
                 Id = id,
                 StudentUpdate = studentUpdate,
             };
+
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
-            var urlString = URLBuilder.Build(baseUrl, "/student/{id}", request);
+            var urlString = URLBuilder.Build(baseUrl, "/student/{id}", request, null);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Patch, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
@@ -1837,7 +2146,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 422 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -2111,5 +2420,6 @@ namespace Meitner
 
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
+
     }
 }

@@ -12,9 +12,9 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// The role of the employee in the placement
+    /// The role of the employee in the placement.
     /// </summary>
     public enum EmployeePlacementRole
     {
@@ -64,5 +64,4 @@ namespace Meitner.Models.Components
             throw new Exception($"Unknown value {value} for enum EmployeePlacementRole");
         }
     }
-
 }

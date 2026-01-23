@@ -12,15 +12,14 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// Smaller than or equal filters for School
+    /// Smaller than or equal filters for School.
     /// </summary>
     public class SchoolSearchSmallerOrEqual
     {
-
         /// <summary>
-        /// Metadata information for the School
+        /// Metadata information for the School.
         /// </summary>
         [JsonProperty("meta")]
         public SchoolSearchSmallerOrEqualMeta? Meta { get; set; } = null;

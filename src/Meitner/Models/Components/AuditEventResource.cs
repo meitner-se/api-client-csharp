@@ -12,9 +12,9 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// The resource that was affected by the audit event
+    /// The resource that was affected by the audit event.
     /// </summary>
     public enum AuditEventResource
     {
@@ -64,5 +64,4 @@ namespace Meitner.Models.Components
             throw new Exception($"Unknown value {value} for enum AuditEventResource");
         }
     }
-
 }

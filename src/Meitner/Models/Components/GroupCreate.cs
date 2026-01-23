@@ -13,13 +13,12 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Request body
+    /// Request body.
     /// </summary>
     public class GroupCreate
     {
-
         /// <summary>
         /// External is the External-object used on Update and Create operations, since it should only be allowed to set SourceID for the employee, the Source-field is not included.
         /// </summary>
@@ -27,17 +26,13 @@ namespace Meitner.Models.Components
         public GroupCreateExternal? External { get; set; }
 
         /// <summary>
-        /// The ID of the school the group belongs to
+        /// The ID of the school the group belongs to.
         /// </summary>
         [JsonProperty("schoolID")]
         public string SchoolID { get; set; } = default!;
 
         /// <summary>
-        /// If the category is Education, the ModeratorIDs have to be employees and the MemberIDs have to be students of the school. If the category is Other, it will not be possible to use the IsClass, IsChildcare and IsMentor fields.<br/>
-        /// 
-        /// <remarks>
-        /// 
-        /// </remarks>
+        /// If the category is Education, the ModeratorIDs have to be employees and the MemberIDs have to be students of the school. If the category is Other, it will not be possible to use the IsClass, IsChildcare and IsMentor fields.
         /// </summary>
         [JsonProperty("category")]
         public GroupCreateCategory? Category { get; set; } = Meitner.Models.Components.GroupCreateCategory.Education;
@@ -49,27 +44,19 @@ namespace Meitner.Models.Components
         public string Title { get; set; } = default!;
 
         /// <summary>
-        /// The types of the group
+        /// The types of the group. Note: For preschools (FS), Class and Childcare types are automatically paired. Adding Class will automatically include Childcare, and adding Childcare will automatically include Class.
         /// </summary>
         [JsonProperty("types")]
         public List<GroupType>? Types { get; set; }
 
         /// <summary>
-        /// The IDs of the moderators of the group.  Can be any user type (Student, Employee, Guardian) if the Category is Other. If the Category is Education, the Moderators have to be employees of the school.<br/>
-        /// 
-        /// <remarks>
-        /// 
-        /// </remarks>
+        /// The IDs of the moderators of the group.  Can be any user type (Student, Employee, Guardian) if the Category is Other. If the Category is Education, the Moderators have to be employees of the school.
         /// </summary>
         [JsonProperty("moderatorIDs")]
         public List<string>? ModeratorIDs { get; set; }
 
         /// <summary>
-        /// The IDs of the members of the group. Can be any user type (Student, Employee, Guardian) if the Category is Other. If the Category is Education, the Members have to be students of the school.<br/>
-        /// 
-        /// <remarks>
-        /// 
-        /// </remarks>
+        /// The IDs of the members of the group. Can be any user type (Student, Employee, Guardian) if the Category is Other. If the Category is Education, the Members have to be students of the school.
         /// </summary>
         [JsonProperty("memberIDs")]
         public List<string>? MemberIDs { get; set; }

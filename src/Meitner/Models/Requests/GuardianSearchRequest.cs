@@ -11,24 +11,23 @@ namespace Meitner.Models.Requests
 {
     using Meitner.Models.Components;
     using Meitner.Utils;
-    
+
     public class GuardianSearchRequest
     {
-
         /// <summary>
-        /// The maximum number of Guardians to return (default: 50) when searching Guardians
+        /// The maximum number of Guardians to return (default: 50) when searching Guardians.
         /// </summary>
         [SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")]
         public long? Limit { get; set; } = 50;
 
         /// <summary>
-        /// The number of Guardians to skip before starting to return results (default: 0) when searching Guardians
+        /// The number of Guardians to skip before starting to return results (default: 0) when searching Guardians.
         /// </summary>
         [SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")]
         public long? Offset { get; set; } = 0;
 
         /// <summary>
-        /// Request body
+        /// Request body.
         /// </summary>
         [SpeakeasyMetadata("request:mediaType=application/json")]
         public GuardianSearchRequestBody GuardianSearch { get; set; } = default!;

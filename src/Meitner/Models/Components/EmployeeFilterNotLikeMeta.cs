@@ -10,9 +10,9 @@
 namespace Meitner.Models.Components
 {
     using Meitner.Utils;
-    
+
     /// <summary>
-    /// Metadata information for the Employee
+    /// Metadata information for the Employee.
     /// </summary>
     public class EmployeeFilterNotLikeMeta
     {

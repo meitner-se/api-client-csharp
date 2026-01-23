@@ -13,15 +13,14 @@ namespace Meitner.Models.Requests
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     public class GuardianCreateResponse
     {
-
         [JsonProperty("-")]
         public HTTPMetadata HttpMeta { get; set; } = default!;
 
         /// <summary>
-        /// Response for Guardian Create operation - returns the created Guardian
+        /// Response for Guardian Create operation - returns the created Guardian.
         /// </summary>
         public Guardian? Guardian { get; set; }
 

@@ -11,21 +11,20 @@ namespace Meitner.Models.Components
 {
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
     /// External is a reusable object that can be used to store external information about the guardian from another system, used for third-party integration tracking.
     /// </summary>
     public class GuardianFilterLikeExternal
     {
-
         /// <summary>
-        /// The ID of the external source
+        /// The ID of the external source.
         /// </summary>
         [JsonProperty("sourceID")]
         public string? SourceID { get; set; } = null;
 
         /// <summary>
-        /// The source of the external information
+        /// The source of the external information.
         /// </summary>
         [JsonProperty("source")]
         public string? Source { get; set; } = null;

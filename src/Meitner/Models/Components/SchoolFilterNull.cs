@@ -12,15 +12,14 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// Null filters for School
+    /// Null filters for School.
     /// </summary>
     public class SchoolFilterNull
     {
-
         /// <summary>
-        /// Metadata information for the School
+        /// Metadata information for the School.
         /// </summary>
         [JsonProperty("meta")]
         public SchoolFilterNullMeta? Meta { get; set; } = null;
@@ -32,19 +31,19 @@ namespace Meitner.Models.Components
         public SchoolFilterNullExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The School Unit Code provided by SCB, is used in reports and printed on grade documents
+        /// The School Unit Code provided by SCB, is used in reports and printed on grade documents.
         /// </summary>
         [JsonProperty("unitCode")]
         public bool? UnitCode { get; set; } = null;
 
         /// <summary>
-        /// The School Code provided by CSN, required for reports to CSN
+        /// The School Code provided by CSN, required for reports to CSN.
         /// </summary>
         [JsonProperty("csnSchoolCode")]
         public bool? CsnSchoolCode { get; set; } = null;
 
         /// <summary>
-        /// Municipality code of the school, is used in reports and printed on grade documents
+        /// Municipality code of the school, is used in reports and printed on grade documents.
         /// </summary>
         [JsonProperty("municipalityCode")]
         public bool? MunicipalityCode { get; set; } = null;

@@ -12,39 +12,38 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// The address of the student
+    /// The address of the student.
     /// </summary>
     public class StudentFilterNotContainsAddress
     {
-
         /// <summary>
-        /// The postal address of the address
+        /// The postal address of the address.
         /// </summary>
         [JsonProperty("postalAddress")]
         public List<string>? PostalAddress { get; set; }
 
         /// <summary>
-        /// The postal code of the address
+        /// The postal code of the address.
         /// </summary>
         [JsonProperty("postalCode")]
         public List<string>? PostalCode { get; set; }
 
         /// <summary>
-        /// The city of the address
+        /// The city of the address.
         /// </summary>
         [JsonProperty("postalCity")]
         public List<string>? PostalCity { get; set; }
 
         /// <summary>
-        /// The country code of the address
+        /// The country code of the address.
         /// </summary>
         [JsonProperty("countryCode")]
         public List<string>? CountryCode { get; set; }
 
         /// <summary>
-        /// The municipality code of the address
+        /// The municipality code of the address.
         /// </summary>
         [JsonProperty("municipalityCode")]
         public List<string>? MunicipalityCode { get; set; }

@@ -14,21 +14,20 @@ namespace Meitner.Models.Components
     using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// EmployeePlacement holds the information about an employee&apos;s placement in a school.
+    /// EmployeePlacement holds the information about an employee's placement in a school.
     /// </summary>
     public class EmployeePlacement
     {
-
         /// <summary>
-        /// Unique identifier for the EmployeePlacement
+        /// Unique identifier for the EmployeePlacement.
         /// </summary>
         [JsonProperty("id")]
         public string Id { get; set; } = default!;
 
         /// <summary>
-        /// Metadata information for the EmployeePlacement
+        /// Metadata information for the EmployeePlacement.
         /// </summary>
         [JsonProperty("meta")]
         public EmployeePlacementMeta? Meta { get; set; }
@@ -40,43 +39,43 @@ namespace Meitner.Models.Components
         public EmployeePlacementExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The ID of the employee the placement belongs to
+        /// The ID of the employee the placement belongs to.
         /// </summary>
         [JsonProperty("employeeID")]
         public string EmployeeID { get; set; } = default!;
 
         /// <summary>
-        /// The ID of the school the placement belongs to
+        /// The ID of the school the placement belongs to.
         /// </summary>
         [JsonProperty("schoolID")]
         public string SchoolID { get; set; } = default!;
 
         /// <summary>
-        /// The signature of the employee
+        /// The signature of the employee.
         /// </summary>
         [JsonProperty("signature")]
         public string? Signature { get; set; } = null;
 
         /// <summary>
-        /// The title of the employee
+        /// The title of the employee.
         /// </summary>
         [JsonProperty("title")]
         public string? Title { get; set; } = null;
 
         /// <summary>
-        /// The roles of the employee
+        /// The roles of the employee.
         /// </summary>
         [JsonProperty("roles")]
         public List<EmployeePlacementRole>? Roles { get; set; }
 
         /// <summary>
-        /// The start date of the placement for the employee
+        /// The start date of the placement for the employee.
         /// </summary>
         [JsonProperty("startDate")]
         public DateOnly StartDate { get; set; } = default!;
 
         /// <summary>
-        /// The end date of the placement for the employee
+        /// The end date of the placement for the employee.
         /// </summary>
         [JsonProperty("endDate")]
         public DateOnly? EndDate { get; set; } = null;
@@ -88,7 +87,7 @@ namespace Meitner.Models.Components
         public string? ArchiveYear { get; set; } = null;
 
         /// <summary>
-        /// The timestamp the placement was archived for the employee
+        /// The timestamp the placement was archived for the employee.
         /// </summary>
         [JsonProperty("archivedAt")]
         public DateTime? ArchivedAt { get; set; } = null;

@@ -12,15 +12,14 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// Null filters for Student
+    /// Null filters for Student.
     /// </summary>
     public class StudentFilterNull
     {
-
         /// <summary>
-        /// Metadata information for the Student
+        /// Metadata information for the Student.
         /// </summary>
         [JsonProperty("meta")]
         public StudentFilterNullMeta? Meta { get; set; } = null;
@@ -32,30 +31,26 @@ namespace Meitner.Models.Components
         public StudentFilterNullExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The gender of the student
+        /// The gender of the student.
         /// </summary>
         [JsonProperty("gender")]
         public bool? Gender { get; set; } = null;
 
         /// <summary>
-        /// The date of birth of the student
+        /// The date of birth of the student.
         /// </summary>
         [JsonProperty("dateOfBirth")]
         public bool? DateOfBirth { get; set; } = null;
 
         /// <summary>
-        /// The address of the student
+        /// The address of the student.
         /// </summary>
         [JsonProperty("address")]
         public StudentFilterNullAddress? Address { get; set; } = null;
 
         /// <summary>
         /// The primary email address of the student, will be used for communication with the student from the system and must be unique within the organization.<br/>
-        /// 
-        /// <remarks>
-        /// Can be used to login to the system if password-authentication is enabled for the organization.<br/>
-        /// 
-        /// </remarks>
+        /// Can be used to login to the system if password-authentication is enabled for the organization.
         /// </summary>
         [JsonProperty("emailAddress1")]
         public bool? EmailAddress1 { get; set; } = null;

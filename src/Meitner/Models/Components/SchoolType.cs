@@ -12,9 +12,9 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// The type of schooling provided at the school
+    /// The type of schooling provided at the school.
     /// </summary>
     public enum SchoolType
     {
@@ -58,5 +58,4 @@ namespace Meitner.Models.Components
             throw new Exception($"Unknown value {value} for enum SchoolType");
         }
     }
-
 }

@@ -13,93 +13,92 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Filter criteria to search for specific records
+    /// Filter criteria to search for specific records.
     /// </summary>
     public class EmployeePlacementSearchFilter
     {
-
         /// <summary>
-        /// Equality filters for EmployeePlacement
+        /// Equality filters for EmployeePlacement.
         /// </summary>
         [JsonProperty("equals")]
         public EmployeePlacementSearchEquals? Equals { get; set; } = null;
 
         /// <summary>
-        /// Inequality filters for EmployeePlacement
+        /// Inequality filters for EmployeePlacement.
         /// </summary>
         [JsonProperty("notEquals")]
         public EmployeePlacementSearchNotEquals? NotEquals { get; set; } = null;
 
         /// <summary>
-        /// Greater than filters for EmployeePlacement
+        /// Greater than filters for EmployeePlacement.
         /// </summary>
         [JsonProperty("greaterThan")]
         public EmployeePlacementSearchGreaterThan? GreaterThan { get; set; } = null;
 
         /// <summary>
-        /// Smaller than filters for EmployeePlacement
+        /// Smaller than filters for EmployeePlacement.
         /// </summary>
         [JsonProperty("smallerThan")]
         public EmployeePlacementSearchSmallerThan? SmallerThan { get; set; } = null;
 
         /// <summary>
-        /// Greater than or equal filters for EmployeePlacement
+        /// Greater than or equal filters for EmployeePlacement.
         /// </summary>
         [JsonProperty("greaterOrEqual")]
         public EmployeePlacementSearchGreaterOrEqual? GreaterOrEqual { get; set; } = null;
 
         /// <summary>
-        /// Smaller than or equal filters for EmployeePlacement
+        /// Smaller than or equal filters for EmployeePlacement.
         /// </summary>
         [JsonProperty("smallerOrEqual")]
         public EmployeePlacementSearchSmallerOrEqual? SmallerOrEqual { get; set; } = null;
 
         /// <summary>
-        /// Contains filters for EmployeePlacement
+        /// Contains filters for EmployeePlacement.
         /// </summary>
         [JsonProperty("contains")]
         public EmployeePlacementSearchContains? Contains { get; set; } = null;
 
         /// <summary>
-        /// Not contains filters for EmployeePlacement
+        /// Not contains filters for EmployeePlacement.
         /// </summary>
         [JsonProperty("notContains")]
         public EmployeePlacementSearchNotContains? NotContains { get; set; } = null;
 
         /// <summary>
-        /// LIKE filters for EmployeePlacement
+        /// LIKE filters for EmployeePlacement.
         /// </summary>
         [JsonProperty("like")]
         public EmployeePlacementSearchLike? Like { get; set; } = null;
 
         /// <summary>
-        /// NOT LIKE filters for EmployeePlacement
+        /// NOT LIKE filters for EmployeePlacement.
         /// </summary>
         [JsonProperty("notLike")]
         public EmployeePlacementSearchNotLike? NotLike { get; set; } = null;
 
         /// <summary>
-        /// Null filters for EmployeePlacement
+        /// Null filters for EmployeePlacement.
         /// </summary>
         [JsonProperty("null")]
         public EmployeePlacementSearchNull? Null { get; set; } = null;
 
         /// <summary>
-        /// Not null filters for EmployeePlacement
+        /// Not null filters for EmployeePlacement.
         /// </summary>
         [JsonProperty("notNull")]
         public EmployeePlacementSearchNotNull? NotNull { get; set; } = null;
 
         /// <summary>
-        /// OrCondition decides if this filter is within an OR-condition or AND-condition
+        /// OrCondition decides if this filter is within an OR-condition or AND-condition.
         /// </summary>
         [JsonProperty("orCondition")]
         public bool OrCondition { get; set; } = default!;
 
         /// <summary>
-        /// NestedFilters of the EmployeePlacement, useful for more complex filters
+        /// NestedFilters of the EmployeePlacement, useful for more complex filters.
         /// </summary>
         [JsonProperty("nestedFilters")]
         public List<EmployeePlacementFilter>? NestedFilters { get; set; }

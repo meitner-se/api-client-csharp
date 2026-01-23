@@ -11,39 +11,38 @@ namespace Meitner.Models.Components
 {
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// The address of the student
+    /// The address of the student.
     /// </summary>
     public class StudentFilterEqualsAddress
     {
-
         /// <summary>
-        /// The postal address of the address
+        /// The postal address of the address.
         /// </summary>
         [JsonProperty("postalAddress")]
         public string? PostalAddress { get; set; } = null;
 
         /// <summary>
-        /// The postal code of the address
+        /// The postal code of the address.
         /// </summary>
         [JsonProperty("postalCode")]
         public string? PostalCode { get; set; } = null;
 
         /// <summary>
-        /// The city of the address
+        /// The city of the address.
         /// </summary>
         [JsonProperty("postalCity")]
         public string? PostalCity { get; set; } = null;
 
         /// <summary>
-        /// The country code of the address
+        /// The country code of the address.
         /// </summary>
         [JsonProperty("countryCode")]
         public string? CountryCode { get; set; } = null;
 
         /// <summary>
-        /// The municipality code of the address
+        /// The municipality code of the address.
         /// </summary>
         [JsonProperty("municipalityCode")]
         public string? MunicipalityCode { get; set; } = null;

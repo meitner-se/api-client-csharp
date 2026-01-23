@@ -10,9 +10,9 @@
 namespace Meitner.Models.Components
 {
     using Meitner.Utils;
-    
+
     /// <summary>
-    /// The address of the student
+    /// The address of the student.
     /// </summary>
     public class StudentSearchSmallerThanAddress
     {

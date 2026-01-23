@@ -12,15 +12,14 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// NOT LIKE filters for AuditEvent
+    /// NOT LIKE filters for AuditEvent.
     /// </summary>
     public class AuditEventSearchNotLike
     {
-
         /// <summary>
-        /// Metadata information for the AuditEvent
+        /// Metadata information for the AuditEvent.
         /// </summary>
         [JsonProperty("meta")]
         public AuditEventSearchNotLikeMeta? Meta { get; set; } = null;

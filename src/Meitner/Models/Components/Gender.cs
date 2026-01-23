@@ -12,9 +12,9 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// The gender of the person
+    /// The gender of the person.
     /// </summary>
     public enum Gender
     {
@@ -58,5 +58,4 @@ namespace Meitner.Models.Components
             throw new Exception($"Unknown value {value} for enum Gender");
         }
     }
-
 }

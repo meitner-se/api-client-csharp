@@ -25,7 +25,7 @@ namespace Meitner.Models.Errors
     }
 
     /// <summary>
-    /// Bad Request - The request was malformed or contained invalid parameters
+    /// Bad Request - The request was malformed or contained invalid parameters.
     /// </summary>
     public class Error400ResponseBody : MeitnerException
     {
@@ -66,5 +66,4 @@ namespace Meitner.Models.Errors
            #pragma warning restore CS0618
         }
     }
-
 }

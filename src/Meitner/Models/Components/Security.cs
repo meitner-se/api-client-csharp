@@ -10,10 +10,9 @@
 namespace Meitner.Models.Components
 {
     using Meitner.Utils;
-    
+
     public class Security
     {
-
         [SpeakeasyMetadata("security:scheme=true,type=apiKey,subType=header,name=Client-ID")]
         public string ClientCredentials { get; set; } = default!;
 

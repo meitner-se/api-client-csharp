@@ -10,9 +10,9 @@
 namespace Meitner.Models.Components
 {
     using Meitner.Utils;
-    
+
     /// <summary>
-    /// Metadata information for the Group
+    /// Metadata information for the Group.
     /// </summary>
     public class GroupSearchNotLikeMeta
     {

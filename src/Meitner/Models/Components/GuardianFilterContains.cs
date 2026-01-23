@@ -13,21 +13,20 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Contains filters for Guardian
+    /// Contains filters for Guardian.
     /// </summary>
     public class GuardianFilterContains
     {
-
         /// <summary>
-        /// Unique identifier for the Guardian
+        /// Unique identifier for the Guardian.
         /// </summary>
         [JsonProperty("id")]
         public List<string>? Id { get; set; }
 
         /// <summary>
-        /// Metadata information for the Guardian
+        /// Metadata information for the Guardian.
         /// </summary>
         [JsonProperty("meta")]
         public GuardianFilterContainsMeta? Meta { get; set; } = null;
@@ -39,42 +38,38 @@ namespace Meitner.Models.Components
         public GuardianFilterContainsExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The identity number of the guardian, must be unique within the organization.
+        /// The identity number of the guardian in the format YYYYMMDD-NNNN, must be unique within the organization.
         /// </summary>
         [JsonProperty("identityNumber")]
         public List<string>? IdentityNumber { get; set; }
 
         /// <summary>
-        /// If the identity number is temporary for the guardian
+        /// If the identity number is temporary for the guardian.
         /// </summary>
         [JsonProperty("identityTemporary")]
         public List<bool>? IdentityTemporary { get; set; }
 
         /// <summary>
-        /// The first name of the guardian
+        /// The first name of the guardian.
         /// </summary>
         [JsonProperty("firstName")]
         public List<string>? FirstName { get; set; }
 
         /// <summary>
-        /// The last name of the guardian
+        /// The last name of the guardian.
         /// </summary>
         [JsonProperty("lastName")]
         public List<string>? LastName { get; set; }
 
         /// <summary>
-        /// The address of the guardian
+        /// The address of the guardian.
         /// </summary>
         [JsonProperty("address")]
         public GuardianFilterContainsAddress? Address { get; set; } = null;
 
         /// <summary>
         /// The email address of the guardian, will be used for communication with the guardian from the system and must be unique within the organization.<br/>
-        /// 
-        /// <remarks>
-        /// Can be used to login to the system if password-authentication is enabled for the organization.<br/>
-        /// 
-        /// </remarks>
+        /// Can be used to login to the system if password-authentication is enabled for the organization.
         /// </summary>
         [JsonProperty("emailAddress1")]
         public List<string>? EmailAddress1 { get; set; }

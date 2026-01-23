@@ -12,27 +12,22 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
     /// The `School` resource represents a school where daily operations occur. A school must exist before you can create StudentPlacements, EmployeePlacements, or Groups.<br/>
-    /// 
-    /// <remarks>
     ///  <br/>
-    /// This resource can be created, Updated, listed, retrieved, and deleted using the standard resource structure. It **does not** support search and filtering.<br/>
-    /// 
-    /// </remarks>
+    /// This resource can be created, updated, listed, retrieved, and searched using the standard resource structure.
     /// </summary>
     public class School
     {
-
         /// <summary>
-        /// Unique identifier for the School
+        /// Unique identifier for the School.
         /// </summary>
         [JsonProperty("id")]
         public string Id { get; set; } = default!;
 
         /// <summary>
-        /// Metadata information for the School
+        /// Metadata information for the School.
         /// </summary>
         [JsonProperty("meta")]
         public SchoolMeta? Meta { get; set; }
@@ -44,31 +39,31 @@ namespace Meitner.Models.Components
         public SchoolExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The title of the school
+        /// The title of the school.
         /// </summary>
         [JsonProperty("title")]
         public string Title { get; set; } = default!;
 
         /// <summary>
-        /// The School Unit Code provided by SCB, is used in reports and printed on grade documents
+        /// The School Unit Code provided by SCB, is used in reports and printed on grade documents.
         /// </summary>
         [JsonProperty("unitCode")]
         public string? UnitCode { get; set; } = null;
 
         /// <summary>
-        /// The School Code provided by CSN, required for reports to CSN
+        /// The School Code provided by CSN, required for reports to CSN.
         /// </summary>
         [JsonProperty("csnSchoolCode")]
         public string? CsnSchoolCode { get; set; } = null;
 
         /// <summary>
-        /// Municipality code of the school, is used in reports and printed on grade documents
+        /// Municipality code of the school, is used in reports and printed on grade documents.
         /// </summary>
         [JsonProperty("municipalityCode")]
         public string? MunicipalityCode { get; set; } = null;
 
         /// <summary>
-        /// Type of schooling provided at the school
+        /// Type of schooling provided at the school.
         /// </summary>
         [JsonProperty("schoolType")]
         public SchoolSchoolType SchoolType { get; set; } = default!;

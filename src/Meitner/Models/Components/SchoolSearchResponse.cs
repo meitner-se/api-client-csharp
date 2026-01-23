@@ -13,21 +13,20 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Response for School Search operation - returns filtered School results
+    /// Response for School Search operation - returns filtered School results.
     /// </summary>
     public class SchoolSearchResponse
     {
-
         /// <summary>
-        /// Array of School objects
+        /// Array of School objects.
         /// </summary>
         [JsonProperty("data")]
         public List<School>? Data { get; set; }
 
         /// <summary>
-        /// Pagination information
+        /// Pagination information.
         /// </summary>
         [JsonProperty("pagination")]
         public SchoolSearchPagination? Pagination { get; set; }

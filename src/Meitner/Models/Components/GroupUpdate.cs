@@ -13,13 +13,12 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Request body
+    /// Request body.
     /// </summary>
     public class GroupUpdate
     {
-
         /// <summary>
         /// External is the External-object used on Update and Create operations, since it should only be allowed to set SourceID for the employee, the Source-field is not included.
         /// </summary>
@@ -33,27 +32,19 @@ namespace Meitner.Models.Components
         public string Title { get; set; } = default!;
 
         /// <summary>
-        /// The types of the group
+        /// The types of the group. Note: For preschools (FS), Class and Childcare types are automatically paired. Adding Class will automatically include Childcare, and adding Childcare will automatically include Class.
         /// </summary>
         [JsonProperty("types")]
         public List<GroupType>? Types { get; set; }
 
         /// <summary>
-        /// The IDs of the moderators of the group.  Can be any user type (Student, Employee, Guardian) if the Category is Other. If the Category is Education, the Moderators have to be employees of the school.<br/>
-        /// 
-        /// <remarks>
-        /// 
-        /// </remarks>
+        /// The IDs of the moderators of the group.  Can be any user type (Student, Employee, Guardian) if the Category is Other. If the Category is Education, the Moderators have to be employees of the school.
         /// </summary>
         [JsonProperty("moderatorIDs")]
         public List<string>? ModeratorIDs { get; set; }
 
         /// <summary>
-        /// The IDs of the members of the group. Can be any user type (Student, Employee, Guardian) if the Category is Other. If the Category is Education, the Members have to be students of the school.<br/>
-        /// 
-        /// <remarks>
-        /// 
-        /// </remarks>
+        /// The IDs of the members of the group. Can be any user type (Student, Employee, Guardian) if the Category is Other. If the Category is Education, the Members have to be students of the school.
         /// </summary>
         [JsonProperty("memberIDs")]
         public List<string>? MemberIDs { get; set; }

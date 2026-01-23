@@ -12,27 +12,26 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// Standard error response object containing error code, message, and request ID
+    /// Standard error response object containing error code, message, and request ID.
     /// </summary>
     public class GroupUpdate422ResponseBodyError
     {
-
         /// <summary>
-        /// The specific error code indicating the type of error
+        /// The specific error code indicating the type of error.
         /// </summary>
         [JsonProperty("code")]
         public ErrorCode Code { get; set; } = default!;
 
         /// <summary>
-        /// Human-readable error message providing additional details
+        /// Human-readable error message providing additional details.
         /// </summary>
         [JsonProperty("message")]
         public string Message { get; set; } = default!;
 
         /// <summary>
-        /// Unique identifier for the request that generated this error, used for logging and debugging
+        /// Unique identifier for the request that generated this error, used for logging and debugging.
         /// </summary>
         [JsonProperty("requestID")]
         public string RequestID { get; set; } = default!;

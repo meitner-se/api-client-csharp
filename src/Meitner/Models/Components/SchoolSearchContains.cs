@@ -13,21 +13,20 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Contains filters for School
+    /// Contains filters for School.
     /// </summary>
     public class SchoolSearchContains
     {
-
         /// <summary>
-        /// Unique identifier for the School
+        /// Unique identifier for the School.
         /// </summary>
         [JsonProperty("id")]
         public List<string>? Id { get; set; }
 
         /// <summary>
-        /// Metadata information for the School
+        /// Metadata information for the School.
         /// </summary>
         [JsonProperty("meta")]
         public SchoolSearchContainsMeta? Meta { get; set; } = null;
@@ -39,31 +38,31 @@ namespace Meitner.Models.Components
         public SchoolSearchContainsExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The title of the school
+        /// The title of the school.
         /// </summary>
         [JsonProperty("title")]
         public List<string>? Title { get; set; }
 
         /// <summary>
-        /// The School Unit Code provided by SCB, is used in reports and printed on grade documents
+        /// The School Unit Code provided by SCB, is used in reports and printed on grade documents.
         /// </summary>
         [JsonProperty("unitCode")]
         public List<string>? UnitCode { get; set; }
 
         /// <summary>
-        /// The School Code provided by CSN, required for reports to CSN
+        /// The School Code provided by CSN, required for reports to CSN.
         /// </summary>
         [JsonProperty("csnSchoolCode")]
         public List<string>? CsnSchoolCode { get; set; }
 
         /// <summary>
-        /// Municipality code of the school, is used in reports and printed on grade documents
+        /// Municipality code of the school, is used in reports and printed on grade documents.
         /// </summary>
         [JsonProperty("municipalityCode")]
         public List<string>? MunicipalityCode { get; set; }
 
         /// <summary>
-        /// Type of schooling provided at the school
+        /// Type of schooling provided at the school.
         /// </summary>
         [JsonProperty("schoolType")]
         public List<SchoolType>? SchoolType { get; set; }

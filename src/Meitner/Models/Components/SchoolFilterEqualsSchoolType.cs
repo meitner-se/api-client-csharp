@@ -12,9 +12,9 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// Type of schooling provided at the school
+    /// Type of schooling provided at the school.
     /// </summary>
     public enum SchoolFilterEqualsSchoolType
     {
@@ -58,5 +58,4 @@ namespace Meitner.Models.Components
             throw new Exception($"Unknown value {value} for enum SchoolFilterEqualsSchoolType");
         }
     }
-
 }

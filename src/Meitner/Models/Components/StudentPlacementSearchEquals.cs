@@ -13,21 +13,20 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// Equality filters for StudentPlacement
+    /// Equality filters for StudentPlacement.
     /// </summary>
     public class StudentPlacementSearchEquals
     {
-
         /// <summary>
-        /// Unique identifier for the StudentPlacement
+        /// Unique identifier for the StudentPlacement.
         /// </summary>
         [JsonProperty("id")]
         public string? Id { get; set; } = null;
 
         /// <summary>
-        /// Metadata information for the StudentPlacement
+        /// Metadata information for the StudentPlacement.
         /// </summary>
         [JsonProperty("meta")]
         public StudentPlacementSearchEqualsMeta? Meta { get; set; } = null;
@@ -39,13 +38,13 @@ namespace Meitner.Models.Components
         public StudentPlacementSearchEqualsExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The ID of the student the placement belongs to
+        /// The ID of the student the placement belongs to.
         /// </summary>
         [JsonProperty("studentID")]
         public string? StudentID { get; set; } = null;
 
         /// <summary>
-        /// The ID of the school the student is placed in
+        /// The ID of the school the student is placed in.
         /// </summary>
         [JsonProperty("schoolID")]
         public string? SchoolID { get; set; } = null;
@@ -57,13 +56,13 @@ namespace Meitner.Models.Components
         public StudentPlacementSearchEqualsSchoolType? SchoolType { get; set; } = null;
 
         /// <summary>
-        /// The school year the student is placed in
+        /// The school year the student is placed in.
         /// </summary>
         [JsonProperty("schoolYear")]
         public StudentPlacementSearchEqualsSchoolYear? SchoolYear { get; set; } = null;
 
         /// <summary>
-        /// Whether the student has childcare
+        /// Whether the student has childcare.
         /// </summary>
         [JsonProperty("hasChildcare")]
         public bool? HasChildcare { get; set; } = null;
@@ -75,13 +74,13 @@ namespace Meitner.Models.Components
         public string? MotherTongue { get; set; } = null;
 
         /// <summary>
-        /// The start date of the placement
+        /// The start date of the placement.
         /// </summary>
         [JsonProperty("startDate")]
         public DateOnly? StartDate { get; set; } = null;
 
         /// <summary>
-        /// The end date of the placement
+        /// The end date of the placement.
         /// </summary>
         [JsonProperty("endDate")]
         public DateOnly? EndDate { get; set; } = null;
@@ -93,7 +92,7 @@ namespace Meitner.Models.Components
         public string? ArchiveYear { get; set; } = null;
 
         /// <summary>
-        /// The timestamp the placement was archived for the student
+        /// The timestamp the placement was archived for the student.
         /// </summary>
         [JsonProperty("archivedAt")]
         public DateTime? ArchivedAt { get; set; } = null;

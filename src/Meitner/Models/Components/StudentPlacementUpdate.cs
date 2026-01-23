@@ -13,13 +13,12 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// Request body
+    /// Request body.
     /// </summary>
     public class StudentPlacementUpdate
     {
-
         /// <summary>
         /// ExternalRequest is the External-object used on Update and Create operations, since it should only be allowed to set SourceID for the student placement, the Source-field is not included.
         /// </summary>
@@ -33,13 +32,13 @@ namespace Meitner.Models.Components
         public StudentPlacementUpdateSchoolType SchoolType { get; set; } = default!;
 
         /// <summary>
-        /// The school year the student is placed in
+        /// The school year the student is placed in.
         /// </summary>
         [JsonProperty("schoolYear")]
         public StudentPlacementUpdateSchoolYear? SchoolYear { get; set; } = null;
 
         /// <summary>
-        /// Whether the student has childcare
+        /// Whether the student has childcare.
         /// </summary>
         [JsonProperty("hasChildcare")]
         public bool? HasChildcare { get; set; } = false;
@@ -51,13 +50,13 @@ namespace Meitner.Models.Components
         public string? MotherTongue { get; set; } = null;
 
         /// <summary>
-        /// The start date of the placement
+        /// The start date of the placement.
         /// </summary>
         [JsonProperty("startDate")]
         public DateOnly StartDate { get; set; } = default!;
 
         /// <summary>
-        /// The end date of the placement
+        /// The end date of the placement.
         /// </summary>
         [JsonProperty("endDate")]
         public DateOnly? EndDate { get; set; } = null;

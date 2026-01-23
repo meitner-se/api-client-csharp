@@ -10,18 +10,17 @@
 namespace Meitner.Models.Requests
 {
     using Meitner.Utils;
-    
+
     public class GuardianListRequest
     {
-
         /// <summary>
-        /// The maximum number of Guardians to return (default: 50) when listing Guardians
+        /// The maximum number of Guardians to return (default: 50) when listing Guardians.
         /// </summary>
         [SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")]
         public long? Limit { get; set; } = 50;
 
         /// <summary>
-        /// The number of Guardians to skip before starting to return results (default: 0) when listing Guardians
+        /// The number of Guardians to skip before starting to return results (default: 0) when listing Guardians.
         /// </summary>
         [SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")]
         public long? Offset { get; set; } = 0;

@@ -25,7 +25,7 @@ namespace Meitner.Models.Errors
     }
 
     /// <summary>
-    /// Conflict - The request could not be completed due to a conflict
+    /// Conflict - The request could not be completed due to a conflict.
     /// </summary>
     public class Error409ResponseBody : MeitnerException
     {
@@ -66,5 +66,4 @@ namespace Meitner.Models.Errors
            #pragma warning restore CS0618
         }
     }
-
 }

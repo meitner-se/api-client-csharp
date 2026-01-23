@@ -1,5 +1,4 @@
 # Students
-(*Students*)
 
 ## Overview
 

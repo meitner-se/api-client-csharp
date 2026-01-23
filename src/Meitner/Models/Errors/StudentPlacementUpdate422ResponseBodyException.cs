@@ -25,7 +25,7 @@ namespace Meitner.Models.Errors
     }
 
     /// <summary>
-    /// Validation error for StudentPlacement Update operation - request data failed validation
+    /// Validation error for StudentPlacement Update operation - request data failed validation.
     /// </summary>
     public class StudentPlacementUpdate422ResponseBodyException : MeitnerException
     {
@@ -66,5 +66,4 @@ namespace Meitner.Models.Errors
            #pragma warning restore CS0618
         }
     }
-
 }

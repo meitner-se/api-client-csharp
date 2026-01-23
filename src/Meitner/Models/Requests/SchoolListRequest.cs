@@ -10,18 +10,17 @@
 namespace Meitner.Models.Requests
 {
     using Meitner.Utils;
-    
+
     public class SchoolListRequest
     {
-
         /// <summary>
-        /// The maximum number of Schools to return (default: 50) when listing Schools
+        /// The maximum number of Schools to return (default: 50) when listing Schools.
         /// </summary>
         [SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")]
         public long? Limit { get; set; } = 50;
 
         /// <summary>
-        /// The number of Schools to skip before starting to return results (default: 0) when listing Schools
+        /// The number of Schools to skip before starting to return results (default: 0) when listing Schools.
         /// </summary>
         [SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")]
         public long? Offset { get; set; } = 0;

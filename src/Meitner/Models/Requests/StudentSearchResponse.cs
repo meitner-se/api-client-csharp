@@ -15,16 +15,15 @@ namespace Meitner.Models.Requests
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    
+
     public class StudentSearchResponse
     {
         public Func<Task<StudentSearchResponse?>>? Next {get;set;}
-
         [JsonProperty("-")]
         public HTTPMetadata HttpMeta { get; set; } = default!;
 
         /// <summary>
-        /// Response for Student Search operation - returns filtered Student results
+        /// Response for Student Search operation - returns filtered Student results.
         /// </summary>
         public Models.Components.StudentSearchResponse? StudentSearch { get; set; }
 

@@ -10,9 +10,9 @@
 namespace Meitner.Models.Components
 {
     using Meitner.Utils;
-    
+
     /// <summary>
-    /// The address of the guardian
+    /// The address of the guardian.
     /// </summary>
     public class GuardianFilterGreaterOrEqualAddress
     {

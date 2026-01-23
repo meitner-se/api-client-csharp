@@ -13,21 +13,20 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Response for Guardian List operation - returns a paginated list of Guardian
+    /// Response for Guardian List operation - returns a paginated list of Guardian.
     /// </summary>
     public class GuardianList
     {
-
         /// <summary>
-        /// Array of Guardian objects
+        /// Array of Guardian objects.
         /// </summary>
         [JsonProperty("data")]
         public List<Guardian>? Data { get; set; }
 
         /// <summary>
-        /// Pagination information
+        /// Pagination information.
         /// </summary>
         [JsonProperty("pagination")]
         public GuardianListPagination? Pagination { get; set; }

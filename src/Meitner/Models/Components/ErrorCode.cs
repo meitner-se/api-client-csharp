@@ -12,9 +12,9 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// Standard error codes used in API responses
+    /// Standard error codes used in API responses.
     /// </summary>
     public enum ErrorCode
     {
@@ -68,5 +68,4 @@ namespace Meitner.Models.Components
             throw new Exception($"Unknown value {value} for enum ErrorCode");
         }
     }
-
 }
