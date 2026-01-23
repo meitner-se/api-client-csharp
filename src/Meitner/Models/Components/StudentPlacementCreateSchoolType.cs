@@ -12,7 +12,7 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
     /// The school type for the student, if not provided on Create, the school type will be fetched from the school.
     /// </summary>
@@ -62,5 +62,4 @@ namespace Meitner.Models.Components
             throw new Exception($"Unknown value {value} for enum StudentPlacementCreateSchoolType");
         }
     }
-
 }

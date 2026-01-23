@@ -10,9 +10,9 @@
 namespace Meitner.Models.Components
 {
     using Meitner.Utils;
-    
+
     /// <summary>
-    /// The address of the employee
+    /// The address of the employee.
     /// </summary>
     public class EmployeeFilterSmallerOrEqualAddress
     {

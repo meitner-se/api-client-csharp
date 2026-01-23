@@ -25,7 +25,7 @@ namespace Meitner.Models.Errors
     }
 
     /// <summary>
-    /// Forbidden - Request is authenticated, but the user is not allowed to perform the operation
+    /// Forbidden - Request is authenticated, but the user is not allowed to perform the operation.
     /// </summary>
     public class Error403ResponseBody : MeitnerException
     {
@@ -66,5 +66,4 @@ namespace Meitner.Models.Errors
            #pragma warning restore CS0618
         }
     }
-
 }

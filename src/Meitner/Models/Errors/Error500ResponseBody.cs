@@ -25,7 +25,7 @@ namespace Meitner.Models.Errors
     }
 
     /// <summary>
-    /// Internal Server Error - An unexpected server error occurred
+    /// Internal Server Error - An unexpected server error occurred.
     /// </summary>
     public class Error500ResponseBody : MeitnerException
     {
@@ -66,5 +66,4 @@ namespace Meitner.Models.Errors
            #pragma warning restore CS0618
         }
     }
-
 }

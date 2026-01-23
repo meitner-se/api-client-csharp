@@ -13,93 +13,92 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Filter criteria to search for specific records
+    /// Filter criteria to search for specific records.
     /// </summary>
     public class GuardianSearchFilter
     {
-
         /// <summary>
-        /// Equality filters for Guardian
+        /// Equality filters for Guardian.
         /// </summary>
         [JsonProperty("equals")]
         public GuardianSearchEquals? Equals { get; set; } = null;
 
         /// <summary>
-        /// Inequality filters for Guardian
+        /// Inequality filters for Guardian.
         /// </summary>
         [JsonProperty("notEquals")]
         public GuardianSearchNotEquals? NotEquals { get; set; } = null;
 
         /// <summary>
-        /// Greater than filters for Guardian
+        /// Greater than filters for Guardian.
         /// </summary>
         [JsonProperty("greaterThan")]
         public GuardianSearchGreaterThan? GreaterThan { get; set; } = null;
 
         /// <summary>
-        /// Smaller than filters for Guardian
+        /// Smaller than filters for Guardian.
         /// </summary>
         [JsonProperty("smallerThan")]
         public GuardianSearchSmallerThan? SmallerThan { get; set; } = null;
 
         /// <summary>
-        /// Greater than or equal filters for Guardian
+        /// Greater than or equal filters for Guardian.
         /// </summary>
         [JsonProperty("greaterOrEqual")]
         public GuardianSearchGreaterOrEqual? GreaterOrEqual { get; set; } = null;
 
         /// <summary>
-        /// Smaller than or equal filters for Guardian
+        /// Smaller than or equal filters for Guardian.
         /// </summary>
         [JsonProperty("smallerOrEqual")]
         public GuardianSearchSmallerOrEqual? SmallerOrEqual { get; set; } = null;
 
         /// <summary>
-        /// Contains filters for Guardian
+        /// Contains filters for Guardian.
         /// </summary>
         [JsonProperty("contains")]
         public GuardianSearchContains? Contains { get; set; } = null;
 
         /// <summary>
-        /// Not contains filters for Guardian
+        /// Not contains filters for Guardian.
         /// </summary>
         [JsonProperty("notContains")]
         public GuardianSearchNotContains? NotContains { get; set; } = null;
 
         /// <summary>
-        /// LIKE filters for Guardian
+        /// LIKE filters for Guardian.
         /// </summary>
         [JsonProperty("like")]
         public GuardianSearchLike? Like { get; set; } = null;
 
         /// <summary>
-        /// NOT LIKE filters for Guardian
+        /// NOT LIKE filters for Guardian.
         /// </summary>
         [JsonProperty("notLike")]
         public GuardianSearchNotLike? NotLike { get; set; } = null;
 
         /// <summary>
-        /// Null filters for Guardian
+        /// Null filters for Guardian.
         /// </summary>
         [JsonProperty("null")]
         public GuardianSearchNull? Null { get; set; } = null;
 
         /// <summary>
-        /// Not null filters for Guardian
+        /// Not null filters for Guardian.
         /// </summary>
         [JsonProperty("notNull")]
         public GuardianSearchNotNull? NotNull { get; set; } = null;
 
         /// <summary>
-        /// OrCondition decides if this filter is within an OR-condition or AND-condition
+        /// OrCondition decides if this filter is within an OR-condition or AND-condition.
         /// </summary>
         [JsonProperty("orCondition")]
         public bool OrCondition { get; set; } = default!;
 
         /// <summary>
-        /// NestedFilters of the Guardian, useful for more complex filters
+        /// NestedFilters of the Guardian, useful for more complex filters.
         /// </summary>
         [JsonProperty("nestedFilters")]
         public List<GuardianFilter>? NestedFilters { get; set; }

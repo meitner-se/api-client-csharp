@@ -10,12 +10,11 @@
 namespace Meitner.Models.Requests
 {
     using Meitner.Utils;
-    
+
     public class SchoolGetRequest
     {
-
         /// <summary>
-        /// The unique identifier of the School to retrieve
+        /// The unique identifier of the School to retrieve.
         /// </summary>
         [SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")]
         public string Id { get; set; } = default!;

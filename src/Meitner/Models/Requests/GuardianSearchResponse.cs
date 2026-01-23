@@ -15,16 +15,15 @@ namespace Meitner.Models.Requests
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    
+
     public class GuardianSearchResponse
     {
         public Func<Task<GuardianSearchResponse?>>? Next {get;set;}
-
         [JsonProperty("-")]
         public HTTPMetadata HttpMeta { get; set; } = default!;
 
         /// <summary>
-        /// Response for Guardian Search operation - returns filtered Guardian results
+        /// Response for Guardian Search operation - returns filtered Guardian results.
         /// </summary>
         public Models.Components.GuardianSearchResponse? GuardianSearch { get; set; }
 

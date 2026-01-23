@@ -12,21 +12,20 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// Equality filters for Guardian
+    /// Equality filters for Guardian.
     /// </summary>
     public class GuardianFilterEquals
     {
-
         /// <summary>
-        /// Unique identifier for the Guardian
+        /// Unique identifier for the Guardian.
         /// </summary>
         [JsonProperty("id")]
         public string? Id { get; set; } = null;
 
         /// <summary>
-        /// Metadata information for the Guardian
+        /// Metadata information for the Guardian.
         /// </summary>
         [JsonProperty("meta")]
         public GuardianFilterEqualsMeta? Meta { get; set; } = null;
@@ -38,42 +37,38 @@ namespace Meitner.Models.Components
         public GuardianFilterEqualsExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The identity number of the guardian, must be unique within the organization.
+        /// The identity number of the guardian in the format YYYYMMDD-NNNN, must be unique within the organization.
         /// </summary>
         [JsonProperty("identityNumber")]
         public string? IdentityNumber { get; set; } = null;
 
         /// <summary>
-        /// If the identity number is temporary for the guardian
+        /// If the identity number is temporary for the guardian.
         /// </summary>
         [JsonProperty("identityTemporary")]
         public bool? IdentityTemporary { get; set; } = null;
 
         /// <summary>
-        /// The first name of the guardian
+        /// The first name of the guardian.
         /// </summary>
         [JsonProperty("firstName")]
         public string? FirstName { get; set; } = null;
 
         /// <summary>
-        /// The last name of the guardian
+        /// The last name of the guardian.
         /// </summary>
         [JsonProperty("lastName")]
         public string? LastName { get; set; } = null;
 
         /// <summary>
-        /// The address of the guardian
+        /// The address of the guardian.
         /// </summary>
         [JsonProperty("address")]
         public GuardianFilterEqualsAddress? Address { get; set; } = null;
 
         /// <summary>
         /// The email address of the guardian, will be used for communication with the guardian from the system and must be unique within the organization.<br/>
-        /// 
-        /// <remarks>
-        /// Can be used to login to the system if password-authentication is enabled for the organization.<br/>
-        /// 
-        /// </remarks>
+        /// Can be used to login to the system if password-authentication is enabled for the organization.
         /// </summary>
         [JsonProperty("emailAddress1")]
         public string? EmailAddress1 { get; set; } = null;

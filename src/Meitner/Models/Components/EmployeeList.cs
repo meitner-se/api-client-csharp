@@ -13,21 +13,20 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Response for Employee List operation - returns a paginated list of Employee
+    /// Response for Employee List operation - returns a paginated list of Employee.
     /// </summary>
     public class EmployeeList
     {
-
         /// <summary>
-        /// Array of Employee objects
+        /// Array of Employee objects.
         /// </summary>
         [JsonProperty("data")]
         public List<Employee>? Data { get; set; }
 
         /// <summary>
-        /// Pagination information
+        /// Pagination information.
         /// </summary>
         [JsonProperty("pagination")]
         public EmployeeListPagination? Pagination { get; set; }

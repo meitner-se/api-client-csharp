@@ -12,9 +12,9 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// The school year the student is placed in
+    /// The school year the student is placed in.
     /// </summary>
     public enum StudentPlacementFilterNotEqualsSchoolYear
     {
@@ -72,5 +72,4 @@ namespace Meitner.Models.Components
             throw new Exception($"Unknown value {value} for enum StudentPlacementFilterNotEqualsSchoolYear");
         }
     }
-
 }

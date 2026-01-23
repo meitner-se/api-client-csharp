@@ -12,15 +12,14 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// Null filters for Guardian
+    /// Null filters for Guardian.
     /// </summary>
     public class GuardianFilterNull
     {
-
         /// <summary>
-        /// Metadata information for the Guardian
+        /// Metadata information for the Guardian.
         /// </summary>
         [JsonProperty("meta")]
         public GuardianFilterNullMeta? Meta { get; set; } = null;
@@ -32,18 +31,14 @@ namespace Meitner.Models.Components
         public GuardianFilterNullExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The address of the guardian
+        /// The address of the guardian.
         /// </summary>
         [JsonProperty("address")]
         public GuardianFilterNullAddress? Address { get; set; } = null;
 
         /// <summary>
         /// The email address of the guardian, will be used for communication with the guardian from the system and must be unique within the organization.<br/>
-        /// 
-        /// <remarks>
-        /// Can be used to login to the system if password-authentication is enabled for the organization.<br/>
-        /// 
-        /// </remarks>
+        /// Can be used to login to the system if password-authentication is enabled for the organization.
         /// </summary>
         [JsonProperty("emailAddress1")]
         public bool? EmailAddress1 { get; set; } = null;

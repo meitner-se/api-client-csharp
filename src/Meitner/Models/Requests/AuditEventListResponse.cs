@@ -15,16 +15,15 @@ namespace Meitner.Models.Requests
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    
+
     public class AuditEventListResponse
     {
         public Func<Task<AuditEventListResponse?>>? Next {get;set;}
-
         [JsonProperty("-")]
         public HTTPMetadata HttpMeta { get; set; } = default!;
 
         /// <summary>
-        /// Response for AuditEvent List operation - returns a paginated list of AuditEvent
+        /// Response for AuditEvent List operation - returns a paginated list of AuditEvent.
         /// </summary>
         public AuditEventList? AuditEventList { get; set; }
 

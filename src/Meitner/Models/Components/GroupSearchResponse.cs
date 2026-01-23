@@ -13,21 +13,20 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Response for Group Search operation - returns filtered Group results
+    /// Response for Group Search operation - returns filtered Group results.
     /// </summary>
     public class GroupSearchResponse
     {
-
         /// <summary>
-        /// Array of Group objects
+        /// Array of Group objects.
         /// </summary>
         [JsonProperty("data")]
         public List<Group>? Data { get; set; }
 
         /// <summary>
-        /// Pagination information
+        /// Pagination information.
         /// </summary>
         [JsonProperty("pagination")]
         public GroupSearchPagination? Pagination { get; set; }

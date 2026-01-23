@@ -13,15 +13,14 @@ namespace Meitner.Models.Requests
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     public class GroupGetResponse
     {
-
         [JsonProperty("-")]
         public HTTPMetadata HttpMeta { get; set; } = default!;
 
         /// <summary>
-        /// Response for Group Get operation - returns the requested Group
+        /// Response for Group Get operation - returns the requested Group.
         /// </summary>
         public Group? Group { get; set; }
 

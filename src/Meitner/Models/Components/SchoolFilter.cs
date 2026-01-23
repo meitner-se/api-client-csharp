@@ -13,93 +13,92 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Filter object for School
+    /// Filter object for School.
     /// </summary>
     public class SchoolFilter
     {
-
         /// <summary>
-        /// Equality filters for School
+        /// Equality filters for School.
         /// </summary>
         [JsonProperty("equals")]
         public SchoolFilterEquals? Equals { get; set; } = null;
 
         /// <summary>
-        /// Inequality filters for School
+        /// Inequality filters for School.
         /// </summary>
         [JsonProperty("notEquals")]
         public SchoolFilterNotEquals? NotEquals { get; set; } = null;
 
         /// <summary>
-        /// Greater than filters for School
+        /// Greater than filters for School.
         /// </summary>
         [JsonProperty("greaterThan")]
         public SchoolFilterGreaterThan? GreaterThan { get; set; } = null;
 
         /// <summary>
-        /// Smaller than filters for School
+        /// Smaller than filters for School.
         /// </summary>
         [JsonProperty("smallerThan")]
         public SchoolFilterSmallerThan? SmallerThan { get; set; } = null;
 
         /// <summary>
-        /// Greater than or equal filters for School
+        /// Greater than or equal filters for School.
         /// </summary>
         [JsonProperty("greaterOrEqual")]
         public SchoolFilterGreaterOrEqual? GreaterOrEqual { get; set; } = null;
 
         /// <summary>
-        /// Smaller than or equal filters for School
+        /// Smaller than or equal filters for School.
         /// </summary>
         [JsonProperty("smallerOrEqual")]
         public SchoolFilterSmallerOrEqual? SmallerOrEqual { get; set; } = null;
 
         /// <summary>
-        /// Contains filters for School
+        /// Contains filters for School.
         /// </summary>
         [JsonProperty("contains")]
         public SchoolFilterContains? Contains { get; set; } = null;
 
         /// <summary>
-        /// Not contains filters for School
+        /// Not contains filters for School.
         /// </summary>
         [JsonProperty("notContains")]
         public SchoolFilterNotContains? NotContains { get; set; } = null;
 
         /// <summary>
-        /// LIKE filters for School
+        /// LIKE filters for School.
         /// </summary>
         [JsonProperty("like")]
         public SchoolFilterLike? Like { get; set; } = null;
 
         /// <summary>
-        /// NOT LIKE filters for School
+        /// NOT LIKE filters for School.
         /// </summary>
         [JsonProperty("notLike")]
         public SchoolFilterNotLike? NotLike { get; set; } = null;
 
         /// <summary>
-        /// Null filters for School
+        /// Null filters for School.
         /// </summary>
         [JsonProperty("null")]
         public SchoolFilterNull? Null { get; set; } = null;
 
         /// <summary>
-        /// Not null filters for School
+        /// Not null filters for School.
         /// </summary>
         [JsonProperty("notNull")]
         public SchoolFilterNotNull? NotNull { get; set; } = null;
 
         /// <summary>
-        /// OrCondition decides if this filter is within an OR-condition or AND-condition
+        /// OrCondition decides if this filter is within an OR-condition or AND-condition.
         /// </summary>
         [JsonProperty("orCondition")]
         public bool OrCondition { get; set; } = default!;
 
         /// <summary>
-        /// NestedFilters of the School, useful for more complex filters
+        /// NestedFilters of the School, useful for more complex filters.
         /// </summary>
         [JsonProperty("nestedFilters")]
         public List<SchoolFilter>? NestedFilters { get; set; }

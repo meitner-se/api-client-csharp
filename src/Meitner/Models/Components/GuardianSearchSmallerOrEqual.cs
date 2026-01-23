@@ -12,15 +12,14 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// Smaller than or equal filters for Guardian
+    /// Smaller than or equal filters for Guardian.
     /// </summary>
     public class GuardianSearchSmallerOrEqual
     {
-
         /// <summary>
-        /// Metadata information for the Guardian
+        /// Metadata information for the Guardian.
         /// </summary>
         [JsonProperty("meta")]
         public GuardianSearchSmallerOrEqualMeta? Meta { get; set; } = null;
@@ -32,7 +31,7 @@ namespace Meitner.Models.Components
         public GuardianSearchSmallerOrEqualExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The address of the guardian
+        /// The address of the guardian.
         /// </summary>
         [JsonProperty("address")]
         public GuardianSearchSmallerOrEqualAddress? Address { get; set; } = null;

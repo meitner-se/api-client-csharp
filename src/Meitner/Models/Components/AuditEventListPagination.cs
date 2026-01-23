@@ -11,27 +11,26 @@ namespace Meitner.Models.Components
 {
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// Pagination information
+    /// Pagination information.
     /// </summary>
     public class AuditEventListPagination
     {
-
         /// <summary>
-        /// Number of items to skip from the beginning of the result set
+        /// Number of items to skip from the beginning of the result set.
         /// </summary>
         [JsonProperty("offset")]
         public long Offset { get; set; } = default!;
 
         /// <summary>
-        /// Maximum number of items to return in the result set
+        /// Maximum number of items to return in the result set.
         /// </summary>
         [JsonProperty("limit")]
         public long Limit { get; set; } = default!;
 
         /// <summary>
-        /// Total number of items available for pagination
+        /// Total number of items available for pagination.
         /// </summary>
         [JsonProperty("total")]
         public long Total { get; set; } = default!;

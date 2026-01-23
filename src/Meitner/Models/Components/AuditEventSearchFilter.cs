@@ -13,93 +13,92 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Filter criteria to search for specific records
+    /// Filter criteria to search for specific records.
     /// </summary>
     public class AuditEventSearchFilter
     {
-
         /// <summary>
-        /// Equality filters for AuditEvent
+        /// Equality filters for AuditEvent.
         /// </summary>
         [JsonProperty("equals")]
         public AuditEventSearchEquals? Equals { get; set; } = null;
 
         /// <summary>
-        /// Inequality filters for AuditEvent
+        /// Inequality filters for AuditEvent.
         /// </summary>
         [JsonProperty("notEquals")]
         public AuditEventSearchNotEquals? NotEquals { get; set; } = null;
 
         /// <summary>
-        /// Greater than filters for AuditEvent
+        /// Greater than filters for AuditEvent.
         /// </summary>
         [JsonProperty("greaterThan")]
         public AuditEventSearchGreaterThan? GreaterThan { get; set; } = null;
 
         /// <summary>
-        /// Smaller than filters for AuditEvent
+        /// Smaller than filters for AuditEvent.
         /// </summary>
         [JsonProperty("smallerThan")]
         public AuditEventSearchSmallerThan? SmallerThan { get; set; } = null;
 
         /// <summary>
-        /// Greater than or equal filters for AuditEvent
+        /// Greater than or equal filters for AuditEvent.
         /// </summary>
         [JsonProperty("greaterOrEqual")]
         public AuditEventSearchGreaterOrEqual? GreaterOrEqual { get; set; } = null;
 
         /// <summary>
-        /// Smaller than or equal filters for AuditEvent
+        /// Smaller than or equal filters for AuditEvent.
         /// </summary>
         [JsonProperty("smallerOrEqual")]
         public AuditEventSearchSmallerOrEqual? SmallerOrEqual { get; set; } = null;
 
         /// <summary>
-        /// Contains filters for AuditEvent
+        /// Contains filters for AuditEvent.
         /// </summary>
         [JsonProperty("contains")]
         public AuditEventSearchContains? Contains { get; set; } = null;
 
         /// <summary>
-        /// Not contains filters for AuditEvent
+        /// Not contains filters for AuditEvent.
         /// </summary>
         [JsonProperty("notContains")]
         public AuditEventSearchNotContains? NotContains { get; set; } = null;
 
         /// <summary>
-        /// LIKE filters for AuditEvent
+        /// LIKE filters for AuditEvent.
         /// </summary>
         [JsonProperty("like")]
         public AuditEventSearchLike? Like { get; set; } = null;
 
         /// <summary>
-        /// NOT LIKE filters for AuditEvent
+        /// NOT LIKE filters for AuditEvent.
         /// </summary>
         [JsonProperty("notLike")]
         public AuditEventSearchNotLike? NotLike { get; set; } = null;
 
         /// <summary>
-        /// Null filters for AuditEvent
+        /// Null filters for AuditEvent.
         /// </summary>
         [JsonProperty("null")]
         public AuditEventSearchNull? Null { get; set; } = null;
 
         /// <summary>
-        /// Not null filters for AuditEvent
+        /// Not null filters for AuditEvent.
         /// </summary>
         [JsonProperty("notNull")]
         public AuditEventSearchNotNull? NotNull { get; set; } = null;
 
         /// <summary>
-        /// OrCondition decides if this filter is within an OR-condition or AND-condition
+        /// OrCondition decides if this filter is within an OR-condition or AND-condition.
         /// </summary>
         [JsonProperty("orCondition")]
         public bool OrCondition { get; set; } = default!;
 
         /// <summary>
-        /// NestedFilters of the AuditEvent, useful for more complex filters
+        /// NestedFilters of the AuditEvent, useful for more complex filters.
         /// </summary>
         [JsonProperty("nestedFilters")]
         public List<AuditEventFilter>? NestedFilters { get; set; }

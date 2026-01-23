@@ -12,15 +12,14 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// Request body
+    /// Request body.
     /// </summary>
     public class GuardianSearchRequestBody
     {
-
         /// <summary>
-        /// Filter criteria to search for specific records
+        /// Filter criteria to search for specific records.
         /// </summary>
         [JsonProperty("filter")]
         public GuardianSearchFilter Filter { get; set; } = default!;

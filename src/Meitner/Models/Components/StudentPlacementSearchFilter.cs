@@ -13,93 +13,92 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Filter criteria to search for specific records
+    /// Filter criteria to search for specific records.
     /// </summary>
     public class StudentPlacementSearchFilter
     {
-
         /// <summary>
-        /// Equality filters for StudentPlacement
+        /// Equality filters for StudentPlacement.
         /// </summary>
         [JsonProperty("equals")]
         public StudentPlacementSearchEquals? Equals { get; set; } = null;
 
         /// <summary>
-        /// Inequality filters for StudentPlacement
+        /// Inequality filters for StudentPlacement.
         /// </summary>
         [JsonProperty("notEquals")]
         public StudentPlacementSearchNotEquals? NotEquals { get; set; } = null;
 
         /// <summary>
-        /// Greater than filters for StudentPlacement
+        /// Greater than filters for StudentPlacement.
         /// </summary>
         [JsonProperty("greaterThan")]
         public StudentPlacementSearchGreaterThan? GreaterThan { get; set; } = null;
 
         /// <summary>
-        /// Smaller than filters for StudentPlacement
+        /// Smaller than filters for StudentPlacement.
         /// </summary>
         [JsonProperty("smallerThan")]
         public StudentPlacementSearchSmallerThan? SmallerThan { get; set; } = null;
 
         /// <summary>
-        /// Greater than or equal filters for StudentPlacement
+        /// Greater than or equal filters for StudentPlacement.
         /// </summary>
         [JsonProperty("greaterOrEqual")]
         public StudentPlacementSearchGreaterOrEqual? GreaterOrEqual { get; set; } = null;
 
         /// <summary>
-        /// Smaller than or equal filters for StudentPlacement
+        /// Smaller than or equal filters for StudentPlacement.
         /// </summary>
         [JsonProperty("smallerOrEqual")]
         public StudentPlacementSearchSmallerOrEqual? SmallerOrEqual { get; set; } = null;
 
         /// <summary>
-        /// Contains filters for StudentPlacement
+        /// Contains filters for StudentPlacement.
         /// </summary>
         [JsonProperty("contains")]
         public StudentPlacementSearchContains? Contains { get; set; } = null;
 
         /// <summary>
-        /// Not contains filters for StudentPlacement
+        /// Not contains filters for StudentPlacement.
         /// </summary>
         [JsonProperty("notContains")]
         public StudentPlacementSearchNotContains? NotContains { get; set; } = null;
 
         /// <summary>
-        /// LIKE filters for StudentPlacement
+        /// LIKE filters for StudentPlacement.
         /// </summary>
         [JsonProperty("like")]
         public StudentPlacementSearchLike? Like { get; set; } = null;
 
         /// <summary>
-        /// NOT LIKE filters for StudentPlacement
+        /// NOT LIKE filters for StudentPlacement.
         /// </summary>
         [JsonProperty("notLike")]
         public StudentPlacementSearchNotLike? NotLike { get; set; } = null;
 
         /// <summary>
-        /// Null filters for StudentPlacement
+        /// Null filters for StudentPlacement.
         /// </summary>
         [JsonProperty("null")]
         public StudentPlacementSearchNull? Null { get; set; } = null;
 
         /// <summary>
-        /// Not null filters for StudentPlacement
+        /// Not null filters for StudentPlacement.
         /// </summary>
         [JsonProperty("notNull")]
         public StudentPlacementSearchNotNull? NotNull { get; set; } = null;
 
         /// <summary>
-        /// OrCondition decides if this filter is within an OR-condition or AND-condition
+        /// OrCondition decides if this filter is within an OR-condition or AND-condition.
         /// </summary>
         [JsonProperty("orCondition")]
         public bool OrCondition { get; set; } = default!;
 
         /// <summary>
-        /// NestedFilters of the StudentPlacement, useful for more complex filters
+        /// NestedFilters of the StudentPlacement, useful for more complex filters.
         /// </summary>
         [JsonProperty("nestedFilters")]
         public List<StudentPlacementFilter>? NestedFilters { get; set; }

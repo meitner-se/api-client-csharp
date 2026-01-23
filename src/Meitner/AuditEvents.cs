@@ -27,57 +27,147 @@ namespace Meitner
 
     public interface IAuditEvents
     {
-
         /// <summary>
-        /// List AuditEvents
-        /// 
+        /// List AuditEvents.
+        /// </summary>
         /// <remarks>
         /// Returns a paginated list of all `AuditEvents` in your organization.
         /// </remarks>
-        /// </summary>
-        Task<AuditEventListResponse> ListAsync(long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <param name="limit">The maximum number of AuditEvents to return (default: 50) when listing AuditEvents.</param>
+        /// <param name="offset">The number of AuditEvents to skip before starting to return results (default: 0) when listing AuditEvents.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="AuditEventListResponse"/> response envelope when completed.</returns>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for AuditEvent List operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for AuditEvent List operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for AuditEvent List operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for AuditEvent List operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for AuditEvent List operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for AuditEvent List operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for AuditEvent List operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<AuditEventListResponse> ListAsync(
+            long? limit = 50,
+            long? offset = 0,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
 
         /// <summary>
-        /// Search AuditEvents
-        /// 
+        /// Search AuditEvents.
+        /// </summary>
         /// <remarks>
         /// Search for `AuditEvents` with filtering capabilities.
         /// </remarks>
-        /// </summary>
-        Task<Models.Requests.AuditEventSearchResponse> SearchAsync(AuditEventSearchRequestBody auditEventSearch, long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <param name="auditEventSearch">Request body.</param>
+        /// <param name="limit">The maximum number of AuditEvents to return (default: 50) when searching AuditEvents.</param>
+        /// <param name="offset">The number of AuditEvents to skip before starting to return results (default: 0) when searching AuditEvents.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="Models.Requests.AuditEventSearchResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="auditEventSearch"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for AuditEvent Search operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for AuditEvent Search operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for AuditEvent Search operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for AuditEvent Search operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for AuditEvent Search operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="AuditEventSearch422ResponseBodyException">Validation error for AuditEvent Search operation - request data failed validation. Thrown when the API returns a 422 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for AuditEvent Search operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for AuditEvent Search operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<Models.Requests.AuditEventSearchResponse> SearchAsync(
+            AuditEventSearchRequestBody auditEventSearch,
+            long? limit = 50,
+            long? offset = 0,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
 
         /// <summary>
-        /// Get a AuditEvent
-        /// 
+        /// Get a AuditEvent.
+        /// </summary>
         /// <remarks>
         /// Retrieves the `AuditEvent` with the given ID.
         /// </remarks>
-        /// </summary>
-        Task<AuditEventGetResponse> GetAsync(string id, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null);
+        /// <param name="id">The unique identifier of the AuditEvent to retrieve.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="AuditEventGetResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="id"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for AuditEvent Get operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for AuditEvent Get operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for AuditEvent Get operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for AuditEvent Get operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for AuditEvent Get operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for AuditEvent Get operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for AuditEvent Get operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public  Task<AuditEventGetResponse> GetAsync(
+            string id,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        );
     }
 
     public class AuditEvents: IAuditEvents
     {
+        /// <summary>
+        /// SDK Configuration.
+        /// <see cref="SDKConfig"/>
+        /// </summary>
         public SDKConfig SDKConfiguration { get; private set; }
-        private const string _language = "csharp";
-        private const string _sdkVersion = "0.1.0";
-        private const string _sdkGenVersion = "2.755.6";
-        private const string _openapiDocVersion = "v1";
 
         public AuditEvents(SDKConfig config)
         {
             SDKConfiguration = config;
         }
 
-        public async Task<AuditEventListResponse> ListAsync(long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+        /// <summary>
+        /// List AuditEvents.
+        /// </summary>
+        /// <remarks>
+        /// Returns a paginated list of all `AuditEvents` in your organization.
+        /// </remarks>
+        /// <param name="limit">The maximum number of AuditEvents to return (default: 50) when listing AuditEvents.</param>
+        /// <param name="offset">The number of AuditEvents to skip before starting to return results (default: 0) when listing AuditEvents.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="AuditEventListResponse"/> response envelope when completed.</returns>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for AuditEvent List operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for AuditEvent List operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for AuditEvent List operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for AuditEvent List operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for AuditEvent List operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for AuditEvent List operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for AuditEvent List operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<AuditEventListResponse> ListAsync(
+            long? limit = 50,
+            long? offset = 0,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
         {
             var request = new AuditEventListRequest()
             {
                 Limit = limit,
                 Offset = offset,
             };
+
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
-            var urlString = URLBuilder.Build(baseUrl, "/audit-event", request);
+            var urlString = URLBuilder.Build(baseUrl, "/audit-event", request, null);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Get, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
@@ -134,7 +224,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -412,16 +502,51 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<Models.Requests.AuditEventSearchResponse> SearchAsync(AuditEventSearchRequestBody auditEventSearch, long? limit = 50, long? offset = 0, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+
+        /// <summary>
+        /// Search AuditEvents.
+        /// </summary>
+        /// <remarks>
+        /// Search for `AuditEvents` with filtering capabilities.
+        /// </remarks>
+        /// <param name="auditEventSearch">Request body.</param>
+        /// <param name="limit">The maximum number of AuditEvents to return (default: 50) when searching AuditEvents.</param>
+        /// <param name="offset">The number of AuditEvents to skip before starting to return results (default: 0) when searching AuditEvents.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="Models.Requests.AuditEventSearchResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="auditEventSearch"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for AuditEvent Search operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for AuditEvent Search operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for AuditEvent Search operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for AuditEvent Search operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for AuditEvent Search operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="AuditEventSearch422ResponseBodyException">Validation error for AuditEvent Search operation - request data failed validation. Thrown when the API returns a 422 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for AuditEvent Search operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for AuditEvent Search operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<Models.Requests.AuditEventSearchResponse> SearchAsync(
+            AuditEventSearchRequestBody auditEventSearch,
+            long? limit = 50,
+            long? offset = 0,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
         {
+            if (auditEventSearch == null) throw new ArgumentNullException(nameof(auditEventSearch));
+
             var request = new AuditEventSearchRequest()
             {
                 AuditEventSearch = auditEventSearch,
                 Limit = limit,
                 Offset = offset,
             };
+
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
-            var urlString = URLBuilder.Build(baseUrl, "/audit-event/_search", request);
+            var urlString = URLBuilder.Build(baseUrl, "/audit-event/_search", request, null);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Post, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
@@ -484,7 +609,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 422 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -789,14 +914,44 @@ namespace Meitner
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
 
-        public async Task<AuditEventGetResponse> GetAsync(string id, RetryConfig? retryConfig = null, CancellationToken? cancellationToken = null)
+
+        /// <summary>
+        /// Get a AuditEvent.
+        /// </summary>
+        /// <remarks>
+        /// Retrieves the `AuditEvent` with the given ID.
+        /// </remarks>
+        /// <param name="id">The unique identifier of the AuditEvent to retrieve.</param>
+        /// <param name="retryConfig">The retry configuration to use for this operation.</param>
+        /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
+        /// <returns>An awaitable task that returns a <see cref="AuditEventGetResponse"/> response envelope when completed.</returns>
+        /// <exception cref="ArgumentNullException">The required parameter <paramref name="id"/> is null.</exception>
+        /// <exception cref="OperationCanceledException">The operation was aborted via the provided cancellation token.</exception>
+        /// <exception cref="HttpRequestException">The HTTP request failed due to network issues.</exception>
+        /// <exception cref="ResponseValidationException">The response body could not be deserialized.</exception>
+        /// <exception cref="Error400ResponseBody">Bad Request error for AuditEvent Get operation - request contains invalid parameters. Thrown when the API returns a 400 response.</exception>
+        /// <exception cref="Error401ResponseBody">Unauthorized error for AuditEvent Get operation - authentication required. Thrown when the API returns a 401 response.</exception>
+        /// <exception cref="Error403ResponseBody">Forbidden error for AuditEvent Get operation - insufficient permissions. Thrown when the API returns a 403 response.</exception>
+        /// <exception cref="Error404ResponseBody">Not Found error for AuditEvent Get operation - resource does not exist. Thrown when the API returns a 404 response.</exception>
+        /// <exception cref="Error409ResponseBody">Conflict error for AuditEvent Get operation - request conflicts with current state. Thrown when the API returns a 409 response.</exception>
+        /// <exception cref="Error429ResponseBody">Rate Limit error for AuditEvent Get operation - too many requests. Thrown when the API returns a 429 response.</exception>
+        /// <exception cref="Error500ResponseBody">Internal Server error for AuditEvent Get operation - unexpected server error. Thrown when the API returns a 500 response.</exception>
+        /// <exception cref="APIException">Default API Exception. Thrown when the API returns a 4XX or 5XX response.</exception>
+        public async  Task<AuditEventGetResponse> GetAsync(
+            string id,
+            RetryConfig? retryConfig = null,
+            CancellationToken? cancellationToken = null
+        )
         {
+            if (id == null) throw new ArgumentNullException(nameof(id));
+
             var request = new AuditEventGetRequest()
             {
                 Id = id,
             };
+
             string baseUrl = this.SDKConfiguration.GetTemplatedServerUrl();
-            var urlString = URLBuilder.Build(baseUrl, "/audit-event/{id}", request);
+            var urlString = URLBuilder.Build(baseUrl, "/audit-event/{id}", request, null);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Get, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
@@ -853,7 +1008,7 @@ namespace Meitner
                 httpResponse = await retries.Run();
                 int _statusCode = (int)httpResponse.StatusCode;
 
-                if (_statusCode == 400 || _statusCode == 401 || _statusCode == 403 || _statusCode == 404 || _statusCode == 409 || _statusCode == 429 || _statusCode >= 400 && _statusCode < 500 || _statusCode == 500 || _statusCode >= 500 && _statusCode < 600)
+                if (_statusCode >= 400 && _statusCode < 500 || _statusCode >= 500 && _statusCode < 600)
                 {
                     var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), httpResponse, null);
                     if (_httpResponse != null)
@@ -1101,5 +1256,6 @@ namespace Meitner
 
             throw new Models.Errors.APIException("Unknown status code received", httpRequest, httpResponse, await httpResponse.Content.ReadAsStringAsync());
         }
+
     }
 }

@@ -13,93 +13,92 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Filter criteria to search for specific records
+    /// Filter criteria to search for specific records.
     /// </summary>
     public class EmployeeSearchFilter
     {
-
         /// <summary>
-        /// Equality filters for Employee
+        /// Equality filters for Employee.
         /// </summary>
         [JsonProperty("equals")]
         public EmployeeSearchEquals? Equals { get; set; } = null;
 
         /// <summary>
-        /// Inequality filters for Employee
+        /// Inequality filters for Employee.
         /// </summary>
         [JsonProperty("notEquals")]
         public EmployeeSearchNotEquals? NotEquals { get; set; } = null;
 
         /// <summary>
-        /// Greater than filters for Employee
+        /// Greater than filters for Employee.
         /// </summary>
         [JsonProperty("greaterThan")]
         public EmployeeSearchGreaterThan? GreaterThan { get; set; } = null;
 
         /// <summary>
-        /// Smaller than filters for Employee
+        /// Smaller than filters for Employee.
         /// </summary>
         [JsonProperty("smallerThan")]
         public EmployeeSearchSmallerThan? SmallerThan { get; set; } = null;
 
         /// <summary>
-        /// Greater than or equal filters for Employee
+        /// Greater than or equal filters for Employee.
         /// </summary>
         [JsonProperty("greaterOrEqual")]
         public EmployeeSearchGreaterOrEqual? GreaterOrEqual { get; set; } = null;
 
         /// <summary>
-        /// Smaller than or equal filters for Employee
+        /// Smaller than or equal filters for Employee.
         /// </summary>
         [JsonProperty("smallerOrEqual")]
         public EmployeeSearchSmallerOrEqual? SmallerOrEqual { get; set; } = null;
 
         /// <summary>
-        /// Contains filters for Employee
+        /// Contains filters for Employee.
         /// </summary>
         [JsonProperty("contains")]
         public EmployeeSearchContains? Contains { get; set; } = null;
 
         /// <summary>
-        /// Not contains filters for Employee
+        /// Not contains filters for Employee.
         /// </summary>
         [JsonProperty("notContains")]
         public EmployeeSearchNotContains? NotContains { get; set; } = null;
 
         /// <summary>
-        /// LIKE filters for Employee
+        /// LIKE filters for Employee.
         /// </summary>
         [JsonProperty("like")]
         public EmployeeSearchLike? Like { get; set; } = null;
 
         /// <summary>
-        /// NOT LIKE filters for Employee
+        /// NOT LIKE filters for Employee.
         /// </summary>
         [JsonProperty("notLike")]
         public EmployeeSearchNotLike? NotLike { get; set; } = null;
 
         /// <summary>
-        /// Null filters for Employee
+        /// Null filters for Employee.
         /// </summary>
         [JsonProperty("null")]
         public EmployeeSearchNull? Null { get; set; } = null;
 
         /// <summary>
-        /// Not null filters for Employee
+        /// Not null filters for Employee.
         /// </summary>
         [JsonProperty("notNull")]
         public EmployeeSearchNotNull? NotNull { get; set; } = null;
 
         /// <summary>
-        /// OrCondition decides if this filter is within an OR-condition or AND-condition
+        /// OrCondition decides if this filter is within an OR-condition or AND-condition.
         /// </summary>
         [JsonProperty("orCondition")]
         public bool OrCondition { get; set; } = default!;
 
         /// <summary>
-        /// NestedFilters of the Employee, useful for more complex filters
+        /// NestedFilters of the Employee, useful for more complex filters.
         /// </summary>
         [JsonProperty("nestedFilters")]
         public List<EmployeeFilter>? NestedFilters { get; set; }

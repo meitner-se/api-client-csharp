@@ -13,21 +13,20 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// Smaller than or equal filters for AuditEvent
+    /// Smaller than or equal filters for AuditEvent.
     /// </summary>
     public class AuditEventFilterSmallerOrEqual
     {
-
         /// <summary>
-        /// Metadata information for the AuditEvent
+        /// Metadata information for the AuditEvent.
         /// </summary>
         [JsonProperty("meta")]
         public AuditEventFilterSmallerOrEqualMeta? Meta { get; set; } = null;
 
         /// <summary>
-        /// The timestamp of the event
+        /// The timestamp of the event.
         /// </summary>
         [JsonProperty("timestamp")]
         public DateTime? Timestamp { get; set; } = null;

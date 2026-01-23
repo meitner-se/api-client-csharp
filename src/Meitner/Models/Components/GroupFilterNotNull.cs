@@ -12,15 +12,14 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// Not null filters for Group
+    /// Not null filters for Group.
     /// </summary>
     public class GroupFilterNotNull
     {
-
         /// <summary>
-        /// Metadata information for the Group
+        /// Metadata information for the Group.
         /// </summary>
         [JsonProperty("meta")]
         public GroupFilterNotNullMeta? Meta { get; set; } = null;
@@ -32,27 +31,19 @@ namespace Meitner.Models.Components
         public GroupFilterNotNullExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The types of the group
+        /// The types of the group. Note: For preschools (FS), Class and Childcare types are automatically paired. Adding Class will automatically include Childcare, and adding Childcare will automatically include Class.
         /// </summary>
         [JsonProperty("types")]
         public bool? Types { get; set; } = null;
 
         /// <summary>
-        /// The IDs of the moderators of the group.  Can be any user type (Student, Employee, Guardian) if the Category is Other. If the Category is Education, the Moderators have to be employees of the school.<br/>
-        /// 
-        /// <remarks>
-        /// 
-        /// </remarks>
+        /// The IDs of the moderators of the group.  Can be any user type (Student, Employee, Guardian) if the Category is Other. If the Category is Education, the Moderators have to be employees of the school.
         /// </summary>
         [JsonProperty("moderatorIDs")]
         public bool? ModeratorIDs { get; set; } = null;
 
         /// <summary>
-        /// The IDs of the members of the group. Can be any user type (Student, Employee, Guardian) if the Category is Other. If the Category is Education, the Members have to be students of the school.<br/>
-        /// 
-        /// <remarks>
-        /// 
-        /// </remarks>
+        /// The IDs of the members of the group. Can be any user type (Student, Employee, Guardian) if the Category is Other. If the Category is Education, the Members have to be students of the school.
         /// </summary>
         [JsonProperty("memberIDs")]
         public bool? MemberIDs { get; set; } = null;

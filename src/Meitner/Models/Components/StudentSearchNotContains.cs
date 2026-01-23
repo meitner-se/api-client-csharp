@@ -14,21 +14,20 @@ namespace Meitner.Models.Components
     using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Not contains filters for Student
+    /// Not contains filters for Student.
     /// </summary>
     public class StudentSearchNotContains
     {
-
         /// <summary>
-        /// Unique identifier for the Student
+        /// Unique identifier for the Student.
         /// </summary>
         [JsonProperty("id")]
         public List<string>? Id { get; set; }
 
         /// <summary>
-        /// Metadata information for the Student
+        /// Metadata information for the Student.
         /// </summary>
         [JsonProperty("meta")]
         public StudentSearchNotContainsMeta? Meta { get; set; } = null;
@@ -40,54 +39,50 @@ namespace Meitner.Models.Components
         public StudentSearchNotContainsExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The gender of the student
+        /// The gender of the student.
         /// </summary>
         [JsonProperty("gender")]
         public List<Gender>? Gender { get; set; }
 
         /// <summary>
-        /// The identity number of the student, must be unique within the organization.
+        /// The identity number of the student in the format YYYYMMDD-NNNN, must be unique within the organization.
         /// </summary>
         [JsonProperty("identityNumber")]
         public List<string>? IdentityNumber { get; set; }
 
         /// <summary>
-        /// If the identity number is temporary for the student
+        /// If the identity number is temporary for the student.
         /// </summary>
         [JsonProperty("identityTemporary")]
         public List<bool>? IdentityTemporary { get; set; }
 
         /// <summary>
-        /// The first name of the student
+        /// The first name of the student.
         /// </summary>
         [JsonProperty("firstName")]
         public List<string>? FirstName { get; set; }
 
         /// <summary>
-        /// The last name of the student
+        /// The last name of the student.
         /// </summary>
         [JsonProperty("lastName")]
         public List<string>? LastName { get; set; }
 
         /// <summary>
-        /// The date of birth of the student
+        /// The date of birth of the student.
         /// </summary>
         [JsonProperty("dateOfBirth")]
         public List<DateOnly>? DateOfBirth { get; set; }
 
         /// <summary>
-        /// The address of the student
+        /// The address of the student.
         /// </summary>
         [JsonProperty("address")]
         public StudentSearchNotContainsAddress? Address { get; set; } = null;
 
         /// <summary>
         /// The primary email address of the student, will be used for communication with the student from the system and must be unique within the organization.<br/>
-        /// 
-        /// <remarks>
-        /// Can be used to login to the system if password-authentication is enabled for the organization.<br/>
-        /// 
-        /// </remarks>
+        /// Can be used to login to the system if password-authentication is enabled for the organization.
         /// </summary>
         [JsonProperty("emailAddress1")]
         public List<string>? EmailAddress1 { get; set; }

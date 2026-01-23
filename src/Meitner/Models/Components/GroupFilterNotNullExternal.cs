@@ -11,21 +11,20 @@ namespace Meitner.Models.Components
 {
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
     /// External is a reusable object that can be used to store external information about the employee from another system, used for third-party integration tracking.
     /// </summary>
     public class GroupFilterNotNullExternal
     {
-
         /// <summary>
-        /// The ID of the external source
+        /// The ID of the external source.
         /// </summary>
         [JsonProperty("sourceID")]
         public bool? SourceID { get; set; } = null;
 
         /// <summary>
-        /// The source of the external information
+        /// The source of the external information.
         /// </summary>
         [JsonProperty("source")]
         public bool? Source { get; set; } = null;

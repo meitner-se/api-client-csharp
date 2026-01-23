@@ -13,15 +13,14 @@ namespace Meitner.Models.Requests
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     public class EmployeeUpdateResponse
     {
-
         [JsonProperty("-")]
         public HTTPMetadata HttpMeta { get; set; } = default!;
 
         /// <summary>
-        /// Response for Employee Update operation - returns the updated Employee
+        /// Response for Employee Update operation - returns the updated Employee.
         /// </summary>
         public Employee? Employee { get; set; }
 

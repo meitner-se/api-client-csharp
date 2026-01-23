@@ -10,9 +10,9 @@
 namespace Meitner.Models.Components
 {
     using Meitner.Utils;
-    
+
     /// <summary>
-    /// Metadata information for the Guardian
+    /// Metadata information for the Guardian.
     /// </summary>
     public class GuardianSearchLikeMeta
     {

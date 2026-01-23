@@ -12,15 +12,14 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// Smaller than filters for Group
+    /// Smaller than filters for Group.
     /// </summary>
     public class GroupFilterSmallerThan
     {
-
         /// <summary>
-        /// Metadata information for the Group
+        /// Metadata information for the Group.
         /// </summary>
         [JsonProperty("meta")]
         public GroupFilterSmallerThanMeta? Meta { get; set; } = null;

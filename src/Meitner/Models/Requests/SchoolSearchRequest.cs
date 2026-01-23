@@ -11,24 +11,23 @@ namespace Meitner.Models.Requests
 {
     using Meitner.Models.Components;
     using Meitner.Utils;
-    
+
     public class SchoolSearchRequest
     {
-
         /// <summary>
-        /// The maximum number of Schools to return (default: 50) when searching Schools
+        /// The maximum number of Schools to return (default: 50) when searching Schools.
         /// </summary>
         [SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")]
         public long? Limit { get; set; } = 50;
 
         /// <summary>
-        /// The number of Schools to skip before starting to return results (default: 0) when searching Schools
+        /// The number of Schools to skip before starting to return results (default: 0) when searching Schools.
         /// </summary>
         [SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")]
         public long? Offset { get; set; } = 0;
 
         /// <summary>
-        /// Request body
+        /// Request body.
         /// </summary>
         [SpeakeasyMetadata("request:mediaType=application/json")]
         public SchoolSearchRequestBody SchoolSearch { get; set; } = default!;

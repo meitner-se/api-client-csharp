@@ -10,18 +10,17 @@
 namespace Meitner.Models.Requests
 {
     using Meitner.Utils;
-    
+
     public class StudentPlacementListRequest
     {
-
         /// <summary>
-        /// The maximum number of StudentPlacements to return (default: 50) when listing StudentPlacements
+        /// The maximum number of StudentPlacements to return (default: 50) when listing StudentPlacements.
         /// </summary>
         [SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")]
         public long? Limit { get; set; } = 50;
 
         /// <summary>
-        /// The number of StudentPlacements to skip before starting to return results (default: 0) when listing StudentPlacements
+        /// The number of StudentPlacements to skip before starting to return results (default: 0) when listing StudentPlacements.
         /// </summary>
         [SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")]
         public long? Offset { get; set; } = 0;

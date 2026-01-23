@@ -10,12 +10,11 @@
 namespace Meitner.Models.Requests
 {
     using Meitner.Utils;
-    
+
     public class EmployeePlacementDeleteRequest
     {
-
         /// <summary>
-        /// The unique identifier of the EmployeePlacement to delete
+        /// The unique identifier of the EmployeePlacement to delete.
         /// </summary>
         [SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")]
         public string Id { get; set; } = default!;

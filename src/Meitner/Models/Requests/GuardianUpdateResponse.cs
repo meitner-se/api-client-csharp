@@ -13,15 +13,14 @@ namespace Meitner.Models.Requests
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     public class GuardianUpdateResponse
     {
-
         [JsonProperty("-")]
         public HTTPMetadata HttpMeta { get; set; } = default!;
 
         /// <summary>
-        /// Response for Guardian Update operation - returns the updated Guardian
+        /// Response for Guardian Update operation - returns the updated Guardian.
         /// </summary>
         public Guardian? Guardian { get; set; }
 

@@ -13,15 +13,14 @@ namespace Meitner.Models.Requests
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     public class StudentPlacementGetResponse
     {
-
         [JsonProperty("-")]
         public HTTPMetadata HttpMeta { get; set; } = default!;
 
         /// <summary>
-        /// Response for StudentPlacement Get operation - returns the requested StudentPlacement
+        /// Response for StudentPlacement Get operation - returns the requested StudentPlacement.
         /// </summary>
         public StudentPlacement? StudentPlacement { get; set; }
 

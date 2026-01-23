@@ -13,15 +13,14 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// Greater than filters for Employee
+    /// Greater than filters for Employee.
     /// </summary>
     public class EmployeeSearchGreaterThan
     {
-
         /// <summary>
-        /// Metadata information for the Employee
+        /// Metadata information for the Employee.
         /// </summary>
         [JsonProperty("meta")]
         public EmployeeSearchGreaterThanMeta? Meta { get; set; } = null;
@@ -33,13 +32,13 @@ namespace Meitner.Models.Components
         public EmployeeSearchGreaterThanExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The date of birth of the employee
+        /// The date of birth of the employee.
         /// </summary>
         [JsonProperty("dateOfBirth")]
         public DateOnly? DateOfBirth { get; set; } = null;
 
         /// <summary>
-        /// The address of the employee
+        /// The address of the employee.
         /// </summary>
         [JsonProperty("address")]
         public EmployeeSearchGreaterThanAddress? Address { get; set; } = null;

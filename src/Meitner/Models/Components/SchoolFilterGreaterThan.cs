@@ -12,15 +12,14 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// Greater than filters for School
+    /// Greater than filters for School.
     /// </summary>
     public class SchoolFilterGreaterThan
     {
-
         /// <summary>
-        /// Metadata information for the School
+        /// Metadata information for the School.
         /// </summary>
         [JsonProperty("meta")]
         public SchoolFilterGreaterThanMeta? Meta { get; set; } = null;

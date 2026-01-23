@@ -12,15 +12,14 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// NOT LIKE filters for EmployeePlacement
+    /// NOT LIKE filters for EmployeePlacement.
     /// </summary>
     public class EmployeePlacementSearchNotLike
     {
-
         /// <summary>
-        /// Metadata information for the EmployeePlacement
+        /// Metadata information for the EmployeePlacement.
         /// </summary>
         [JsonProperty("meta")]
         public EmployeePlacementSearchNotLikeMeta? Meta { get; set; } = null;
@@ -32,13 +31,13 @@ namespace Meitner.Models.Components
         public EmployeePlacementSearchNotLikeExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The signature of the employee
+        /// The signature of the employee.
         /// </summary>
         [JsonProperty("signature")]
         public string? Signature { get; set; } = null;
 
         /// <summary>
-        /// The title of the employee
+        /// The title of the employee.
         /// </summary>
         [JsonProperty("title")]
         public string? Title { get; set; } = null;

@@ -13,13 +13,12 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// Request body
+    /// Request body.
     /// </summary>
     public class EmployeeUpdate
     {
-
         /// <summary>
         /// ExternalRequest is the External-object used on Update and Create operations, since it should only be allowed to set SourceID for the employee placement, the Source-field is not included.
         /// </summary>
@@ -27,54 +26,50 @@ namespace Meitner.Models.Components
         public EmployeeUpdateExternal? External { get; set; }
 
         /// <summary>
-        /// The gender of the employee
+        /// The gender of the employee.
         /// </summary>
         [JsonProperty("gender")]
         public EmployeeUpdateGender? Gender { get; set; } = null;
 
         /// <summary>
-        /// The identity number of the employee, must be unique within the organization.
+        /// The identity number of the employee in the format YYYYMMDD-NNNN, must be unique within the organization.
         /// </summary>
         [JsonProperty("identityNumber")]
         public string IdentityNumber { get; set; } = default!;
 
         /// <summary>
-        /// If the identity number is temporary for the employee
+        /// If the identity number is temporary for the employee.
         /// </summary>
         [JsonProperty("identityTemporary")]
         public bool? IdentityTemporary { get; set; } = false;
 
         /// <summary>
-        /// The first name of the employee
+        /// The first name of the employee.
         /// </summary>
         [JsonProperty("firstName")]
         public string FirstName { get; set; } = default!;
 
         /// <summary>
-        /// The last name of the employee
+        /// The last name of the employee.
         /// </summary>
         [JsonProperty("lastName")]
         public string LastName { get; set; } = default!;
 
         /// <summary>
-        /// The date of birth of the employee
+        /// The date of birth of the employee.
         /// </summary>
         [JsonProperty("dateOfBirth")]
         public DateOnly? DateOfBirth { get; set; } = null;
 
         /// <summary>
-        /// The address of the employee
+        /// The address of the employee.
         /// </summary>
         [JsonProperty("address")]
         public EmployeeUpdateAddress? Address { get; set; }
 
         /// <summary>
         /// The primary email address of the employee, will be used for communication with the employee from the system and must be unique within the organization.<br/>
-        /// 
-        /// <remarks>
-        /// Can be used to login to the system if password-authentication is enabled for the organization.<br/>
-        /// 
-        /// </remarks>
+        /// Can be used to login to the system if password-authentication is enabled for the organization.
         /// </summary>
         [JsonProperty("emailAddress1")]
         public string? EmailAddress1 { get; set; } = null;

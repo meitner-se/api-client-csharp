@@ -13,15 +13,14 @@ namespace Meitner.Models.Requests
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     public class AuditEventGetResponse
     {
-
         [JsonProperty("-")]
         public HTTPMetadata HttpMeta { get; set; } = default!;
 
         /// <summary>
-        /// Response for AuditEvent Get operation - returns the requested AuditEvent
+        /// Response for AuditEvent Get operation - returns the requested AuditEvent.
         /// </summary>
         public AuditEvent? AuditEvent { get; set; }
 

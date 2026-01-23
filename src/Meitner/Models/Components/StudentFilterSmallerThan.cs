@@ -13,15 +13,14 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// Smaller than filters for Student
+    /// Smaller than filters for Student.
     /// </summary>
     public class StudentFilterSmallerThan
     {
-
         /// <summary>
-        /// Metadata information for the Student
+        /// Metadata information for the Student.
         /// </summary>
         [JsonProperty("meta")]
         public StudentFilterSmallerThanMeta? Meta { get; set; } = null;
@@ -33,13 +32,13 @@ namespace Meitner.Models.Components
         public StudentFilterSmallerThanExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The date of birth of the student
+        /// The date of birth of the student.
         /// </summary>
         [JsonProperty("dateOfBirth")]
         public DateOnly? DateOfBirth { get; set; } = null;
 
         /// <summary>
-        /// The address of the student
+        /// The address of the student.
         /// </summary>
         [JsonProperty("address")]
         public StudentFilterSmallerThanAddress? Address { get; set; } = null;

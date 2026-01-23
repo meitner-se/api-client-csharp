@@ -12,15 +12,14 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// Greater than or equal filters for Guardian
+    /// Greater than or equal filters for Guardian.
     /// </summary>
     public class GuardianFilterGreaterOrEqual
     {
-
         /// <summary>
-        /// Metadata information for the Guardian
+        /// Metadata information for the Guardian.
         /// </summary>
         [JsonProperty("meta")]
         public GuardianFilterGreaterOrEqualMeta? Meta { get; set; } = null;
@@ -32,7 +31,7 @@ namespace Meitner.Models.Components
         public GuardianFilterGreaterOrEqualExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The address of the guardian
+        /// The address of the guardian.
         /// </summary>
         [JsonProperty("address")]
         public GuardianFilterGreaterOrEqualAddress? Address { get; set; } = null;

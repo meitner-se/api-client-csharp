@@ -10,12 +10,11 @@
 namespace Meitner.Models.Requests
 {
     using Meitner.Utils;
-    
+
     public class GuardianDeleteRequest
     {
-
         /// <summary>
-        /// The unique identifier of the Guardian to delete
+        /// The unique identifier of the Guardian to delete.
         /// </summary>
         [SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")]
         public string Id { get; set; } = default!;

@@ -13,15 +13,14 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// Smaller than or equal filters for StudentPlacement
+    /// Smaller than or equal filters for StudentPlacement.
     /// </summary>
     public class StudentPlacementSearchSmallerOrEqual
     {
-
         /// <summary>
-        /// Metadata information for the StudentPlacement
+        /// Metadata information for the StudentPlacement.
         /// </summary>
         [JsonProperty("meta")]
         public StudentPlacementSearchSmallerOrEqualMeta? Meta { get; set; } = null;
@@ -33,19 +32,19 @@ namespace Meitner.Models.Components
         public StudentPlacementSearchSmallerOrEqualExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The start date of the placement
+        /// The start date of the placement.
         /// </summary>
         [JsonProperty("startDate")]
         public DateOnly? StartDate { get; set; } = null;
 
         /// <summary>
-        /// The end date of the placement
+        /// The end date of the placement.
         /// </summary>
         [JsonProperty("endDate")]
         public DateOnly? EndDate { get; set; } = null;
 
         /// <summary>
-        /// The timestamp the placement was archived for the student
+        /// The timestamp the placement was archived for the student.
         /// </summary>
         [JsonProperty("archivedAt")]
         public DateTime? ArchivedAt { get; set; } = null;

@@ -13,21 +13,20 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Response for Employee Search operation - returns filtered Employee results
+    /// Response for Employee Search operation - returns filtered Employee results.
     /// </summary>
     public class EmployeeSearchResponse
     {
-
         /// <summary>
-        /// Array of Employee objects
+        /// Array of Employee objects.
         /// </summary>
         [JsonProperty("data")]
         public List<Employee>? Data { get; set; }
 
         /// <summary>
-        /// Pagination information
+        /// Pagination information.
         /// </summary>
         [JsonProperty("pagination")]
         public EmployeeSearchPagination? Pagination { get; set; }

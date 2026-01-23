@@ -13,21 +13,20 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Response for AuditEvent List operation - returns a paginated list of AuditEvent
+    /// Response for AuditEvent List operation - returns a paginated list of AuditEvent.
     /// </summary>
     public class AuditEventList
     {
-
         /// <summary>
-        /// Array of AuditEvent objects
+        /// Array of AuditEvent objects.
         /// </summary>
         [JsonProperty("data")]
         public List<AuditEvent>? Data { get; set; }
 
         /// <summary>
-        /// Pagination information
+        /// Pagination information.
         /// </summary>
         [JsonProperty("pagination")]
         public AuditEventListPagination? Pagination { get; set; }

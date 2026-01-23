@@ -10,18 +10,17 @@
 namespace Meitner.Models.Requests
 {
     using Meitner.Utils;
-    
+
     public class AuditEventListRequest
     {
-
         /// <summary>
-        /// The maximum number of AuditEvents to return (default: 50) when listing AuditEvents
+        /// The maximum number of AuditEvents to return (default: 50) when listing AuditEvents.
         /// </summary>
         [SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")]
         public long? Limit { get; set; } = 50;
 
         /// <summary>
-        /// The number of AuditEvents to skip before starting to return results (default: 0) when listing AuditEvents
+        /// The number of AuditEvents to skip before starting to return results (default: 0) when listing AuditEvents.
         /// </summary>
         [SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")]
         public long? Offset { get; set; } = 0;

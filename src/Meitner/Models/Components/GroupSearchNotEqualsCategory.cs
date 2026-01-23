@@ -12,13 +12,9 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// If the category is Education, the ModeratorIDs have to be employees and the MemberIDs have to be students of the school. If the category is Other, it will not be possible to use the IsClass, IsChildcare and IsMentor fields.<br/>
-    /// 
-    /// <remarks>
-    /// 
-    /// </remarks>
+    /// If the category is Education, the ModeratorIDs have to be employees and the MemberIDs have to be students of the school. If the category is Other, it will not be possible to use the IsClass, IsChildcare and IsMentor fields.
     /// </summary>
     public enum GroupSearchNotEqualsCategory
     {
@@ -60,5 +56,4 @@ namespace Meitner.Models.Components
             throw new Exception($"Unknown value {value} for enum GroupSearchNotEqualsCategory");
         }
     }
-
 }

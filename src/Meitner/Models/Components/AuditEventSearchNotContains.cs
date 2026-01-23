@@ -13,39 +13,38 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Not contains filters for AuditEvent
+    /// Not contains filters for AuditEvent.
     /// </summary>
     public class AuditEventSearchNotContains
     {
-
         /// <summary>
-        /// Unique identifier for the AuditEvent
+        /// Unique identifier for the AuditEvent.
         /// </summary>
         [JsonProperty("id")]
         public List<string>? Id { get; set; }
 
         /// <summary>
-        /// Metadata information for the AuditEvent
+        /// Metadata information for the AuditEvent.
         /// </summary>
         [JsonProperty("meta")]
         public AuditEventSearchNotContainsMeta? Meta { get; set; } = null;
 
         /// <summary>
-        /// The type of resource the event occured for
+        /// The type of resource the event occured for.
         /// </summary>
         [JsonProperty("resource")]
         public List<AuditEventResource>? Resource { get; set; }
 
         /// <summary>
-        /// The ID of the resource the event belongs to
+        /// The ID of the resource the event belongs to.
         /// </summary>
         [JsonProperty("resourceID")]
         public List<string>? ResourceID { get; set; }
 
         /// <summary>
-        /// The type of the audit event
+        /// The type of the audit event.
         /// </summary>
         [JsonProperty("type")]
         public List<AuditEventType>? Type { get; set; }

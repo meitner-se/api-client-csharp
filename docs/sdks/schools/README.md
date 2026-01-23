@@ -1,5 +1,4 @@
 # Schools
-(*Schools*)
 
 ## Overview
 

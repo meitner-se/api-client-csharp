@@ -13,93 +13,92 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Filter object for Student
+    /// Filter object for Student.
     /// </summary>
     public class StudentFilter
     {
-
         /// <summary>
-        /// Equality filters for Student
+        /// Equality filters for Student.
         /// </summary>
         [JsonProperty("equals")]
         public StudentFilterEquals? Equals { get; set; } = null;
 
         /// <summary>
-        /// Inequality filters for Student
+        /// Inequality filters for Student.
         /// </summary>
         [JsonProperty("notEquals")]
         public StudentFilterNotEquals? NotEquals { get; set; } = null;
 
         /// <summary>
-        /// Greater than filters for Student
+        /// Greater than filters for Student.
         /// </summary>
         [JsonProperty("greaterThan")]
         public StudentFilterGreaterThan? GreaterThan { get; set; } = null;
 
         /// <summary>
-        /// Smaller than filters for Student
+        /// Smaller than filters for Student.
         /// </summary>
         [JsonProperty("smallerThan")]
         public StudentFilterSmallerThan? SmallerThan { get; set; } = null;
 
         /// <summary>
-        /// Greater than or equal filters for Student
+        /// Greater than or equal filters for Student.
         /// </summary>
         [JsonProperty("greaterOrEqual")]
         public StudentFilterGreaterOrEqual? GreaterOrEqual { get; set; } = null;
 
         /// <summary>
-        /// Smaller than or equal filters for Student
+        /// Smaller than or equal filters for Student.
         /// </summary>
         [JsonProperty("smallerOrEqual")]
         public StudentFilterSmallerOrEqual? SmallerOrEqual { get; set; } = null;
 
         /// <summary>
-        /// Contains filters for Student
+        /// Contains filters for Student.
         /// </summary>
         [JsonProperty("contains")]
         public StudentFilterContains? Contains { get; set; } = null;
 
         /// <summary>
-        /// Not contains filters for Student
+        /// Not contains filters for Student.
         /// </summary>
         [JsonProperty("notContains")]
         public StudentFilterNotContains? NotContains { get; set; } = null;
 
         /// <summary>
-        /// LIKE filters for Student
+        /// LIKE filters for Student.
         /// </summary>
         [JsonProperty("like")]
         public StudentFilterLike? Like { get; set; } = null;
 
         /// <summary>
-        /// NOT LIKE filters for Student
+        /// NOT LIKE filters for Student.
         /// </summary>
         [JsonProperty("notLike")]
         public StudentFilterNotLike? NotLike { get; set; } = null;
 
         /// <summary>
-        /// Null filters for Student
+        /// Null filters for Student.
         /// </summary>
         [JsonProperty("null")]
         public StudentFilterNull? Null { get; set; } = null;
 
         /// <summary>
-        /// Not null filters for Student
+        /// Not null filters for Student.
         /// </summary>
         [JsonProperty("notNull")]
         public StudentFilterNotNull? NotNull { get; set; } = null;
 
         /// <summary>
-        /// OrCondition decides if this filter is within an OR-condition or AND-condition
+        /// OrCondition decides if this filter is within an OR-condition or AND-condition.
         /// </summary>
         [JsonProperty("orCondition")]
         public bool OrCondition { get; set; } = default!;
 
         /// <summary>
-        /// NestedFilters of the Student, useful for more complex filters
+        /// NestedFilters of the Student, useful for more complex filters.
         /// </summary>
         [JsonProperty("nestedFilters")]
         public List<StudentFilter>? NestedFilters { get; set; }

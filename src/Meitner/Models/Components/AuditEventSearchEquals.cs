@@ -13,45 +13,44 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// Equality filters for AuditEvent
+    /// Equality filters for AuditEvent.
     /// </summary>
     public class AuditEventSearchEquals
     {
-
         /// <summary>
-        /// Unique identifier for the AuditEvent
+        /// Unique identifier for the AuditEvent.
         /// </summary>
         [JsonProperty("id")]
         public string? Id { get; set; } = null;
 
         /// <summary>
-        /// Metadata information for the AuditEvent
+        /// Metadata information for the AuditEvent.
         /// </summary>
         [JsonProperty("meta")]
         public AuditEventSearchEqualsMeta? Meta { get; set; } = null;
 
         /// <summary>
-        /// The timestamp of the event
+        /// The timestamp of the event.
         /// </summary>
         [JsonProperty("timestamp")]
         public DateTime? Timestamp { get; set; } = null;
 
         /// <summary>
-        /// The type of resource the event occured for
+        /// The type of resource the event occured for.
         /// </summary>
         [JsonProperty("resource")]
         public EqualsResourceRequestBody? Resource { get; set; } = null;
 
         /// <summary>
-        /// The ID of the resource the event belongs to
+        /// The ID of the resource the event belongs to.
         /// </summary>
         [JsonProperty("resourceID")]
         public string? ResourceID { get; set; } = null;
 
         /// <summary>
-        /// The type of the audit event
+        /// The type of the audit event.
         /// </summary>
         [JsonProperty("type")]
         public EqualsTypeRequestBody? Type { get; set; } = null;

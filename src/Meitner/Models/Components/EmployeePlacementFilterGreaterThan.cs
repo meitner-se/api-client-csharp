@@ -13,15 +13,14 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// Greater than filters for EmployeePlacement
+    /// Greater than filters for EmployeePlacement.
     /// </summary>
     public class EmployeePlacementFilterGreaterThan
     {
-
         /// <summary>
-        /// Metadata information for the EmployeePlacement
+        /// Metadata information for the EmployeePlacement.
         /// </summary>
         [JsonProperty("meta")]
         public EmployeePlacementFilterGreaterThanMeta? Meta { get; set; } = null;
@@ -33,19 +32,19 @@ namespace Meitner.Models.Components
         public EmployeePlacementFilterGreaterThanExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The start date of the placement for the employee
+        /// The start date of the placement for the employee.
         /// </summary>
         [JsonProperty("startDate")]
         public DateOnly? StartDate { get; set; } = null;
 
         /// <summary>
-        /// The end date of the placement for the employee
+        /// The end date of the placement for the employee.
         /// </summary>
         [JsonProperty("endDate")]
         public DateOnly? EndDate { get; set; } = null;
 
         /// <summary>
-        /// The timestamp the placement was archived for the employee
+        /// The timestamp the placement was archived for the employee.
         /// </summary>
         [JsonProperty("archivedAt")]
         public DateTime? ArchivedAt { get; set; } = null;

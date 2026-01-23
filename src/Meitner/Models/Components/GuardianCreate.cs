@@ -13,13 +13,12 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Request body
+    /// Request body.
     /// </summary>
     public class GuardianCreate
     {
-
         /// <summary>
         /// ExternalRequest is the External-object used on Update and Create operations, since it should only be allowed to set SourceID for the guardian, the Source-field is not included.
         /// </summary>
@@ -27,42 +26,38 @@ namespace Meitner.Models.Components
         public GuardianCreateExternal? External { get; set; }
 
         /// <summary>
-        /// The identity number of the guardian, must be unique within the organization.
+        /// The identity number of the guardian in the format YYYYMMDD-NNNN, must be unique within the organization.
         /// </summary>
         [JsonProperty("identityNumber")]
         public string IdentityNumber { get; set; } = default!;
 
         /// <summary>
-        /// If the identity number is temporary for the guardian
+        /// If the identity number is temporary for the guardian.
         /// </summary>
         [JsonProperty("identityTemporary")]
         public bool? IdentityTemporary { get; set; } = false;
 
         /// <summary>
-        /// The first name of the guardian
+        /// The first name of the guardian.
         /// </summary>
         [JsonProperty("firstName")]
         public string FirstName { get; set; } = default!;
 
         /// <summary>
-        /// The last name of the guardian
+        /// The last name of the guardian.
         /// </summary>
         [JsonProperty("lastName")]
         public string LastName { get; set; } = default!;
 
         /// <summary>
-        /// The address of the guardian
+        /// The address of the guardian.
         /// </summary>
         [JsonProperty("address")]
         public GuardianCreateAddress? Address { get; set; }
 
         /// <summary>
         /// The email address of the guardian, will be used for communication with the guardian from the system and must be unique within the organization.<br/>
-        /// 
-        /// <remarks>
-        /// Can be used to login to the system if password-authentication is enabled for the organization.<br/>
-        /// 
-        /// </remarks>
+        /// Can be used to login to the system if password-authentication is enabled for the organization.
         /// </summary>
         [JsonProperty("emailAddress1")]
         public string? EmailAddress1 { get; set; } = null;

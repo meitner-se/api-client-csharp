@@ -10,9 +10,9 @@
 namespace Meitner.Models.Components
 {
     using Meitner.Utils;
-    
+
     /// <summary>
-    /// Metadata information for the StudentPlacement
+    /// Metadata information for the StudentPlacement.
     /// </summary>
     public class StudentPlacementSearchNotLikeMeta
     {

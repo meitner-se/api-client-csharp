@@ -14,21 +14,20 @@ namespace Meitner.Models.Components
     using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Contains filters for Employee
+    /// Contains filters for Employee.
     /// </summary>
     public class EmployeeSearchContains
     {
-
         /// <summary>
-        /// Unique identifier for the Employee
+        /// Unique identifier for the Employee.
         /// </summary>
         [JsonProperty("id")]
         public List<string>? Id { get; set; }
 
         /// <summary>
-        /// Metadata information for the Employee
+        /// Metadata information for the Employee.
         /// </summary>
         [JsonProperty("meta")]
         public EmployeeSearchContainsMeta? Meta { get; set; } = null;
@@ -40,54 +39,50 @@ namespace Meitner.Models.Components
         public EmployeeSearchContainsExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The gender of the employee
+        /// The gender of the employee.
         /// </summary>
         [JsonProperty("gender")]
         public List<Gender>? Gender { get; set; }
 
         /// <summary>
-        /// The identity number of the employee, must be unique within the organization.
+        /// The identity number of the employee in the format YYYYMMDD-NNNN, must be unique within the organization.
         /// </summary>
         [JsonProperty("identityNumber")]
         public List<string>? IdentityNumber { get; set; }
 
         /// <summary>
-        /// If the identity number is temporary for the employee
+        /// If the identity number is temporary for the employee.
         /// </summary>
         [JsonProperty("identityTemporary")]
         public List<bool>? IdentityTemporary { get; set; }
 
         /// <summary>
-        /// The first name of the employee
+        /// The first name of the employee.
         /// </summary>
         [JsonProperty("firstName")]
         public List<string>? FirstName { get; set; }
 
         /// <summary>
-        /// The last name of the employee
+        /// The last name of the employee.
         /// </summary>
         [JsonProperty("lastName")]
         public List<string>? LastName { get; set; }
 
         /// <summary>
-        /// The date of birth of the employee
+        /// The date of birth of the employee.
         /// </summary>
         [JsonProperty("dateOfBirth")]
         public List<DateOnly>? DateOfBirth { get; set; }
 
         /// <summary>
-        /// The address of the employee
+        /// The address of the employee.
         /// </summary>
         [JsonProperty("address")]
         public EmployeeSearchContainsAddress? Address { get; set; } = null;
 
         /// <summary>
         /// The primary email address of the employee, will be used for communication with the employee from the system and must be unique within the organization.<br/>
-        /// 
-        /// <remarks>
-        /// Can be used to login to the system if password-authentication is enabled for the organization.<br/>
-        /// 
-        /// </remarks>
+        /// Can be used to login to the system if password-authentication is enabled for the organization.
         /// </summary>
         [JsonProperty("emailAddress1")]
         public List<string>? EmailAddress1 { get; set; }

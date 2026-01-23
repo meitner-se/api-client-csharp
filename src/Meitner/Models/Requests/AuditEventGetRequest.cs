@@ -10,12 +10,11 @@
 namespace Meitner.Models.Requests
 {
     using Meitner.Utils;
-    
+
     public class AuditEventGetRequest
     {
-
         /// <summary>
-        /// The unique identifier of the AuditEvent to retrieve
+        /// The unique identifier of the AuditEvent to retrieve.
         /// </summary>
         [SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")]
         public string Id { get; set; } = default!;

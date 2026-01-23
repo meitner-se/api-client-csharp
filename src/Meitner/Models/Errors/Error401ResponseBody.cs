@@ -25,7 +25,7 @@ namespace Meitner.Models.Errors
     }
 
     /// <summary>
-    /// Unauthorized - The request is missing valid authentication credentials
+    /// Unauthorized - The request is missing valid authentication credentials.
     /// </summary>
     public class Error401ResponseBody : MeitnerException
     {
@@ -66,5 +66,4 @@ namespace Meitner.Models.Errors
            #pragma warning restore CS0618
         }
     }
-
 }

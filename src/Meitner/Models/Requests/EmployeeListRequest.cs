@@ -10,18 +10,17 @@
 namespace Meitner.Models.Requests
 {
     using Meitner.Utils;
-    
+
     public class EmployeeListRequest
     {
-
         /// <summary>
-        /// The maximum number of Employees to return (default: 50) when listing Employees
+        /// The maximum number of Employees to return (default: 50) when listing Employees.
         /// </summary>
         [SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")]
         public long? Limit { get; set; } = 50;
 
         /// <summary>
-        /// The number of Employees to skip before starting to return results (default: 0) when listing Employees
+        /// The number of Employees to skip before starting to return results (default: 0) when listing Employees.
         /// </summary>
         [SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")]
         public long? Offset { get; set; } = 0;

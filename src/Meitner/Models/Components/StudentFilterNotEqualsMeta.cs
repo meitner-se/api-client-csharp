@@ -12,33 +12,32 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// Metadata information for the Student
+    /// Metadata information for the Student.
     /// </summary>
     public class StudentFilterNotEqualsMeta
     {
-
         /// <summary>
-        /// Timestamp when the resource was created
+        /// Timestamp when the resource was created.
         /// </summary>
         [JsonProperty("createdAt")]
         public DateTime? CreatedAt { get; set; } = null;
 
         /// <summary>
-        /// User who created the resource
+        /// User who created the resource.
         /// </summary>
         [JsonProperty("createdBy")]
         public string? CreatedBy { get; set; } = null;
 
         /// <summary>
-        /// Timestamp when the resource was last updated
+        /// Timestamp when the resource was last updated.
         /// </summary>
         [JsonProperty("updatedAt")]
         public DateTime? UpdatedAt { get; set; } = null;
 
         /// <summary>
-        /// User who last updated the resource
+        /// User who last updated the resource.
         /// </summary>
         [JsonProperty("updatedBy")]
         public string? UpdatedBy { get; set; } = null;

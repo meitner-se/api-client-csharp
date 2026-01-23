@@ -12,15 +12,14 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// NOT LIKE filters for Student
+    /// NOT LIKE filters for Student.
     /// </summary>
     public class StudentFilterNotLike
     {
-
         /// <summary>
-        /// Metadata information for the Student
+        /// Metadata information for the Student.
         /// </summary>
         [JsonProperty("meta")]
         public StudentFilterNotLikeMeta? Meta { get; set; } = null;
@@ -32,36 +31,32 @@ namespace Meitner.Models.Components
         public StudentFilterNotLikeExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The identity number of the student, must be unique within the organization.
+        /// The identity number of the student in the format YYYYMMDD-NNNN, must be unique within the organization.
         /// </summary>
         [JsonProperty("identityNumber")]
         public string? IdentityNumber { get; set; } = null;
 
         /// <summary>
-        /// The first name of the student
+        /// The first name of the student.
         /// </summary>
         [JsonProperty("firstName")]
         public string? FirstName { get; set; } = null;
 
         /// <summary>
-        /// The last name of the student
+        /// The last name of the student.
         /// </summary>
         [JsonProperty("lastName")]
         public string? LastName { get; set; } = null;
 
         /// <summary>
-        /// The address of the student
+        /// The address of the student.
         /// </summary>
         [JsonProperty("address")]
         public StudentFilterNotLikeAddress? Address { get; set; } = null;
 
         /// <summary>
         /// The primary email address of the student, will be used for communication with the student from the system and must be unique within the organization.<br/>
-        /// 
-        /// <remarks>
-        /// Can be used to login to the system if password-authentication is enabled for the organization.<br/>
-        /// 
-        /// </remarks>
+        /// Can be used to login to the system if password-authentication is enabled for the organization.
         /// </summary>
         [JsonProperty("emailAddress1")]
         public string? EmailAddress1 { get; set; } = null;

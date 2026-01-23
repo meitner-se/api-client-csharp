@@ -12,9 +12,9 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// The category of the group
+    /// The category of the group.
     /// </summary>
     public enum GroupCategory
     {
@@ -56,5 +56,4 @@ namespace Meitner.Models.Components
             throw new Exception($"Unknown value {value} for enum GroupCategory");
         }
     }
-
 }

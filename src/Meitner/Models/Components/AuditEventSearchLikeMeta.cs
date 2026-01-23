@@ -10,9 +10,9 @@
 namespace Meitner.Models.Components
 {
     using Meitner.Utils;
-    
+
     /// <summary>
-    /// Metadata information for the AuditEvent
+    /// Metadata information for the AuditEvent.
     /// </summary>
     public class AuditEventSearchLikeMeta
     {

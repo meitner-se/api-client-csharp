@@ -14,21 +14,20 @@ namespace Meitner.Models.Components
     using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Contains filters for EmployeePlacement
+    /// Contains filters for EmployeePlacement.
     /// </summary>
     public class EmployeePlacementFilterContains
     {
-
         /// <summary>
-        /// Unique identifier for the EmployeePlacement
+        /// Unique identifier for the EmployeePlacement.
         /// </summary>
         [JsonProperty("id")]
         public List<string>? Id { get; set; }
 
         /// <summary>
-        /// Metadata information for the EmployeePlacement
+        /// Metadata information for the EmployeePlacement.
         /// </summary>
         [JsonProperty("meta")]
         public EmployeePlacementFilterContainsMeta? Meta { get; set; } = null;
@@ -40,43 +39,43 @@ namespace Meitner.Models.Components
         public EmployeePlacementFilterContainsExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The ID of the employee the placement belongs to
+        /// The ID of the employee the placement belongs to.
         /// </summary>
         [JsonProperty("employeeID")]
         public List<string>? EmployeeID { get; set; }
 
         /// <summary>
-        /// The ID of the school the placement belongs to
+        /// The ID of the school the placement belongs to.
         /// </summary>
         [JsonProperty("schoolID")]
         public List<string>? SchoolID { get; set; }
 
         /// <summary>
-        /// The signature of the employee
+        /// The signature of the employee.
         /// </summary>
         [JsonProperty("signature")]
         public List<string>? Signature { get; set; }
 
         /// <summary>
-        /// The title of the employee
+        /// The title of the employee.
         /// </summary>
         [JsonProperty("title")]
         public List<string>? Title { get; set; }
 
         /// <summary>
-        /// The roles of the employee
+        /// The roles of the employee.
         /// </summary>
         [JsonProperty("roles")]
         public List<EmployeePlacementRole>? Roles { get; set; }
 
         /// <summary>
-        /// The start date of the placement for the employee
+        /// The start date of the placement for the employee.
         /// </summary>
         [JsonProperty("startDate")]
         public List<DateOnly>? StartDate { get; set; }
 
         /// <summary>
-        /// The end date of the placement for the employee
+        /// The end date of the placement for the employee.
         /// </summary>
         [JsonProperty("endDate")]
         public List<DateOnly>? EndDate { get; set; }

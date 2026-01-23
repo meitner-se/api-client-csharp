@@ -12,9 +12,9 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// The type of the group
+    /// The type of the group.
     /// </summary>
     public enum GroupType
     {
@@ -58,5 +58,4 @@ namespace Meitner.Models.Components
             throw new Exception($"Unknown value {value} for enum GroupType");
         }
     }
-
 }

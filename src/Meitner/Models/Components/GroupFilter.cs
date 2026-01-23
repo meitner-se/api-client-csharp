@@ -13,93 +13,92 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-    
+
     /// <summary>
-    /// Filter object for Group
+    /// Filter object for Group.
     /// </summary>
     public class GroupFilter
     {
-
         /// <summary>
-        /// Equality filters for Group
+        /// Equality filters for Group.
         /// </summary>
         [JsonProperty("equals")]
         public GroupFilterEquals? Equals { get; set; } = null;
 
         /// <summary>
-        /// Inequality filters for Group
+        /// Inequality filters for Group.
         /// </summary>
         [JsonProperty("notEquals")]
         public GroupFilterNotEquals? NotEquals { get; set; } = null;
 
         /// <summary>
-        /// Greater than filters for Group
+        /// Greater than filters for Group.
         /// </summary>
         [JsonProperty("greaterThan")]
         public GroupFilterGreaterThan? GreaterThan { get; set; } = null;
 
         /// <summary>
-        /// Smaller than filters for Group
+        /// Smaller than filters for Group.
         /// </summary>
         [JsonProperty("smallerThan")]
         public GroupFilterSmallerThan? SmallerThan { get; set; } = null;
 
         /// <summary>
-        /// Greater than or equal filters for Group
+        /// Greater than or equal filters for Group.
         /// </summary>
         [JsonProperty("greaterOrEqual")]
         public GroupFilterGreaterOrEqual? GreaterOrEqual { get; set; } = null;
 
         /// <summary>
-        /// Smaller than or equal filters for Group
+        /// Smaller than or equal filters for Group.
         /// </summary>
         [JsonProperty("smallerOrEqual")]
         public GroupFilterSmallerOrEqual? SmallerOrEqual { get; set; } = null;
 
         /// <summary>
-        /// Contains filters for Group
+        /// Contains filters for Group.
         /// </summary>
         [JsonProperty("contains")]
         public GroupFilterContains? Contains { get; set; } = null;
 
         /// <summary>
-        /// Not contains filters for Group
+        /// Not contains filters for Group.
         /// </summary>
         [JsonProperty("notContains")]
         public GroupFilterNotContains? NotContains { get; set; } = null;
 
         /// <summary>
-        /// LIKE filters for Group
+        /// LIKE filters for Group.
         /// </summary>
         [JsonProperty("like")]
         public GroupFilterLike? Like { get; set; } = null;
 
         /// <summary>
-        /// NOT LIKE filters for Group
+        /// NOT LIKE filters for Group.
         /// </summary>
         [JsonProperty("notLike")]
         public GroupFilterNotLike? NotLike { get; set; } = null;
 
         /// <summary>
-        /// Null filters for Group
+        /// Null filters for Group.
         /// </summary>
         [JsonProperty("null")]
         public GroupFilterNull? Null { get; set; } = null;
 
         /// <summary>
-        /// Not null filters for Group
+        /// Not null filters for Group.
         /// </summary>
         [JsonProperty("notNull")]
         public GroupFilterNotNull? NotNull { get; set; } = null;
 
         /// <summary>
-        /// OrCondition decides if this filter is within an OR-condition or AND-condition
+        /// OrCondition decides if this filter is within an OR-condition or AND-condition.
         /// </summary>
         [JsonProperty("orCondition")]
         public bool OrCondition { get; set; } = default!;
 
         /// <summary>
-        /// NestedFilters of the Group, useful for more complex filters
+        /// NestedFilters of the Group, useful for more complex filters.
         /// </summary>
         [JsonProperty("nestedFilters")]
         public List<GroupFilter>? NestedFilters { get; set; }

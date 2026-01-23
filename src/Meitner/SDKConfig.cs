@@ -17,6 +17,9 @@ namespace Meitner
     using System.Collections.Generic;
     using System.Linq;
 
+    /// <summary>
+    /// Main configuration for the SDK.
+    /// </summary>
     public struct SDKConfig
     {
         /// <summary>
@@ -52,7 +55,7 @@ namespace Meitner
             Client = client ?? new MeitnerHttpClient();
             ServerUrl = "";
             ServerName = null;
-            UserAgent = "speakeasy-sdk/csharp 0.1.0 2.755.6 v1 Meitner";
+            UserAgent = "speakeasy-sdk/csharp 0.2.0 2.799.0 v1 Meitner";
             SecuritySource = null;
             Hooks = new SDKHooks();
             RetryConfig = null;

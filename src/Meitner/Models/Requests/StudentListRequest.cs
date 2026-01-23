@@ -10,18 +10,17 @@
 namespace Meitner.Models.Requests
 {
     using Meitner.Utils;
-    
+
     public class StudentListRequest
     {
-
         /// <summary>
-        /// The maximum number of Students to return (default: 50) when listing Students
+        /// The maximum number of Students to return (default: 50) when listing Students.
         /// </summary>
         [SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")]
         public long? Limit { get; set; } = 50;
 
         /// <summary>
-        /// The number of Students to skip before starting to return results (default: 0) when listing Students
+        /// The number of Students to skip before starting to return results (default: 0) when listing Students.
         /// </summary>
         [SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")]
         public long? Offset { get; set; } = 0;

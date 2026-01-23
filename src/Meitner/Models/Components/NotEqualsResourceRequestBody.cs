@@ -12,9 +12,9 @@ namespace Meitner.Models.Components
     using Meitner.Utils;
     using Newtonsoft.Json;
     using System;
-    
+
     /// <summary>
-    /// The type of resource the event occured for
+    /// The type of resource the event occured for.
     /// </summary>
     public enum NotEqualsResourceRequestBody
     {
@@ -64,5 +64,4 @@ namespace Meitner.Models.Components
             throw new Exception($"Unknown value {value} for enum NotEqualsResourceRequestBody");
         }
     }
-
 }

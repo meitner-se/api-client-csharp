@@ -1,5 +1,4 @@
 # Guardians
-(*Guardians*)
 
 ## Overview
 

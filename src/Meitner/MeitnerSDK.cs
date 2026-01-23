@@ -20,43 +20,74 @@ namespace Meitner
     using System.Net.Http;
     using System.Threading;
     using System.Threading.Tasks;
-
     /// <summary>
-    /// Directory API: Generated API documentation
+    /// Directory API: Generated API documentation.
     /// </summary>
     public interface IMeitnerSDK
     {
         public ISchools Schools { get; }
+
         public IGroups Groups { get; }
+
         public IEmployees Employees { get; }
+
         public IEmployeePlacements EmployeePlacements { get; }
+
         public IGuardians Guardians { get; }
+
         public IStudents Students { get; }
+
         public IStudentPlacements StudentPlacements { get; }
+
         public IAuditEvents AuditEvents { get; }
     }
 
-
     /// <summary>
-    /// Directory API: Generated API documentation
+    /// Directory API: Generated API documentation.
     /// </summary>
     public class MeitnerSDK: IMeitnerSDK
     {
+        /// <summary>
+        /// The main SDK Configuration.
+        /// </summary>
         public SDKConfig SDKConfiguration { get; private set; }
-
-        private const string _language = "csharp";
-        private const string _sdkVersion = "0.1.0";
-        private const string _sdkGenVersion = "2.755.6";
-        private const string _openapiDocVersion = "v1";
+        /// <summary>
+        /// The Schools sub-SDK.
+        /// </summary>
         public ISchools Schools { get; private set; }
+        /// <summary>
+        /// The Groups sub-SDK.
+        /// </summary>
         public IGroups Groups { get; private set; }
+        /// <summary>
+        /// The Employees sub-SDK.
+        /// </summary>
         public IEmployees Employees { get; private set; }
+        /// <summary>
+        /// The EmployeePlacements sub-SDK.
+        /// </summary>
         public IEmployeePlacements EmployeePlacements { get; private set; }
+        /// <summary>
+        /// The Guardians sub-SDK.
+        /// </summary>
         public IGuardians Guardians { get; private set; }
+        /// <summary>
+        /// The Students sub-SDK.
+        /// </summary>
         public IStudents Students { get; private set; }
+        /// <summary>
+        /// The StudentPlacements sub-SDK.
+        /// </summary>
         public IStudentPlacements StudentPlacements { get; private set; }
+        /// <summary>
+        /// The AuditEvents sub-SDK.
+        /// </summary>
         public IAuditEvents AuditEvents { get; private set; }
 
+        /// <summary>
+        /// Initializes a new instance of the SDK based on a <see cref="SDKConfig"/> configuration object.
+        /// </summary>
+        /// <param name="config">The SDK configuration object.</param>
         public MeitnerSDK(SDKConfig config)
         {
             SDKConfiguration = config;
@@ -89,7 +120,16 @@ namespace Meitner
         /// <param name="urlParams">A dictionary of parameters to use for templating the serverUrl. Only used when serverUrl is provided.</param>
         /// <param name="client">A custom HTTP client implementation to use for making API requests. If not provided, the default MeitnerHttpClient will be used.</param>
         /// <param name="retryConfig">Configuration for retry behavior when API requests fail. Defines retry strategies, backoff policies, and maximum retry attempts.</param>
-        public MeitnerSDK(Meitner.Models.Components.Security? security = null, Func<Meitner.Models.Components.Security>? securitySource = null, SDKConfig.Server? server = null, string? serverUrl = null, Dictionary<string, string>? urlParams = null, IMeitnerHttpClient? client = null, RetryConfig? retryConfig = null)
+        /// <exception cref="ArgumentException">None of <paramref name="security"/> and <paramref name="securitySource"/> were provided.</exception>
+        public MeitnerSDK(
+            Meitner.Models.Components.Security? security = null,
+            Func<Meitner.Models.Components.Security>? securitySource = null,
+            SDKConfig.Server? server = null,
+            string? serverUrl = null,
+            Dictionary<string, string>? urlParams = null,
+            IMeitnerHttpClient? client = null,
+            RetryConfig? retryConfig = null
+        )
         {
 
             if (serverUrl != null)
@@ -111,7 +151,7 @@ namespace Meitner
             }
             else
             {
-                throw new Exception("security and securitySource cannot both be null");
+                throw new ArgumentException("security and securitySource cannot both be null");
             }
 
             SDKConfiguration = new SDKConfig(client)
@@ -146,18 +186,27 @@ namespace Meitner
             SDKConfiguration = SDKConfiguration.Hooks.SDKInit(SDKConfiguration);
         }
 
+        /// <summary>
+        /// Builder class for constructing an instance of the SDK.
+        /// </summary>
         public class SDKBuilder
         {
             private SDKConfig _sdkConfig = new SDKConfig(client: new MeitnerHttpClient());
 
             public SDKBuilder() { }
 
+            /// <summary>
+            /// Overrides the default server by name.
+            /// </summary>
             public SDKBuilder WithServer(SDKConfig.Server server)
             {
                 _sdkConfig.ServerName = server;
                 return this;
             }
 
+            /// <summary>
+            /// Overrides the default server URL for the SDK.
+            /// </summary>
             public SDKBuilder WithServerUrl(string serverUrl, Dictionary<string, string>? serverVariables = null)
             {
                 if (serverVariables != null)
@@ -168,34 +217,49 @@ namespace Meitner
                 return this;
             }
 
+            /// <summary>
+            /// Sets the securitySource security parameter for the SDK.
+            /// </summary>
             public SDKBuilder WithSecuritySource(Func<Meitner.Models.Components.Security> securitySource)
             {
                 _sdkConfig.SecuritySource = securitySource;
                 return this;
             }
 
+            /// <summary>
+            /// Sets the security security parameter for the SDK.
+            /// </summary>
             public SDKBuilder WithSecurity(Meitner.Models.Components.Security security)
             {
                 _sdkConfig.SecuritySource = () => security;
                 return this;
             }
 
+            /// <summary>
+            /// Sets a custom HTTP client to be used by the SDK.
+            /// </summary>
             public SDKBuilder WithClient(IMeitnerHttpClient client)
             {
                 _sdkConfig.Client = client;
                 return this;
             }
 
+            /// <summary>
+            /// Sets the retry configuration for the SDK.
+            /// </summary>
             public SDKBuilder WithRetryConfig(RetryConfig retryConfig)
             {
                 _sdkConfig.RetryConfig = retryConfig;
                 return this;
             }
 
+            /// <summary>
+            /// Builds and returns the SDK instance.
+            /// </summary>
             public MeitnerSDK Build()
             {
               if (_sdkConfig.SecuritySource == null) {
-                  throw new Exception("securitySource cannot be null. One of `Security` or `securitySource` needs to be defined.");
+                  throw new ArgumentException("securitySource cannot be null. One of `Security` or `securitySource` needs to be defined.");
               }
               return new MeitnerSDK(_sdkConfig);
             }

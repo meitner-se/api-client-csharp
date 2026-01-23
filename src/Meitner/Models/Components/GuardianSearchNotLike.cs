@@ -12,15 +12,14 @@ namespace Meitner.Models.Components
     using Meitner.Models.Components;
     using Meitner.Utils;
     using Newtonsoft.Json;
-    
+
     /// <summary>
-    /// NOT LIKE filters for Guardian
+    /// NOT LIKE filters for Guardian.
     /// </summary>
     public class GuardianSearchNotLike
     {
-
         /// <summary>
-        /// Metadata information for the Guardian
+        /// Metadata information for the Guardian.
         /// </summary>
         [JsonProperty("meta")]
         public GuardianSearchNotLikeMeta? Meta { get; set; } = null;
@@ -32,36 +31,32 @@ namespace Meitner.Models.Components
         public GuardianSearchNotLikeExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The identity number of the guardian, must be unique within the organization.
+        /// The identity number of the guardian in the format YYYYMMDD-NNNN, must be unique within the organization.
         /// </summary>
         [JsonProperty("identityNumber")]
         public string? IdentityNumber { get; set; } = null;
 
         /// <summary>
-        /// The first name of the guardian
+        /// The first name of the guardian.
         /// </summary>
         [JsonProperty("firstName")]
         public string? FirstName { get; set; } = null;
 
         /// <summary>
-        /// The last name of the guardian
+        /// The last name of the guardian.
         /// </summary>
         [JsonProperty("lastName")]
         public string? LastName { get; set; } = null;
 
         /// <summary>
-        /// The address of the guardian
+        /// The address of the guardian.
         /// </summary>
         [JsonProperty("address")]
         public GuardianSearchNotLikeAddress? Address { get; set; } = null;
 
         /// <summary>
         /// The email address of the guardian, will be used for communication with the guardian from the system and must be unique within the organization.<br/>
-        /// 
-        /// <remarks>
-        /// Can be used to login to the system if password-authentication is enabled for the organization.<br/>
-        /// 
-        /// </remarks>
+        /// Can be used to login to the system if password-authentication is enabled for the organization.
         /// </summary>
         [JsonProperty("emailAddress1")]
         public string? EmailAddress1 { get; set; } = null;
