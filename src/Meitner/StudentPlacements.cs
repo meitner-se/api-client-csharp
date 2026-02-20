@@ -208,6 +208,17 @@ namespace Meitner
         /// <summary>
         /// Archive a student placement.
         /// </summary>
+        /// <remarks>
+        /// Archive a student placement.<br/>
+        /// <br/>
+        /// **Recommended usage:**<br/>
+        /// We recommend only archiving student placements that have a passed end date. When building syncs from external systems and a studentPlacement is removed, we recommend the following workflow:<br/>
+        /// <br/>
+        /// 1. Set the `endDate` to the date when the studentPlacement was removed from the external system<br/>
+        /// 2. Wait approximately 5 days before archiving the student placement<br/>
+        /// <br/>
+        /// This grace period allows time to correct any mistakes made by administrators in the external system before the placement is permanently archived.
+        /// </remarks>
         /// <param name="id">The ID of the student placement to archive.</param>
         /// <param name="retryConfig">The retry configuration to use for this operation.</param>
         /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
@@ -233,6 +244,9 @@ namespace Meitner
         /// <summary>
         /// Restore an archived student placement.
         /// </summary>
+        /// <remarks>
+        /// Restore an archived student placement.
+        /// </remarks>
         /// <param name="id">The ID of the student placement to restore.</param>
         /// <param name="retryConfig">The retry configuration to use for this operation.</param>
         /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
@@ -371,9 +385,9 @@ namespace Meitner
                     }
                 }
             }
-            catch (Exception error)
+            catch (Exception _hookError)
             {
-                var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), null, error);
+                var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), null, _hookError);
                 if (_httpResponse != null)
                 {
                     httpResponse = _httpResponse;
@@ -438,7 +452,8 @@ namespace Meitner
                             Response = httpResponse,
                             Request = httpRequest
                         },
-                        Next = nextFunc
+                        Next = nextFunc,
+                        Headers = Utilities.CollectHeaders(httpResponse.Headers)
                     };
                     response.StudentPlacementList = obj;
                     return response;
@@ -745,9 +760,9 @@ namespace Meitner
                     }
                 }
             }
-            catch (Exception error)
+            catch (Exception _hookError)
             {
-                var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), null, error);
+                var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), null, _hookError);
                 if (_httpResponse != null)
                 {
                     httpResponse = _httpResponse;
@@ -783,7 +798,8 @@ namespace Meitner
                         {
                             Response = httpResponse,
                             Request = httpRequest
-                        }
+                        },
+                        Headers = Utilities.CollectHeaders(httpResponse.Headers)
                     };
                     response.StudentPlacement = obj;
                     return response;
@@ -1127,9 +1143,9 @@ namespace Meitner
                     }
                 }
             }
-            catch (Exception error)
+            catch (Exception _hookError)
             {
-                var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), null, error);
+                var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), null, _hookError);
                 if (_httpResponse != null)
                 {
                     httpResponse = _httpResponse;
@@ -1195,7 +1211,8 @@ namespace Meitner
                             Response = httpResponse,
                             Request = httpRequest
                         },
-                        Next = nextFunc
+                        Next = nextFunc,
+                        Headers = Utilities.CollectHeaders(httpResponse.Headers)
                     };
                     response.StudentPlacementSearch = obj;
                     return response;
@@ -1526,9 +1543,9 @@ namespace Meitner
                     }
                 }
             }
-            catch (Exception error)
+            catch (Exception _hookError)
             {
-                var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), null, error);
+                var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), null, _hookError);
                 if (_httpResponse != null)
                 {
                     httpResponse = _httpResponse;
@@ -1564,7 +1581,8 @@ namespace Meitner
                         {
                             Response = httpResponse,
                             Request = httpRequest
-                        }
+                        },
+                        Headers = Utilities.CollectHeaders(httpResponse.Headers)
                     };
                     response.StudentPlacement = obj;
                     return response;
@@ -1869,9 +1887,9 @@ namespace Meitner
                     }
                 }
             }
-            catch (Exception error)
+            catch (Exception _hookError)
             {
-                var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), null, error);
+                var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), null, _hookError);
                 if (_httpResponse != null)
                 {
                     httpResponse = _httpResponse;
@@ -1894,7 +1912,8 @@ namespace Meitner
                     {
                         Response = httpResponse,
                         Request = httpRequest
-                    }
+                    },
+                    Headers = Utilities.CollectHeaders(httpResponse.Headers)
                 };
             }
             else if(responseStatusCode == 400)
@@ -2205,9 +2224,9 @@ namespace Meitner
                     }
                 }
             }
-            catch (Exception error)
+            catch (Exception _hookError)
             {
-                var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), null, error);
+                var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), null, _hookError);
                 if (_httpResponse != null)
                 {
                     httpResponse = _httpResponse;
@@ -2243,7 +2262,8 @@ namespace Meitner
                         {
                             Response = httpResponse,
                             Request = httpRequest
-                        }
+                        },
+                        Headers = Utilities.CollectHeaders(httpResponse.Headers)
                     };
                     response.StudentPlacement = obj;
                     return response;
@@ -2475,6 +2495,17 @@ namespace Meitner
         /// <summary>
         /// Archive a student placement.
         /// </summary>
+        /// <remarks>
+        /// Archive a student placement.<br/>
+        /// <br/>
+        /// **Recommended usage:**<br/>
+        /// We recommend only archiving student placements that have a passed end date. When building syncs from external systems and a studentPlacement is removed, we recommend the following workflow:<br/>
+        /// <br/>
+        /// 1. Set the `endDate` to the date when the studentPlacement was removed from the external system<br/>
+        /// 2. Wait approximately 5 days before archiving the student placement<br/>
+        /// <br/>
+        /// This grace period allows time to correct any mistakes made by administrators in the external system before the placement is permanently archived.
+        /// </remarks>
         /// <param name="id">The ID of the student placement to archive.</param>
         /// <param name="retryConfig">The retry configuration to use for this operation.</param>
         /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
@@ -2571,9 +2602,9 @@ namespace Meitner
                     }
                 }
             }
-            catch (Exception error)
+            catch (Exception _hookError)
             {
-                var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), null, error);
+                var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), null, _hookError);
                 if (_httpResponse != null)
                 {
                     httpResponse = _httpResponse;
@@ -2609,7 +2640,8 @@ namespace Meitner
                         {
                             Response = httpResponse,
                             Request = httpRequest
-                        }
+                        },
+                        Headers = Utilities.CollectHeaders(httpResponse.Headers)
                     };
                     response.StudentPlacement = obj;
                     return response;
@@ -2815,6 +2847,9 @@ namespace Meitner
         /// <summary>
         /// Restore an archived student placement.
         /// </summary>
+        /// <remarks>
+        /// Restore an archived student placement.
+        /// </remarks>
         /// <param name="id">The ID of the student placement to restore.</param>
         /// <param name="retryConfig">The retry configuration to use for this operation.</param>
         /// <param name="cancellationToken">An optional cancellation token to signal when the operation should be aborted.</param>
@@ -2911,9 +2946,9 @@ namespace Meitner
                     }
                 }
             }
-            catch (Exception error)
+            catch (Exception _hookError)
             {
-                var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), null, error);
+                var _httpResponse = await this.SDKConfiguration.Hooks.AfterErrorAsync(new AfterErrorContext(hookCtx), null, _hookError);
                 if (_httpResponse != null)
                 {
                     httpResponse = _httpResponse;
@@ -2949,7 +2984,8 @@ namespace Meitner
                         {
                             Response = httpResponse,
                             Request = httpRequest
-                        }
+                        },
+                        Headers = Utilities.CollectHeaders(httpResponse.Headers)
                     };
                     response.StudentPlacement = obj;
                     return response;

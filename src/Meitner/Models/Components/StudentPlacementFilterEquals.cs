@@ -74,6 +74,36 @@ namespace Meitner.Models.Components
         public string? MotherTongue { get; set; } = null;
 
         /// <summary>
+        /// The modern language alternative for the student.
+        /// </summary>
+        [JsonProperty("modernLanguageAlternative")]
+        public StudentPlacementFilterEqualsModernLanguageAlternative? ModernLanguageAlternative { get; set; } = null;
+
+        /// <summary>
+        /// Whether the student has Swedish as their second language.
+        /// </summary>
+        [JsonProperty("swedishAsSecondLanguage")]
+        public bool? SwedishAsSecondLanguage { get; set; } = null;
+
+        /// <summary>
+        /// Whether the student participates in mother tongue education.
+        /// </summary>
+        [JsonProperty("motherTongueParticipates")]
+        public bool? MotherTongueParticipates { get; set; } = null;
+
+        /// <summary>
+        /// The language code for the student's modern language in school choice (Skolans val). Language codes follow the ISO 639-2 standard (three-letter codes).
+        /// </summary>
+        [JsonProperty("modernLanguageInSchoolChoice")]
+        public string? ModernLanguageInSchoolChoice { get; set; } = null;
+
+        /// <summary>
+        /// The language code for the student's modern language in language choice (Språkval, M2, B-språk). Language codes follow the ISO 639-2 standard (three-letter codes).
+        /// </summary>
+        [JsonProperty("modernLanguageInLanguageChoice")]
+        public string? ModernLanguageInLanguageChoice { get; set; } = null;
+
+        /// <summary>
         /// The start date of the placement.
         /// </summary>
         [JsonProperty("startDate")]

@@ -5,7 +5,7 @@ External is a reusable object that can be used to store external information abo
 
 ## Fields
 
-| Field                                  | Type                                   | Required                               | Description                            | Example                                |
-| -------------------------------------- | -------------------------------------- | -------------------------------------- | -------------------------------------- | -------------------------------------- |
-| `SourceID`                             | *bool*                                 | :heavy_minus_sign:                     | The ID of the external source          | true                                   |
-| `Source`                               | *bool*                                 | :heavy_minus_sign:                     | The source of the external information | true                                   |
+| Field                                        | Type                                         | Required                                     | Description                                  | Example                                      |
+| -------------------------------------------- | -------------------------------------------- | -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
+| `SourceID`                                   | *bool*                                       | :heavy_minus_sign:                           | The ID of the external source                | **Example 1:** true<br/>**Example 2:** <nil> |
+| `Source`                                     | *bool*                                       | :heavy_minus_sign:                           | The source of the external information       | **Example 1:** true<br/>**Example 2:** <nil> |

@@ -17,7 +17,7 @@ Returns a paginated list of all `Guardians` in your organization.
 
 ### Example Usage
 
-<!-- UsageSnippet language="csharp" operationID="GuardianList" method="get" path="/guardian" -->
+<!-- UsageSnippet language="csharp" operationID="GuardianList" method="get" path="/guardian" example="responseExample" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -69,9 +69,132 @@ while(res != null)
 
 Create a new Guardian
 
-### Example Usage
+### Example Usage: errorExample
 
-<!-- UsageSnippet language="csharp" operationID="GuardianCreate" method="post" path="/guardian" -->
+<!-- UsageSnippet language="csharp" operationID="GuardianCreate" method="post" path="/guardian" example="errorExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+GuardianCreate req = new GuardianCreate() {
+    External = new GuardianCreateExternal() {
+        SourceID = "12345678",
+    },
+    IdentityNumber = "20191216-1234",
+    IdentityTemporary = true,
+    FirstName = "Lise",
+    LastName = "Meitner",
+    Address = new GuardianCreateAddress() {
+        PostalAddress = "Dalvägen 14",
+        PostalCode = "169 56",
+        PostalCity = "Solna",
+        CountryCode = "SWE",
+        MunicipalityCode = "0184",
+    },
+    EmailAddress1 = "lise@meitner.se",
+    EmailAddress2 = "lise@gmail.com",
+    PhoneNumber1 = "+46701234567",
+    PhoneNumber2 = "+46701234567",
+    StudentIDs = new List<string>() {
+        "123e4567-e89b-12d3-a456-426614174000",
+    },
+};
+
+var res = await sdk.Guardians.CreateAsync(req);
+
+// handle response
+```
+### Example Usage: requestExample
+
+<!-- UsageSnippet language="csharp" operationID="GuardianCreate" method="post" path="/guardian" example="requestExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+GuardianCreate req = new GuardianCreate() {
+    External = new GuardianCreateExternal() {
+        SourceID = "12345678",
+    },
+    IdentityNumber = "20191216-1234",
+    IdentityTemporary = true,
+    FirstName = "Lise",
+    LastName = "Meitner",
+    Address = new GuardianCreateAddress() {
+        PostalAddress = "Dalvägen 14",
+        PostalCode = "169 56",
+        PostalCity = "Solna",
+        CountryCode = "SWE",
+        MunicipalityCode = "0184",
+    },
+    EmailAddress1 = "lise@meitner.se",
+    EmailAddress2 = "lise@gmail.com",
+    PhoneNumber1 = "+46701234567",
+    PhoneNumber2 = "+46701234567",
+    StudentIDs = new List<string>() {
+        "123e4567-e89b-12d3-a456-426614174000",
+    },
+};
+
+var res = await sdk.Guardians.CreateAsync(req);
+
+// handle response
+```
+### Example Usage: responseExample
+
+<!-- UsageSnippet language="csharp" operationID="GuardianCreate" method="post" path="/guardian" example="responseExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+GuardianCreate req = new GuardianCreate() {
+    External = new GuardianCreateExternal() {
+        SourceID = "12345678",
+    },
+    IdentityNumber = "20191216-1234",
+    IdentityTemporary = true,
+    FirstName = "Lise",
+    LastName = "Meitner",
+    Address = new GuardianCreateAddress() {
+        PostalAddress = "Dalvägen 14",
+        PostalCode = "169 56",
+        PostalCity = "Solna",
+        CountryCode = "SWE",
+        MunicipalityCode = "0184",
+    },
+    EmailAddress1 = "lise@meitner.se",
+    EmailAddress2 = "lise@gmail.com",
+    PhoneNumber1 = "+46701234567",
+    PhoneNumber2 = "+46701234567",
+    StudentIDs = new List<string>() {
+        "123e4567-e89b-12d3-a456-426614174000",
+    },
+};
+
+var res = await sdk.Guardians.CreateAsync(req);
+
+// handle response
+```
+### Example Usage: validationError
+
+<!-- UsageSnippet language="csharp" operationID="GuardianCreate" method="post" path="/guardian" example="validationError" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -139,9 +262,996 @@ var res = await sdk.Guardians.CreateAsync(req);
 
 Search for `Guardians` with filtering capabilities.
 
-### Example Usage
+### Example Usage: errorExample
 
-<!-- UsageSnippet language="csharp" operationID="GuardianSearch" method="post" path="/guardian/_search" -->
+<!-- UsageSnippet language="csharp" operationID="GuardianSearch" method="post" path="/guardian/_search" example="errorExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+Models.Requests.GuardianSearchResponse? res = await sdk.Guardians.SearchAsync(
+    guardianSearch: new GuardianSearchRequestBody() {
+        Filter = new GuardianSearchFilter() {
+            Equals = new GuardianSearchEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new GuardianSearchEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new GuardianSearchEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                IdentityNumber = "example",
+                IdentityTemporary = true,
+                FirstName = "example",
+                LastName = "example",
+                Address = new GuardianSearchEqualsAddress() {
+                    PostalAddress = "example",
+                    PostalCode = "example",
+                    PostalCity = "example",
+                    CountryCode = "example",
+                    MunicipalityCode = "example",
+                },
+                EmailAddress1 = "example",
+                EmailAddress2 = "example",
+                PhoneNumber1 = "example",
+                PhoneNumber2 = "example",
+                StudentIDs = "123e4567-e89b-12d3-a456-426614174000",
+            },
+            NotEquals = new GuardianSearchNotEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new GuardianSearchNotEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new GuardianSearchNotEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                IdentityNumber = "example",
+                IdentityTemporary = true,
+                FirstName = "example",
+                LastName = "example",
+                Address = new GuardianSearchNotEqualsAddress() {
+                    PostalAddress = "example",
+                    PostalCode = "example",
+                    PostalCity = "example",
+                    CountryCode = "example",
+                    MunicipalityCode = "example",
+                },
+                EmailAddress1 = "example",
+                EmailAddress2 = "example",
+                PhoneNumber1 = "example",
+                PhoneNumber2 = "example",
+                StudentIDs = "123e4567-e89b-12d3-a456-426614174000",
+            },
+            GreaterThan = new GuardianSearchGreaterThan() {
+                Meta = new GuardianSearchGreaterThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            SmallerThan = new GuardianSearchSmallerThan() {
+                Meta = new GuardianSearchSmallerThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            GreaterOrEqual = new GuardianSearchGreaterOrEqual() {
+                Meta = new GuardianSearchGreaterOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            SmallerOrEqual = new GuardianSearchSmallerOrEqual() {
+                Meta = new GuardianSearchSmallerOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            Contains = new GuardianSearchContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new GuardianSearchContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new GuardianSearchContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                IdentityNumber = new List<string>() {
+                    "example",
+                },
+                IdentityTemporary = new List<bool>() {
+                    true,
+                },
+                FirstName = new List<string>() {
+                    "example",
+                },
+                LastName = new List<string>() {
+                    "example",
+                },
+                Address = new GuardianSearchContainsAddress() {
+                    PostalAddress = new List<string>() {
+                        "example",
+                    },
+                    PostalCode = new List<string>() {
+                        "example",
+                    },
+                    PostalCity = new List<string>() {
+                        "example",
+                    },
+                    CountryCode = new List<string>() {
+                        "example",
+                    },
+                    MunicipalityCode = new List<string>() {
+                        "example",
+                    },
+                },
+                EmailAddress1 = new List<string>() {
+                    "example",
+                },
+                EmailAddress2 = new List<string>() {
+                    "example",
+                },
+                PhoneNumber1 = new List<string>() {
+                    "example",
+                },
+                PhoneNumber2 = new List<string>() {
+                    "example",
+                },
+                StudentIDs = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+            },
+            NotContains = new GuardianSearchNotContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new GuardianSearchNotContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new GuardianSearchNotContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                IdentityNumber = new List<string>() {
+                    "example",
+                },
+                IdentityTemporary = new List<bool>() {
+                    true,
+                },
+                FirstName = new List<string>() {
+                    "example",
+                },
+                LastName = new List<string>() {
+                    "example",
+                },
+                Address = new GuardianSearchNotContainsAddress() {
+                    PostalAddress = new List<string>() {
+                        "example",
+                    },
+                    PostalCode = new List<string>() {
+                        "example",
+                    },
+                    PostalCity = new List<string>() {
+                        "example",
+                    },
+                    CountryCode = new List<string>() {
+                        "example",
+                    },
+                    MunicipalityCode = new List<string>() {
+                        "example",
+                    },
+                },
+                EmailAddress1 = new List<string>() {
+                    "example",
+                },
+                EmailAddress2 = new List<string>() {
+                    "example",
+                },
+                PhoneNumber1 = new List<string>() {
+                    "example",
+                },
+                PhoneNumber2 = new List<string>() {
+                    "example",
+                },
+                StudentIDs = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+            },
+            Like = new GuardianSearchLike() {
+                External = new GuardianSearchLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                IdentityNumber = "example",
+                FirstName = "example",
+                LastName = "example",
+                Address = new GuardianSearchLikeAddress() {
+                    PostalAddress = "example",
+                    PostalCode = "example",
+                    PostalCity = "example",
+                    CountryCode = "example",
+                    MunicipalityCode = "example",
+                },
+                EmailAddress1 = "example",
+                EmailAddress2 = "example",
+                PhoneNumber1 = "example",
+                PhoneNumber2 = "example",
+            },
+            NotLike = new GuardianSearchNotLike() {
+                External = new GuardianSearchNotLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                IdentityNumber = "example",
+                FirstName = "example",
+                LastName = "example",
+                Address = new GuardianSearchNotLikeAddress() {
+                    PostalAddress = "example",
+                    PostalCode = "example",
+                    PostalCity = "example",
+                    CountryCode = "example",
+                    MunicipalityCode = "example",
+                },
+                EmailAddress1 = "example",
+                EmailAddress2 = "example",
+                PhoneNumber1 = "example",
+                PhoneNumber2 = "example",
+            },
+            Null = new GuardianSearchNull() {
+                Meta = new GuardianSearchNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new GuardianSearchNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                Address = new GuardianSearchNullAddress() {
+                    PostalAddress = true,
+                    PostalCode = true,
+                    PostalCity = true,
+                    CountryCode = true,
+                    MunicipalityCode = true,
+                },
+                EmailAddress1 = true,
+                EmailAddress2 = true,
+                PhoneNumber1 = true,
+                PhoneNumber2 = true,
+                StudentIDs = true,
+            },
+            NotNull = new GuardianSearchNotNull() {
+                Meta = new GuardianSearchNotNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new GuardianSearchNotNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                Address = new GuardianSearchNotNullAddress() {
+                    PostalAddress = true,
+                    PostalCode = true,
+                    PostalCity = true,
+                    CountryCode = true,
+                    MunicipalityCode = true,
+                },
+                EmailAddress1 = true,
+                EmailAddress2 = true,
+                PhoneNumber1 = true,
+                PhoneNumber2 = true,
+                StudentIDs = true,
+            },
+            OrCondition = true,
+        },
+    },
+    limit: 1,
+    offset: 0
+);
+
+while(res != null)
+{
+    // handle items
+
+    res = await res.Next!();
+}
+```
+### Example Usage: requestExample
+
+<!-- UsageSnippet language="csharp" operationID="GuardianSearch" method="post" path="/guardian/_search" example="requestExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+Models.Requests.GuardianSearchResponse? res = await sdk.Guardians.SearchAsync(
+    guardianSearch: new GuardianSearchRequestBody() {
+        Filter = new GuardianSearchFilter() {
+            Equals = new GuardianSearchEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new GuardianSearchEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new GuardianSearchEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                IdentityNumber = "example",
+                IdentityTemporary = true,
+                FirstName = "example",
+                LastName = "example",
+                Address = new GuardianSearchEqualsAddress() {
+                    PostalAddress = "example",
+                    PostalCode = "example",
+                    PostalCity = "example",
+                    CountryCode = "example",
+                    MunicipalityCode = "example",
+                },
+                EmailAddress1 = "example",
+                EmailAddress2 = "example",
+                PhoneNumber1 = "example",
+                PhoneNumber2 = "example",
+                StudentIDs = "123e4567-e89b-12d3-a456-426614174000",
+            },
+            NotEquals = new GuardianSearchNotEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new GuardianSearchNotEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new GuardianSearchNotEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                IdentityNumber = "example",
+                IdentityTemporary = true,
+                FirstName = "example",
+                LastName = "example",
+                Address = new GuardianSearchNotEqualsAddress() {
+                    PostalAddress = "example",
+                    PostalCode = "example",
+                    PostalCity = "example",
+                    CountryCode = "example",
+                    MunicipalityCode = "example",
+                },
+                EmailAddress1 = "example",
+                EmailAddress2 = "example",
+                PhoneNumber1 = "example",
+                PhoneNumber2 = "example",
+                StudentIDs = "123e4567-e89b-12d3-a456-426614174000",
+            },
+            GreaterThan = new GuardianSearchGreaterThan() {
+                Meta = new GuardianSearchGreaterThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            SmallerThan = new GuardianSearchSmallerThan() {
+                Meta = new GuardianSearchSmallerThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            GreaterOrEqual = new GuardianSearchGreaterOrEqual() {
+                Meta = new GuardianSearchGreaterOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            SmallerOrEqual = new GuardianSearchSmallerOrEqual() {
+                Meta = new GuardianSearchSmallerOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            Contains = new GuardianSearchContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new GuardianSearchContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new GuardianSearchContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                IdentityNumber = new List<string>() {
+                    "example",
+                },
+                IdentityTemporary = new List<bool>() {
+                    true,
+                },
+                FirstName = new List<string>() {
+                    "example",
+                },
+                LastName = new List<string>() {
+                    "example",
+                },
+                Address = new GuardianSearchContainsAddress() {
+                    PostalAddress = new List<string>() {
+                        "example",
+                    },
+                    PostalCode = new List<string>() {
+                        "example",
+                    },
+                    PostalCity = new List<string>() {
+                        "example",
+                    },
+                    CountryCode = new List<string>() {
+                        "example",
+                    },
+                    MunicipalityCode = new List<string>() {
+                        "example",
+                    },
+                },
+                EmailAddress1 = new List<string>() {
+                    "example",
+                },
+                EmailAddress2 = new List<string>() {
+                    "example",
+                },
+                PhoneNumber1 = new List<string>() {
+                    "example",
+                },
+                PhoneNumber2 = new List<string>() {
+                    "example",
+                },
+                StudentIDs = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+            },
+            NotContains = new GuardianSearchNotContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new GuardianSearchNotContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new GuardianSearchNotContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                IdentityNumber = new List<string>() {
+                    "example",
+                },
+                IdentityTemporary = new List<bool>() {
+                    true,
+                },
+                FirstName = new List<string>() {
+                    "example",
+                },
+                LastName = new List<string>() {
+                    "example",
+                },
+                Address = new GuardianSearchNotContainsAddress() {
+                    PostalAddress = new List<string>() {
+                        "example",
+                    },
+                    PostalCode = new List<string>() {
+                        "example",
+                    },
+                    PostalCity = new List<string>() {
+                        "example",
+                    },
+                    CountryCode = new List<string>() {
+                        "example",
+                    },
+                    MunicipalityCode = new List<string>() {
+                        "example",
+                    },
+                },
+                EmailAddress1 = new List<string>() {
+                    "example",
+                },
+                EmailAddress2 = new List<string>() {
+                    "example",
+                },
+                PhoneNumber1 = new List<string>() {
+                    "example",
+                },
+                PhoneNumber2 = new List<string>() {
+                    "example",
+                },
+                StudentIDs = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+            },
+            Like = new GuardianSearchLike() {
+                External = new GuardianSearchLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                IdentityNumber = "example",
+                FirstName = "example",
+                LastName = "example",
+                Address = new GuardianSearchLikeAddress() {
+                    PostalAddress = "example",
+                    PostalCode = "example",
+                    PostalCity = "example",
+                    CountryCode = "example",
+                    MunicipalityCode = "example",
+                },
+                EmailAddress1 = "example",
+                EmailAddress2 = "example",
+                PhoneNumber1 = "example",
+                PhoneNumber2 = "example",
+            },
+            NotLike = new GuardianSearchNotLike() {
+                External = new GuardianSearchNotLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                IdentityNumber = "example",
+                FirstName = "example",
+                LastName = "example",
+                Address = new GuardianSearchNotLikeAddress() {
+                    PostalAddress = "example",
+                    PostalCode = "example",
+                    PostalCity = "example",
+                    CountryCode = "example",
+                    MunicipalityCode = "example",
+                },
+                EmailAddress1 = "example",
+                EmailAddress2 = "example",
+                PhoneNumber1 = "example",
+                PhoneNumber2 = "example",
+            },
+            Null = new GuardianSearchNull() {
+                Meta = new GuardianSearchNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new GuardianSearchNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                Address = new GuardianSearchNullAddress() {
+                    PostalAddress = true,
+                    PostalCode = true,
+                    PostalCity = true,
+                    CountryCode = true,
+                    MunicipalityCode = true,
+                },
+                EmailAddress1 = true,
+                EmailAddress2 = true,
+                PhoneNumber1 = true,
+                PhoneNumber2 = true,
+                StudentIDs = true,
+            },
+            NotNull = new GuardianSearchNotNull() {
+                Meta = new GuardianSearchNotNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new GuardianSearchNotNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                Address = new GuardianSearchNotNullAddress() {
+                    PostalAddress = true,
+                    PostalCode = true,
+                    PostalCity = true,
+                    CountryCode = true,
+                    MunicipalityCode = true,
+                },
+                EmailAddress1 = true,
+                EmailAddress2 = true,
+                PhoneNumber1 = true,
+                PhoneNumber2 = true,
+                StudentIDs = true,
+            },
+            OrCondition = true,
+        },
+    },
+    limit: 1,
+    offset: 0
+);
+
+while(res != null)
+{
+    // handle items
+
+    res = await res.Next!();
+}
+```
+### Example Usage: responseExample
+
+<!-- UsageSnippet language="csharp" operationID="GuardianSearch" method="post" path="/guardian/_search" example="responseExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+Models.Requests.GuardianSearchResponse? res = await sdk.Guardians.SearchAsync(
+    guardianSearch: new GuardianSearchRequestBody() {
+        Filter = new GuardianSearchFilter() {
+            Equals = new GuardianSearchEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new GuardianSearchEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new GuardianSearchEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                IdentityNumber = "example",
+                IdentityTemporary = true,
+                FirstName = "example",
+                LastName = "example",
+                Address = new GuardianSearchEqualsAddress() {
+                    PostalAddress = "example",
+                    PostalCode = "example",
+                    PostalCity = "example",
+                    CountryCode = "example",
+                    MunicipalityCode = "example",
+                },
+                EmailAddress1 = "example",
+                EmailAddress2 = "example",
+                PhoneNumber1 = "example",
+                PhoneNumber2 = "example",
+                StudentIDs = "123e4567-e89b-12d3-a456-426614174000",
+            },
+            NotEquals = new GuardianSearchNotEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new GuardianSearchNotEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new GuardianSearchNotEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                IdentityNumber = "example",
+                IdentityTemporary = true,
+                FirstName = "example",
+                LastName = "example",
+                Address = new GuardianSearchNotEqualsAddress() {
+                    PostalAddress = "example",
+                    PostalCode = "example",
+                    PostalCity = "example",
+                    CountryCode = "example",
+                    MunicipalityCode = "example",
+                },
+                EmailAddress1 = "example",
+                EmailAddress2 = "example",
+                PhoneNumber1 = "example",
+                PhoneNumber2 = "example",
+                StudentIDs = "123e4567-e89b-12d3-a456-426614174000",
+            },
+            GreaterThan = new GuardianSearchGreaterThan() {
+                Meta = new GuardianSearchGreaterThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            SmallerThan = new GuardianSearchSmallerThan() {
+                Meta = new GuardianSearchSmallerThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            GreaterOrEqual = new GuardianSearchGreaterOrEqual() {
+                Meta = new GuardianSearchGreaterOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            SmallerOrEqual = new GuardianSearchSmallerOrEqual() {
+                Meta = new GuardianSearchSmallerOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            Contains = new GuardianSearchContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new GuardianSearchContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new GuardianSearchContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                IdentityNumber = new List<string>() {
+                    "example",
+                },
+                IdentityTemporary = new List<bool>() {
+                    true,
+                },
+                FirstName = new List<string>() {
+                    "example",
+                },
+                LastName = new List<string>() {
+                    "example",
+                },
+                Address = new GuardianSearchContainsAddress() {
+                    PostalAddress = new List<string>() {
+                        "example",
+                    },
+                    PostalCode = new List<string>() {
+                        "example",
+                    },
+                    PostalCity = new List<string>() {
+                        "example",
+                    },
+                    CountryCode = new List<string>() {
+                        "example",
+                    },
+                    MunicipalityCode = new List<string>() {
+                        "example",
+                    },
+                },
+                EmailAddress1 = new List<string>() {
+                    "example",
+                },
+                EmailAddress2 = new List<string>() {
+                    "example",
+                },
+                PhoneNumber1 = new List<string>() {
+                    "example",
+                },
+                PhoneNumber2 = new List<string>() {
+                    "example",
+                },
+                StudentIDs = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+            },
+            NotContains = new GuardianSearchNotContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new GuardianSearchNotContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new GuardianSearchNotContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                IdentityNumber = new List<string>() {
+                    "example",
+                },
+                IdentityTemporary = new List<bool>() {
+                    true,
+                },
+                FirstName = new List<string>() {
+                    "example",
+                },
+                LastName = new List<string>() {
+                    "example",
+                },
+                Address = new GuardianSearchNotContainsAddress() {
+                    PostalAddress = new List<string>() {
+                        "example",
+                    },
+                    PostalCode = new List<string>() {
+                        "example",
+                    },
+                    PostalCity = new List<string>() {
+                        "example",
+                    },
+                    CountryCode = new List<string>() {
+                        "example",
+                    },
+                    MunicipalityCode = new List<string>() {
+                        "example",
+                    },
+                },
+                EmailAddress1 = new List<string>() {
+                    "example",
+                },
+                EmailAddress2 = new List<string>() {
+                    "example",
+                },
+                PhoneNumber1 = new List<string>() {
+                    "example",
+                },
+                PhoneNumber2 = new List<string>() {
+                    "example",
+                },
+                StudentIDs = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+            },
+            Like = new GuardianSearchLike() {
+                External = new GuardianSearchLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                IdentityNumber = "example",
+                FirstName = "example",
+                LastName = "example",
+                Address = new GuardianSearchLikeAddress() {
+                    PostalAddress = "example",
+                    PostalCode = "example",
+                    PostalCity = "example",
+                    CountryCode = "example",
+                    MunicipalityCode = "example",
+                },
+                EmailAddress1 = "example",
+                EmailAddress2 = "example",
+                PhoneNumber1 = "example",
+                PhoneNumber2 = "example",
+            },
+            NotLike = new GuardianSearchNotLike() {
+                External = new GuardianSearchNotLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                IdentityNumber = "example",
+                FirstName = "example",
+                LastName = "example",
+                Address = new GuardianSearchNotLikeAddress() {
+                    PostalAddress = "example",
+                    PostalCode = "example",
+                    PostalCity = "example",
+                    CountryCode = "example",
+                    MunicipalityCode = "example",
+                },
+                EmailAddress1 = "example",
+                EmailAddress2 = "example",
+                PhoneNumber1 = "example",
+                PhoneNumber2 = "example",
+            },
+            Null = new GuardianSearchNull() {
+                Meta = new GuardianSearchNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new GuardianSearchNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                Address = new GuardianSearchNullAddress() {
+                    PostalAddress = true,
+                    PostalCode = true,
+                    PostalCity = true,
+                    CountryCode = true,
+                    MunicipalityCode = true,
+                },
+                EmailAddress1 = true,
+                EmailAddress2 = true,
+                PhoneNumber1 = true,
+                PhoneNumber2 = true,
+                StudentIDs = true,
+            },
+            NotNull = new GuardianSearchNotNull() {
+                Meta = new GuardianSearchNotNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new GuardianSearchNotNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                Address = new GuardianSearchNotNullAddress() {
+                    PostalAddress = true,
+                    PostalCode = true,
+                    PostalCity = true,
+                    CountryCode = true,
+                    MunicipalityCode = true,
+                },
+                EmailAddress1 = true,
+                EmailAddress2 = true,
+                PhoneNumber1 = true,
+                PhoneNumber2 = true,
+                StudentIDs = true,
+            },
+            OrCondition = true,
+        },
+    },
+    limit: 1,
+    offset: 0
+);
+
+while(res != null)
+{
+    // handle items
+
+    res = await res.Next!();
+}
+```
+### Example Usage: validationError
+
+<!-- UsageSnippet language="csharp" operationID="GuardianSearch" method="post" path="/guardian/_search" example="validationError" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -501,7 +1611,7 @@ Retrieves the `Guardian` with the given ID.
 
 ### Example Usage
 
-<!-- UsageSnippet language="csharp" operationID="GuardianGet" method="get" path="/guardian/{id}" -->
+<!-- UsageSnippet language="csharp" operationID="GuardianGet" method="get" path="/guardian/{id}" example="responseExample" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -587,9 +1697,135 @@ var res = await sdk.Guardians.DeleteAsync(id: "123e4567-e89b-12d3-a456-426614174
 
 Update a Guardian
 
-### Example Usage
+### Example Usage: errorExample
 
-<!-- UsageSnippet language="csharp" operationID="GuardianUpdate" method="patch" path="/guardian/{id}" -->
+<!-- UsageSnippet language="csharp" operationID="GuardianUpdate" method="patch" path="/guardian/{id}" example="errorExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+var res = await sdk.Guardians.UpdateAsync(
+    id: "123e4567-e89b-12d3-a456-426614174000",
+    guardianUpdate: new GuardianUpdate() {
+        External = new GuardianUpdateExternal() {
+            SourceID = "12345678",
+        },
+        IdentityNumber = "20191216-1234",
+        IdentityTemporary = true,
+        FirstName = "Lise",
+        LastName = "Meitner",
+        Address = new GuardianUpdateAddress() {
+            PostalAddress = "Dalvägen 14",
+            PostalCode = "169 56",
+            PostalCity = "Solna",
+            CountryCode = "SWE",
+            MunicipalityCode = "0184",
+        },
+        EmailAddress1 = "lise@meitner.se",
+        EmailAddress2 = "lise@gmail.com",
+        PhoneNumber1 = "+46701234567",
+        PhoneNumber2 = "+46701234567",
+        StudentIDs = new List<string>() {
+            "123e4567-e89b-12d3-a456-426614174000",
+        },
+    }
+);
+
+// handle response
+```
+### Example Usage: requestExample
+
+<!-- UsageSnippet language="csharp" operationID="GuardianUpdate" method="patch" path="/guardian/{id}" example="requestExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+var res = await sdk.Guardians.UpdateAsync(
+    id: "123e4567-e89b-12d3-a456-426614174000",
+    guardianUpdate: new GuardianUpdate() {
+        External = new GuardianUpdateExternal() {
+            SourceID = "12345678",
+        },
+        IdentityNumber = "20191216-1234",
+        IdentityTemporary = true,
+        FirstName = "Lise",
+        LastName = "Meitner",
+        Address = new GuardianUpdateAddress() {
+            PostalAddress = "Dalvägen 14",
+            PostalCode = "169 56",
+            PostalCity = "Solna",
+            CountryCode = "SWE",
+            MunicipalityCode = "0184",
+        },
+        EmailAddress1 = "lise@meitner.se",
+        EmailAddress2 = "lise@gmail.com",
+        PhoneNumber1 = "+46701234567",
+        PhoneNumber2 = "+46701234567",
+        StudentIDs = new List<string>() {
+            "123e4567-e89b-12d3-a456-426614174000",
+        },
+    }
+);
+
+// handle response
+```
+### Example Usage: responseExample
+
+<!-- UsageSnippet language="csharp" operationID="GuardianUpdate" method="patch" path="/guardian/{id}" example="responseExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+var res = await sdk.Guardians.UpdateAsync(
+    id: "123e4567-e89b-12d3-a456-426614174000",
+    guardianUpdate: new GuardianUpdate() {
+        External = new GuardianUpdateExternal() {
+            SourceID = "12345678",
+        },
+        IdentityNumber = "20191216-1234",
+        IdentityTemporary = true,
+        FirstName = "Lise",
+        LastName = "Meitner",
+        Address = new GuardianUpdateAddress() {
+            PostalAddress = "Dalvägen 14",
+            PostalCode = "169 56",
+            PostalCity = "Solna",
+            CountryCode = "SWE",
+            MunicipalityCode = "0184",
+        },
+        EmailAddress1 = "lise@meitner.se",
+        EmailAddress2 = "lise@gmail.com",
+        PhoneNumber1 = "+46701234567",
+        PhoneNumber2 = "+46701234567",
+        StudentIDs = new List<string>() {
+            "123e4567-e89b-12d3-a456-426614174000",
+        },
+    }
+);
+
+// handle response
+```
+### Example Usage: validationError
+
+<!-- UsageSnippet language="csharp" operationID="GuardianUpdate" method="patch" path="/guardian/{id}" example="validationError" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;

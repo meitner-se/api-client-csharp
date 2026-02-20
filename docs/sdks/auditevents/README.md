@@ -14,7 +14,7 @@ Returns a paginated list of all `AuditEvents` in your organization.
 
 ### Example Usage
 
-<!-- UsageSnippet language="csharp" operationID="AuditEventList" method="get" path="/audit-event" -->
+<!-- UsageSnippet language="csharp" operationID="AuditEventList" method="get" path="/audit-event" example="responseExample" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -66,9 +66,390 @@ while(res != null)
 
 Search for `AuditEvents` with filtering capabilities.
 
-### Example Usage
+### Example Usage: errorExample
 
-<!-- UsageSnippet language="csharp" operationID="AuditEventSearch" method="post" path="/audit-event/_search" -->
+<!-- UsageSnippet language="csharp" operationID="AuditEventSearch" method="post" path="/audit-event/_search" example="errorExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+Models.Requests.AuditEventSearchResponse? res = await sdk.AuditEvents.SearchAsync(
+    auditEventSearch: new AuditEventSearchRequestBody() {
+        Filter = new AuditEventSearchFilter() {
+            Equals = new AuditEventSearchEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new AuditEventSearchEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ResourceID = "123e4567-e89b-12d3-a456-426614174000",
+            },
+            NotEquals = new AuditEventSearchNotEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new AuditEventSearchNotEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ResourceID = "123e4567-e89b-12d3-a456-426614174000",
+            },
+            GreaterThan = new AuditEventSearchGreaterThan() {
+                Meta = new AuditEventSearchGreaterThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            SmallerThan = new AuditEventSearchSmallerThan() {
+                Meta = new AuditEventSearchSmallerThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            GreaterOrEqual = new AuditEventSearchGreaterOrEqual() {
+                Meta = new AuditEventSearchGreaterOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            SmallerOrEqual = new AuditEventSearchSmallerOrEqual() {
+                Meta = new AuditEventSearchSmallerOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            Contains = new AuditEventSearchContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new AuditEventSearchContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                ResourceID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+            },
+            NotContains = new AuditEventSearchNotContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new AuditEventSearchNotContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                ResourceID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+            },
+            Null = new AuditEventSearchNull() {
+                Meta = new AuditEventSearchNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+            },
+            NotNull = new AuditEventSearchNotNull() {
+                Meta = new AuditEventSearchNotNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+            },
+            OrCondition = true,
+        },
+    },
+    limit: 1,
+    offset: 0
+);
+
+while(res != null)
+{
+    // handle items
+
+    res = await res.Next!();
+}
+```
+### Example Usage: requestExample
+
+<!-- UsageSnippet language="csharp" operationID="AuditEventSearch" method="post" path="/audit-event/_search" example="requestExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+Models.Requests.AuditEventSearchResponse? res = await sdk.AuditEvents.SearchAsync(
+    auditEventSearch: new AuditEventSearchRequestBody() {
+        Filter = new AuditEventSearchFilter() {
+            Equals = new AuditEventSearchEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new AuditEventSearchEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ResourceID = "123e4567-e89b-12d3-a456-426614174000",
+            },
+            NotEquals = new AuditEventSearchNotEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new AuditEventSearchNotEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ResourceID = "123e4567-e89b-12d3-a456-426614174000",
+            },
+            GreaterThan = new AuditEventSearchGreaterThan() {
+                Meta = new AuditEventSearchGreaterThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            SmallerThan = new AuditEventSearchSmallerThan() {
+                Meta = new AuditEventSearchSmallerThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            GreaterOrEqual = new AuditEventSearchGreaterOrEqual() {
+                Meta = new AuditEventSearchGreaterOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            SmallerOrEqual = new AuditEventSearchSmallerOrEqual() {
+                Meta = new AuditEventSearchSmallerOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            Contains = new AuditEventSearchContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new AuditEventSearchContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                ResourceID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+            },
+            NotContains = new AuditEventSearchNotContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new AuditEventSearchNotContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                ResourceID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+            },
+            Null = new AuditEventSearchNull() {
+                Meta = new AuditEventSearchNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+            },
+            NotNull = new AuditEventSearchNotNull() {
+                Meta = new AuditEventSearchNotNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+            },
+            OrCondition = true,
+        },
+    },
+    limit: 1,
+    offset: 0
+);
+
+while(res != null)
+{
+    // handle items
+
+    res = await res.Next!();
+}
+```
+### Example Usage: responseExample
+
+<!-- UsageSnippet language="csharp" operationID="AuditEventSearch" method="post" path="/audit-event/_search" example="responseExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+Models.Requests.AuditEventSearchResponse? res = await sdk.AuditEvents.SearchAsync(
+    auditEventSearch: new AuditEventSearchRequestBody() {
+        Filter = new AuditEventSearchFilter() {
+            Equals = new AuditEventSearchEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new AuditEventSearchEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ResourceID = "123e4567-e89b-12d3-a456-426614174000",
+            },
+            NotEquals = new AuditEventSearchNotEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new AuditEventSearchNotEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ResourceID = "123e4567-e89b-12d3-a456-426614174000",
+            },
+            GreaterThan = new AuditEventSearchGreaterThan() {
+                Meta = new AuditEventSearchGreaterThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            SmallerThan = new AuditEventSearchSmallerThan() {
+                Meta = new AuditEventSearchSmallerThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            GreaterOrEqual = new AuditEventSearchGreaterOrEqual() {
+                Meta = new AuditEventSearchGreaterOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            SmallerOrEqual = new AuditEventSearchSmallerOrEqual() {
+                Meta = new AuditEventSearchSmallerOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            Contains = new AuditEventSearchContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new AuditEventSearchContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                ResourceID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+            },
+            NotContains = new AuditEventSearchNotContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new AuditEventSearchNotContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                ResourceID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+            },
+            Null = new AuditEventSearchNull() {
+                Meta = new AuditEventSearchNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+            },
+            NotNull = new AuditEventSearchNotNull() {
+                Meta = new AuditEventSearchNotNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+            },
+            OrCondition = true,
+        },
+    },
+    limit: 1,
+    offset: 0
+);
+
+while(res != null)
+{
+    // handle items
+
+    res = await res.Next!();
+}
+```
+### Example Usage: validationError
+
+<!-- UsageSnippet language="csharp" operationID="AuditEventSearch" method="post" path="/audit-event/_search" example="validationError" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -226,7 +607,7 @@ Retrieves the `AuditEvent` with the given ID.
 
 ### Example Usage
 
-<!-- UsageSnippet language="csharp" operationID="AuditEventGet" method="get" path="/audit-event/{id}" -->
+<!-- UsageSnippet language="csharp" operationID="AuditEventGet" method="get" path="/audit-event/{id}" example="responseExample" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;

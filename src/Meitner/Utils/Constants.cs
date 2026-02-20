@@ -22,12 +22,12 @@ namespace Meitner.Utils
         /// <summary>
         /// The version of the SDK.
         /// </summary>
-        public const string SdkVersion = "0.3.0";
+        public const string SdkVersion = "0.3.1";
 
         /// <summary>
         /// The version of the SDK generator used to create this SDK.
         /// </summary>
-        public const string SdkGenVersion = "2.799.0";
+        public const string SdkGenVersion = "2.832.9";
 
         /// <summary>
         /// The version of the OpenAPI document used to generate this SDK.
