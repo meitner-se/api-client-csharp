@@ -17,7 +17,7 @@ Returns a paginated list of all `EmployeePlacements` in your organization.
 
 ### Example Usage
 
-<!-- UsageSnippet language="csharp" operationID="EmployeePlacementList" method="get" path="/employee-placement" -->
+<!-- UsageSnippet language="csharp" operationID="EmployeePlacementList" method="get" path="/employee-placement" example="responseExample" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -69,9 +69,9 @@ while(res != null)
 
 Create a new EmployeePlacement
 
-### Example Usage
+### Example Usage: errorExample
 
-<!-- UsageSnippet language="csharp" operationID="EmployeePlacementCreate" method="post" path="/employee-placement" -->
+<!-- UsageSnippet language="csharp" operationID="EmployeePlacementCreate" method="post" path="/employee-placement" example="errorExample" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -96,6 +96,109 @@ EmployeePlacementCreate req = new EmployeePlacementCreate() {
     },
     StartDate = DateOnly.Parse("2024-08-01"),
     EndDate = DateOnly.Parse("2024-08-01"),
+    EmploymentPercent = 100,
+};
+
+var res = await sdk.EmployeePlacements.CreateAsync(req);
+
+// handle response
+```
+### Example Usage: requestExample
+
+<!-- UsageSnippet language="csharp" operationID="EmployeePlacementCreate" method="post" path="/employee-placement" example="requestExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+EmployeePlacementCreate req = new EmployeePlacementCreate() {
+    External = new EmployeePlacementCreateExternal() {
+        SourceID = "12345678",
+    },
+    EmployeeID = "123e4567-e89b-12d3-a456-426614174000",
+    SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+    Signature = "LM",
+    Title = "Principal",
+    Roles = new List<EmployeePlacementRole>() {
+        EmployeePlacementRole.Admin,
+    },
+    StartDate = DateOnly.Parse("2024-08-01"),
+    EndDate = DateOnly.Parse("2024-08-01"),
+    EmploymentPercent = 100,
+};
+
+var res = await sdk.EmployeePlacements.CreateAsync(req);
+
+// handle response
+```
+### Example Usage: responseExample
+
+<!-- UsageSnippet language="csharp" operationID="EmployeePlacementCreate" method="post" path="/employee-placement" example="responseExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+EmployeePlacementCreate req = new EmployeePlacementCreate() {
+    External = new EmployeePlacementCreateExternal() {
+        SourceID = "12345678",
+    },
+    EmployeeID = "123e4567-e89b-12d3-a456-426614174000",
+    SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+    Signature = "LM",
+    Title = "Principal",
+    Roles = new List<EmployeePlacementRole>() {
+        EmployeePlacementRole.Admin,
+    },
+    StartDate = DateOnly.Parse("2024-08-01"),
+    EndDate = DateOnly.Parse("2024-08-01"),
+    EmploymentPercent = 100,
+};
+
+var res = await sdk.EmployeePlacements.CreateAsync(req);
+
+// handle response
+```
+### Example Usage: validationError
+
+<!-- UsageSnippet language="csharp" operationID="EmployeePlacementCreate" method="post" path="/employee-placement" example="validationError" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+EmployeePlacementCreate req = new EmployeePlacementCreate() {
+    External = new EmployeePlacementCreateExternal() {
+        SourceID = "12345678",
+    },
+    EmployeeID = "123e4567-e89b-12d3-a456-426614174000",
+    SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+    Signature = "LM",
+    Title = "Principal",
+    Roles = new List<EmployeePlacementRole>() {
+        EmployeePlacementRole.Admin,
+    },
+    StartDate = DateOnly.Parse("2024-08-01"),
+    EndDate = DateOnly.Parse("2024-08-01"),
+    EmploymentPercent = 100,
 };
 
 var res = await sdk.EmployeePlacements.CreateAsync(req);
@@ -131,9 +234,9 @@ var res = await sdk.EmployeePlacements.CreateAsync(req);
 
 Search for `EmployeePlacements` with filtering capabilities.
 
-### Example Usage
+### Example Usage: errorExample
 
-<!-- UsageSnippet language="csharp" operationID="EmployeePlacementSearch" method="post" path="/employee-placement/_search" -->
+<!-- UsageSnippet language="csharp" operationID="EmployeePlacementSearch" method="post" path="/employee-placement/_search" example="errorExample" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -168,6 +271,7 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchiveYear = "example",
                 ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
             },
             NotEquals = new EmployeePlacementSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
@@ -189,6 +293,7 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchiveYear = "example",
                 ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
             },
             GreaterThan = new EmployeePlacementSearchGreaterThan() {
                 Meta = new EmployeePlacementSearchGreaterThanMeta() {
@@ -198,6 +303,7 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
             },
             SmallerThan = new EmployeePlacementSearchSmallerThan() {
                 Meta = new EmployeePlacementSearchSmallerThanMeta() {
@@ -207,6 +313,7 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
             },
             GreaterOrEqual = new EmployeePlacementSearchGreaterOrEqual() {
                 Meta = new EmployeePlacementSearchGreaterOrEqualMeta() {
@@ -216,6 +323,7 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
             },
             SmallerOrEqual = new EmployeePlacementSearchSmallerOrEqual() {
                 Meta = new EmployeePlacementSearchSmallerOrEqualMeta() {
@@ -225,6 +333,7 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
             },
             Contains = new EmployeePlacementSearchContains() {
                 Id = new List<string>() {
@@ -266,6 +375,9 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
                 },
                 ArchiveYear = new List<string>() {
                     "example",
+                },
+                EmploymentPercent = new List<long>() {
+                    42,
                 },
             },
             NotContains = new EmployeePlacementSearchNotContains() {
@@ -309,6 +421,9 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
                 ArchiveYear = new List<string>() {
                     "example",
                 },
+                EmploymentPercent = new List<long>() {
+                    42,
+                },
             },
             Like = new EmployeePlacementSearchLike() {
                 External = new EmployeePlacementSearchLikeExternal() {
@@ -344,6 +459,7 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
                 EndDate = true,
                 ArchiveYear = true,
                 ArchivedAt = true,
+                EmploymentPercent = true,
             },
             NotNull = new EmployeePlacementSearchNotNull() {
                 Meta = new EmployeePlacementSearchNotNullMeta() {
@@ -361,6 +477,784 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
                 EndDate = true,
                 ArchiveYear = true,
                 ArchivedAt = true,
+                EmploymentPercent = true,
+            },
+            OrCondition = true,
+        },
+    },
+    limit: 1,
+    offset: 0
+);
+
+while(res != null)
+{
+    // handle items
+
+    res = await res.Next!();
+}
+```
+### Example Usage: requestExample
+
+<!-- UsageSnippet language="csharp" operationID="EmployeePlacementSearch" method="post" path="/employee-placement/_search" example="requestExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlacements.SearchAsync(
+    employeePlacementSearch: new EmployeePlacementSearchRequestBody() {
+        Filter = new EmployeePlacementSearchFilter() {
+            Equals = new EmployeePlacementSearchEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new EmployeePlacementSearchEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new EmployeePlacementSearchEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                EmployeeID = "123e4567-e89b-12d3-a456-426614174000",
+                SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+                Signature = "example",
+                Title = "example",
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchiveYear = "example",
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
+            },
+            NotEquals = new EmployeePlacementSearchNotEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new EmployeePlacementSearchNotEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new EmployeePlacementSearchNotEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                EmployeeID = "123e4567-e89b-12d3-a456-426614174000",
+                SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+                Signature = "example",
+                Title = "example",
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchiveYear = "example",
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
+            },
+            GreaterThan = new EmployeePlacementSearchGreaterThan() {
+                Meta = new EmployeePlacementSearchGreaterThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
+            },
+            SmallerThan = new EmployeePlacementSearchSmallerThan() {
+                Meta = new EmployeePlacementSearchSmallerThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
+            },
+            GreaterOrEqual = new EmployeePlacementSearchGreaterOrEqual() {
+                Meta = new EmployeePlacementSearchGreaterOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
+            },
+            SmallerOrEqual = new EmployeePlacementSearchSmallerOrEqual() {
+                Meta = new EmployeePlacementSearchSmallerOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
+            },
+            Contains = new EmployeePlacementSearchContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new EmployeePlacementSearchContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new EmployeePlacementSearchContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                EmployeeID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                SchoolID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Signature = new List<string>() {
+                    "example",
+                },
+                Title = new List<string>() {
+                    "example",
+                },
+                StartDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                EndDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                ArchiveYear = new List<string>() {
+                    "example",
+                },
+                EmploymentPercent = new List<long>() {
+                    42,
+                },
+            },
+            NotContains = new EmployeePlacementSearchNotContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new EmployeePlacementSearchNotContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new EmployeePlacementSearchNotContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                EmployeeID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                SchoolID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Signature = new List<string>() {
+                    "example",
+                },
+                Title = new List<string>() {
+                    "example",
+                },
+                StartDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                EndDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                ArchiveYear = new List<string>() {
+                    "example",
+                },
+                EmploymentPercent = new List<long>() {
+                    42,
+                },
+            },
+            Like = new EmployeePlacementSearchLike() {
+                External = new EmployeePlacementSearchLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Signature = "example",
+                Title = "example",
+                ArchiveYear = "example",
+            },
+            NotLike = new EmployeePlacementSearchNotLike() {
+                External = new EmployeePlacementSearchNotLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Signature = "example",
+                Title = "example",
+                ArchiveYear = "example",
+            },
+            Null = new EmployeePlacementSearchNull() {
+                Meta = new EmployeePlacementSearchNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new EmployeePlacementSearchNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                Signature = true,
+                Title = true,
+                Roles = true,
+                EndDate = true,
+                ArchiveYear = true,
+                ArchivedAt = true,
+                EmploymentPercent = true,
+            },
+            NotNull = new EmployeePlacementSearchNotNull() {
+                Meta = new EmployeePlacementSearchNotNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new EmployeePlacementSearchNotNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                Signature = true,
+                Title = true,
+                Roles = true,
+                EndDate = true,
+                ArchiveYear = true,
+                ArchivedAt = true,
+                EmploymentPercent = true,
+            },
+            OrCondition = true,
+        },
+    },
+    limit: 1,
+    offset: 0
+);
+
+while(res != null)
+{
+    // handle items
+
+    res = await res.Next!();
+}
+```
+### Example Usage: responseExample
+
+<!-- UsageSnippet language="csharp" operationID="EmployeePlacementSearch" method="post" path="/employee-placement/_search" example="responseExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlacements.SearchAsync(
+    employeePlacementSearch: new EmployeePlacementSearchRequestBody() {
+        Filter = new EmployeePlacementSearchFilter() {
+            Equals = new EmployeePlacementSearchEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new EmployeePlacementSearchEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new EmployeePlacementSearchEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                EmployeeID = "123e4567-e89b-12d3-a456-426614174000",
+                SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+                Signature = "example",
+                Title = "example",
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchiveYear = "example",
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
+            },
+            NotEquals = new EmployeePlacementSearchNotEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new EmployeePlacementSearchNotEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new EmployeePlacementSearchNotEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                EmployeeID = "123e4567-e89b-12d3-a456-426614174000",
+                SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+                Signature = "example",
+                Title = "example",
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchiveYear = "example",
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
+            },
+            GreaterThan = new EmployeePlacementSearchGreaterThan() {
+                Meta = new EmployeePlacementSearchGreaterThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
+            },
+            SmallerThan = new EmployeePlacementSearchSmallerThan() {
+                Meta = new EmployeePlacementSearchSmallerThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
+            },
+            GreaterOrEqual = new EmployeePlacementSearchGreaterOrEqual() {
+                Meta = new EmployeePlacementSearchGreaterOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
+            },
+            SmallerOrEqual = new EmployeePlacementSearchSmallerOrEqual() {
+                Meta = new EmployeePlacementSearchSmallerOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
+            },
+            Contains = new EmployeePlacementSearchContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new EmployeePlacementSearchContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new EmployeePlacementSearchContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                EmployeeID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                SchoolID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Signature = new List<string>() {
+                    "example",
+                },
+                Title = new List<string>() {
+                    "example",
+                },
+                StartDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                EndDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                ArchiveYear = new List<string>() {
+                    "example",
+                },
+                EmploymentPercent = new List<long>() {
+                    42,
+                },
+            },
+            NotContains = new EmployeePlacementSearchNotContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new EmployeePlacementSearchNotContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new EmployeePlacementSearchNotContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                EmployeeID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                SchoolID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Signature = new List<string>() {
+                    "example",
+                },
+                Title = new List<string>() {
+                    "example",
+                },
+                StartDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                EndDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                ArchiveYear = new List<string>() {
+                    "example",
+                },
+                EmploymentPercent = new List<long>() {
+                    42,
+                },
+            },
+            Like = new EmployeePlacementSearchLike() {
+                External = new EmployeePlacementSearchLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Signature = "example",
+                Title = "example",
+                ArchiveYear = "example",
+            },
+            NotLike = new EmployeePlacementSearchNotLike() {
+                External = new EmployeePlacementSearchNotLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Signature = "example",
+                Title = "example",
+                ArchiveYear = "example",
+            },
+            Null = new EmployeePlacementSearchNull() {
+                Meta = new EmployeePlacementSearchNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new EmployeePlacementSearchNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                Signature = true,
+                Title = true,
+                Roles = true,
+                EndDate = true,
+                ArchiveYear = true,
+                ArchivedAt = true,
+                EmploymentPercent = true,
+            },
+            NotNull = new EmployeePlacementSearchNotNull() {
+                Meta = new EmployeePlacementSearchNotNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new EmployeePlacementSearchNotNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                Signature = true,
+                Title = true,
+                Roles = true,
+                EndDate = true,
+                ArchiveYear = true,
+                ArchivedAt = true,
+                EmploymentPercent = true,
+            },
+            OrCondition = true,
+        },
+    },
+    limit: 1,
+    offset: 0
+);
+
+while(res != null)
+{
+    // handle items
+
+    res = await res.Next!();
+}
+```
+### Example Usage: validationError
+
+<!-- UsageSnippet language="csharp" operationID="EmployeePlacementSearch" method="post" path="/employee-placement/_search" example="validationError" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlacements.SearchAsync(
+    employeePlacementSearch: new EmployeePlacementSearchRequestBody() {
+        Filter = new EmployeePlacementSearchFilter() {
+            Equals = new EmployeePlacementSearchEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new EmployeePlacementSearchEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new EmployeePlacementSearchEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                EmployeeID = "123e4567-e89b-12d3-a456-426614174000",
+                SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+                Signature = "example",
+                Title = "example",
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchiveYear = "example",
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
+            },
+            NotEquals = new EmployeePlacementSearchNotEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new EmployeePlacementSearchNotEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new EmployeePlacementSearchNotEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                EmployeeID = "123e4567-e89b-12d3-a456-426614174000",
+                SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+                Signature = "example",
+                Title = "example",
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchiveYear = "example",
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
+            },
+            GreaterThan = new EmployeePlacementSearchGreaterThan() {
+                Meta = new EmployeePlacementSearchGreaterThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
+            },
+            SmallerThan = new EmployeePlacementSearchSmallerThan() {
+                Meta = new EmployeePlacementSearchSmallerThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
+            },
+            GreaterOrEqual = new EmployeePlacementSearchGreaterOrEqual() {
+                Meta = new EmployeePlacementSearchGreaterOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
+            },
+            SmallerOrEqual = new EmployeePlacementSearchSmallerOrEqual() {
+                Meta = new EmployeePlacementSearchSmallerOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                EmploymentPercent = 42,
+            },
+            Contains = new EmployeePlacementSearchContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new EmployeePlacementSearchContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new EmployeePlacementSearchContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                EmployeeID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                SchoolID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Signature = new List<string>() {
+                    "example",
+                },
+                Title = new List<string>() {
+                    "example",
+                },
+                StartDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                EndDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                ArchiveYear = new List<string>() {
+                    "example",
+                },
+                EmploymentPercent = new List<long>() {
+                    42,
+                },
+            },
+            NotContains = new EmployeePlacementSearchNotContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new EmployeePlacementSearchNotContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new EmployeePlacementSearchNotContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                EmployeeID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                SchoolID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Signature = new List<string>() {
+                    "example",
+                },
+                Title = new List<string>() {
+                    "example",
+                },
+                StartDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                EndDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                ArchiveYear = new List<string>() {
+                    "example",
+                },
+                EmploymentPercent = new List<long>() {
+                    42,
+                },
+            },
+            Like = new EmployeePlacementSearchLike() {
+                External = new EmployeePlacementSearchLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Signature = "example",
+                Title = "example",
+                ArchiveYear = "example",
+            },
+            NotLike = new EmployeePlacementSearchNotLike() {
+                External = new EmployeePlacementSearchNotLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Signature = "example",
+                Title = "example",
+                ArchiveYear = "example",
+            },
+            Null = new EmployeePlacementSearchNull() {
+                Meta = new EmployeePlacementSearchNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new EmployeePlacementSearchNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                Signature = true,
+                Title = true,
+                Roles = true,
+                EndDate = true,
+                ArchiveYear = true,
+                ArchivedAt = true,
+                EmploymentPercent = true,
+            },
+            NotNull = new EmployeePlacementSearchNotNull() {
+                Meta = new EmployeePlacementSearchNotNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new EmployeePlacementSearchNotNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                Signature = true,
+                Title = true,
+                Roles = true,
+                EndDate = true,
+                ArchiveYear = true,
+                ArchivedAt = true,
+                EmploymentPercent = true,
             },
             OrCondition = true,
         },
@@ -409,7 +1303,7 @@ Retrieves the `EmployeePlacement` with the given ID.
 
 ### Example Usage
 
-<!-- UsageSnippet language="csharp" operationID="EmployeePlacementGet" method="get" path="/employee-placement/{id}" -->
+<!-- UsageSnippet language="csharp" operationID="EmployeePlacementGet" method="get" path="/employee-placement/{id}" example="responseExample" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -495,9 +1389,9 @@ var res = await sdk.EmployeePlacements.DeleteAsync(id: "123e4567-e89b-12d3-a456-
 
 Update a EmployeePlacement
 
-### Example Usage
+### Example Usage: errorExample
 
-<!-- UsageSnippet language="csharp" operationID="EmployeePlacementUpdate" method="patch" path="/employee-placement/{id}" -->
+<!-- UsageSnippet language="csharp" operationID="EmployeePlacementUpdate" method="patch" path="/employee-placement/{id}" example="errorExample" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -522,6 +1416,106 @@ var res = await sdk.EmployeePlacements.UpdateAsync(
         },
         StartDate = DateOnly.Parse("2024-08-01"),
         EndDate = DateOnly.Parse("2024-08-01"),
+        EmploymentPercent = 100,
+    }
+);
+
+// handle response
+```
+### Example Usage: requestExample
+
+<!-- UsageSnippet language="csharp" operationID="EmployeePlacementUpdate" method="patch" path="/employee-placement/{id}" example="requestExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+var res = await sdk.EmployeePlacements.UpdateAsync(
+    id: "123e4567-e89b-12d3-a456-426614174000",
+    employeePlacementUpdate: new EmployeePlacementUpdate() {
+        External = new EmployeePlacementUpdateExternal() {
+            SourceID = "12345678",
+        },
+        Signature = "LM",
+        Title = "Principal",
+        Roles = new List<EmployeePlacementRole>() {
+            EmployeePlacementRole.Admin,
+        },
+        StartDate = DateOnly.Parse("2024-08-01"),
+        EndDate = DateOnly.Parse("2024-08-01"),
+        EmploymentPercent = 100,
+    }
+);
+
+// handle response
+```
+### Example Usage: responseExample
+
+<!-- UsageSnippet language="csharp" operationID="EmployeePlacementUpdate" method="patch" path="/employee-placement/{id}" example="responseExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+var res = await sdk.EmployeePlacements.UpdateAsync(
+    id: "123e4567-e89b-12d3-a456-426614174000",
+    employeePlacementUpdate: new EmployeePlacementUpdate() {
+        External = new EmployeePlacementUpdateExternal() {
+            SourceID = "12345678",
+        },
+        Signature = "LM",
+        Title = "Principal",
+        Roles = new List<EmployeePlacementRole>() {
+            EmployeePlacementRole.Admin,
+        },
+        StartDate = DateOnly.Parse("2024-08-01"),
+        EndDate = DateOnly.Parse("2024-08-01"),
+        EmploymentPercent = 100,
+    }
+);
+
+// handle response
+```
+### Example Usage: validationError
+
+<!-- UsageSnippet language="csharp" operationID="EmployeePlacementUpdate" method="patch" path="/employee-placement/{id}" example="validationError" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+var res = await sdk.EmployeePlacements.UpdateAsync(
+    id: "123e4567-e89b-12d3-a456-426614174000",
+    employeePlacementUpdate: new EmployeePlacementUpdate() {
+        External = new EmployeePlacementUpdateExternal() {
+            SourceID = "12345678",
+        },
+        Signature = "LM",
+        Title = "Principal",
+        Roles = new List<EmployeePlacementRole>() {
+            EmployeePlacementRole.Admin,
+        },
+        StartDate = DateOnly.Parse("2024-08-01"),
+        EndDate = DateOnly.Parse("2024-08-01"),
+        EmploymentPercent = 100,
     }
 );
 

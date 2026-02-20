@@ -37,6 +37,18 @@ namespace Meitner.Models.Components
         public string? MotherTongue { get; set; } = null;
 
         /// <summary>
+        /// The language code for the student's modern language in school choice (Skolans val). Language codes follow the ISO 639-2 standard (three-letter codes).
+        /// </summary>
+        [JsonProperty("modernLanguageInSchoolChoice")]
+        public string? ModernLanguageInSchoolChoice { get; set; } = null;
+
+        /// <summary>
+        /// The language code for the student's modern language in language choice (Språkval, M2, B-språk). Language codes follow the ISO 639-2 standard (three-letter codes).
+        /// </summary>
+        [JsonProperty("modernLanguageInLanguageChoice")]
+        public string? ModernLanguageInLanguageChoice { get; set; } = null;
+
+        /// <summary>
         /// The year the placement was archived for the student, in the format YYYY_YYYY where the first year is the autumn and the second year is the spring.
         /// </summary>
         [JsonProperty("archiveYear")]

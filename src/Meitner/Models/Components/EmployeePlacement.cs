@@ -91,5 +91,11 @@ namespace Meitner.Models.Components
         /// </summary>
         [JsonProperty("archivedAt")]
         public DateTime? ArchivedAt { get; set; } = null;
+
+        /// <summary>
+        /// The percentage of employment for the employee at this school, represented as an integer (e.g., 100 for 100%, 50 for 50%).
+        /// </summary>
+        [JsonProperty("employmentPercent")]
+        public long? EmploymentPercent { get; set; } = null;
     }
 }

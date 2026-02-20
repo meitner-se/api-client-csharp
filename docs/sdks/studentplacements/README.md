@@ -19,7 +19,7 @@ Returns a paginated list of all `StudentPlacements` in your organization.
 
 ### Example Usage
 
-<!-- UsageSnippet language="csharp" operationID="StudentPlacementList" method="get" path="/student-placement" -->
+<!-- UsageSnippet language="csharp" operationID="StudentPlacementList" method="get" path="/student-placement" example="responseExample" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -71,9 +71,9 @@ while(res != null)
 
 Create a new StudentPlacement
 
-### Example Usage
+### Example Usage: errorExample
 
-<!-- UsageSnippet language="csharp" operationID="StudentPlacementCreate" method="post" path="/student-placement" -->
+<!-- UsageSnippet language="csharp" operationID="StudentPlacementCreate" method="post" path="/student-placement" example="errorExample" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -94,6 +94,111 @@ StudentPlacementCreate req = new StudentPlacementCreate() {
     SchoolYear = StudentPlacementCreateSchoolYear.One,
     HasChildcare = true,
     MotherTongue = "SWE",
+    ModernLanguageAlternative = StudentPlacementCreateModernLanguageAlternative.En,
+    ModernLanguageInSchoolChoice = "deu",
+    ModernLanguageInLanguageChoice = "fra",
+    StartDate = DateOnly.Parse("2024-08-01"),
+    EndDate = DateOnly.Parse("2025-08-01"),
+};
+
+var res = await sdk.StudentPlacements.CreateAsync(req);
+
+// handle response
+```
+### Example Usage: requestExample
+
+<!-- UsageSnippet language="csharp" operationID="StudentPlacementCreate" method="post" path="/student-placement" example="requestExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+StudentPlacementCreate req = new StudentPlacementCreate() {
+    External = new StudentPlacementCreateExternal() {
+        SourceID = "12345678",
+    },
+    StudentID = "123e4567-e89b-12d3-a456-426614174000",
+    SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+    SchoolType = StudentPlacementCreateSchoolType.Gr,
+    SchoolYear = StudentPlacementCreateSchoolYear.One,
+    HasChildcare = true,
+    MotherTongue = "SWE",
+    ModernLanguageAlternative = StudentPlacementCreateModernLanguageAlternative.En,
+    ModernLanguageInSchoolChoice = "deu",
+    ModernLanguageInLanguageChoice = "fra",
+    StartDate = DateOnly.Parse("2024-08-01"),
+    EndDate = DateOnly.Parse("2025-08-01"),
+};
+
+var res = await sdk.StudentPlacements.CreateAsync(req);
+
+// handle response
+```
+### Example Usage: responseExample
+
+<!-- UsageSnippet language="csharp" operationID="StudentPlacementCreate" method="post" path="/student-placement" example="responseExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+StudentPlacementCreate req = new StudentPlacementCreate() {
+    External = new StudentPlacementCreateExternal() {
+        SourceID = "12345678",
+    },
+    StudentID = "123e4567-e89b-12d3-a456-426614174000",
+    SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+    SchoolType = StudentPlacementCreateSchoolType.Gr,
+    SchoolYear = StudentPlacementCreateSchoolYear.One,
+    HasChildcare = true,
+    MotherTongue = "SWE",
+    ModernLanguageAlternative = StudentPlacementCreateModernLanguageAlternative.En,
+    ModernLanguageInSchoolChoice = "deu",
+    ModernLanguageInLanguageChoice = "fra",
+    StartDate = DateOnly.Parse("2024-08-01"),
+    EndDate = DateOnly.Parse("2025-08-01"),
+};
+
+var res = await sdk.StudentPlacements.CreateAsync(req);
+
+// handle response
+```
+### Example Usage: validationError
+
+<!-- UsageSnippet language="csharp" operationID="StudentPlacementCreate" method="post" path="/student-placement" example="validationError" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+StudentPlacementCreate req = new StudentPlacementCreate() {
+    External = new StudentPlacementCreateExternal() {
+        SourceID = "12345678",
+    },
+    StudentID = "123e4567-e89b-12d3-a456-426614174000",
+    SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+    SchoolType = StudentPlacementCreateSchoolType.Gr,
+    SchoolYear = StudentPlacementCreateSchoolYear.One,
+    HasChildcare = true,
+    MotherTongue = "SWE",
+    ModernLanguageAlternative = StudentPlacementCreateModernLanguageAlternative.En,
+    ModernLanguageInSchoolChoice = "deu",
+    ModernLanguageInLanguageChoice = "fra",
     StartDate = DateOnly.Parse("2024-08-01"),
     EndDate = DateOnly.Parse("2025-08-01"),
 };
@@ -131,9 +236,9 @@ var res = await sdk.StudentPlacements.CreateAsync(req);
 
 Search for `StudentPlacements` with filtering capabilities.
 
-### Example Usage
+### Example Usage: errorExample
 
-<!-- UsageSnippet language="csharp" operationID="StudentPlacementSearch" method="post" path="/student-placement/_search" -->
+<!-- UsageSnippet language="csharp" operationID="StudentPlacementSearch" method="post" path="/student-placement/_search" example="errorExample" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -164,6 +269,10 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 SchoolID = "123e4567-e89b-12d3-a456-426614174000",
                 HasChildcare = true,
                 MotherTongue = "example",
+                SwedishAsSecondLanguage = true,
+                MotherTongueParticipates = true,
+                ModernLanguageInSchoolChoice = "example",
+                ModernLanguageInLanguageChoice = "example",
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchiveYear = "example",
@@ -185,6 +294,10 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 SchoolID = "123e4567-e89b-12d3-a456-426614174000",
                 HasChildcare = true,
                 MotherTongue = "example",
+                SwedishAsSecondLanguage = true,
+                MotherTongueParticipates = true,
+                ModernLanguageInSchoolChoice = "example",
+                ModernLanguageInLanguageChoice = "example",
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchiveYear = "example",
@@ -258,6 +371,18 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 MotherTongue = new List<string>() {
                     "example",
                 },
+                SwedishAsSecondLanguage = new List<bool>() {
+                    true,
+                },
+                MotherTongueParticipates = new List<bool>() {
+                    true,
+                },
+                ModernLanguageInSchoolChoice = new List<string>() {
+                    "example",
+                },
+                ModernLanguageInLanguageChoice = new List<string>() {
+                    "example",
+                },
                 StartDate = new List<DateOnly>() {
                     DateOnly.Parse("2024-01-15"),
                 },
@@ -300,6 +425,18 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 MotherTongue = new List<string>() {
                     "example",
                 },
+                SwedishAsSecondLanguage = new List<bool>() {
+                    true,
+                },
+                MotherTongueParticipates = new List<bool>() {
+                    true,
+                },
+                ModernLanguageInSchoolChoice = new List<string>() {
+                    "example",
+                },
+                ModernLanguageInLanguageChoice = new List<string>() {
+                    "example",
+                },
                 StartDate = new List<DateOnly>() {
                     DateOnly.Parse("2024-01-15"),
                 },
@@ -316,6 +453,8 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                     Source = "example",
                 },
                 MotherTongue = "example",
+                ModernLanguageInSchoolChoice = "example",
+                ModernLanguageInLanguageChoice = "example",
                 ArchiveYear = "example",
             },
             NotLike = new StudentPlacementSearchNotLike() {
@@ -324,6 +463,8 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                     Source = "example",
                 },
                 MotherTongue = "example",
+                ModernLanguageInSchoolChoice = "example",
+                ModernLanguageInLanguageChoice = "example",
                 ArchiveYear = "example",
             },
             Null = new StudentPlacementSearchNull() {
@@ -338,6 +479,9 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 },
                 SchoolYear = true,
                 MotherTongue = true,
+                ModernLanguageAlternative = true,
+                ModernLanguageInSchoolChoice = true,
+                ModernLanguageInLanguageChoice = true,
                 EndDate = true,
                 ArchiveYear = true,
                 ArchivedAt = true,
@@ -354,6 +498,858 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 },
                 SchoolYear = true,
                 MotherTongue = true,
+                ModernLanguageAlternative = true,
+                ModernLanguageInSchoolChoice = true,
+                ModernLanguageInLanguageChoice = true,
+                EndDate = true,
+                ArchiveYear = true,
+                ArchivedAt = true,
+            },
+            OrCondition = true,
+        },
+    },
+    limit: 1,
+    offset: 0
+);
+
+while(res != null)
+{
+    // handle items
+
+    res = await res.Next!();
+}
+```
+### Example Usage: requestExample
+
+<!-- UsageSnippet language="csharp" operationID="StudentPlacementSearch" method="post" path="/student-placement/_search" example="requestExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacements.SearchAsync(
+    studentPlacementSearch: new StudentPlacementSearchRequestBody() {
+        Filter = new StudentPlacementSearchFilter() {
+            Equals = new StudentPlacementSearchEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new StudentPlacementSearchEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new StudentPlacementSearchEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                StudentID = "123e4567-e89b-12d3-a456-426614174000",
+                SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+                HasChildcare = true,
+                MotherTongue = "example",
+                SwedishAsSecondLanguage = true,
+                MotherTongueParticipates = true,
+                ModernLanguageInSchoolChoice = "example",
+                ModernLanguageInLanguageChoice = "example",
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchiveYear = "example",
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            NotEquals = new StudentPlacementSearchNotEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new StudentPlacementSearchNotEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new StudentPlacementSearchNotEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                StudentID = "123e4567-e89b-12d3-a456-426614174000",
+                SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+                HasChildcare = true,
+                MotherTongue = "example",
+                SwedishAsSecondLanguage = true,
+                MotherTongueParticipates = true,
+                ModernLanguageInSchoolChoice = "example",
+                ModernLanguageInLanguageChoice = "example",
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchiveYear = "example",
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            GreaterThan = new StudentPlacementSearchGreaterThan() {
+                Meta = new StudentPlacementSearchGreaterThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            SmallerThan = new StudentPlacementSearchSmallerThan() {
+                Meta = new StudentPlacementSearchSmallerThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            GreaterOrEqual = new StudentPlacementSearchGreaterOrEqual() {
+                Meta = new StudentPlacementSearchGreaterOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            SmallerOrEqual = new StudentPlacementSearchSmallerOrEqual() {
+                Meta = new StudentPlacementSearchSmallerOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            Contains = new StudentPlacementSearchContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new StudentPlacementSearchContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new StudentPlacementSearchContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                StudentID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                SchoolID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                HasChildcare = new List<bool>() {
+                    true,
+                },
+                MotherTongue = new List<string>() {
+                    "example",
+                },
+                SwedishAsSecondLanguage = new List<bool>() {
+                    true,
+                },
+                MotherTongueParticipates = new List<bool>() {
+                    true,
+                },
+                ModernLanguageInSchoolChoice = new List<string>() {
+                    "example",
+                },
+                ModernLanguageInLanguageChoice = new List<string>() {
+                    "example",
+                },
+                StartDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                EndDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                ArchiveYear = new List<string>() {
+                    "example",
+                },
+            },
+            NotContains = new StudentPlacementSearchNotContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new StudentPlacementSearchNotContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new StudentPlacementSearchNotContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                StudentID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                SchoolID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                HasChildcare = new List<bool>() {
+                    true,
+                },
+                MotherTongue = new List<string>() {
+                    "example",
+                },
+                SwedishAsSecondLanguage = new List<bool>() {
+                    true,
+                },
+                MotherTongueParticipates = new List<bool>() {
+                    true,
+                },
+                ModernLanguageInSchoolChoice = new List<string>() {
+                    "example",
+                },
+                ModernLanguageInLanguageChoice = new List<string>() {
+                    "example",
+                },
+                StartDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                EndDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                ArchiveYear = new List<string>() {
+                    "example",
+                },
+            },
+            Like = new StudentPlacementSearchLike() {
+                External = new StudentPlacementSearchLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                MotherTongue = "example",
+                ModernLanguageInSchoolChoice = "example",
+                ModernLanguageInLanguageChoice = "example",
+                ArchiveYear = "example",
+            },
+            NotLike = new StudentPlacementSearchNotLike() {
+                External = new StudentPlacementSearchNotLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                MotherTongue = "example",
+                ModernLanguageInSchoolChoice = "example",
+                ModernLanguageInLanguageChoice = "example",
+                ArchiveYear = "example",
+            },
+            Null = new StudentPlacementSearchNull() {
+                Meta = new StudentPlacementSearchNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new StudentPlacementSearchNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                SchoolYear = true,
+                MotherTongue = true,
+                ModernLanguageAlternative = true,
+                ModernLanguageInSchoolChoice = true,
+                ModernLanguageInLanguageChoice = true,
+                EndDate = true,
+                ArchiveYear = true,
+                ArchivedAt = true,
+            },
+            NotNull = new StudentPlacementSearchNotNull() {
+                Meta = new StudentPlacementSearchNotNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new StudentPlacementSearchNotNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                SchoolYear = true,
+                MotherTongue = true,
+                ModernLanguageAlternative = true,
+                ModernLanguageInSchoolChoice = true,
+                ModernLanguageInLanguageChoice = true,
+                EndDate = true,
+                ArchiveYear = true,
+                ArchivedAt = true,
+            },
+            OrCondition = true,
+        },
+    },
+    limit: 1,
+    offset: 0
+);
+
+while(res != null)
+{
+    // handle items
+
+    res = await res.Next!();
+}
+```
+### Example Usage: responseExample
+
+<!-- UsageSnippet language="csharp" operationID="StudentPlacementSearch" method="post" path="/student-placement/_search" example="responseExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacements.SearchAsync(
+    studentPlacementSearch: new StudentPlacementSearchRequestBody() {
+        Filter = new StudentPlacementSearchFilter() {
+            Equals = new StudentPlacementSearchEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new StudentPlacementSearchEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new StudentPlacementSearchEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                StudentID = "123e4567-e89b-12d3-a456-426614174000",
+                SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+                HasChildcare = true,
+                MotherTongue = "example",
+                SwedishAsSecondLanguage = true,
+                MotherTongueParticipates = true,
+                ModernLanguageInSchoolChoice = "example",
+                ModernLanguageInLanguageChoice = "example",
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchiveYear = "example",
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            NotEquals = new StudentPlacementSearchNotEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new StudentPlacementSearchNotEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new StudentPlacementSearchNotEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                StudentID = "123e4567-e89b-12d3-a456-426614174000",
+                SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+                HasChildcare = true,
+                MotherTongue = "example",
+                SwedishAsSecondLanguage = true,
+                MotherTongueParticipates = true,
+                ModernLanguageInSchoolChoice = "example",
+                ModernLanguageInLanguageChoice = "example",
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchiveYear = "example",
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            GreaterThan = new StudentPlacementSearchGreaterThan() {
+                Meta = new StudentPlacementSearchGreaterThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            SmallerThan = new StudentPlacementSearchSmallerThan() {
+                Meta = new StudentPlacementSearchSmallerThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            GreaterOrEqual = new StudentPlacementSearchGreaterOrEqual() {
+                Meta = new StudentPlacementSearchGreaterOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            SmallerOrEqual = new StudentPlacementSearchSmallerOrEqual() {
+                Meta = new StudentPlacementSearchSmallerOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            Contains = new StudentPlacementSearchContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new StudentPlacementSearchContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new StudentPlacementSearchContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                StudentID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                SchoolID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                HasChildcare = new List<bool>() {
+                    true,
+                },
+                MotherTongue = new List<string>() {
+                    "example",
+                },
+                SwedishAsSecondLanguage = new List<bool>() {
+                    true,
+                },
+                MotherTongueParticipates = new List<bool>() {
+                    true,
+                },
+                ModernLanguageInSchoolChoice = new List<string>() {
+                    "example",
+                },
+                ModernLanguageInLanguageChoice = new List<string>() {
+                    "example",
+                },
+                StartDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                EndDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                ArchiveYear = new List<string>() {
+                    "example",
+                },
+            },
+            NotContains = new StudentPlacementSearchNotContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new StudentPlacementSearchNotContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new StudentPlacementSearchNotContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                StudentID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                SchoolID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                HasChildcare = new List<bool>() {
+                    true,
+                },
+                MotherTongue = new List<string>() {
+                    "example",
+                },
+                SwedishAsSecondLanguage = new List<bool>() {
+                    true,
+                },
+                MotherTongueParticipates = new List<bool>() {
+                    true,
+                },
+                ModernLanguageInSchoolChoice = new List<string>() {
+                    "example",
+                },
+                ModernLanguageInLanguageChoice = new List<string>() {
+                    "example",
+                },
+                StartDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                EndDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                ArchiveYear = new List<string>() {
+                    "example",
+                },
+            },
+            Like = new StudentPlacementSearchLike() {
+                External = new StudentPlacementSearchLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                MotherTongue = "example",
+                ModernLanguageInSchoolChoice = "example",
+                ModernLanguageInLanguageChoice = "example",
+                ArchiveYear = "example",
+            },
+            NotLike = new StudentPlacementSearchNotLike() {
+                External = new StudentPlacementSearchNotLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                MotherTongue = "example",
+                ModernLanguageInSchoolChoice = "example",
+                ModernLanguageInLanguageChoice = "example",
+                ArchiveYear = "example",
+            },
+            Null = new StudentPlacementSearchNull() {
+                Meta = new StudentPlacementSearchNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new StudentPlacementSearchNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                SchoolYear = true,
+                MotherTongue = true,
+                ModernLanguageAlternative = true,
+                ModernLanguageInSchoolChoice = true,
+                ModernLanguageInLanguageChoice = true,
+                EndDate = true,
+                ArchiveYear = true,
+                ArchivedAt = true,
+            },
+            NotNull = new StudentPlacementSearchNotNull() {
+                Meta = new StudentPlacementSearchNotNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new StudentPlacementSearchNotNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                SchoolYear = true,
+                MotherTongue = true,
+                ModernLanguageAlternative = true,
+                ModernLanguageInSchoolChoice = true,
+                ModernLanguageInLanguageChoice = true,
+                EndDate = true,
+                ArchiveYear = true,
+                ArchivedAt = true,
+            },
+            OrCondition = true,
+        },
+    },
+    limit: 1,
+    offset: 0
+);
+
+while(res != null)
+{
+    // handle items
+
+    res = await res.Next!();
+}
+```
+### Example Usage: validationError
+
+<!-- UsageSnippet language="csharp" operationID="StudentPlacementSearch" method="post" path="/student-placement/_search" example="validationError" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacements.SearchAsync(
+    studentPlacementSearch: new StudentPlacementSearchRequestBody() {
+        Filter = new StudentPlacementSearchFilter() {
+            Equals = new StudentPlacementSearchEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new StudentPlacementSearchEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new StudentPlacementSearchEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                StudentID = "123e4567-e89b-12d3-a456-426614174000",
+                SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+                HasChildcare = true,
+                MotherTongue = "example",
+                SwedishAsSecondLanguage = true,
+                MotherTongueParticipates = true,
+                ModernLanguageInSchoolChoice = "example",
+                ModernLanguageInLanguageChoice = "example",
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchiveYear = "example",
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            NotEquals = new StudentPlacementSearchNotEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new StudentPlacementSearchNotEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new StudentPlacementSearchNotEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                StudentID = "123e4567-e89b-12d3-a456-426614174000",
+                SchoolID = "123e4567-e89b-12d3-a456-426614174000",
+                HasChildcare = true,
+                MotherTongue = "example",
+                SwedishAsSecondLanguage = true,
+                MotherTongueParticipates = true,
+                ModernLanguageInSchoolChoice = "example",
+                ModernLanguageInLanguageChoice = "example",
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchiveYear = "example",
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            GreaterThan = new StudentPlacementSearchGreaterThan() {
+                Meta = new StudentPlacementSearchGreaterThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            SmallerThan = new StudentPlacementSearchSmallerThan() {
+                Meta = new StudentPlacementSearchSmallerThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            GreaterOrEqual = new StudentPlacementSearchGreaterOrEqual() {
+                Meta = new StudentPlacementSearchGreaterOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            SmallerOrEqual = new StudentPlacementSearchSmallerOrEqual() {
+                Meta = new StudentPlacementSearchSmallerOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+                StartDate = DateOnly.Parse("2024-01-15"),
+                EndDate = DateOnly.Parse("2024-01-15"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+            },
+            Contains = new StudentPlacementSearchContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new StudentPlacementSearchContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new StudentPlacementSearchContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                StudentID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                SchoolID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                HasChildcare = new List<bool>() {
+                    true,
+                },
+                MotherTongue = new List<string>() {
+                    "example",
+                },
+                SwedishAsSecondLanguage = new List<bool>() {
+                    true,
+                },
+                MotherTongueParticipates = new List<bool>() {
+                    true,
+                },
+                ModernLanguageInSchoolChoice = new List<string>() {
+                    "example",
+                },
+                ModernLanguageInLanguageChoice = new List<string>() {
+                    "example",
+                },
+                StartDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                EndDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                ArchiveYear = new List<string>() {
+                    "example",
+                },
+            },
+            NotContains = new StudentPlacementSearchNotContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new StudentPlacementSearchNotContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new StudentPlacementSearchNotContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                StudentID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                SchoolID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                HasChildcare = new List<bool>() {
+                    true,
+                },
+                MotherTongue = new List<string>() {
+                    "example",
+                },
+                SwedishAsSecondLanguage = new List<bool>() {
+                    true,
+                },
+                MotherTongueParticipates = new List<bool>() {
+                    true,
+                },
+                ModernLanguageInSchoolChoice = new List<string>() {
+                    "example",
+                },
+                ModernLanguageInLanguageChoice = new List<string>() {
+                    "example",
+                },
+                StartDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                EndDate = new List<DateOnly>() {
+                    DateOnly.Parse("2024-01-15"),
+                },
+                ArchiveYear = new List<string>() {
+                    "example",
+                },
+            },
+            Like = new StudentPlacementSearchLike() {
+                External = new StudentPlacementSearchLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                MotherTongue = "example",
+                ModernLanguageInSchoolChoice = "example",
+                ModernLanguageInLanguageChoice = "example",
+                ArchiveYear = "example",
+            },
+            NotLike = new StudentPlacementSearchNotLike() {
+                External = new StudentPlacementSearchNotLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                MotherTongue = "example",
+                ModernLanguageInSchoolChoice = "example",
+                ModernLanguageInLanguageChoice = "example",
+                ArchiveYear = "example",
+            },
+            Null = new StudentPlacementSearchNull() {
+                Meta = new StudentPlacementSearchNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new StudentPlacementSearchNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                SchoolYear = true,
+                MotherTongue = true,
+                ModernLanguageAlternative = true,
+                ModernLanguageInSchoolChoice = true,
+                ModernLanguageInLanguageChoice = true,
+                EndDate = true,
+                ArchiveYear = true,
+                ArchivedAt = true,
+            },
+            NotNull = new StudentPlacementSearchNotNull() {
+                Meta = new StudentPlacementSearchNotNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new StudentPlacementSearchNotNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                SchoolYear = true,
+                MotherTongue = true,
+                ModernLanguageAlternative = true,
+                ModernLanguageInSchoolChoice = true,
+                ModernLanguageInLanguageChoice = true,
                 EndDate = true,
                 ArchiveYear = true,
                 ArchivedAt = true,
@@ -405,7 +1401,7 @@ Retrieves the `StudentPlacement` with the given ID.
 
 ### Example Usage
 
-<!-- UsageSnippet language="csharp" operationID="StudentPlacementGet" method="get" path="/student-placement/{id}" -->
+<!-- UsageSnippet language="csharp" operationID="StudentPlacementGet" method="get" path="/student-placement/{id}" example="responseExample" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -491,9 +1487,9 @@ var res = await sdk.StudentPlacements.DeleteAsync(id: "123e4567-e89b-12d3-a456-4
 
 Update a StudentPlacement
 
-### Example Usage
+### Example Usage: errorExample
 
-<!-- UsageSnippet language="csharp" operationID="StudentPlacementUpdate" method="patch" path="/student-placement/{id}" -->
+<!-- UsageSnippet language="csharp" operationID="StudentPlacementUpdate" method="patch" path="/student-placement/{id}" example="errorExample" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -514,6 +1510,108 @@ var res = await sdk.StudentPlacements.UpdateAsync(
         SchoolYear = StudentPlacementUpdateSchoolYear.One,
         HasChildcare = true,
         MotherTongue = "SWE",
+        ModernLanguageAlternative = StudentPlacementUpdateModernLanguageAlternative.En,
+        ModernLanguageInSchoolChoice = "deu",
+        ModernLanguageInLanguageChoice = "fra",
+        StartDate = DateOnly.Parse("2024-08-01"),
+        EndDate = DateOnly.Parse("2025-08-01"),
+    }
+);
+
+// handle response
+```
+### Example Usage: requestExample
+
+<!-- UsageSnippet language="csharp" operationID="StudentPlacementUpdate" method="patch" path="/student-placement/{id}" example="requestExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+var res = await sdk.StudentPlacements.UpdateAsync(
+    id: "123e4567-e89b-12d3-a456-426614174000",
+    studentPlacementUpdate: new StudentPlacementUpdate() {
+        External = new StudentPlacementUpdateExternal() {
+            SourceID = "12345678",
+        },
+        SchoolType = StudentPlacementUpdateSchoolType.Gr,
+        SchoolYear = StudentPlacementUpdateSchoolYear.One,
+        HasChildcare = true,
+        MotherTongue = "SWE",
+        ModernLanguageAlternative = StudentPlacementUpdateModernLanguageAlternative.En,
+        ModernLanguageInSchoolChoice = "deu",
+        ModernLanguageInLanguageChoice = "fra",
+        StartDate = DateOnly.Parse("2024-08-01"),
+        EndDate = DateOnly.Parse("2025-08-01"),
+    }
+);
+
+// handle response
+```
+### Example Usage: responseExample
+
+<!-- UsageSnippet language="csharp" operationID="StudentPlacementUpdate" method="patch" path="/student-placement/{id}" example="responseExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+var res = await sdk.StudentPlacements.UpdateAsync(
+    id: "123e4567-e89b-12d3-a456-426614174000",
+    studentPlacementUpdate: new StudentPlacementUpdate() {
+        External = new StudentPlacementUpdateExternal() {
+            SourceID = "12345678",
+        },
+        SchoolType = StudentPlacementUpdateSchoolType.Gr,
+        SchoolYear = StudentPlacementUpdateSchoolYear.One,
+        HasChildcare = true,
+        MotherTongue = "SWE",
+        ModernLanguageAlternative = StudentPlacementUpdateModernLanguageAlternative.En,
+        ModernLanguageInSchoolChoice = "deu",
+        ModernLanguageInLanguageChoice = "fra",
+        StartDate = DateOnly.Parse("2024-08-01"),
+        EndDate = DateOnly.Parse("2025-08-01"),
+    }
+);
+
+// handle response
+```
+### Example Usage: validationError
+
+<!-- UsageSnippet language="csharp" operationID="StudentPlacementUpdate" method="patch" path="/student-placement/{id}" example="validationError" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+var res = await sdk.StudentPlacements.UpdateAsync(
+    id: "123e4567-e89b-12d3-a456-426614174000",
+    studentPlacementUpdate: new StudentPlacementUpdate() {
+        External = new StudentPlacementUpdateExternal() {
+            SourceID = "12345678",
+        },
+        SchoolType = StudentPlacementUpdateSchoolType.Gr,
+        SchoolYear = StudentPlacementUpdateSchoolYear.One,
+        HasChildcare = true,
+        MotherTongue = "SWE",
+        ModernLanguageAlternative = StudentPlacementUpdateModernLanguageAlternative.En,
+        ModernLanguageInSchoolChoice = "deu",
+        ModernLanguageInLanguageChoice = "fra",
         StartDate = DateOnly.Parse("2024-08-01"),
         EndDate = DateOnly.Parse("2025-08-01"),
     }
@@ -549,11 +1647,20 @@ var res = await sdk.StudentPlacements.UpdateAsync(
 
 ## Archive
 
-Archive a student placement
+Archive a student placement.
+
+**Recommended usage:**
+We recommend only archiving student placements that have a passed end date. When building syncs from external systems and a studentPlacement is removed, we recommend the following workflow:
+
+1. Set the `endDate` to the date when the studentPlacement was removed from the external system
+2. Wait approximately 5 days before archiving the student placement
+
+This grace period allows time to correct any mistakes made by administrators in the external system before the placement is permanently archived.
+
 
 ### Example Usage
 
-<!-- UsageSnippet language="csharp" operationID="StudentPlacementArchive" method="patch" path="/student-placement/{id}/archive" -->
+<!-- UsageSnippet language="csharp" operationID="StudentPlacementArchive" method="patch" path="/student-placement/{id}/archive" example="responseExample" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -597,7 +1704,7 @@ Restore an archived student placement
 
 ### Example Usage
 
-<!-- UsageSnippet language="csharp" operationID="StudentPlacementRestore" method="patch" path="/student-placement/{id}/restore" -->
+<!-- UsageSnippet language="csharp" operationID="StudentPlacementRestore" method="patch" path="/student-placement/{id}/restore" example="responseExample" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;

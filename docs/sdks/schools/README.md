@@ -16,7 +16,7 @@ Returns a paginated list of all `Schools` in your organization.
 
 ### Example Usage
 
-<!-- UsageSnippet language="csharp" operationID="SchoolList" method="get" path="/school" -->
+<!-- UsageSnippet language="csharp" operationID="SchoolList" method="get" path="/school" example="responseExample" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -68,9 +68,90 @@ while(res != null)
 
 Create a new School
 
-### Example Usage
+### Example Usage: errorExample
 
-<!-- UsageSnippet language="csharp" operationID="SchoolCreate" method="post" path="/school" -->
+<!-- UsageSnippet language="csharp" operationID="SchoolCreate" method="post" path="/school" example="errorExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+SchoolCreate req = new SchoolCreate() {
+    External = new SchoolCreateExternal() {
+        SourceID = "12345678",
+    },
+    Title = "Meitner Grundskola",
+    UnitCode = "12345678",
+    CsnSchoolCode = "12345",
+    MunicipalityCode = "0184",
+    SchoolType = SchoolCreateSchoolType.Gr,
+};
+
+var res = await sdk.Schools.CreateAsync(req);
+
+// handle response
+```
+### Example Usage: requestExample
+
+<!-- UsageSnippet language="csharp" operationID="SchoolCreate" method="post" path="/school" example="requestExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+SchoolCreate req = new SchoolCreate() {
+    External = new SchoolCreateExternal() {
+        SourceID = "12345678",
+    },
+    Title = "Meitner Grundskola",
+    UnitCode = "12345678",
+    CsnSchoolCode = "12345",
+    MunicipalityCode = "0184",
+    SchoolType = SchoolCreateSchoolType.Gr,
+};
+
+var res = await sdk.Schools.CreateAsync(req);
+
+// handle response
+```
+### Example Usage: responseExample
+
+<!-- UsageSnippet language="csharp" operationID="SchoolCreate" method="post" path="/school" example="responseExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+SchoolCreate req = new SchoolCreate() {
+    External = new SchoolCreateExternal() {
+        SourceID = "12345678",
+    },
+    Title = "Meitner Grundskola",
+    UnitCode = "12345678",
+    CsnSchoolCode = "12345",
+    MunicipalityCode = "0184",
+    SchoolType = SchoolCreateSchoolType.Gr,
+};
+
+var res = await sdk.Schools.CreateAsync(req);
+
+// handle response
+```
+### Example Usage: validationError
+
+<!-- UsageSnippet language="csharp" operationID="SchoolCreate" method="post" path="/school" example="validationError" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -124,9 +205,618 @@ var res = await sdk.Schools.CreateAsync(req);
 
 Search for `Schools` with filtering capabilities.
 
-### Example Usage
+### Example Usage: errorExample
 
-<!-- UsageSnippet language="csharp" operationID="SchoolSearch" method="post" path="/school/_search" -->
+<!-- UsageSnippet language="csharp" operationID="SchoolSearch" method="post" path="/school/_search" example="errorExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
+    schoolSearch: new SchoolSearchRequestBody() {
+        Filter = new SchoolSearchFilter() {
+            Equals = new SchoolSearchEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new SchoolSearchEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new SchoolSearchEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Title = "example",
+                UnitCode = "example",
+                CsnSchoolCode = "example",
+                MunicipalityCode = "example",
+            },
+            NotEquals = new SchoolSearchNotEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new SchoolSearchNotEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new SchoolSearchNotEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Title = "example",
+                UnitCode = "example",
+                CsnSchoolCode = "example",
+                MunicipalityCode = "example",
+            },
+            GreaterThan = new SchoolSearchGreaterThan() {
+                Meta = new SchoolSearchGreaterThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            SmallerThan = new SchoolSearchSmallerThan() {
+                Meta = new SchoolSearchSmallerThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            GreaterOrEqual = new SchoolSearchGreaterOrEqual() {
+                Meta = new SchoolSearchGreaterOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            SmallerOrEqual = new SchoolSearchSmallerOrEqual() {
+                Meta = new SchoolSearchSmallerOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            Contains = new SchoolSearchContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new SchoolSearchContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new SchoolSearchContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                Title = new List<string>() {
+                    "example",
+                },
+                UnitCode = new List<string>() {
+                    "example",
+                },
+                CsnSchoolCode = new List<string>() {
+                    "example",
+                },
+                MunicipalityCode = new List<string>() {
+                    "example",
+                },
+            },
+            NotContains = new SchoolSearchNotContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new SchoolSearchNotContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new SchoolSearchNotContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                Title = new List<string>() {
+                    "example",
+                },
+                UnitCode = new List<string>() {
+                    "example",
+                },
+                CsnSchoolCode = new List<string>() {
+                    "example",
+                },
+                MunicipalityCode = new List<string>() {
+                    "example",
+                },
+            },
+            Like = new SchoolSearchLike() {
+                External = new SchoolSearchLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Title = "example",
+                UnitCode = "example",
+                CsnSchoolCode = "example",
+                MunicipalityCode = "example",
+            },
+            NotLike = new SchoolSearchNotLike() {
+                External = new SchoolSearchNotLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Title = "example",
+                UnitCode = "example",
+                CsnSchoolCode = "example",
+                MunicipalityCode = "example",
+            },
+            Null = new SchoolSearchNull() {
+                Meta = new SchoolSearchNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new SchoolSearchNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                UnitCode = true,
+                CsnSchoolCode = true,
+                MunicipalityCode = true,
+            },
+            NotNull = new SchoolSearchNotNull() {
+                Meta = new SchoolSearchNotNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new SchoolSearchNotNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                UnitCode = true,
+                CsnSchoolCode = true,
+                MunicipalityCode = true,
+            },
+            OrCondition = true,
+        },
+    },
+    limit: 1,
+    offset: 0
+);
+
+while(res != null)
+{
+    // handle items
+
+    res = await res.Next!();
+}
+```
+### Example Usage: requestExample
+
+<!-- UsageSnippet language="csharp" operationID="SchoolSearch" method="post" path="/school/_search" example="requestExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
+    schoolSearch: new SchoolSearchRequestBody() {
+        Filter = new SchoolSearchFilter() {
+            Equals = new SchoolSearchEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new SchoolSearchEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new SchoolSearchEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Title = "example",
+                UnitCode = "example",
+                CsnSchoolCode = "example",
+                MunicipalityCode = "example",
+            },
+            NotEquals = new SchoolSearchNotEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new SchoolSearchNotEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new SchoolSearchNotEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Title = "example",
+                UnitCode = "example",
+                CsnSchoolCode = "example",
+                MunicipalityCode = "example",
+            },
+            GreaterThan = new SchoolSearchGreaterThan() {
+                Meta = new SchoolSearchGreaterThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            SmallerThan = new SchoolSearchSmallerThan() {
+                Meta = new SchoolSearchSmallerThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            GreaterOrEqual = new SchoolSearchGreaterOrEqual() {
+                Meta = new SchoolSearchGreaterOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            SmallerOrEqual = new SchoolSearchSmallerOrEqual() {
+                Meta = new SchoolSearchSmallerOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            Contains = new SchoolSearchContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new SchoolSearchContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new SchoolSearchContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                Title = new List<string>() {
+                    "example",
+                },
+                UnitCode = new List<string>() {
+                    "example",
+                },
+                CsnSchoolCode = new List<string>() {
+                    "example",
+                },
+                MunicipalityCode = new List<string>() {
+                    "example",
+                },
+            },
+            NotContains = new SchoolSearchNotContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new SchoolSearchNotContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new SchoolSearchNotContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                Title = new List<string>() {
+                    "example",
+                },
+                UnitCode = new List<string>() {
+                    "example",
+                },
+                CsnSchoolCode = new List<string>() {
+                    "example",
+                },
+                MunicipalityCode = new List<string>() {
+                    "example",
+                },
+            },
+            Like = new SchoolSearchLike() {
+                External = new SchoolSearchLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Title = "example",
+                UnitCode = "example",
+                CsnSchoolCode = "example",
+                MunicipalityCode = "example",
+            },
+            NotLike = new SchoolSearchNotLike() {
+                External = new SchoolSearchNotLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Title = "example",
+                UnitCode = "example",
+                CsnSchoolCode = "example",
+                MunicipalityCode = "example",
+            },
+            Null = new SchoolSearchNull() {
+                Meta = new SchoolSearchNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new SchoolSearchNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                UnitCode = true,
+                CsnSchoolCode = true,
+                MunicipalityCode = true,
+            },
+            NotNull = new SchoolSearchNotNull() {
+                Meta = new SchoolSearchNotNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new SchoolSearchNotNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                UnitCode = true,
+                CsnSchoolCode = true,
+                MunicipalityCode = true,
+            },
+            OrCondition = true,
+        },
+    },
+    limit: 1,
+    offset: 0
+);
+
+while(res != null)
+{
+    // handle items
+
+    res = await res.Next!();
+}
+```
+### Example Usage: responseExample
+
+<!-- UsageSnippet language="csharp" operationID="SchoolSearch" method="post" path="/school/_search" example="responseExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using System;
+using System.Collections.Generic;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
+    schoolSearch: new SchoolSearchRequestBody() {
+        Filter = new SchoolSearchFilter() {
+            Equals = new SchoolSearchEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new SchoolSearchEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new SchoolSearchEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Title = "example",
+                UnitCode = "example",
+                CsnSchoolCode = "example",
+                MunicipalityCode = "example",
+            },
+            NotEquals = new SchoolSearchNotEquals() {
+                Id = "123e4567-e89b-12d3-a456-426614174000",
+                Meta = new SchoolSearchNotEqualsMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
+                },
+                External = new SchoolSearchNotEqualsExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Title = "example",
+                UnitCode = "example",
+                CsnSchoolCode = "example",
+                MunicipalityCode = "example",
+            },
+            GreaterThan = new SchoolSearchGreaterThan() {
+                Meta = new SchoolSearchGreaterThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            SmallerThan = new SchoolSearchSmallerThan() {
+                Meta = new SchoolSearchSmallerThanMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            GreaterOrEqual = new SchoolSearchGreaterOrEqual() {
+                Meta = new SchoolSearchGreaterOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            SmallerOrEqual = new SchoolSearchSmallerOrEqual() {
+                Meta = new SchoolSearchSmallerOrEqualMeta() {
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                },
+            },
+            Contains = new SchoolSearchContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new SchoolSearchContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new SchoolSearchContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                Title = new List<string>() {
+                    "example",
+                },
+                UnitCode = new List<string>() {
+                    "example",
+                },
+                CsnSchoolCode = new List<string>() {
+                    "example",
+                },
+                MunicipalityCode = new List<string>() {
+                    "example",
+                },
+            },
+            NotContains = new SchoolSearchNotContains() {
+                Id = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
+                Meta = new SchoolSearchNotContainsMeta() {
+                    CreatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                    UpdatedBy = new List<string>() {
+                        "123e4567-e89b-12d3-a456-426614174000",
+                    },
+                },
+                External = new SchoolSearchNotContainsExternal() {
+                    SourceID = new List<string>() {
+                        "example",
+                    },
+                    Source = new List<string>() {
+                        "example",
+                    },
+                },
+                Title = new List<string>() {
+                    "example",
+                },
+                UnitCode = new List<string>() {
+                    "example",
+                },
+                CsnSchoolCode = new List<string>() {
+                    "example",
+                },
+                MunicipalityCode = new List<string>() {
+                    "example",
+                },
+            },
+            Like = new SchoolSearchLike() {
+                External = new SchoolSearchLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Title = "example",
+                UnitCode = "example",
+                CsnSchoolCode = "example",
+                MunicipalityCode = "example",
+            },
+            NotLike = new SchoolSearchNotLike() {
+                External = new SchoolSearchNotLikeExternal() {
+                    SourceID = "example",
+                    Source = "example",
+                },
+                Title = "example",
+                UnitCode = "example",
+                CsnSchoolCode = "example",
+                MunicipalityCode = "example",
+            },
+            Null = new SchoolSearchNull() {
+                Meta = new SchoolSearchNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new SchoolSearchNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                UnitCode = true,
+                CsnSchoolCode = true,
+                MunicipalityCode = true,
+            },
+            NotNull = new SchoolSearchNotNull() {
+                Meta = new SchoolSearchNotNullMeta() {
+                    CreatedBy = true,
+                    UpdatedAt = true,
+                    UpdatedBy = true,
+                },
+                External = new SchoolSearchNotNullExternal() {
+                    SourceID = true,
+                    Source = true,
+                },
+                UnitCode = true,
+                CsnSchoolCode = true,
+                MunicipalityCode = true,
+            },
+            OrCondition = true,
+        },
+    },
+    limit: 1,
+    offset: 0
+);
+
+while(res != null)
+{
+    // handle items
+
+    res = await res.Next!();
+}
+```
+### Example Usage: validationError
+
+<!-- UsageSnippet language="csharp" operationID="SchoolSearch" method="post" path="/school/_search" example="validationError" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -360,7 +1050,7 @@ Retrieves the `School` with the given ID.
 
 ### Example Usage
 
-<!-- UsageSnippet language="csharp" operationID="SchoolGet" method="get" path="/school/{id}" -->
+<!-- UsageSnippet language="csharp" operationID="SchoolGet" method="get" path="/school/{id}" example="responseExample" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
@@ -402,9 +1092,90 @@ var res = await sdk.Schools.GetAsync(id: "123e4567-e89b-12d3-a456-426614174000")
 
 Update a School
 
-### Example Usage
+### Example Usage: errorExample
 
-<!-- UsageSnippet language="csharp" operationID="SchoolUpdate" method="patch" path="/school/{id}" -->
+<!-- UsageSnippet language="csharp" operationID="SchoolUpdate" method="patch" path="/school/{id}" example="errorExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+var res = await sdk.Schools.UpdateAsync(
+    id: "123e4567-e89b-12d3-a456-426614174000",
+    schoolUpdate: new SchoolUpdate() {
+        External = new SchoolUpdateExternal() {
+            SourceID = "12345678",
+        },
+        Title = "Meitner Grundskola",
+        UnitCode = "12345678",
+        CsnSchoolCode = "12345",
+        MunicipalityCode = "0184",
+    }
+);
+
+// handle response
+```
+### Example Usage: requestExample
+
+<!-- UsageSnippet language="csharp" operationID="SchoolUpdate" method="patch" path="/school/{id}" example="requestExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+var res = await sdk.Schools.UpdateAsync(
+    id: "123e4567-e89b-12d3-a456-426614174000",
+    schoolUpdate: new SchoolUpdate() {
+        External = new SchoolUpdateExternal() {
+            SourceID = "12345678",
+        },
+        Title = "Meitner Grundskola",
+        UnitCode = "12345678",
+        CsnSchoolCode = "12345",
+        MunicipalityCode = "0184",
+    }
+);
+
+// handle response
+```
+### Example Usage: responseExample
+
+<!-- UsageSnippet language="csharp" operationID="SchoolUpdate" method="patch" path="/school/{id}" example="responseExample" -->
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    ClientCredentials = "<YOUR_API_KEY_HERE>",
+    ClientSecret = "<YOUR_API_KEY_HERE>",
+});
+
+var res = await sdk.Schools.UpdateAsync(
+    id: "123e4567-e89b-12d3-a456-426614174000",
+    schoolUpdate: new SchoolUpdate() {
+        External = new SchoolUpdateExternal() {
+            SourceID = "12345678",
+        },
+        Title = "Meitner Grundskola",
+        UnitCode = "12345678",
+        CsnSchoolCode = "12345",
+        MunicipalityCode = "0184",
+    }
+);
+
+// handle response
+```
+### Example Usage: validationError
+
+<!-- UsageSnippet language="csharp" operationID="SchoolUpdate" method="patch" path="/school/{id}" example="validationError" -->
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
