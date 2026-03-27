@@ -2,6 +2,14 @@
 
 The role of the employee in the placement
 
+## Example Usage
+
+```csharp
+using Meitner.Models.Components;
+
+var value = EmployeePlacementRole.Admin;
+```
+
 
 ## Values
 

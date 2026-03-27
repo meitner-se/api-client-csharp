@@ -21,8 +21,10 @@ using Meitner.Models.Components;
 using Meitner.Models.Requests;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 AuditEventListResponse? res = await sdk.AuditEvents.ListAsync(
@@ -76,8 +78,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.AuditEventSearchResponse? res = await sdk.AuditEvents.SearchAsync(
@@ -86,52 +90,52 @@ Models.Requests.AuditEventSearchResponse? res = await sdk.AuditEvents.SearchAsyn
             Equals = new AuditEventSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new AuditEventSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 ResourceID = "123e4567-e89b-12d3-a456-426614174000",
             },
             NotEquals = new AuditEventSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new AuditEventSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 ResourceID = "123e4567-e89b-12d3-a456-426614174000",
             },
             GreaterThan = new AuditEventSearchGreaterThan() {
                 Meta = new AuditEventSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             SmallerThan = new AuditEventSearchSmallerThan() {
                 Meta = new AuditEventSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             GreaterOrEqual = new AuditEventSearchGreaterOrEqual() {
                 Meta = new AuditEventSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             SmallerOrEqual = new AuditEventSearchSmallerOrEqual() {
                 Meta = new AuditEventSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             Contains = new AuditEventSearchContains() {
                 Id = new List<string>() {
@@ -203,8 +207,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.AuditEventSearchResponse? res = await sdk.AuditEvents.SearchAsync(
@@ -213,52 +219,52 @@ Models.Requests.AuditEventSearchResponse? res = await sdk.AuditEvents.SearchAsyn
             Equals = new AuditEventSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new AuditEventSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 ResourceID = "123e4567-e89b-12d3-a456-426614174000",
             },
             NotEquals = new AuditEventSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new AuditEventSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 ResourceID = "123e4567-e89b-12d3-a456-426614174000",
             },
             GreaterThan = new AuditEventSearchGreaterThan() {
                 Meta = new AuditEventSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             SmallerThan = new AuditEventSearchSmallerThan() {
                 Meta = new AuditEventSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             GreaterOrEqual = new AuditEventSearchGreaterOrEqual() {
                 Meta = new AuditEventSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             SmallerOrEqual = new AuditEventSearchSmallerOrEqual() {
                 Meta = new AuditEventSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             Contains = new AuditEventSearchContains() {
                 Id = new List<string>() {
@@ -330,8 +336,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.AuditEventSearchResponse? res = await sdk.AuditEvents.SearchAsync(
@@ -340,52 +348,52 @@ Models.Requests.AuditEventSearchResponse? res = await sdk.AuditEvents.SearchAsyn
             Equals = new AuditEventSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new AuditEventSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 ResourceID = "123e4567-e89b-12d3-a456-426614174000",
             },
             NotEquals = new AuditEventSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new AuditEventSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 ResourceID = "123e4567-e89b-12d3-a456-426614174000",
             },
             GreaterThan = new AuditEventSearchGreaterThan() {
                 Meta = new AuditEventSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             SmallerThan = new AuditEventSearchSmallerThan() {
                 Meta = new AuditEventSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             GreaterOrEqual = new AuditEventSearchGreaterOrEqual() {
                 Meta = new AuditEventSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             SmallerOrEqual = new AuditEventSearchSmallerOrEqual() {
                 Meta = new AuditEventSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             Contains = new AuditEventSearchContains() {
                 Id = new List<string>() {
@@ -457,8 +465,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.AuditEventSearchResponse? res = await sdk.AuditEvents.SearchAsync(
@@ -467,52 +477,52 @@ Models.Requests.AuditEventSearchResponse? res = await sdk.AuditEvents.SearchAsyn
             Equals = new AuditEventSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new AuditEventSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 ResourceID = "123e4567-e89b-12d3-a456-426614174000",
             },
             NotEquals = new AuditEventSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new AuditEventSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 ResourceID = "123e4567-e89b-12d3-a456-426614174000",
             },
             GreaterThan = new AuditEventSearchGreaterThan() {
                 Meta = new AuditEventSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             SmallerThan = new AuditEventSearchSmallerThan() {
                 Meta = new AuditEventSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             GreaterOrEqual = new AuditEventSearchGreaterOrEqual() {
                 Meta = new AuditEventSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             SmallerOrEqual = new AuditEventSearchSmallerOrEqual() {
                 Meta = new AuditEventSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
-                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                Timestamp = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             Contains = new AuditEventSearchContains() {
                 Id = new List<string>() {
@@ -613,8 +623,10 @@ using Meitner;
 using Meitner.Models.Components;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.AuditEvents.GetAsync(id: "123e4567-e89b-12d3-a456-426614174000");

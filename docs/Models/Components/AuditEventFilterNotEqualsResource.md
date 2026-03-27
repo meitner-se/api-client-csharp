@@ -2,6 +2,14 @@
 
 The type of resource the event occured for
 
+## Example Usage
+
+```csharp
+using Meitner.Models.Components;
+
+var value = AuditEventFilterNotEqualsResource.Group;
+```
+
 
 ## Values
 

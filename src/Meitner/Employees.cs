@@ -260,12 +260,17 @@ namespace Meitner
             var httpRequest = new HttpRequestMessage(HttpMethod.Get, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
 
+            if (!httpRequest.Headers.Contains("Accept"))
+            {
+                httpRequest.Headers.Add("Accept", "application/json");
+            }
+
             if (SDKConfiguration.SecuritySource != null)
             {
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "EmployeeList", null, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "EmployeeList", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -629,6 +634,11 @@ namespace Meitner
             var httpRequest = new HttpRequestMessage(HttpMethod.Post, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
 
+            if (!httpRequest.Headers.Contains("Accept"))
+            {
+                httpRequest.Headers.Add("Accept", "application/json");
+            }
+
             var serializedBody = RequestBodySerializer.Serialize(request, "Request", "json", false, false);
             if (serializedBody != null)
             {
@@ -640,7 +650,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "EmployeeCreate", null, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "EmployeeCreate", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -1012,6 +1022,11 @@ namespace Meitner
             var httpRequest = new HttpRequestMessage(HttpMethod.Post, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
 
+            if (!httpRequest.Headers.Contains("Accept"))
+            {
+                httpRequest.Headers.Add("Accept", "application/json");
+            }
+
             var serializedBody = RequestBodySerializer.Serialize(request, "EmployeeSearch", "json", false, false);
             if (serializedBody != null)
             {
@@ -1023,7 +1038,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "EmployeeSearch", null, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "EmployeeSearch", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -1118,7 +1133,7 @@ namespace Meitner
                 return await SearchAsync (
                     limit: limit,
                     offset: newOffset,
-                    employeeSearch: employeeSearch,
+                    employeeSearch: request.EmployeeSearch,
                     retryConfig: retryConfig
                 );
             };
@@ -1418,12 +1433,17 @@ namespace Meitner
             var httpRequest = new HttpRequestMessage(HttpMethod.Get, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
 
+            if (!httpRequest.Headers.Contains("Accept"))
+            {
+                httpRequest.Headers.Add("Accept", "application/json");
+            }
+
             if (SDKConfiguration.SecuritySource != null)
             {
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "EmployeeGet", null, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "EmployeeGet", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -1762,12 +1782,17 @@ namespace Meitner
             var httpRequest = new HttpRequestMessage(HttpMethod.Delete, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
 
+            if (!httpRequest.Headers.Contains("Accept"))
+            {
+                httpRequest.Headers.Add("Accept", "application/json");
+            }
+
             if (SDKConfiguration.SecuritySource != null)
             {
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "EmployeeDelete", null, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "EmployeeDelete", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -2093,6 +2118,11 @@ namespace Meitner
             var httpRequest = new HttpRequestMessage(HttpMethod.Patch, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
 
+            if (!httpRequest.Headers.Contains("Accept"))
+            {
+                httpRequest.Headers.Add("Accept", "application/json");
+            }
+
             var serializedBody = RequestBodySerializer.Serialize(request, "EmployeeUpdate", "json", false, false);
             if (serializedBody != null)
             {
@@ -2104,7 +2134,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "EmployeeUpdate", null, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "EmployeeUpdate", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)

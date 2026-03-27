@@ -2,6 +2,14 @@
 
 The gender of the person
 
+## Example Usage
+
+```csharp
+using Meitner.Models.Components;
+
+var value = Gender.Female;
+```
+
 
 ## Values
 

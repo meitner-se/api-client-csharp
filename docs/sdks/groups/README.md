@@ -24,8 +24,10 @@ using Meitner.Models.Components;
 using Meitner.Models.Requests;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 GroupListResponse? res = await sdk.Groups.ListAsync(
@@ -78,8 +80,10 @@ using Meitner.Models.Components;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 GroupCreate req = new GroupCreate() {
@@ -112,8 +116,10 @@ using Meitner.Models.Components;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 GroupCreate req = new GroupCreate() {
@@ -146,8 +152,10 @@ using Meitner.Models.Components;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 GroupCreate req = new GroupCreate() {
@@ -180,8 +188,10 @@ using Meitner.Models.Components;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 GroupCreate req = new GroupCreate() {
@@ -244,8 +254,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.GroupSearchResponse? res = await sdk.Groups.SearchAsync(
@@ -254,9 +266,9 @@ Models.Requests.GroupSearchResponse? res = await sdk.Groups.SearchAsync(
             Equals = new GroupSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new GroupSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new GroupSearchEqualsExternal() {
@@ -271,9 +283,9 @@ Models.Requests.GroupSearchResponse? res = await sdk.Groups.SearchAsync(
             NotEquals = new GroupSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new GroupSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new GroupSearchNotEqualsExternal() {
@@ -287,26 +299,26 @@ Models.Requests.GroupSearchResponse? res = await sdk.Groups.SearchAsync(
             },
             GreaterThan = new GroupSearchGreaterThan() {
                 Meta = new GroupSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             SmallerThan = new GroupSearchSmallerThan() {
                 Meta = new GroupSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             GreaterOrEqual = new GroupSearchGreaterOrEqual() {
                 Meta = new GroupSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             SmallerOrEqual = new GroupSearchSmallerOrEqual() {
                 Meta = new GroupSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             Contains = new GroupSearchContains() {
@@ -441,8 +453,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.GroupSearchResponse? res = await sdk.Groups.SearchAsync(
@@ -451,9 +465,9 @@ Models.Requests.GroupSearchResponse? res = await sdk.Groups.SearchAsync(
             Equals = new GroupSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new GroupSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new GroupSearchEqualsExternal() {
@@ -468,9 +482,9 @@ Models.Requests.GroupSearchResponse? res = await sdk.Groups.SearchAsync(
             NotEquals = new GroupSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new GroupSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new GroupSearchNotEqualsExternal() {
@@ -484,26 +498,26 @@ Models.Requests.GroupSearchResponse? res = await sdk.Groups.SearchAsync(
             },
             GreaterThan = new GroupSearchGreaterThan() {
                 Meta = new GroupSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             SmallerThan = new GroupSearchSmallerThan() {
                 Meta = new GroupSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             GreaterOrEqual = new GroupSearchGreaterOrEqual() {
                 Meta = new GroupSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             SmallerOrEqual = new GroupSearchSmallerOrEqual() {
                 Meta = new GroupSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             Contains = new GroupSearchContains() {
@@ -638,8 +652,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.GroupSearchResponse? res = await sdk.Groups.SearchAsync(
@@ -648,9 +664,9 @@ Models.Requests.GroupSearchResponse? res = await sdk.Groups.SearchAsync(
             Equals = new GroupSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new GroupSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new GroupSearchEqualsExternal() {
@@ -665,9 +681,9 @@ Models.Requests.GroupSearchResponse? res = await sdk.Groups.SearchAsync(
             NotEquals = new GroupSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new GroupSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new GroupSearchNotEqualsExternal() {
@@ -681,26 +697,26 @@ Models.Requests.GroupSearchResponse? res = await sdk.Groups.SearchAsync(
             },
             GreaterThan = new GroupSearchGreaterThan() {
                 Meta = new GroupSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             SmallerThan = new GroupSearchSmallerThan() {
                 Meta = new GroupSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             GreaterOrEqual = new GroupSearchGreaterOrEqual() {
                 Meta = new GroupSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             SmallerOrEqual = new GroupSearchSmallerOrEqual() {
                 Meta = new GroupSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             Contains = new GroupSearchContains() {
@@ -835,8 +851,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.GroupSearchResponse? res = await sdk.Groups.SearchAsync(
@@ -845,9 +863,9 @@ Models.Requests.GroupSearchResponse? res = await sdk.Groups.SearchAsync(
             Equals = new GroupSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new GroupSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new GroupSearchEqualsExternal() {
@@ -862,9 +880,9 @@ Models.Requests.GroupSearchResponse? res = await sdk.Groups.SearchAsync(
             NotEquals = new GroupSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new GroupSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new GroupSearchNotEqualsExternal() {
@@ -878,26 +896,26 @@ Models.Requests.GroupSearchResponse? res = await sdk.Groups.SearchAsync(
             },
             GreaterThan = new GroupSearchGreaterThan() {
                 Meta = new GroupSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             SmallerThan = new GroupSearchSmallerThan() {
                 Meta = new GroupSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             GreaterOrEqual = new GroupSearchGreaterOrEqual() {
                 Meta = new GroupSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             SmallerOrEqual = new GroupSearchSmallerOrEqual() {
                 Meta = new GroupSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             Contains = new GroupSearchContains() {
@@ -1061,8 +1079,10 @@ using Meitner;
 using Meitner.Models.Components;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.Groups.GetAsync(id: "123e4567-e89b-12d3-a456-426614174000");
@@ -1105,8 +1125,10 @@ using Meitner;
 using Meitner.Models.Components;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.Groups.DeleteAsync(id: "123e4567-e89b-12d3-a456-426614174000");
@@ -1150,8 +1172,10 @@ using Meitner.Models.Components;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.Groups.UpdateAsync(
@@ -1184,8 +1208,10 @@ using Meitner.Models.Components;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.Groups.UpdateAsync(
@@ -1218,8 +1244,10 @@ using Meitner.Models.Components;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.Groups.UpdateAsync(
@@ -1252,8 +1280,10 @@ using Meitner.Models.Components;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.Groups.UpdateAsync(

@@ -9,15 +9,16 @@
 #nullable enable
 namespace Meitner.Models.Components
 {
-    using Meitner.Models.Components;
     using Meitner.Utils;
 
-    public class Security
+    public class SecurityOption2
     {
-        [SpeakeasyMetadata("security:option=true")]
-        public SecurityOption1? Option1 { get; set; }
+        [SpeakeasyMetadata("security:scheme=true,type=oauth2,subType=client_credentials,name=clientID")]
+        public string ClientID { get; set; } = default!;
 
-        [SpeakeasyMetadata("security:option=true")]
-        public SecurityOption2? Option2 { get; set; }
+        [SpeakeasyMetadata("security:scheme=true,type=oauth2,subType=client_credentials,name=clientSecret")]
+        public string ClientSecret { get; set; } = default!;
+
+        public string TokenURL { get; set; } = "/oauth/token";
     }
 }

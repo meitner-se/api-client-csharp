@@ -2,6 +2,14 @@
 
 The roles of the employee
 
+## Example Usage
+
+```csharp
+using Meitner.Models.Components;
+
+var value = EqualsRolesRequestBody.Admin;
+```
+
 
 ## Values
 

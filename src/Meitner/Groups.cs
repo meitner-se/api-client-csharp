@@ -260,12 +260,17 @@ namespace Meitner
             var httpRequest = new HttpRequestMessage(HttpMethod.Get, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
 
+            if (!httpRequest.Headers.Contains("Accept"))
+            {
+                httpRequest.Headers.Add("Accept", "application/json");
+            }
+
             if (SDKConfiguration.SecuritySource != null)
             {
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupList", null, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupList", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -629,6 +634,11 @@ namespace Meitner
             var httpRequest = new HttpRequestMessage(HttpMethod.Post, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
 
+            if (!httpRequest.Headers.Contains("Accept"))
+            {
+                httpRequest.Headers.Add("Accept", "application/json");
+            }
+
             var serializedBody = RequestBodySerializer.Serialize(request, "Request", "json", false, false);
             if (serializedBody != null)
             {
@@ -640,7 +650,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupCreate", null, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupCreate", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -1012,6 +1022,11 @@ namespace Meitner
             var httpRequest = new HttpRequestMessage(HttpMethod.Post, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
 
+            if (!httpRequest.Headers.Contains("Accept"))
+            {
+                httpRequest.Headers.Add("Accept", "application/json");
+            }
+
             var serializedBody = RequestBodySerializer.Serialize(request, "GroupSearch", "json", false, false);
             if (serializedBody != null)
             {
@@ -1023,7 +1038,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupSearch", null, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupSearch", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -1118,7 +1133,7 @@ namespace Meitner
                 return await SearchAsync (
                     limit: limit,
                     offset: newOffset,
-                    groupSearch: groupSearch,
+                    groupSearch: request.GroupSearch,
                     retryConfig: retryConfig
                 );
             };
@@ -1418,12 +1433,17 @@ namespace Meitner
             var httpRequest = new HttpRequestMessage(HttpMethod.Get, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
 
+            if (!httpRequest.Headers.Contains("Accept"))
+            {
+                httpRequest.Headers.Add("Accept", "application/json");
+            }
+
             if (SDKConfiguration.SecuritySource != null)
             {
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupGet", null, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupGet", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -1762,12 +1782,17 @@ namespace Meitner
             var httpRequest = new HttpRequestMessage(HttpMethod.Delete, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
 
+            if (!httpRequest.Headers.Contains("Accept"))
+            {
+                httpRequest.Headers.Add("Accept", "application/json");
+            }
+
             if (SDKConfiguration.SecuritySource != null)
             {
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupDelete", null, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupDelete", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)
@@ -2093,6 +2118,11 @@ namespace Meitner
             var httpRequest = new HttpRequestMessage(HttpMethod.Patch, urlString);
             httpRequest.Headers.Add("user-agent", SDKConfiguration.UserAgent);
 
+            if (!httpRequest.Headers.Contains("Accept"))
+            {
+                httpRequest.Headers.Add("Accept", "application/json");
+            }
+
             var serializedBody = RequestBodySerializer.Serialize(request, "GroupUpdate", "json", false, false);
             if (serializedBody != null)
             {
@@ -2104,7 +2134,7 @@ namespace Meitner
                 httpRequest = new SecurityMetadata(SDKConfiguration.SecuritySource).Apply(httpRequest);
             }
 
-            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupUpdate", null, SDKConfiguration.SecuritySource, cancellationToken);
+            var hookCtx = new HookContext(SDKConfiguration, baseUrl, "GroupUpdate", new List<string> {  }, SDKConfiguration.SecuritySource, cancellationToken);
 
             httpRequest = await this.SDKConfiguration.Hooks.BeforeRequestAsync(new BeforeRequestContext(hookCtx), httpRequest);
             if (retryConfig == null)

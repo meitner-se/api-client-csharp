@@ -12,8 +12,10 @@ using Meitner.Models.Components;
 using Meitner.Models.Requests;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 SchoolListResponse? res = await sdk.Schools.ListAsync(
@@ -35,22 +37,61 @@ while(res != null)
 
 ### Per-Client Security Schemes
 
-This SDK supports the following security schemes globally:
+This SDK supports multiple security scheme combinations globally. You can choose from one of the alternatives through the `security` optional parameter when initializing the SDK client instance. The selected option will be used by default to authenticate with the API for all operations that support it.
+
+#### Option1
+
+All of the following schemes must be satisfied to use the `Option1` alternative:
 
 | Name                | Type   | Scheme  |
 | ------------------- | ------ | ------- |
 | `ClientCredentials` | apiKey | API key |
 | `ClientSecret`      | apiKey | API key |
 
-You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. The selected scheme will be used by default to authenticate with the API for all operations that support it. For example:
 ```csharp
 using Meitner;
 using Meitner.Models.Components;
 using Meitner.Models.Requests;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
+});
+
+SchoolListResponse? res = await sdk.Schools.ListAsync(
+    limit: 1,
+    offset: 0
+);
+
+while(res != null)
+{
+    // handle items
+
+    res = await res.Next!();
+}
+```
+
+#### Option2
+
+The `Option2` alternative relies on the following scheme:
+
+| Name                                         | Type   | Scheme                         |
+| -------------------------------------------- | ------ | ------------------------------ |
+| `ClientID`<br/>`ClientSecret`<br/>`TokenURL` | oauth2 | OAuth2 Client Credentials Flow |
+
+```csharp
+using Meitner;
+using Meitner.Models.Components;
+using Meitner.Models.Requests;
+
+var sdk = new MeitnerSDK(security: new Security() {
+    Option2 = new SecurityOption2() {
+        ClientID = "<YOUR_CLIENT_ID_HERE>",
+        ClientSecret = "<YOUR_CLIENT_SECRET_HERE>",
+        TokenURL = "/oauth/token",
+    },
 });
 
 SchoolListResponse? res = await sdk.Schools.ListAsync(
@@ -81,8 +122,10 @@ using Meitner.Models.Components;
 using Meitner.Models.Requests;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 SchoolListResponse? res = await sdk.Schools.ListAsync(
@@ -111,8 +154,10 @@ using Meitner.Models.Components;
 using Meitner.Models.Requests;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 SchoolListResponse? res = await sdk.Schools.ListAsync(
@@ -156,8 +201,10 @@ var sdk = new MeitnerSDK(
         retryConnectionErrors: false
     ),
     security: new Security() {
-        ClientCredentials = "<YOUR_API_KEY_HERE>",
-        ClientSecret = "<YOUR_API_KEY_HERE>",
+        Option1 = new SecurityOption1() {
+            ClientCredentials = "<YOUR_API_KEY_HERE>",
+            ClientSecret = "<YOUR_API_KEY_HERE>",
+        },
     }
 );
 
@@ -197,8 +244,10 @@ using Meitner.Models.Errors;
 using Meitner.Models.Requests;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 try
@@ -316,8 +365,10 @@ using Meitner.Models.Requests;
 var sdk = new MeitnerSDK(
     server: SDKConfig.Server.Production,
     security: new Security() {
-        ClientCredentials = "<YOUR_API_KEY_HERE>",
-        ClientSecret = "<YOUR_API_KEY_HERE>",
+        Option1 = new SecurityOption1() {
+            ClientCredentials = "<YOUR_API_KEY_HERE>",
+            ClientSecret = "<YOUR_API_KEY_HERE>",
+        },
     }
 );
 
@@ -345,8 +396,10 @@ using Meitner.Models.Requests;
 var sdk = new MeitnerSDK(
     serverUrl: "https://api.meitner.se/directory/v1",
     security: new Security() {
-        ClientCredentials = "<YOUR_API_KEY_HERE>",
-        ClientSecret = "<YOUR_API_KEY_HERE>",
+        Option1 = new SecurityOption1() {
+            ClientCredentials = "<YOUR_API_KEY_HERE>",
+            ClientSecret = "<YOUR_API_KEY_HERE>",
+        },
     }
 );
 

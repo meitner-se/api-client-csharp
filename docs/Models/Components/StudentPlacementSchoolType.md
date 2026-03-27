@@ -2,6 +2,14 @@
 
 The type of schooling the student is attending
 
+## Example Usage
+
+```csharp
+using Meitner.Models.Components;
+
+var value = StudentPlacementSchoolType.Gr;
+```
+
 
 ## Values
 

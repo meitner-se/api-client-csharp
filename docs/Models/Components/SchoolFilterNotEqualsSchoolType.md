@@ -2,6 +2,14 @@
 
 Type of schooling provided at the school
 
+## Example Usage
+
+```csharp
+using Meitner.Models.Components;
+
+var value = SchoolFilterNotEqualsSchoolType.Gr;
+```
+
 
 ## Values
 
