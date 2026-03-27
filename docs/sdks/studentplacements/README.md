@@ -26,8 +26,10 @@ using Meitner.Models.Components;
 using Meitner.Models.Requests;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 StudentPlacementListResponse? res = await sdk.StudentPlacements.ListAsync(
@@ -80,8 +82,10 @@ using Meitner.Models.Components;
 using System;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 StudentPlacementCreate req = new StudentPlacementCreate() {
@@ -114,8 +118,10 @@ using Meitner.Models.Components;
 using System;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 StudentPlacementCreate req = new StudentPlacementCreate() {
@@ -148,8 +154,10 @@ using Meitner.Models.Components;
 using System;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 StudentPlacementCreate req = new StudentPlacementCreate() {
@@ -182,8 +190,10 @@ using Meitner.Models.Components;
 using System;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 StudentPlacementCreate req = new StudentPlacementCreate() {
@@ -246,8 +256,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacements.SearchAsync(
@@ -256,9 +268,9 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
             Equals = new StudentPlacementSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new StudentPlacementSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new StudentPlacementSearchEqualsExternal() {
@@ -276,14 +288,14 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchiveYear = "example",
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             NotEquals = new StudentPlacementSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new StudentPlacementSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new StudentPlacementSearchNotEqualsExternal() {
@@ -301,43 +313,43 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchiveYear = "example",
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             GreaterThan = new StudentPlacementSearchGreaterThan() {
                 Meta = new StudentPlacementSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             SmallerThan = new StudentPlacementSearchSmallerThan() {
                 Meta = new StudentPlacementSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             GreaterOrEqual = new StudentPlacementSearchGreaterOrEqual() {
                 Meta = new StudentPlacementSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             SmallerOrEqual = new StudentPlacementSearchSmallerOrEqual() {
                 Meta = new StudentPlacementSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             Contains = new StudentPlacementSearchContains() {
                 Id = new List<string>() {
@@ -529,8 +541,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacements.SearchAsync(
@@ -539,9 +553,9 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
             Equals = new StudentPlacementSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new StudentPlacementSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new StudentPlacementSearchEqualsExternal() {
@@ -559,14 +573,14 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchiveYear = "example",
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             NotEquals = new StudentPlacementSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new StudentPlacementSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new StudentPlacementSearchNotEqualsExternal() {
@@ -584,43 +598,43 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchiveYear = "example",
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             GreaterThan = new StudentPlacementSearchGreaterThan() {
                 Meta = new StudentPlacementSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             SmallerThan = new StudentPlacementSearchSmallerThan() {
                 Meta = new StudentPlacementSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             GreaterOrEqual = new StudentPlacementSearchGreaterOrEqual() {
                 Meta = new StudentPlacementSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             SmallerOrEqual = new StudentPlacementSearchSmallerOrEqual() {
                 Meta = new StudentPlacementSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             Contains = new StudentPlacementSearchContains() {
                 Id = new List<string>() {
@@ -812,8 +826,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacements.SearchAsync(
@@ -822,9 +838,9 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
             Equals = new StudentPlacementSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new StudentPlacementSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new StudentPlacementSearchEqualsExternal() {
@@ -842,14 +858,14 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchiveYear = "example",
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             NotEquals = new StudentPlacementSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new StudentPlacementSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new StudentPlacementSearchNotEqualsExternal() {
@@ -867,43 +883,43 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchiveYear = "example",
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             GreaterThan = new StudentPlacementSearchGreaterThan() {
                 Meta = new StudentPlacementSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             SmallerThan = new StudentPlacementSearchSmallerThan() {
                 Meta = new StudentPlacementSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             GreaterOrEqual = new StudentPlacementSearchGreaterOrEqual() {
                 Meta = new StudentPlacementSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             SmallerOrEqual = new StudentPlacementSearchSmallerOrEqual() {
                 Meta = new StudentPlacementSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             Contains = new StudentPlacementSearchContains() {
                 Id = new List<string>() {
@@ -1095,8 +1111,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacements.SearchAsync(
@@ -1105,9 +1123,9 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
             Equals = new StudentPlacementSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new StudentPlacementSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new StudentPlacementSearchEqualsExternal() {
@@ -1125,14 +1143,14 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchiveYear = "example",
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             NotEquals = new StudentPlacementSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new StudentPlacementSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new StudentPlacementSearchNotEqualsExternal() {
@@ -1150,43 +1168,43 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchiveYear = "example",
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             GreaterThan = new StudentPlacementSearchGreaterThan() {
                 Meta = new StudentPlacementSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             SmallerThan = new StudentPlacementSearchSmallerThan() {
                 Meta = new StudentPlacementSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             GreaterOrEqual = new StudentPlacementSearchGreaterOrEqual() {
                 Meta = new StudentPlacementSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             SmallerOrEqual = new StudentPlacementSearchSmallerOrEqual() {
                 Meta = new StudentPlacementSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
             },
             Contains = new StudentPlacementSearchContains() {
                 Id = new List<string>() {
@@ -1407,8 +1425,10 @@ using Meitner;
 using Meitner.Models.Components;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.StudentPlacements.GetAsync(id: "123e4567-e89b-12d3-a456-426614174000");
@@ -1451,8 +1471,10 @@ using Meitner;
 using Meitner.Models.Components;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.StudentPlacements.DeleteAsync(id: "123e4567-e89b-12d3-a456-426614174000");
@@ -1496,8 +1518,10 @@ using Meitner.Models.Components;
 using System;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.StudentPlacements.UpdateAsync(
@@ -1529,8 +1553,10 @@ using Meitner.Models.Components;
 using System;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.StudentPlacements.UpdateAsync(
@@ -1562,8 +1588,10 @@ using Meitner.Models.Components;
 using System;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.StudentPlacements.UpdateAsync(
@@ -1595,8 +1623,10 @@ using Meitner.Models.Components;
 using System;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.StudentPlacements.UpdateAsync(
@@ -1666,8 +1696,10 @@ using Meitner;
 using Meitner.Models.Components;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.StudentPlacements.ArchiveAsync(id: "123e4567-e89b-12d3-a456-426614174000");
@@ -1710,8 +1742,10 @@ using Meitner;
 using Meitner.Models.Components;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.StudentPlacements.RestoreAsync(id: "123e4567-e89b-12d3-a456-426614174000");

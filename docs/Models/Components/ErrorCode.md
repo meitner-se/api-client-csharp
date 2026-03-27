@@ -2,6 +2,14 @@
 
 Standard error codes used in API responses
 
+## Example Usage
+
+```csharp
+using Meitner.Models.Components;
+
+var value = ErrorCode.BadRequest;
+```
+
 
 ## Values
 

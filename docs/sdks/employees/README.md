@@ -24,8 +24,10 @@ using Meitner.Models.Components;
 using Meitner.Models.Requests;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 EmployeeListResponse? res = await sdk.Employees.ListAsync(
@@ -78,8 +80,10 @@ using Meitner.Models.Components;
 using System;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 EmployeeCreate req = new EmployeeCreate() {
@@ -118,8 +122,10 @@ using Meitner.Models.Components;
 using System;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 EmployeeCreate req = new EmployeeCreate() {
@@ -158,8 +164,10 @@ using Meitner.Models.Components;
 using System;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 EmployeeCreate req = new EmployeeCreate() {
@@ -198,8 +206,10 @@ using Meitner.Models.Components;
 using System;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 EmployeeCreate req = new EmployeeCreate() {
@@ -268,8 +278,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
@@ -278,9 +290,9 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
             Equals = new EmployeeSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new EmployeeSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new EmployeeSearchEqualsExternal() {
@@ -307,9 +319,9 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
             NotEquals = new EmployeeSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new EmployeeSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new EmployeeSearchNotEqualsExternal() {
@@ -335,29 +347,29 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
             },
             GreaterThan = new EmployeeSearchGreaterThan() {
                 Meta = new EmployeeSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 DateOfBirth = DateOnly.Parse("2024-01-15"),
             },
             SmallerThan = new EmployeeSearchSmallerThan() {
                 Meta = new EmployeeSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 DateOfBirth = DateOnly.Parse("2024-01-15"),
             },
             GreaterOrEqual = new EmployeeSearchGreaterOrEqual() {
                 Meta = new EmployeeSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 DateOfBirth = DateOnly.Parse("2024-01-15"),
             },
             SmallerOrEqual = new EmployeeSearchSmallerOrEqual() {
                 Meta = new EmployeeSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 DateOfBirth = DateOnly.Parse("2024-01-15"),
             },
@@ -603,8 +615,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
@@ -613,9 +627,9 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
             Equals = new EmployeeSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new EmployeeSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new EmployeeSearchEqualsExternal() {
@@ -642,9 +656,9 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
             NotEquals = new EmployeeSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new EmployeeSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new EmployeeSearchNotEqualsExternal() {
@@ -670,29 +684,29 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
             },
             GreaterThan = new EmployeeSearchGreaterThan() {
                 Meta = new EmployeeSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 DateOfBirth = DateOnly.Parse("2024-01-15"),
             },
             SmallerThan = new EmployeeSearchSmallerThan() {
                 Meta = new EmployeeSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 DateOfBirth = DateOnly.Parse("2024-01-15"),
             },
             GreaterOrEqual = new EmployeeSearchGreaterOrEqual() {
                 Meta = new EmployeeSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 DateOfBirth = DateOnly.Parse("2024-01-15"),
             },
             SmallerOrEqual = new EmployeeSearchSmallerOrEqual() {
                 Meta = new EmployeeSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 DateOfBirth = DateOnly.Parse("2024-01-15"),
             },
@@ -938,8 +952,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
@@ -948,9 +964,9 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
             Equals = new EmployeeSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new EmployeeSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new EmployeeSearchEqualsExternal() {
@@ -977,9 +993,9 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
             NotEquals = new EmployeeSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new EmployeeSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new EmployeeSearchNotEqualsExternal() {
@@ -1005,29 +1021,29 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
             },
             GreaterThan = new EmployeeSearchGreaterThan() {
                 Meta = new EmployeeSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 DateOfBirth = DateOnly.Parse("2024-01-15"),
             },
             SmallerThan = new EmployeeSearchSmallerThan() {
                 Meta = new EmployeeSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 DateOfBirth = DateOnly.Parse("2024-01-15"),
             },
             GreaterOrEqual = new EmployeeSearchGreaterOrEqual() {
                 Meta = new EmployeeSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 DateOfBirth = DateOnly.Parse("2024-01-15"),
             },
             SmallerOrEqual = new EmployeeSearchSmallerOrEqual() {
                 Meta = new EmployeeSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 DateOfBirth = DateOnly.Parse("2024-01-15"),
             },
@@ -1273,8 +1289,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
@@ -1283,9 +1301,9 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
             Equals = new EmployeeSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new EmployeeSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new EmployeeSearchEqualsExternal() {
@@ -1312,9 +1330,9 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
             NotEquals = new EmployeeSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new EmployeeSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new EmployeeSearchNotEqualsExternal() {
@@ -1340,29 +1358,29 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
             },
             GreaterThan = new EmployeeSearchGreaterThan() {
                 Meta = new EmployeeSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 DateOfBirth = DateOnly.Parse("2024-01-15"),
             },
             SmallerThan = new EmployeeSearchSmallerThan() {
                 Meta = new EmployeeSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 DateOfBirth = DateOnly.Parse("2024-01-15"),
             },
             GreaterOrEqual = new EmployeeSearchGreaterOrEqual() {
                 Meta = new EmployeeSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 DateOfBirth = DateOnly.Parse("2024-01-15"),
             },
             SmallerOrEqual = new EmployeeSearchSmallerOrEqual() {
                 Meta = new EmployeeSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 DateOfBirth = DateOnly.Parse("2024-01-15"),
             },
@@ -1637,8 +1655,10 @@ using Meitner;
 using Meitner.Models.Components;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.Employees.GetAsync(id: "123e4567-e89b-12d3-a456-426614174000");
@@ -1681,8 +1701,10 @@ using Meitner;
 using Meitner.Models.Components;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.Employees.DeleteAsync(id: "123e4567-e89b-12d3-a456-426614174000");
@@ -1726,8 +1748,10 @@ using Meitner.Models.Components;
 using System;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.Employees.UpdateAsync(
@@ -1767,8 +1791,10 @@ using Meitner.Models.Components;
 using System;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.Employees.UpdateAsync(
@@ -1808,8 +1834,10 @@ using Meitner.Models.Components;
 using System;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.Employees.UpdateAsync(
@@ -1849,8 +1877,10 @@ using Meitner.Models.Components;
 using System;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.Employees.UpdateAsync(

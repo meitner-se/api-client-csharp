@@ -23,8 +23,10 @@ using Meitner.Models.Components;
 using Meitner.Models.Requests;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 SchoolListResponse? res = await sdk.Schools.ListAsync(
@@ -76,8 +78,10 @@ using Meitner;
 using Meitner.Models.Components;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 SchoolCreate req = new SchoolCreate() {
@@ -103,8 +107,10 @@ using Meitner;
 using Meitner.Models.Components;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 SchoolCreate req = new SchoolCreate() {
@@ -130,8 +136,10 @@ using Meitner;
 using Meitner.Models.Components;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 SchoolCreate req = new SchoolCreate() {
@@ -157,8 +165,10 @@ using Meitner;
 using Meitner.Models.Components;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 SchoolCreate req = new SchoolCreate() {
@@ -215,8 +225,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
@@ -225,9 +237,9 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
             Equals = new SchoolSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new SchoolSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new SchoolSearchEqualsExternal() {
@@ -242,9 +254,9 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
             NotEquals = new SchoolSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new SchoolSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new SchoolSearchNotEqualsExternal() {
@@ -258,26 +270,26 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
             },
             GreaterThan = new SchoolSearchGreaterThan() {
                 Meta = new SchoolSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             SmallerThan = new SchoolSearchSmallerThan() {
                 Meta = new SchoolSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             GreaterOrEqual = new SchoolSearchGreaterOrEqual() {
                 Meta = new SchoolSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             SmallerOrEqual = new SchoolSearchSmallerOrEqual() {
                 Meta = new SchoolSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             Contains = new SchoolSearchContains() {
@@ -418,8 +430,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
@@ -428,9 +442,9 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
             Equals = new SchoolSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new SchoolSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new SchoolSearchEqualsExternal() {
@@ -445,9 +459,9 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
             NotEquals = new SchoolSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new SchoolSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new SchoolSearchNotEqualsExternal() {
@@ -461,26 +475,26 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
             },
             GreaterThan = new SchoolSearchGreaterThan() {
                 Meta = new SchoolSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             SmallerThan = new SchoolSearchSmallerThan() {
                 Meta = new SchoolSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             GreaterOrEqual = new SchoolSearchGreaterOrEqual() {
                 Meta = new SchoolSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             SmallerOrEqual = new SchoolSearchSmallerOrEqual() {
                 Meta = new SchoolSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             Contains = new SchoolSearchContains() {
@@ -621,8 +635,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
@@ -631,9 +647,9 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
             Equals = new SchoolSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new SchoolSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new SchoolSearchEqualsExternal() {
@@ -648,9 +664,9 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
             NotEquals = new SchoolSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new SchoolSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new SchoolSearchNotEqualsExternal() {
@@ -664,26 +680,26 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
             },
             GreaterThan = new SchoolSearchGreaterThan() {
                 Meta = new SchoolSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             SmallerThan = new SchoolSearchSmallerThan() {
                 Meta = new SchoolSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             GreaterOrEqual = new SchoolSearchGreaterOrEqual() {
                 Meta = new SchoolSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             SmallerOrEqual = new SchoolSearchSmallerOrEqual() {
                 Meta = new SchoolSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             Contains = new SchoolSearchContains() {
@@ -824,8 +840,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
@@ -834,9 +852,9 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
             Equals = new SchoolSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new SchoolSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new SchoolSearchEqualsExternal() {
@@ -851,9 +869,9 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
             NotEquals = new SchoolSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new SchoolSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new SchoolSearchNotEqualsExternal() {
@@ -867,26 +885,26 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
             },
             GreaterThan = new SchoolSearchGreaterThan() {
                 Meta = new SchoolSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             SmallerThan = new SchoolSearchSmallerThan() {
                 Meta = new SchoolSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             GreaterOrEqual = new SchoolSearchGreaterOrEqual() {
                 Meta = new SchoolSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             SmallerOrEqual = new SchoolSearchSmallerOrEqual() {
                 Meta = new SchoolSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
             },
             Contains = new SchoolSearchContains() {
@@ -1056,8 +1074,10 @@ using Meitner;
 using Meitner.Models.Components;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.Schools.GetAsync(id: "123e4567-e89b-12d3-a456-426614174000");
@@ -1100,8 +1120,10 @@ using Meitner;
 using Meitner.Models.Components;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.Schools.UpdateAsync(
@@ -1127,8 +1149,10 @@ using Meitner;
 using Meitner.Models.Components;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.Schools.UpdateAsync(
@@ -1154,8 +1178,10 @@ using Meitner;
 using Meitner.Models.Components;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.Schools.UpdateAsync(
@@ -1181,8 +1207,10 @@ using Meitner;
 using Meitner.Models.Components;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.Schools.UpdateAsync(

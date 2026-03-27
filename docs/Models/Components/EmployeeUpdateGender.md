@@ -2,6 +2,14 @@
 
 The gender of the employee
 
+## Example Usage
+
+```csharp
+using Meitner.Models.Components;
+
+var value = EmployeeUpdateGender.Female;
+```
+
 
 ## Values
 

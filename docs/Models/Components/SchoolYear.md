@@ -2,6 +2,14 @@
 
 The school year the student is attending
 
+## Example Usage
+
+```csharp
+using Meitner.Models.Components;
+
+var value = SchoolYear.Zero;
+```
+
 
 ## Values
 

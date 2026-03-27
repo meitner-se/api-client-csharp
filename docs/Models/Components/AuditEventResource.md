@@ -2,6 +2,14 @@
 
 The resource that was affected by the audit event
 
+## Example Usage
+
+```csharp
+using Meitner.Models.Components;
+
+var value = AuditEventResource.Group;
+```
+
 
 ## Values
 

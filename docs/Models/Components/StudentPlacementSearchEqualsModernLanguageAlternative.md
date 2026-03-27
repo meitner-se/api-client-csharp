@@ -2,6 +2,14 @@
 
 The modern language alternative for the student
 
+## Example Usage
+
+```csharp
+using Meitner.Models.Components;
+
+var value = StudentPlacementSearchEqualsModernLanguageAlternative.En;
+```
+
 
 ## Values
 

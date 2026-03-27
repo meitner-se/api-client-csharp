@@ -24,8 +24,10 @@ using Meitner.Models.Components;
 using Meitner.Models.Requests;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 EmployeePlacementListResponse? res = await sdk.EmployeePlacements.ListAsync(
@@ -79,8 +81,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 EmployeePlacementCreate req = new EmployeePlacementCreate() {
@@ -113,8 +117,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 EmployeePlacementCreate req = new EmployeePlacementCreate() {
@@ -147,8 +153,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 EmployeePlacementCreate req = new EmployeePlacementCreate() {
@@ -181,8 +189,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 EmployeePlacementCreate req = new EmployeePlacementCreate() {
@@ -244,8 +254,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlacements.SearchAsync(
@@ -254,9 +266,9 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
             Equals = new EmployeePlacementSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new EmployeePlacementSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new EmployeePlacementSearchEqualsExternal() {
@@ -270,15 +282,15 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchiveYear = "example",
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             NotEquals = new EmployeePlacementSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new EmployeePlacementSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new EmployeePlacementSearchNotEqualsExternal() {
@@ -292,47 +304,47 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchiveYear = "example",
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             GreaterThan = new EmployeePlacementSearchGreaterThan() {
                 Meta = new EmployeePlacementSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             SmallerThan = new EmployeePlacementSearchSmallerThan() {
                 Meta = new EmployeePlacementSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             GreaterOrEqual = new EmployeePlacementSearchGreaterOrEqual() {
                 Meta = new EmployeePlacementSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             SmallerOrEqual = new EmployeePlacementSearchSmallerOrEqual() {
                 Meta = new EmployeePlacementSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             Contains = new EmployeePlacementSearchContains() {
@@ -503,8 +515,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlacements.SearchAsync(
@@ -513,9 +527,9 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
             Equals = new EmployeePlacementSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new EmployeePlacementSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new EmployeePlacementSearchEqualsExternal() {
@@ -529,15 +543,15 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchiveYear = "example",
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             NotEquals = new EmployeePlacementSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new EmployeePlacementSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new EmployeePlacementSearchNotEqualsExternal() {
@@ -551,47 +565,47 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchiveYear = "example",
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             GreaterThan = new EmployeePlacementSearchGreaterThan() {
                 Meta = new EmployeePlacementSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             SmallerThan = new EmployeePlacementSearchSmallerThan() {
                 Meta = new EmployeePlacementSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             GreaterOrEqual = new EmployeePlacementSearchGreaterOrEqual() {
                 Meta = new EmployeePlacementSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             SmallerOrEqual = new EmployeePlacementSearchSmallerOrEqual() {
                 Meta = new EmployeePlacementSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             Contains = new EmployeePlacementSearchContains() {
@@ -762,8 +776,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlacements.SearchAsync(
@@ -772,9 +788,9 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
             Equals = new EmployeePlacementSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new EmployeePlacementSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new EmployeePlacementSearchEqualsExternal() {
@@ -788,15 +804,15 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchiveYear = "example",
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             NotEquals = new EmployeePlacementSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new EmployeePlacementSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new EmployeePlacementSearchNotEqualsExternal() {
@@ -810,47 +826,47 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchiveYear = "example",
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             GreaterThan = new EmployeePlacementSearchGreaterThan() {
                 Meta = new EmployeePlacementSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             SmallerThan = new EmployeePlacementSearchSmallerThan() {
                 Meta = new EmployeePlacementSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             GreaterOrEqual = new EmployeePlacementSearchGreaterOrEqual() {
                 Meta = new EmployeePlacementSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             SmallerOrEqual = new EmployeePlacementSearchSmallerOrEqual() {
                 Meta = new EmployeePlacementSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             Contains = new EmployeePlacementSearchContains() {
@@ -1021,8 +1037,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlacements.SearchAsync(
@@ -1031,9 +1049,9 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
             Equals = new EmployeePlacementSearchEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new EmployeePlacementSearchEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new EmployeePlacementSearchEqualsExternal() {
@@ -1047,15 +1065,15 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchiveYear = "example",
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             NotEquals = new EmployeePlacementSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
                 Meta = new EmployeePlacementSearchNotEqualsMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     CreatedBy = "123e4567-e89b-12d3-a456-426614174000",
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                     UpdatedBy = "123e4567-e89b-12d3-a456-426614174000",
                 },
                 External = new EmployeePlacementSearchNotEqualsExternal() {
@@ -1069,47 +1087,47 @@ Models.Requests.EmployeePlacementSearchResponse? res = await sdk.EmployeePlaceme
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
                 ArchiveYear = "example",
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             GreaterThan = new EmployeePlacementSearchGreaterThan() {
                 Meta = new EmployeePlacementSearchGreaterThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             SmallerThan = new EmployeePlacementSearchSmallerThan() {
                 Meta = new EmployeePlacementSearchSmallerThanMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             GreaterOrEqual = new EmployeePlacementSearchGreaterOrEqual() {
                 Meta = new EmployeePlacementSearchGreaterOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             SmallerOrEqual = new EmployeePlacementSearchSmallerOrEqual() {
                 Meta = new EmployeePlacementSearchSmallerOrEqualMeta() {
-                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
-                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                    CreatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
+                    UpdatedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 },
                 StartDate = DateOnly.Parse("2024-01-15"),
                 EndDate = DateOnly.Parse("2024-01-15"),
-                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z"),
+                ArchivedAt = System.DateTime.Parse("2024-01-15T10:30:00Z").ToUniversalTime(),
                 EmploymentPercent = 42,
             },
             Contains = new EmployeePlacementSearchContains() {
@@ -1309,8 +1327,10 @@ using Meitner;
 using Meitner.Models.Components;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.EmployeePlacements.GetAsync(id: "123e4567-e89b-12d3-a456-426614174000");
@@ -1353,8 +1373,10 @@ using Meitner;
 using Meitner.Models.Components;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.EmployeePlacements.DeleteAsync(id: "123e4567-e89b-12d3-a456-426614174000");
@@ -1399,8 +1421,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.EmployeePlacements.UpdateAsync(
@@ -1432,8 +1456,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.EmployeePlacements.UpdateAsync(
@@ -1465,8 +1491,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.EmployeePlacements.UpdateAsync(
@@ -1498,8 +1526,10 @@ using System;
 using System.Collections.Generic;
 
 var sdk = new MeitnerSDK(security: new Security() {
-    ClientCredentials = "<YOUR_API_KEY_HERE>",
-    ClientSecret = "<YOUR_API_KEY_HERE>",
+    Option1 = new SecurityOption1() {
+        ClientCredentials = "<YOUR_API_KEY_HERE>",
+        ClientSecret = "<YOUR_API_KEY_HERE>",
+    },
 });
 
 var res = await sdk.EmployeePlacements.UpdateAsync(

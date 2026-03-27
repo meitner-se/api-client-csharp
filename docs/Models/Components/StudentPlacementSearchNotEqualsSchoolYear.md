@@ -2,6 +2,14 @@
 
 The school year the student is placed in
 
+## Example Usage
+
+```csharp
+using Meitner.Models.Components;
+
+var value = StudentPlacementSearchNotEqualsSchoolYear.Zero;
+```
+
 
 ## Values
 
