@@ -1,26 +1,26 @@
 lockVersion: 2.0.0
 id: 91388079-51e0-4fb6-b48a-dd78e186eddb
 management:
-  docChecksum: 9ae4f6ac917c7d35d64f829eda0616b0
+  docChecksum: eb930e871b83e042934ff38d8aba9fa9
   docVersion: v1
-  speakeasyVersion: 1.759.3
-  generationVersion: 2.869.25
-  releaseVersion: 0.4.0
-  configChecksum: 82538d081ed84bdd23491d1af59cf7c4
+  speakeasyVersion: 1.761.1
+  generationVersion: 2.879.6
+  releaseVersion: 0.4.1
+  configChecksum: 96344a76d4b72ed4e56c5034f0afab01
   repoURL: https://github.com/meitner-se/api-client-csharp.git
   installationURL: https://github.com/meitner-se/api-client-csharp
   published: true
 persistentEdits:
-  generation_id: 9f1a0060-bc4a-40e0-b166-58de8999119e
-  pristine_commit_hash: 33e6592ea51e199c795581271d6c6a270d59a1b5
-  pristine_tree_hash: 995a8c11f910449b7491504539f2c32bba926035
+  generation_id: 51318371-be2d-4bbb-afe2-48e7b587416a
+  pristine_commit_hash: f5af55c494f7e839ee122596b0effb55ea0cb461
+  pristine_tree_hash: d138ee44a6d769c50d37f4c776524a47a92e0fea
 features:
   csharp:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.0.3
     core: 3.15.20
     flattening: 2.81.3
-    globalSecurity: 2.83.10
+    globalSecurity: 2.83.11
     globalSecurityCallbacks: 0.1.0
     globalServerURLs: 2.83.1
     groups: 2.81.3
@@ -317,16 +317,16 @@ trackedFiles:
     pristine_git_object: d25d2c67e0ae6e6326cc5a1123d3f23c9d065871
   docs/Models/Components/Employee.md:
     id: 4dbd12efac65
-    last_write_checksum: sha1:338ef324b4875ead578e5ad1315b54e85db74db2
-    pristine_git_object: 22ec33990fa8bd3e4f5b6841eabd085a657ff3b6
+    last_write_checksum: sha1:9ff977d35c0193237510248ce76c7fd2f5759dda
+    pristine_git_object: 4e0ccbfefaa404eaecf3fb8b8e1cd9ce3eed55c2
   docs/Models/Components/EmployeeAddress.md:
     id: 3c17f841b9ef
     last_write_checksum: sha1:de40501a96daaa173e75fca49cd93d72b994c84c
     pristine_git_object: 2317ed8771f1f3ac01cd522904d206e64c03dbac
   docs/Models/Components/EmployeeCreate.md:
     id: fabf37c23c11
-    last_write_checksum: sha1:564cc0b708548fc58de6c1446d939f1c0ea72f6c
-    pristine_git_object: b8c45a93155ff7c0b341f3d9848677015d29384f
+    last_write_checksum: sha1:c1c0160b66bbb4613bf512b4363c29c2dd506b2f
+    pristine_git_object: c564c04b738d1a4555b2a7bc836963ce86dcac98
   docs/Models/Components/EmployeeCreate422ResponseBodyError.md:
     id: 64030d44da1f
     last_write_checksum: sha1:8d65333b9e37c54c10d4eaa4b08a16321355b544
@@ -349,12 +349,12 @@ trackedFiles:
     pristine_git_object: 0e473e8ec2414f0cb889e5e27e3bc30283d8273a
   docs/Models/Components/EmployeeFilter.md:
     id: 0c892d4acfcb
-    last_write_checksum: sha1:91219df10d04f5ffc1e5314beef8f5eec87d9986
-    pristine_git_object: b37078b417a1e8a91ef9dd2efdfa9e5698e4a4b3
+    last_write_checksum: sha1:3716986f86468175083ec25bbe968c8a6ab7d881
+    pristine_git_object: c69a3e0ee0d14a55e4d602e057bd93dc74ac235d
   docs/Models/Components/EmployeeFilterContains.md:
     id: 4313ec66ae65
-    last_write_checksum: sha1:a30445f7ab6e7b534d37c087beed664a9ff69586
-    pristine_git_object: 0a539ea4e02a6d6320f7c42a6c14db349b1e380d
+    last_write_checksum: sha1:47254edfcde247bf8d0f741a9761a9f8f832c96f
+    pristine_git_object: fccb35558dbb7125f9ea756b1581d568b1e2458f
   docs/Models/Components/EmployeeFilterContainsAddress.md:
     id: 6fdff927af40
     last_write_checksum: sha1:7cfe8d0c92559eaff8c45dee4f78385d4454e3c3
@@ -369,8 +369,8 @@ trackedFiles:
     pristine_git_object: cca1cb3d204e3171aa233016423e983d8cbc985a
   docs/Models/Components/EmployeeFilterEquals.md:
     id: 9315c8cbd330
-    last_write_checksum: sha1:f848213d81c1cdfb124153ec05605a4d469c43c8
-    pristine_git_object: 1824b0bebdc5e7d5240447affb8274047d609975
+    last_write_checksum: sha1:1f08badb9ebe3e45448516f6f8270006c4a07af7
+    pristine_git_object: 91e8329b630e769c077fd53a630a15b48d69eeee
   docs/Models/Components/EmployeeFilterEqualsAddress.md:
     id: 9cf30d450fb4
     last_write_checksum: sha1:b66988397b811a5dbe95ce3c943a04a8731eb066
@@ -421,8 +421,8 @@ trackedFiles:
     pristine_git_object: d8598324f5ef92e1d8e8e85be0197ce41e3c9ea6
   docs/Models/Components/EmployeeFilterLike.md:
     id: 003ca79e6b51
-    last_write_checksum: sha1:c0f4f0e1e9d41cd81df7ba35b7ede42859a8f648
-    pristine_git_object: df88d88893b4ebcd39a115133365a717e0b43bd5
+    last_write_checksum: sha1:16075d06b587d4944f8c09f9273c41f695e8f20f
+    pristine_git_object: b2455e31265f3798293a5effb2b3c7e31126a083
   docs/Models/Components/EmployeeFilterLikeAddress.md:
     id: 021ae2709e31
     last_write_checksum: sha1:0b7ef87246145e0090990aac6b42a6c8a05c9f81
@@ -437,8 +437,8 @@ trackedFiles:
     pristine_git_object: a3be947437fe48235718d04de8a77e65a84d0415
   docs/Models/Components/EmployeeFilterNotContains.md:
     id: 9678e940f1d9
-    last_write_checksum: sha1:f5b3597f1c312173ba88a60df1f21c9899dc3d98
-    pristine_git_object: abf1cdbdde7fa084ae7e21ccb903fa1988871ffe
+    last_write_checksum: sha1:fb3f3853ff73557b9c3e3dbdcf92eb008c3780aa
+    pristine_git_object: c86b29e09471f38fa65bff32a31faf1a7f1a768b
   docs/Models/Components/EmployeeFilterNotContainsAddress.md:
     id: 73188a51c20d
     last_write_checksum: sha1:81a7e3d52cd27652862d8a2e4ce75d1c6ff788fc
@@ -453,8 +453,8 @@ trackedFiles:
     pristine_git_object: d60eaa4b616c6629f9804f3beab57d83e85d9ecd
   docs/Models/Components/EmployeeFilterNotEquals.md:
     id: 0de56ea74e60
-    last_write_checksum: sha1:9885f20bbf15fcbad45122a07edb7e174885546b
-    pristine_git_object: 61779973619a1ae1356e1fe968ec6175b98c9e49
+    last_write_checksum: sha1:daabdf490ed8bdcd4cdd18163779cda7f6df263d
+    pristine_git_object: 95f581323aa6e01d3947d84b6d6b4aabad8fc9f9
   docs/Models/Components/EmployeeFilterNotEqualsAddress.md:
     id: 32f42604079b
     last_write_checksum: sha1:5adddbaec37dd058e26cdad7d79cd21f9ce13933
@@ -473,8 +473,8 @@ trackedFiles:
     pristine_git_object: 963b8c9435a2c6db74510959a040a298ec257631
   docs/Models/Components/EmployeeFilterNotLike.md:
     id: 4c4c2876f837
-    last_write_checksum: sha1:87eada0976262f653a241002cfaf3f6d36356cc9
-    pristine_git_object: 1b8f1846e9fae4accead854726efe2c67d71dd78
+    last_write_checksum: sha1:fe54dd46d87083fd6db2fcc31ab78f1716062c36
+    pristine_git_object: 233cd10cd72d2840246a52b914efa21b975840c1
   docs/Models/Components/EmployeeFilterNotLikeAddress.md:
     id: 31635546b81f
     last_write_checksum: sha1:281cb242a5102395367190757e55e5b1cd6ac1c1
@@ -489,8 +489,8 @@ trackedFiles:
     pristine_git_object: 2ebad2055c14efe7a57523cd8c1f6bebe688ba54
   docs/Models/Components/EmployeeFilterNotNull.md:
     id: a4480cd81c54
-    last_write_checksum: sha1:57dd9beb73c3fc234479d39df14a47f791842083
-    pristine_git_object: 9e594fec2265cd745aceeb0a2f3385fb267f4c2d
+    last_write_checksum: sha1:9231df9a9b2ab620694644f42ea4a12be374a991
+    pristine_git_object: 9a989f448054e0e4ccc80741f53a877486b96ccc
   docs/Models/Components/EmployeeFilterNotNullAddress.md:
     id: f3b1767fa316
     last_write_checksum: sha1:dca5eec751c910ec6e0fd51f430bc6acce1d9b2a
@@ -505,8 +505,8 @@ trackedFiles:
     pristine_git_object: d24f4e3691c25676187f2e90ef76ed5d64a32a29
   docs/Models/Components/EmployeeFilterNull.md:
     id: c831547e5c13
-    last_write_checksum: sha1:b14d84db89d316b1043d0e60fd5f93b00004b800
-    pristine_git_object: b7942b5735b4077064c4cc29149ea9f2b7fd49c9
+    last_write_checksum: sha1:44281393855a996c23b11f31bae014d5ae7b4684
+    pristine_git_object: df82ea5900341ceededc66d68086e657bd6a7293
   docs/Models/Components/EmployeeFilterNullAddress.md:
     id: 3e638515d28b
     last_write_checksum: sha1:1e84b33b1ec97487cda7a348659a5f0cdcff0350
@@ -557,8 +557,8 @@ trackedFiles:
     pristine_git_object: 4b6193419f2859e85d8e8d9a3ad80579d8306337
   docs/Models/Components/EmployeeList.md:
     id: ccc1f4a418be
-    last_write_checksum: sha1:e11c75619bbe8f5b525534a02fb06003edfad33b
-    pristine_git_object: e495f1afac78d8a61a33e8200235a6f442765cdb
+    last_write_checksum: sha1:6f0dd3cad61b8ff04ac0b9797f1975f954090b87
+    pristine_git_object: b199880bafec2288a4ce6050de2379e6efc34221
   docs/Models/Components/EmployeeListPagination.md:
     id: d9251e926d32
     last_write_checksum: sha1:e775d8a79944e18d0f4c26fdf9eed28e82dbc020
@@ -941,8 +941,8 @@ trackedFiles:
     pristine_git_object: 53dbabdcc480cc61e90098df39dbdb91e6eed0d3
   docs/Models/Components/EmployeeSearchContains.md:
     id: b9113afae3a0
-    last_write_checksum: sha1:599e434f7956e63f69a5335633fed4e98646eee8
-    pristine_git_object: 789bbcebcd78b0e96b24f32b56d95e5cf2aca121
+    last_write_checksum: sha1:418a2b6e8d65529419b7eb26373b6d5cebb4ec9e
+    pristine_git_object: a2d349aba2cd4c24b6ee9c6b0ea686da063e7307
   docs/Models/Components/EmployeeSearchContainsAddress.md:
     id: e3ab57825177
     last_write_checksum: sha1:415530492235f8842091aa1f2ac0ef7b943782e3
@@ -957,8 +957,8 @@ trackedFiles:
     pristine_git_object: 18e9daddbf72f8a7e741d3a578d2b5f41274a9e7
   docs/Models/Components/EmployeeSearchEquals.md:
     id: f6c3be363a4d
-    last_write_checksum: sha1:dac61e1158ff6d09d0bfd7ac00ffb86e9975ad1c
-    pristine_git_object: 265a793a85b100de0615be5bcf1a9d43649f0bf9
+    last_write_checksum: sha1:aa4362c33ce01514d804706c037aa9ab738e4366
+    pristine_git_object: c090a3ef5a00c25f9668e21779c2469cc442c5c9
   docs/Models/Components/EmployeeSearchEqualsAddress.md:
     id: c12846f214f7
     last_write_checksum: sha1:27e173a4d62d29cf413410fd525cbd966c4287d5
@@ -977,8 +977,8 @@ trackedFiles:
     pristine_git_object: beda31d365009267f2b4d81826d20193acf6f225
   docs/Models/Components/EmployeeSearchFilter.md:
     id: aa3c1cafd975
-    last_write_checksum: sha1:46cf15da6eb021f62346868fe9be886914979c6a
-    pristine_git_object: 0ed5aabf77825867fb3f50182d736088bd1b1ae0
+    last_write_checksum: sha1:b70de07eb9f1da846a43da2cc0adf4953d32230e
+    pristine_git_object: 0edab8de7367d2735d14171babb59bd565ab13d0
   docs/Models/Components/EmployeeSearchGreaterOrEqual.md:
     id: 4a5e05b4cb43
     last_write_checksum: sha1:e8626073808cc68aea4b95d6905c189ac9a7960a
@@ -1013,8 +1013,8 @@ trackedFiles:
     pristine_git_object: 352260bb8446e0ac48d624aedb0bb56ccea3045a
   docs/Models/Components/EmployeeSearchLike.md:
     id: f9f615f136dd
-    last_write_checksum: sha1:1452911d84a0118fb01f67a928c9687e686f8879
-    pristine_git_object: 74c95b06691b06b9d2162926b78b2fbd47e2b060
+    last_write_checksum: sha1:25042dcfc9d6c0201dc1465c8b57cc7339a911c6
+    pristine_git_object: 8cbf8231d15fb95e9c6f39d8dfe84942e8575ec8
   docs/Models/Components/EmployeeSearchLikeAddress.md:
     id: dded1c6ab2ff
     last_write_checksum: sha1:89140e538254909095d75adeaea7425ceb8de000
@@ -1029,8 +1029,8 @@ trackedFiles:
     pristine_git_object: 7fa5754e50acb6db2b8092cbe08be07707acbe7b
   docs/Models/Components/EmployeeSearchNotContains.md:
     id: d9fbf88ce5d8
-    last_write_checksum: sha1:0cdd6faf9c65aa7ec91ce75fe1e2fccca6377dda
-    pristine_git_object: 3c607aaafa97aac2250cf179795c4401057f6d11
+    last_write_checksum: sha1:3e9d2e7b927784532f837136bbb8ab0e50b235b5
+    pristine_git_object: 8d5bec10d1197e6ead66fbba6b48a38a08868112
   docs/Models/Components/EmployeeSearchNotContainsAddress.md:
     id: b1b9149f6e56
     last_write_checksum: sha1:04372b9dc62d2a14fa24cc5cbac97d5a8704d507
@@ -1045,8 +1045,8 @@ trackedFiles:
     pristine_git_object: a337d95c10bacd801ad1d074e9ab44f26fa49273
   docs/Models/Components/EmployeeSearchNotEquals.md:
     id: cc6656013ec5
-    last_write_checksum: sha1:a86049a80e255455f1e8c931d9c3cbc67473d111
-    pristine_git_object: 1e3d56c571fc5ab947f5954553b2183a87f210b8
+    last_write_checksum: sha1:d17cd795044504bd84d6271bdda576322c9cb863
+    pristine_git_object: 6a911c057217c3800150dd92a790e580bf7475a4
   docs/Models/Components/EmployeeSearchNotEqualsAddress.md:
     id: 0eca1bceb171
     last_write_checksum: sha1:3d91d476850bff1b851245c8f1b4ea1b8c2cc334
@@ -1065,8 +1065,8 @@ trackedFiles:
     pristine_git_object: b9a5b13c448bbd8d38306ae368287d2a57e528bd
   docs/Models/Components/EmployeeSearchNotLike.md:
     id: 9835b3835d76
-    last_write_checksum: sha1:b65960b9beff1e355d346d7c5f07a10d85b27200
-    pristine_git_object: bbafd42632d8e19624c5f02f80fecf75c219a12e
+    last_write_checksum: sha1:8e650abf4cc9237f5aaf5482810c8e9b09c0bef9
+    pristine_git_object: 72b9e4a7450b733d09575643cc1d881c249c2bdd
   docs/Models/Components/EmployeeSearchNotLikeAddress.md:
     id: 553ec7bdb8f2
     last_write_checksum: sha1:2f8abb6573a0067d2d2eb5e32e19f0e2c33f0cb0
@@ -1081,8 +1081,8 @@ trackedFiles:
     pristine_git_object: e7a442d12c00ddbecb5591a1a8fe51645ab5a98c
   docs/Models/Components/EmployeeSearchNotNull.md:
     id: d747c1e0ac06
-    last_write_checksum: sha1:d44bdd4b8147561c357d8271f13f38042a8b327c
-    pristine_git_object: 69fb830d67a61c12b7a4858a630b0864149ec202
+    last_write_checksum: sha1:27c1bd4d46fe08b0c949dc1076eb75ef7d62ccb2
+    pristine_git_object: 77d396acb1cedd985d4d38af223cc525d3f48dbb
   docs/Models/Components/EmployeeSearchNotNullAddress.md:
     id: 716c8fe4913d
     last_write_checksum: sha1:ff67f8d3b14a7030047394f78e6419d3f4e14352
@@ -1097,8 +1097,8 @@ trackedFiles:
     pristine_git_object: ac75160db9c0f794df009e2950e00acb5633ab34
   docs/Models/Components/EmployeeSearchNull.md:
     id: a53bdc3dee2a
-    last_write_checksum: sha1:a8a167b645cc7e77f77cf0c0c548cd78798b6db6
-    pristine_git_object: 0fb32e25f2c27e42ee075b8a28cb863d9f24a5c9
+    last_write_checksum: sha1:fc73a0dee95224fa68ff95e7993403f173681017
+    pristine_git_object: d2c43535f0eef04c96ac1477fd656445482cfac7
   docs/Models/Components/EmployeeSearchNullAddress.md:
     id: 29e4109d370b
     last_write_checksum: sha1:f53cb9713f43a2852d663d8a42c263bfdb5adc72
@@ -1117,12 +1117,12 @@ trackedFiles:
     pristine_git_object: f0ea7a6918bda90121cb37f3db2dafa4051419ad
   docs/Models/Components/EmployeeSearchRequestBody.md:
     id: 73f133b37431
-    last_write_checksum: sha1:ca61a273aca9c937bca131b7e08e6a190864078a
-    pristine_git_object: a75a774ec58ac2613d81a5e247b42f0b9e82c933
+    last_write_checksum: sha1:827b69690663829b4627572bac7ea826d411a5cb
+    pristine_git_object: 079ab816e3e8e41f1b64e48f8477be1d0c6e1614
   docs/Models/Components/EmployeeSearchResponse.md:
     id: fd9673e76901
-    last_write_checksum: sha1:c9dd12f05a37345c3ac0756f0e45f1a2d9ed2e94
-    pristine_git_object: 830ea11f27e2cafd1a5616e63639ea3e53af4581
+    last_write_checksum: sha1:637eff69351108e6ea8efcd661dd8813cb8e38bf
+    pristine_git_object: 3676b1b34acc824cf76e56416634337aeacf056a
   docs/Models/Components/EmployeeSearchSmallerOrEqual.md:
     id: c42b82c80ce3
     last_write_checksum: sha1:bbfe24c93876bdd1bd7ee2dbe9795b3ee1d64d8f
@@ -1157,8 +1157,8 @@ trackedFiles:
     pristine_git_object: b1fcb99b3a6f64f9064ed0475814da9515d199cf
   docs/Models/Components/EmployeeUpdate.md:
     id: 6811e3113220
-    last_write_checksum: sha1:0eccfd39c6cc3632e12a94f562dadda3cb383ca4
-    pristine_git_object: 8f24552ec5c3fb16207a41a5fda95c0b994eeb30
+    last_write_checksum: sha1:4511b153ebd410e86ba00d4b0f95eda80a436073
+    pristine_git_object: 41d70aa0f79d04f9fa5d2ca70de3efa301cfa09e
   docs/Models/Components/EmployeeUpdate422ResponseBodyError.md:
     id: adcefb0b9f9e
     last_write_checksum: sha1:85b3d2de1b0e5e73d2ea00d9e7774924bbbf5b47
@@ -2513,16 +2513,16 @@ trackedFiles:
     pristine_git_object: 3cce8daf6a4ffdb7d6fb1bd903a24a269617b9b3
   docs/Models/Components/Student.md:
     id: 5594559a671a
-    last_write_checksum: sha1:bee508112ac6e742e30cb8ef48c84470897fbb96
-    pristine_git_object: 6c55b5a6c15dd5ce7fe817184363dc00498a01cb
+    last_write_checksum: sha1:245e043396b77467e155c189d5eeffa444bae316
+    pristine_git_object: 38bff39402af0ac14acfea7379981111b48b1cef
   docs/Models/Components/StudentAddress.md:
     id: 4962b88a7c91
     last_write_checksum: sha1:d46295e981d0b49bedbddd777f1b21912531d9f8
     pristine_git_object: c79afbbbd9918636957e34767456c7300aa111d8
   docs/Models/Components/StudentCreate.md:
     id: 721b125d3347
-    last_write_checksum: sha1:50a4a1aafbeb28264e7a6d91f31fedb5d1b2d875
-    pristine_git_object: 87c176efe9d4a6e9c8681fb549fdf039db5f0a65
+    last_write_checksum: sha1:75f9f268aaa57f57a8f5cb5a45eb445141568d8c
+    pristine_git_object: b0bd3bd86133499765c8e59b1d9c7a674e6a2f28
   docs/Models/Components/StudentCreate422ResponseBodyError.md:
     id: 393c3c385920
     last_write_checksum: sha1:285681a44ae43f877f8a37891a89c176b1a5739e
@@ -2545,12 +2545,12 @@ trackedFiles:
     pristine_git_object: 5a76d09bd3e7acd8c4db9cfc1d2dd85d6cf85150
   docs/Models/Components/StudentFilter.md:
     id: 89a8b90a1024
-    last_write_checksum: sha1:325430593a98b7366ece343af600e5ae6054f9e4
-    pristine_git_object: 9ca3e348406763fdea923a707a47c294356dc81a
+    last_write_checksum: sha1:4d6e49772a6def48da891bdef8545d7c2b19e8e2
+    pristine_git_object: 8bb00ed17ccb74f247a6c1d9ddad90d02d3e91d1
   docs/Models/Components/StudentFilterContains.md:
     id: a498cb9a58a2
-    last_write_checksum: sha1:0794920fd8ff7ce98f6639d55268995fb624c68f
-    pristine_git_object: 75a1610ef90605e732a32a977dda2fce8970de1d
+    last_write_checksum: sha1:e14b28cf69a65d9c67fb9d39b2b237b570c3f229
+    pristine_git_object: d2ad930b20c12885f872b3185541d0f0d2721916
   docs/Models/Components/StudentFilterContainsAddress.md:
     id: c6ee49cfcb1c
     last_write_checksum: sha1:46264c135e80eccc7cd1e31bb467f66c7d121e3e
@@ -2565,8 +2565,8 @@ trackedFiles:
     pristine_git_object: 328f05332865a794f42ab18148c67879653092bd
   docs/Models/Components/StudentFilterEquals.md:
     id: 1656701a9814
-    last_write_checksum: sha1:8a80fd8a89cea91c25ff5fad50e34ed3cbe1e7ab
-    pristine_git_object: 5b4387c0b4715b37e99adbc9fa9c9d2f4161385a
+    last_write_checksum: sha1:d978578b04df571a89003e77eafd276c1b827318
+    pristine_git_object: 2acfab4031073c0ea096d6a93ae14d64c4e84889
   docs/Models/Components/StudentFilterEqualsAddress.md:
     id: a13b329cebcd
     last_write_checksum: sha1:2232f4a05f9819493f0b60ef36454900d4fb5291
@@ -2617,8 +2617,8 @@ trackedFiles:
     pristine_git_object: cdd916bd2327dd67c5391e51a63882cd3336ff09
   docs/Models/Components/StudentFilterLike.md:
     id: cbcad875dc18
-    last_write_checksum: sha1:6591e56712fbcc6f601b3688169dda3faa4caaa6
-    pristine_git_object: 3d8bcd311a3ece71ff8c5cd622fb4bf21a8476c1
+    last_write_checksum: sha1:95a722da37b4747fb5dc78c6f882155e61a2239d
+    pristine_git_object: 29f4f89d574f6412ef0ea49f03dcc4510efe5006
   docs/Models/Components/StudentFilterLikeAddress.md:
     id: e96da44b6dec
     last_write_checksum: sha1:c6bb159ea6a4bdc437de704e9f224d91175de2a6
@@ -2633,8 +2633,8 @@ trackedFiles:
     pristine_git_object: 1bee2750ddf267dd241b5264689b451d9817aff0
   docs/Models/Components/StudentFilterNotContains.md:
     id: d086aa16a626
-    last_write_checksum: sha1:b94456fba62d0c20789f893da3a61e820106d7b7
-    pristine_git_object: 7d423c10215570c4840006c02571856632ac882e
+    last_write_checksum: sha1:8c7cd003463c76c9c9f5e640ad3b98d74989d261
+    pristine_git_object: 34b76a84d5439ea423fbddadf0fddbdb1f550331
   docs/Models/Components/StudentFilterNotContainsAddress.md:
     id: abe84afa2a38
     last_write_checksum: sha1:e638e0575bc69e6b10b621994fb854c2decf52b8
@@ -2649,8 +2649,8 @@ trackedFiles:
     pristine_git_object: 90d830817b20feb8bbdc50c880136666edb391ac
   docs/Models/Components/StudentFilterNotEquals.md:
     id: e101ff914bf2
-    last_write_checksum: sha1:8cbd6b2b0357e607e4da983f8ca01bfe001b5556
-    pristine_git_object: cdda2554fda5706cf34b89a492bffa9e8d32342e
+    last_write_checksum: sha1:022400c80f97f62a548fdb003bbcee626ab510d4
+    pristine_git_object: b5abc9fd3ddb4dbc50b04e4fbffd086e9ef0cbce
   docs/Models/Components/StudentFilterNotEqualsAddress.md:
     id: 98cd84a83b12
     last_write_checksum: sha1:1a8eea21e0af6b2f26dda5ff6e124338ef1fe26b
@@ -2669,8 +2669,8 @@ trackedFiles:
     pristine_git_object: 7cdc3892168d8566b23e2dfb3723a58086955a10
   docs/Models/Components/StudentFilterNotLike.md:
     id: 11560aa0a4b5
-    last_write_checksum: sha1:cab522886c2bbf3567c0dc7b447d2c3c7143f0a7
-    pristine_git_object: 4e5cbac8ba327a239bef9aa44d4c03e9ca28b4b3
+    last_write_checksum: sha1:f1959213a9640bc4cbb0ff5a50ba0be58e0361f7
+    pristine_git_object: cc28d6d826ed156f7421c3dc9b46620e2b01c5fc
   docs/Models/Components/StudentFilterNotLikeAddress.md:
     id: 66d95a8c8dc6
     last_write_checksum: sha1:ce6db458fb48f3e6c75b0b2140d0310fb2d2ea05
@@ -2685,8 +2685,8 @@ trackedFiles:
     pristine_git_object: f83516bc4a5a85640bdcc4230e33d37a88db7c9e
   docs/Models/Components/StudentFilterNotNull.md:
     id: 166ca4412b48
-    last_write_checksum: sha1:2ef2b6d48604a4caea093d9797a9d653e9b87d9a
-    pristine_git_object: afc5dc4d2e2733c591b86a28affa0661889a0c69
+    last_write_checksum: sha1:0803bc996b041e8233f4c6d91c74bcbe77d3ebee
+    pristine_git_object: 8ff00fb4279f0f96f08a83c5c6345424011eaa73
   docs/Models/Components/StudentFilterNotNullAddress.md:
     id: c106281d3c2f
     last_write_checksum: sha1:db0ea6154ff3c76e32b153c0bb704ec36cca6077
@@ -2701,8 +2701,8 @@ trackedFiles:
     pristine_git_object: 089133e221e490e3a80148caa1e591bb94de59ff
   docs/Models/Components/StudentFilterNull.md:
     id: 2096a5b794cb
-    last_write_checksum: sha1:50a8fc71c7d800ae26e6e54ceeaf60e071aa8673
-    pristine_git_object: 09194d502cfbb161f37a0c58bb43d2138c5ca153
+    last_write_checksum: sha1:8b9574a6d81d94c3cfb3da49370fb09bffeda38e
+    pristine_git_object: ceb724ce2625fd7f7694af64fcb423a84e9e6961
   docs/Models/Components/StudentFilterNullAddress.md:
     id: 6ccb282b96b3
     last_write_checksum: sha1:a6b701875617f47808d9fb45e31df6eae716fd5d
@@ -2753,8 +2753,8 @@ trackedFiles:
     pristine_git_object: 5ea9b80b177a81c0e3eb46cd98b1e9511a819d3e
   docs/Models/Components/StudentList.md:
     id: 6ef9fe01087f
-    last_write_checksum: sha1:785a1207f2ce74e1cee14c9a0896d0288c1f4400
-    pristine_git_object: 0311009a7875b300ff15980ce0a2c8a65bd844a8
+    last_write_checksum: sha1:37f4f0272db0625307632762b364b9df451a7a62
+    pristine_git_object: 5afd9390de6a7be370af6ac261f7d778c16a2a9f
   docs/Models/Components/StudentListPagination.md:
     id: 54b11cc661cd
     last_write_checksum: sha1:0ba9ada2b08893643f9ed29a24857446e874e3fb
@@ -3213,8 +3213,8 @@ trackedFiles:
     pristine_git_object: 90e72b7969a826982c98646d67ea7302fedce542
   docs/Models/Components/StudentSearchContains.md:
     id: b908a827cc3b
-    last_write_checksum: sha1:46c46575493763b9cdebebb3459f9dbff44920fa
-    pristine_git_object: ecc8db61f6a106c62c4ef10273f25aaebe5f73c6
+    last_write_checksum: sha1:3b912924c20a4a1d9bb707dcce64280dfa65ded6
+    pristine_git_object: 510785f5b397cd35ea81cd2dca2c9a1b6c3eb0fd
   docs/Models/Components/StudentSearchContainsAddress.md:
     id: 6faa88c9b82f
     last_write_checksum: sha1:bb17f277f00841851d1d5aab554e3c02e028a112
@@ -3229,8 +3229,8 @@ trackedFiles:
     pristine_git_object: 0fdaa6cb59ab83b576423283da17d423d2ce9873
   docs/Models/Components/StudentSearchEquals.md:
     id: c4257bf4f4c7
-    last_write_checksum: sha1:5b3534e022d2b5fb0354d9ca16d5bceed71d835c
-    pristine_git_object: 0e996ecbf9e33080697d057ba11f62f3e35a79e1
+    last_write_checksum: sha1:9535cc58b044a15a1951764ede75f5d95443cf93
+    pristine_git_object: 8b6aa3e1ff13d4e4e415f1624c4bf7234748d362
   docs/Models/Components/StudentSearchEqualsAddress.md:
     id: 9b41bd105565
     last_write_checksum: sha1:ead063597085707ee396bc0d2b45dc7edc116fc0
@@ -3249,8 +3249,8 @@ trackedFiles:
     pristine_git_object: 06e88f2be0664cfec479d318f602bd53fd7fce7f
   docs/Models/Components/StudentSearchFilter.md:
     id: 88a6ce7a5194
-    last_write_checksum: sha1:4d0fd521189877c1e796523be829d4c1c0c14e6a
-    pristine_git_object: 3d9d58dc415e006efe365a132cb23bf615e6e4af
+    last_write_checksum: sha1:78e0c85d0cc6b06a00d3a7dc9b9d6f3462803fe4
+    pristine_git_object: 557d77be870335c96f3b5eaf1f8a27a4ecc9427a
   docs/Models/Components/StudentSearchGreaterOrEqual.md:
     id: 7a079076bcec
     last_write_checksum: sha1:eff647afbbb09fe80061aba254d2f0d616e1abfd
@@ -3285,8 +3285,8 @@ trackedFiles:
     pristine_git_object: 08de5e860e2009c8e35aee37f66ab3e3b333d84d
   docs/Models/Components/StudentSearchLike.md:
     id: 895a5794a5a0
-    last_write_checksum: sha1:db8e7d355b0d4b64847bdf86ac6a0de6d603b9b2
-    pristine_git_object: 2e8425d9d78e2511ef9f8f34fe69b80f8a180551
+    last_write_checksum: sha1:996a4efa95b259b3811288d3c523620ff0866464
+    pristine_git_object: 277f95bdf0b22088b39b8ebd41fcf38d80b0b5cf
   docs/Models/Components/StudentSearchLikeAddress.md:
     id: 93451c1e13ec
     last_write_checksum: sha1:17c3f302e83bb3d357f85cd620911fb4c5092914
@@ -3301,8 +3301,8 @@ trackedFiles:
     pristine_git_object: eab2492b922c50fdb50babc6fef696e29568716d
   docs/Models/Components/StudentSearchNotContains.md:
     id: 3dfe158a5467
-    last_write_checksum: sha1:fcc6146970ce234403c211674ba0dc32eb9726e5
-    pristine_git_object: a35ee91cd7f1167a06df94cb9b5cb861eb2ca542
+    last_write_checksum: sha1:66a4f4fc42fc1d3e1e7b5fac6359acaeb30e7698
+    pristine_git_object: fc6b9d71beee4d0864537d5ac267ef3ec94b4ced
   docs/Models/Components/StudentSearchNotContainsAddress.md:
     id: 72e8ad679d69
     last_write_checksum: sha1:6d5b1bea624f2ae7a09d4adbb603611c39f602f4
@@ -3317,8 +3317,8 @@ trackedFiles:
     pristine_git_object: 1e36e4b52913c44e20a0050852b4cdc801c6d79d
   docs/Models/Components/StudentSearchNotEquals.md:
     id: 3fdcb596931e
-    last_write_checksum: sha1:8ae4342de62d0560c2de97da69de7c1bf36b90c0
-    pristine_git_object: cd2e76c5624afeae84adba0d30aadfdc2406db9f
+    last_write_checksum: sha1:73dfc807fbfd5a8ae7ce8ff6a767107866b0b39e
+    pristine_git_object: 4e40a0ff16461b09a63c7dfe3be1e6026b925c32
   docs/Models/Components/StudentSearchNotEqualsAddress.md:
     id: 9e02457f2112
     last_write_checksum: sha1:97b85efe4ad31b64c197d68edd873874d19bfb96
@@ -3337,8 +3337,8 @@ trackedFiles:
     pristine_git_object: 260a476a25e36210ad77963180b4a27d16108ce1
   docs/Models/Components/StudentSearchNotLike.md:
     id: e3e9e1e75cd0
-    last_write_checksum: sha1:60b2869b94685c34d6c296183269368b2e36b8db
-    pristine_git_object: 151cf12391ee6d3ddfd1fc206aaa980a235147c8
+    last_write_checksum: sha1:dd9b2f9a66c0f4de8d8579f6e6f22a16a3c60ec8
+    pristine_git_object: e650fda1dc056299f336ef369183e17bd64a38a1
   docs/Models/Components/StudentSearchNotLikeAddress.md:
     id: 49bbf8a1c2db
     last_write_checksum: sha1:6f81952494c097d234f19b4f86617c4f36a0dda7
@@ -3353,8 +3353,8 @@ trackedFiles:
     pristine_git_object: bc620afd1887af58120d2f6a997358e0b7e57886
   docs/Models/Components/StudentSearchNotNull.md:
     id: d4fb45bc9290
-    last_write_checksum: sha1:c6a81a21edb6886a04d3f61ae5c679a7fa7b28f2
-    pristine_git_object: f97ff27d2fa6de52a618f96b5cd2edefc1f6cc33
+    last_write_checksum: sha1:c68b7a94c126d43bd7d9cefac07c40256bd4d0fc
+    pristine_git_object: 086e86fb68747690f266d1ecdeafa859ada26ad7
   docs/Models/Components/StudentSearchNotNullAddress.md:
     id: 2195e2ba945f
     last_write_checksum: sha1:9e9a4738233301c42ade07aced32187103a5a056
@@ -3369,8 +3369,8 @@ trackedFiles:
     pristine_git_object: 894541bcd32b4dcea0bc4fbda54d3736c4e5c4e5
   docs/Models/Components/StudentSearchNull.md:
     id: 2861bee5a96b
-    last_write_checksum: sha1:f4cadc6644262eeba650f50839aa3e195baac85d
-    pristine_git_object: 62a0d7126de2f9b0df5f9003ac0bd47fc9417d50
+    last_write_checksum: sha1:32256d1960c4325f93b2b1d1b7add3d3559f0631
+    pristine_git_object: 437ce351e93a27d4512baa7ef3eee2d4f7f7cbed
   docs/Models/Components/StudentSearchNullAddress.md:
     id: 35dacf43e2dc
     last_write_checksum: sha1:fc341084d3c8645dc5f61f9eee6f891ac0f94bc4
@@ -3389,12 +3389,12 @@ trackedFiles:
     pristine_git_object: 2a685148e5d0d1286f4c136e64f61cf7663282a5
   docs/Models/Components/StudentSearchRequestBody.md:
     id: da27a89a9ee6
-    last_write_checksum: sha1:bddf130fbae152e55d29d5777e71c525c30761c0
-    pristine_git_object: 0a8024565b30d14ae0b8fdf7771882ea30cd82c3
+    last_write_checksum: sha1:91d8d16c6870ce6170ae918276b59e9d84ecf987
+    pristine_git_object: b6c685163a6bb5e7d5ce3e7789e8dd3d7a6d49cb
   docs/Models/Components/StudentSearchResponse.md:
     id: e045be277b32
-    last_write_checksum: sha1:579ca1e730fd32347dc74f5ebd72ed7401bdfa0e
-    pristine_git_object: 04a76282b6dc27022b01aab01c1c0829fd182789
+    last_write_checksum: sha1:58f5ea78679424509fef1e2799d84f8de41f9854
+    pristine_git_object: 2ad0e90e7ab4528df6566d3dab86ce79d430a8fb
   docs/Models/Components/StudentSearchSmallerOrEqual.md:
     id: e02d2641a916
     last_write_checksum: sha1:e96be9efb839725c358402907acb7960ef7f773a
@@ -3429,8 +3429,8 @@ trackedFiles:
     pristine_git_object: 213159044547c5fb68a75d3d948640322a07f732
   docs/Models/Components/StudentUpdate.md:
     id: cb46a069b31b
-    last_write_checksum: sha1:d1c464c22a88b6c562da5378797a81db0510a540
-    pristine_git_object: b426c92a510771b69f95a79c234cede15b080f1d
+    last_write_checksum: sha1:54c80e9c824f3cb624e336c134b4285528668f46
+    pristine_git_object: d8bd29d99d6b3465ae33c586f4a38fbe46f88c4c
   docs/Models/Components/StudentUpdate422ResponseBodyError.md:
     id: f132388c2dfe
     last_write_checksum: sha1:e50f683ea59758c2c45bf97b96e85a4284318deb
@@ -3913,8 +3913,8 @@ trackedFiles:
     pristine_git_object: 75e2994a368e4e4ef6cf96546c01b7cc1574018b
   docs/sdks/employees/README.md:
     id: 3adbd327ce9d
-    last_write_checksum: sha1:d638d38835efdfa499dc395eb276b62c66cf4cb9
-    pristine_git_object: f488e0911777f8dc722fc6c9ae1eabd123ea3682
+    last_write_checksum: sha1:35e3d0d5dac78f9dbc0281696722940aa0a1e1b4
+    pristine_git_object: d2e5dc049be1ff0eff4724d077186ffd5d503ba8
   docs/sdks/groups/README.md:
     id: 3336939a71e4
     last_write_checksum: sha1:2f0c19ff4bad6e220854c311d523af6fcf03280c
@@ -3933,8 +3933,8 @@ trackedFiles:
     pristine_git_object: d87aeff5abaddb1853815aaccd54b4172f20fab9
   docs/sdks/students/README.md:
     id: 2511b9d05d46
-    last_write_checksum: sha1:3b6c9e6f33aca9c04cdcee9e33551c3c45b39628
-    pristine_git_object: 7436fa8cc7eab9fafcedf73e38b7595caab598f8
+    last_write_checksum: sha1:ff5f5b63f8053bc738ff5afa7681ec94042d6745
+    pristine_git_object: 6c3f9c37c960d3e76f5250b96dde11c855249870
   global.json:
     id: 908e72401bf4
     last_write_checksum: sha1:3161b880f51cd74e7d1dea069b541d8bf4736dc9
@@ -3973,8 +3973,8 @@ trackedFiles:
     pristine_git_object: 867c04dc7849b48dca7a5f1d0fca617650390eca
   src/Meitner/Meitner.csproj:
     id: a4d633b7165a
-    last_write_checksum: sha1:91e642a7025dbaee92342adbd1903454a0eafd75
-    pristine_git_object: 107801465f1637bb5138c85da0f376cc158360cf
+    last_write_checksum: sha1:7236650ba352abd4ca0f07efa743b3519e471a90
+    pristine_git_object: a354d55597cebd14679050d80ca3b44e965aa22d
   src/Meitner/MeitnerSDK.cs:
     id: df60ef816859
     last_write_checksum: sha1:ec6fce100bf9bfb1deed494deb0858091c4a206c
@@ -4245,16 +4245,16 @@ trackedFiles:
     pristine_git_object: fef8a0d4c944fd1403397594d0dfedf4785ce2b0
   src/Meitner/Models/Components/Employee.cs:
     id: 684901915b0b
-    last_write_checksum: sha1:8cf1eaf47796ce0641349870c61f2d4207ab785a
-    pristine_git_object: cafc86c444dceb4573eb28658a638b9751e5083b
+    last_write_checksum: sha1:0919f0c88c75e2339293f6e3f311f88620433b6f
+    pristine_git_object: ef84b2fbb8a4b50c3fab9c5feaee7962e5354697
   src/Meitner/Models/Components/EmployeeAddress.cs:
     id: 5cc7c0234d1d
     last_write_checksum: sha1:2b915d0a5ae3b9e1ca85799a7fb29cb04e1fcd0c
     pristine_git_object: 7a24348a63385176ec1cbe5e7e0b21314c7e8fd6
   src/Meitner/Models/Components/EmployeeCreate.cs:
     id: bf175d49385d
-    last_write_checksum: sha1:0c341c3e819eb5bf947af5b290f82c320297fe7f
-    pristine_git_object: 3aa055b4011807115ae25ee9576ddf7c9ee84419
+    last_write_checksum: sha1:e7fd99c16b81191328493cd0ccb30f087dbc34ca
+    pristine_git_object: ecc93ba7be55154b7db952e856bb2fda3782e4bd
   src/Meitner/Models/Components/EmployeeCreate422ResponseBodyError.cs:
     id: c85d60e8ad2d
     last_write_checksum: sha1:715bd148120ac269558a49511f3e6fe26a35d979
@@ -4281,8 +4281,8 @@ trackedFiles:
     pristine_git_object: 03242fa4c4bb1d30f7a425feb07e06d4bfff05ae
   src/Meitner/Models/Components/EmployeeFilterContains.cs:
     id: 79599d0f5d28
-    last_write_checksum: sha1:b81cf07b2277122263ab3c92a6a824e59131864b
-    pristine_git_object: 73b44cc2cad3d572d7d04cd8fada03f8ba2bedaf
+    last_write_checksum: sha1:ea970a240a5c2a6f6d59e566f72c8132d3cfc590
+    pristine_git_object: 13b97021850fbdbc9679ed11a4000b7759a9a9e4
   src/Meitner/Models/Components/EmployeeFilterContainsAddress.cs:
     id: bfdd5424eecf
     last_write_checksum: sha1:aadccd6d188baef59581961c6b08a05db7ab45da
@@ -4297,8 +4297,8 @@ trackedFiles:
     pristine_git_object: 766cccf3b2a511e75ef9e99137631f74f29cdea3
   src/Meitner/Models/Components/EmployeeFilterEquals.cs:
     id: e032a33e659a
-    last_write_checksum: sha1:c42b4c835afc6a8face4c94569825fee246a1f13
-    pristine_git_object: db0149b79386d039aea25ae1546b32ffb9b9cbca
+    last_write_checksum: sha1:73115c5d82b8ef583795bc8f16e4a6ee958cd956
+    pristine_git_object: fccdad46cf1922c89d4ffc2f02bd4efec42df7ca
   src/Meitner/Models/Components/EmployeeFilterEqualsAddress.cs:
     id: 1322b2d9302f
     last_write_checksum: sha1:e7fe38f9fc621397d8ea9304b54eb83ca01abfe0
@@ -4349,8 +4349,8 @@ trackedFiles:
     pristine_git_object: 6105ffaa954821a7b2857753ced3464bf5cc27c7
   src/Meitner/Models/Components/EmployeeFilterLike.cs:
     id: b41202417add
-    last_write_checksum: sha1:e5cf394c5289180fdb98a72aea1a0ae0dc292b2c
-    pristine_git_object: be4cd97680c0ad97a4c5f61cff9f6d85b7a26884
+    last_write_checksum: sha1:447fdcfc1f65720badc166dc894097003fc29d8c
+    pristine_git_object: 0bb7e5f961834f9a47d6962a8fb7843c693b3ebd
   src/Meitner/Models/Components/EmployeeFilterLikeAddress.cs:
     id: 5de8cded73d5
     last_write_checksum: sha1:ce027565719a99ef614520aea7bfea8da4e29de0
@@ -4365,8 +4365,8 @@ trackedFiles:
     pristine_git_object: 7e12d7ca0bdc1f31b9a47e29b0735e03e90ab693
   src/Meitner/Models/Components/EmployeeFilterNotContains.cs:
     id: fa89ba8fb13b
-    last_write_checksum: sha1:472809c57659a858ffd7d141eecd398f5d63c21d
-    pristine_git_object: ec2b18f910f340acac6164c504f792b783c10941
+    last_write_checksum: sha1:6ddaee7a5f28567c2d935323d8f163c1133046fe
+    pristine_git_object: a0c60753d230002350fd348b4173628c3ef6edd4
   src/Meitner/Models/Components/EmployeeFilterNotContainsAddress.cs:
     id: bd072110fafb
     last_write_checksum: sha1:3c1f081030fde4550b29fad5e11161b25e085fef
@@ -4381,8 +4381,8 @@ trackedFiles:
     pristine_git_object: 0dbb956130f71295d73acbca9b60bbb36edae0fb
   src/Meitner/Models/Components/EmployeeFilterNotEquals.cs:
     id: 5ecfda531f7d
-    last_write_checksum: sha1:244717fac4a096ff158bdbe0405a5271e7071843
-    pristine_git_object: 6264b70ab97ea3b76e0d5b0dba4c8d1a74fca6ba
+    last_write_checksum: sha1:43645d33febacc3c9e62dc3d76e806369dc663e3
+    pristine_git_object: c29da1b9353f3a80314cc231a16f207208907ae9
   src/Meitner/Models/Components/EmployeeFilterNotEqualsAddress.cs:
     id: 74333123419f
     last_write_checksum: sha1:c7a41814639e5a3dfbd8df96cbf458def15eac0e
@@ -4401,8 +4401,8 @@ trackedFiles:
     pristine_git_object: e4aa82546f8504125caa9388af67b685e0fd6ee3
   src/Meitner/Models/Components/EmployeeFilterNotLike.cs:
     id: 9b4e0ac6b7aa
-    last_write_checksum: sha1:eea158e4e58bf21772aca7f32a5165f3d3607036
-    pristine_git_object: 53f3647b6d58d8e7da6e1be8a45afc2c74bcd19d
+    last_write_checksum: sha1:016625e76c53fffbf6510d709bf4181cc20c6daf
+    pristine_git_object: 40490e03869837e2918e38e3ee41e8a01d781af2
   src/Meitner/Models/Components/EmployeeFilterNotLikeAddress.cs:
     id: 0f93c0710f2a
     last_write_checksum: sha1:d417c2cb2785bd010eac8abd8573a90ede29e41f
@@ -4417,8 +4417,8 @@ trackedFiles:
     pristine_git_object: a99e2028395891040a6fbfe679d572b9cf6a6ced
   src/Meitner/Models/Components/EmployeeFilterNotNull.cs:
     id: ef3dbc684d45
-    last_write_checksum: sha1:95af14b0dc285adb9942ae98d033f2115a9e963a
-    pristine_git_object: 17df516f8a5ee932558c79c8f2689bcb50127931
+    last_write_checksum: sha1:90d59b7e8367546c70974d43f241fbe9d194fc5c
+    pristine_git_object: df874cc219dbf4d0e2bfbf49e5b7e40912f3cbde
   src/Meitner/Models/Components/EmployeeFilterNotNullAddress.cs:
     id: 6226bf34d5d8
     last_write_checksum: sha1:be7595250d0c47933f47e37f3688a3d484b2ece6
@@ -4433,8 +4433,8 @@ trackedFiles:
     pristine_git_object: 975537e7613335eb9904abd12f1e5f66b3223e1b
   src/Meitner/Models/Components/EmployeeFilterNull.cs:
     id: 1ceb7ddffd8b
-    last_write_checksum: sha1:1cb87951b49d79f41e7e4d020c1c61afb4fbeddd
-    pristine_git_object: 0a8af1fe99caf2e97787ae180dc3c906df504335
+    last_write_checksum: sha1:6243f554dea586b0ee8d066b063bc3e7832ec359
+    pristine_git_object: 05802757508bdb9d904b447b4cf54c8a733621ff
   src/Meitner/Models/Components/EmployeeFilterNullAddress.cs:
     id: 99872def6f82
     last_write_checksum: sha1:669349c40a789bd1fb02f7b506763dcd6b85e14b
@@ -4869,8 +4869,8 @@ trackedFiles:
     pristine_git_object: 46570955d19884f2aac82157f401cf6cf6dea028
   src/Meitner/Models/Components/EmployeeSearchContains.cs:
     id: e2bcdcdf4445
-    last_write_checksum: sha1:840f8befdc773576ed2fff60656f4c765da3aaec
-    pristine_git_object: dd3d368aa4b8a6943710ab3b1dbda125010d016a
+    last_write_checksum: sha1:600c825758559fcd381385e90f74232cc817272f
+    pristine_git_object: 37a29a599b4f6d9eac111ff6db34047181608a77
   src/Meitner/Models/Components/EmployeeSearchContainsAddress.cs:
     id: 1dce0b802466
     last_write_checksum: sha1:ec2264146ebc1eb323c8826623bb7f2ebfaec24c
@@ -4885,8 +4885,8 @@ trackedFiles:
     pristine_git_object: 54e6faa01a8bd3a2e64b57e3819b6bc9d266b46b
   src/Meitner/Models/Components/EmployeeSearchEquals.cs:
     id: f43faf51280d
-    last_write_checksum: sha1:39d1cb22d374ae3b2cecacce6d76a92e0a80f88e
-    pristine_git_object: e66e8aa2e8217b38f711df4a647c5ed665a52314
+    last_write_checksum: sha1:46e5732d5dc9eddd50b40ab8dc7a6621a3aae253
+    pristine_git_object: 001f78d7f7506e7ff4e799cc1af6d62a2f5404e5
   src/Meitner/Models/Components/EmployeeSearchEqualsAddress.cs:
     id: aea42e58a812
     last_write_checksum: sha1:0ac69fbbe169558c2dafa734f3d36e06cb6e1317
@@ -4941,8 +4941,8 @@ trackedFiles:
     pristine_git_object: 8e47119164cc29b33c7762ea228a073dbbe0d506
   src/Meitner/Models/Components/EmployeeSearchLike.cs:
     id: 730b86084506
-    last_write_checksum: sha1:4fe1bdf42c1a6fa4d0976bb8c915c1c098488dee
-    pristine_git_object: 4ebb26178121dec4cb53052298f7c0b3be4ed974
+    last_write_checksum: sha1:854f8312dbb0c30acc1117f6591cb626e5afec2c
+    pristine_git_object: 040c6e33e7462d52b169470f03d73283d745c1ca
   src/Meitner/Models/Components/EmployeeSearchLikeAddress.cs:
     id: 2944732bb906
     last_write_checksum: sha1:904f1bdfc41afcba1e5621c4955d69a1f3080f2f
@@ -4957,8 +4957,8 @@ trackedFiles:
     pristine_git_object: d8a4d1764425cc7ebe9e37ba7bca08e9238f8796
   src/Meitner/Models/Components/EmployeeSearchNotContains.cs:
     id: 9eea87cf6da8
-    last_write_checksum: sha1:7e2d6044c124445655fa4f9006e951d7b6922ab1
-    pristine_git_object: b802c13bfc7fa8036e89ccb46f8ee66ed9289d08
+    last_write_checksum: sha1:034021ab0b19e93f04e0c046a209f356a0205478
+    pristine_git_object: 53f7be29b46d9e125be9e02cda135acf476a69b8
   src/Meitner/Models/Components/EmployeeSearchNotContainsAddress.cs:
     id: adebaf340a9b
     last_write_checksum: sha1:24191bae9737f9223ed1ccfc4a8d0ef4d7937c58
@@ -4973,8 +4973,8 @@ trackedFiles:
     pristine_git_object: 49a4b7d0c01c0c4517ff1d03420238c8be31af50
   src/Meitner/Models/Components/EmployeeSearchNotEquals.cs:
     id: 6bb4c92c64bd
-    last_write_checksum: sha1:372f072850a947c59f5f80d2c7ead8283841f8f5
-    pristine_git_object: 976104129fd835bb29f9c7c86df5ae40bcc6df70
+    last_write_checksum: sha1:2be23d5e2d9a213aed3badba3567a2775438a160
+    pristine_git_object: 65b8e9b2daf1d4a7ece933f2e9f489d6544fe2cb
   src/Meitner/Models/Components/EmployeeSearchNotEqualsAddress.cs:
     id: "996447297351"
     last_write_checksum: sha1:fba9ca4420269ef4ac5da4abd6d711ef2d5ac230
@@ -4993,8 +4993,8 @@ trackedFiles:
     pristine_git_object: 8cc15e3b86d7b92402914145f965be0363ba22a1
   src/Meitner/Models/Components/EmployeeSearchNotLike.cs:
     id: 57929e460292
-    last_write_checksum: sha1:9a8f452ad236ea771833bbda790e60c00e25351f
-    pristine_git_object: c758f25436aa03a4883920e7d4b4cf5093d242cf
+    last_write_checksum: sha1:564f5440c7bfb6ee421b32ec34e6ba5b6e081a13
+    pristine_git_object: c957e3a05386f165ca378f4cbb8f7f087dd53b9c
   src/Meitner/Models/Components/EmployeeSearchNotLikeAddress.cs:
     id: e0b664f852e2
     last_write_checksum: sha1:0302cdfd8533c76c9d4699d75e6de421247a0a91
@@ -5009,8 +5009,8 @@ trackedFiles:
     pristine_git_object: 6704bb215e4eefa6b79c83c4d87fd1516402209c
   src/Meitner/Models/Components/EmployeeSearchNotNull.cs:
     id: 358b0fb414c0
-    last_write_checksum: sha1:de7c0175aa2c15a0dbea1fe5d8658f55ef31c185
-    pristine_git_object: 7fae1b52ab9bc7a902e18fed549691922b1cc429
+    last_write_checksum: sha1:551cc4e26e516cfd67428d33b3103dfad26bb1b9
+    pristine_git_object: 9de65cdd585f3fe6d7a51048112dfb810132ad50
   src/Meitner/Models/Components/EmployeeSearchNotNullAddress.cs:
     id: f7951c592458
     last_write_checksum: sha1:00fecc147e7f9d2a82eb14c2cbb1cafa3dcdbd00
@@ -5025,8 +5025,8 @@ trackedFiles:
     pristine_git_object: 7923ae7d24f6a4986313cadcdc54d4857cb1d598
   src/Meitner/Models/Components/EmployeeSearchNull.cs:
     id: 35b86f8c3282
-    last_write_checksum: sha1:06a04d21594d7bd68910143646561229efb255c6
-    pristine_git_object: c6c547b5b3898cd5ed493e62808285f4a148face
+    last_write_checksum: sha1:23521998f21acbcde2f18c7e6024962c84ca4620
+    pristine_git_object: 73ece1a6d001f768e1425a441c7dfc189fe79542
   src/Meitner/Models/Components/EmployeeSearchNullAddress.cs:
     id: 060f44a0bdf4
     last_write_checksum: sha1:64f49348dc28b2ab9c9fbbb203ec1a39d5b77047
@@ -5085,8 +5085,8 @@ trackedFiles:
     pristine_git_object: 5b65e3cec11f6df32749d31ea22826393f43aa3c
   src/Meitner/Models/Components/EmployeeUpdate.cs:
     id: c7573fb549a5
-    last_write_checksum: sha1:3cabfb8c7eaaa0687b164572a65e782dac843cbf
-    pristine_git_object: 421e2fdfb9bbd91eaf927657b2db78611f883628
+    last_write_checksum: sha1:c303d40969321c5982a4db511e25485329d8da6e
+    pristine_git_object: ab1c7e7e2557529a0c4a1913d85be3001dbc9785
   src/Meitner/Models/Components/EmployeeUpdate422ResponseBodyError.cs:
     id: 75c486519607
     last_write_checksum: sha1:a99e8bebb36765e5d7fc126360f31e2a89e73dd2
@@ -6433,24 +6433,24 @@ trackedFiles:
     pristine_git_object: 51063f01c453c091dd2afbad7b054847c6deab4a
   src/Meitner/Models/Components/SecurityOption1.cs:
     id: 4f0a4046edf2
-    last_write_checksum: sha1:6eb36423f35b6aae80d4017ca8bc759da7829e94
-    pristine_git_object: 1a6c73f44dbe643f103497594f2f0e8f0d96b47a
+    last_write_checksum: sha1:86a5f8ce993b7c8ff91f2377249c39038ef10d09
+    pristine_git_object: c5823a4f75af24ee3ccc60f3d293f4ee03b486a5
   src/Meitner/Models/Components/SecurityOption2.cs:
     id: 68ec1ceeb291
     last_write_checksum: sha1:7b4f6a62a783163be77cfe6255dd145c9ba963cb
     pristine_git_object: 39eb0573aa75ca460bfd5a900810b2258e950f10
   src/Meitner/Models/Components/Student.cs:
     id: 7385e51c5df0
-    last_write_checksum: sha1:2e8a725470bf250a1e5e20cf0e8ae9fab70fccd6
-    pristine_git_object: 4d6f963f202bc297795f145efe53018fedf3cf26
+    last_write_checksum: sha1:902cbff3d8466232cf84b73c5f3555a0473a4505
+    pristine_git_object: 7d1241d06dfcf412bc839ffa5b6b0ee61a75d4f5
   src/Meitner/Models/Components/StudentAddress.cs:
     id: 2fefaff07a5b
     last_write_checksum: sha1:595dc60408e39ae3996968230f8783546d15d1a1
     pristine_git_object: d0d86da2ce6bf01118de274be99aa2aa57e13297
   src/Meitner/Models/Components/StudentCreate.cs:
     id: 59f1fda9f779
-    last_write_checksum: sha1:04ba2b09ed2497c87dd9b46716d5ebbad999fa97
-    pristine_git_object: 0ae6f615123d34df104a750f1321cf88ec042788
+    last_write_checksum: sha1:cae848e080f1477058c491babb56cd59354e1453
+    pristine_git_object: 7b4942ca0e84366b7e00a4756bc78cebef567bf6
   src/Meitner/Models/Components/StudentCreate422ResponseBodyError.cs:
     id: dcdf4febab3b
     last_write_checksum: sha1:0738cdc8f4a52e45d6ff9dda0d36151b1b1b4c65
@@ -6477,8 +6477,8 @@ trackedFiles:
     pristine_git_object: fe04b4adef64aef7f8db25a3c8397c835c2a9303
   src/Meitner/Models/Components/StudentFilterContains.cs:
     id: e8d38e77ebb9
-    last_write_checksum: sha1:3a30271a29cc5f6ee1b514c7af8d48502602d176
-    pristine_git_object: 64b5075832f62e2794cbb2b73a8cb7879aeedc1e
+    last_write_checksum: sha1:1663fd913f0b7652e42e0395cca663c41578b7ef
+    pristine_git_object: 60ea43b60e25c0c79f30bc16119c8662c0eeb0fb
   src/Meitner/Models/Components/StudentFilterContainsAddress.cs:
     id: 1145ea067725
     last_write_checksum: sha1:f8eb4a8be64b0324d40994f228a7b7b1a90056d8
@@ -6493,8 +6493,8 @@ trackedFiles:
     pristine_git_object: 48275a314725f8c966e2ee1594fc3ed030f22097
   src/Meitner/Models/Components/StudentFilterEquals.cs:
     id: 803839c9f80c
-    last_write_checksum: sha1:cf6699a8d966f6f6b4f4c8fadf20f90f7641b5e4
-    pristine_git_object: ef379f5a94f298bc0e47d99fb3ecce226900c0f5
+    last_write_checksum: sha1:80582218a39c34d1996d4c9516d9accda2adaf13
+    pristine_git_object: e6ce6e3de7543b9a3309aca300878474383ba98b
   src/Meitner/Models/Components/StudentFilterEqualsAddress.cs:
     id: 982cf04028f5
     last_write_checksum: sha1:5e1ff417ae39cde44a1b871848be6dc2e17dc83d
@@ -6545,8 +6545,8 @@ trackedFiles:
     pristine_git_object: 20b7faef02204d4620474bf71300eafb8f4e0d5e
   src/Meitner/Models/Components/StudentFilterLike.cs:
     id: 5f8117c8097f
-    last_write_checksum: sha1:9d16fa77d55f7c6fe383664bfd706455f6922b2a
-    pristine_git_object: 47a53cf825014cab0a1091bde64fc223a0bcf56e
+    last_write_checksum: sha1:ce27f5ba90bfcdd158ac86a3f5bfdc8582bd7d47
+    pristine_git_object: 612b518f5d57a9dd58c5a18f40f9cfa84276b9d6
   src/Meitner/Models/Components/StudentFilterLikeAddress.cs:
     id: 9e4be2c6557d
     last_write_checksum: sha1:d8f468515c6a75450fad53beb8b3580a861af997
@@ -6561,8 +6561,8 @@ trackedFiles:
     pristine_git_object: c03dbf83d5bd97dbc81e9a08343326a9a107c68b
   src/Meitner/Models/Components/StudentFilterNotContains.cs:
     id: 3646a08d1e26
-    last_write_checksum: sha1:c5377d44ce1f35891b10fb9998edc4a9fda04804
-    pristine_git_object: 4345c0d5599eef842d47d12ff75b0441802e5c09
+    last_write_checksum: sha1:fbf35b6dfaf05f2bfb3684cd0b2516bee06a3e8a
+    pristine_git_object: fefcd8e924aead6607d3b6812061e999ade860e9
   src/Meitner/Models/Components/StudentFilterNotContainsAddress.cs:
     id: 99d039eadb65
     last_write_checksum: sha1:6439ea464248b032039d399552036f417f5f5c0b
@@ -6577,8 +6577,8 @@ trackedFiles:
     pristine_git_object: 176d0c620fafe60643bb0fe10739aed7dcf11746
   src/Meitner/Models/Components/StudentFilterNotEquals.cs:
     id: 01f6ee42c2ac
-    last_write_checksum: sha1:3accbf8d5b0aa92cb82854a9e94f50c4cecd8eb0
-    pristine_git_object: 459ce084debb33d80a83831967176a3f7fb71fa1
+    last_write_checksum: sha1:931992bc77071454dfa950d8a8f2e9b7ea2cef8b
+    pristine_git_object: 066494b63d259b0098c334fce93fe677d60578ce
   src/Meitner/Models/Components/StudentFilterNotEqualsAddress.cs:
     id: 008b7301710b
     last_write_checksum: sha1:d0ed53258721633e5d0962eeda3fcef920e993ad
@@ -6597,8 +6597,8 @@ trackedFiles:
     pristine_git_object: adb9ee7ac8fc3c8277a0f24788c474cb4ac265ed
   src/Meitner/Models/Components/StudentFilterNotLike.cs:
     id: 5e9d8d4dac0b
-    last_write_checksum: sha1:fc59bbd05860f02526d6e186e8ae16ae94368aaf
-    pristine_git_object: 70e47fe1f6e5e965546649623929e24b32956f83
+    last_write_checksum: sha1:7a092ff43e7ccd9d2562a20ef50924e4548003bc
+    pristine_git_object: 7f7a8826e364369273880f513a2fa97f8d59236e
   src/Meitner/Models/Components/StudentFilterNotLikeAddress.cs:
     id: c8cf49946e49
     last_write_checksum: sha1:2c5a977ba9d3b5206a1a57325708816fa1b496ba
@@ -6613,8 +6613,8 @@ trackedFiles:
     pristine_git_object: 23ea320237218ffb92b94e6121c9b2067a0e6374
   src/Meitner/Models/Components/StudentFilterNotNull.cs:
     id: 06ca57fa1a72
-    last_write_checksum: sha1:0ede5e0c9ff1a5af8791256dcdff7e5b3a744be7
-    pristine_git_object: 885fea5908ec8a3972bbee708cafd2147a625b9f
+    last_write_checksum: sha1:c6a7157878dee084ed2701820b8546f2a08c0313
+    pristine_git_object: 8b0ebe70fd98ebbb1b545e75cd1b55656994c4c5
   src/Meitner/Models/Components/StudentFilterNotNullAddress.cs:
     id: ee8219a20679
     last_write_checksum: sha1:8ce73459dea4b0b008835e0e298c2523c39a4007
@@ -6629,8 +6629,8 @@ trackedFiles:
     pristine_git_object: b8133dd93fd6143e4983d2666c371cbab90d6d5b
   src/Meitner/Models/Components/StudentFilterNull.cs:
     id: c6d5ecb9daa4
-    last_write_checksum: sha1:194a107574d35732948d65dc2423a93cf0de35fb
-    pristine_git_object: c8dd6667eaf0f92958189a42f73e0ac44ff19489
+    last_write_checksum: sha1:cabe24bf68a2fc116739ece407f4ca11ed714f61
+    pristine_git_object: c079f534cde741830930a1f953145f01861d9b8d
   src/Meitner/Models/Components/StudentFilterNullAddress.cs:
     id: d44c979d4478
     last_write_checksum: sha1:ca40769c995aa6b08acce4e2d1f52d693c5e666f
@@ -7141,8 +7141,8 @@ trackedFiles:
     pristine_git_object: 9eb9df778f970e59a2cab452c2016f7b37ca56a8
   src/Meitner/Models/Components/StudentSearchContains.cs:
     id: f28fbaafe326
-    last_write_checksum: sha1:403de371853e6d80552525ae9c79e36a641946a1
-    pristine_git_object: 36680c2cd2f9519831be51de8689e5dd362e4f9f
+    last_write_checksum: sha1:1ea99e9ef788a121333b3b736e4062fc6eafb4a6
+    pristine_git_object: 6f49c1362a7afa0a5820eb7f68c5770c87953720
   src/Meitner/Models/Components/StudentSearchContainsAddress.cs:
     id: aa97fc85581d
     last_write_checksum: sha1:e15390484072842f6e13817eb6c81c9c9c6114bf
@@ -7157,8 +7157,8 @@ trackedFiles:
     pristine_git_object: 1f7f7470986080d8d9b6a71e98d12360d91d1d84
   src/Meitner/Models/Components/StudentSearchEquals.cs:
     id: 130f1a460c7f
-    last_write_checksum: sha1:c5d4b21fe547b03c75890f158ad5b80027eab40c
-    pristine_git_object: f561131d25bb74ef24c4a81e327e97e9b9b142c6
+    last_write_checksum: sha1:a8ede56494282514b955760d546df2b39ddbdc68
+    pristine_git_object: 3a50567b444e4d369e07d5b74870815239b2d4b5
   src/Meitner/Models/Components/StudentSearchEqualsAddress.cs:
     id: 18ad66cee082
     last_write_checksum: sha1:ecbb291b190e8356309cfb7c5168c278a3fd35b4
@@ -7213,8 +7213,8 @@ trackedFiles:
     pristine_git_object: 54393165f650e7295b95e9b27ec25bd08e5e1343
   src/Meitner/Models/Components/StudentSearchLike.cs:
     id: 91afb65a5081
-    last_write_checksum: sha1:d55cf08225796b8a8288e4d166ea37b1d0deeeee
-    pristine_git_object: ae3bc294b9a9caac4e4a20b8727374ef6dea010f
+    last_write_checksum: sha1:3bfbc9dcc8dce0374fde347173f78356bf869208
+    pristine_git_object: 067588990251aec222c5d4d282e4eae20cf4b305
   src/Meitner/Models/Components/StudentSearchLikeAddress.cs:
     id: 49f20374f6c5
     last_write_checksum: sha1:ed4497b20ab91b41ee31083e57d72d8c66ecc881
@@ -7229,8 +7229,8 @@ trackedFiles:
     pristine_git_object: fa7458837dc3421d0176861c185d0c7303a9c322
   src/Meitner/Models/Components/StudentSearchNotContains.cs:
     id: 937cdf4d27f3
-    last_write_checksum: sha1:49d9d73f92714b20aa231246fcfff34ece61d1b6
-    pristine_git_object: 41d402d05548928065825ed8863f3c9fa9654f58
+    last_write_checksum: sha1:36ea7a406441f160f50129c2d1c3edcb7a315845
+    pristine_git_object: 35a28848bd6584016007775ab7c78051828381c4
   src/Meitner/Models/Components/StudentSearchNotContainsAddress.cs:
     id: 13523f2aa1d3
     last_write_checksum: sha1:b76e451cbdc88e0a7c5414c1ed110b219ea3e78b
@@ -7245,8 +7245,8 @@ trackedFiles:
     pristine_git_object: 479348add439156067efc480a26939757a25187b
   src/Meitner/Models/Components/StudentSearchNotEquals.cs:
     id: 12aa434fa6a3
-    last_write_checksum: sha1:de5c6f71623f355fe48d52814b8a10d5b7deee8a
-    pristine_git_object: ac662d9ed65410547c83d1f869f944559ffcc061
+    last_write_checksum: sha1:8265c3af01cb6ab2d0dcd22f9a9e984a0acfdd26
+    pristine_git_object: b6d324d57f85f40c6c6392b9132a4dc33354d5c9
   src/Meitner/Models/Components/StudentSearchNotEqualsAddress.cs:
     id: 0514dff65a50
     last_write_checksum: sha1:ac69e6b06d7571bb074fd2134f5846d74472bd0b
@@ -7265,8 +7265,8 @@ trackedFiles:
     pristine_git_object: 27797f521973ecb044177f07b4fb5be34a01a66b
   src/Meitner/Models/Components/StudentSearchNotLike.cs:
     id: f071c0d2fd82
-    last_write_checksum: sha1:7fc60cce5eef5d7f5fb81bbd29b18311ac2bf575
-    pristine_git_object: d9f1ef71da9abf8015bb18a5cb93e1282d6c3f26
+    last_write_checksum: sha1:1fa2b19d0087b4ab63179128f1da32fb07365fdf
+    pristine_git_object: 177327d107d86be39f143e682dea2febba8416ab
   src/Meitner/Models/Components/StudentSearchNotLikeAddress.cs:
     id: c4c057a0597f
     last_write_checksum: sha1:3736aca6ceab104cc1e6245a4f93509dc9a24c3a
@@ -7281,8 +7281,8 @@ trackedFiles:
     pristine_git_object: 34ce3721b72c89031e6778f4101851a300c23e87
   src/Meitner/Models/Components/StudentSearchNotNull.cs:
     id: fdaf7ebb8221
-    last_write_checksum: sha1:dbfd3a4be06bfc57d2f752f9834feb7b0c771370
-    pristine_git_object: ac97c16e0b75b7231f96d8faf5753ec336267545
+    last_write_checksum: sha1:4308623ec445218c077b7ed6d82e1eba6de3774c
+    pristine_git_object: 82e4be95be7be4cde939e6508f4142818bd3613b
   src/Meitner/Models/Components/StudentSearchNotNullAddress.cs:
     id: b0d2b06b125f
     last_write_checksum: sha1:aab0ac7fd928bf0f9f16c11baf31d9260a8847aa
@@ -7297,8 +7297,8 @@ trackedFiles:
     pristine_git_object: 25a256175656f593f39d676b73f58803e9e14082
   src/Meitner/Models/Components/StudentSearchNull.cs:
     id: ecb19d05f768
-    last_write_checksum: sha1:1068e3bbe40d47080b095fc9c6c0931f42147b04
-    pristine_git_object: bb74e998bf74d363679cb4b3446586df562c0461
+    last_write_checksum: sha1:9ef87abfb6705aad4e8fd69eac69149677bba8b8
+    pristine_git_object: 00cb75f5f20e69bc053fb694d58302aecf91a988
   src/Meitner/Models/Components/StudentSearchNullAddress.cs:
     id: a8a9c5d98f05
     last_write_checksum: sha1:bc8836c4c8188bf6e46e3a901d538830c99e077d
@@ -7357,8 +7357,8 @@ trackedFiles:
     pristine_git_object: c355ac9a69f23315bce2daa0bfba155eb59fb1e1
   src/Meitner/Models/Components/StudentUpdate.cs:
     id: 69c2bb85ba0a
-    last_write_checksum: sha1:f7bf43df73e8f7631fe1bd06a62dc0a42738144e
-    pristine_git_object: bfe933b8de49640edebdbd45b4655b6013bcb722
+    last_write_checksum: sha1:339f2d87be5fcdda0ad9744a37fc91915864de9a
+    pristine_git_object: 24106a7b61b37bda659010ce93025a9f3470cb81
   src/Meitner/Models/Components/StudentUpdate422ResponseBodyError.cs:
     id: 9f379381a019
     last_write_checksum: sha1:9ef54e371b98fb14d3879595e7ac389bc8e86161
@@ -7845,8 +7845,8 @@ trackedFiles:
     pristine_git_object: c388a5824adb6bd37e28fce98e9b30f0eeb09001
   src/Meitner/SDKConfig.cs:
     id: 76b7b2320f7e
-    last_write_checksum: sha1:d7009b6e7305b574ba714d5456d7aef9df666c9b
-    pristine_git_object: a317d91148d5ffebb5c96ad8213e78e31620e37c
+    last_write_checksum: sha1:308f1a8bd63ea81524ca1d7d94d00c26079e092f
+    pristine_git_object: 929b926262f9f8be2cb0d6298e0ede054bcf5ad0
   src/Meitner/Schools.cs:
     id: 123ea3045683
     last_write_checksum: sha1:feea07e95e9d0265184983bfa8921bd99ae7e970
@@ -7869,8 +7869,8 @@ trackedFiles:
     pristine_git_object: b6fc27aa15229bb5ebefc4d9b9820f2b09458034
   src/Meitner/Utils/Constants.cs:
     id: 7bbeab0ba4b4
-    last_write_checksum: sha1:ffc531769feaa12eb14895306f1b61d30531a4f3
-    pristine_git_object: 5b86763ae0443a5c53d0a0afac024b654770fcd1
+    last_write_checksum: sha1:a0ecccf3784f7b95af683da67549d859af20b300
+    pristine_git_object: 570e3371dc7f512f000ee589f6eba28e1b01ed29
   src/Meitner/Utils/DecimalStrConverter.cs:
     id: 42954e25c852
     last_write_checksum: sha1:e64015d0352c7041f3ec262e188f9c75ccc298f5
@@ -7921,20 +7921,20 @@ trackedFiles:
     pristine_git_object: a3ae4a0f3b5d820d61d4ddeacf6e1e759cb5e7c7
   src/Meitner/Utils/SecurityMetadata.cs:
     id: e509f852e011
-    last_write_checksum: sha1:61d6770ca0ee2f49dd305e8c3dc40c848057bf74
-    pristine_git_object: d5b057d8b46e3c2d3a5067fe6bca5ecc7de3a37f
+    last_write_checksum: sha1:ec6d3b121598f445b64af7059265050af452a6ab
+    pristine_git_object: 6486a67acd4e024f795856955c5e8c731162889e
   src/Meitner/Utils/SpeakeasyMetadata.cs:
     id: d37227a22bc3
-    last_write_checksum: sha1:2530e77ff8c1ecb4281c05d3d70dcfbb611ccf0a
-    pristine_git_object: 9b88d79d4d3de379e1a0c8f088bed39bb2f24758
+    last_write_checksum: sha1:b30296d0d14a5d689a77e4ab60683c54ff2579bc
+    pristine_git_object: 38376c90bdef23f801dbbd0977fb31bdb2cc32fa
   src/Meitner/Utils/URLBuilder.cs:
     id: 0adf5ce35d6a
     last_write_checksum: sha1:fdbfcf1f544c101b81258955fa38b166aba4f9e3
     pristine_git_object: 83042dac104f05ec2e7bb73455034c771295e480
   src/Meitner/Utils/Utilities.cs:
     id: fb4447c08379
-    last_write_checksum: sha1:25ccf066c39937ec5a69a524e4020b9bbadd085b
-    pristine_git_object: 59bc07ba3af5eb7ca24ba9a772df0201b18ed8d4
+    last_write_checksum: sha1:d2f40c9d07beefbfc2200fa07e49c52b73c43952
+    pristine_git_object: b324bb4aecc966e3e862ae10df494c70e5f8b86b
 examples:
   SchoolList:
     responseExample:
@@ -8469,7 +8469,7 @@ examples:
           offset: 0
       responses:
         "200":
-          application/json: {"data": [{"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567"}], "pagination": {"offset": 0, "limit": 1, "total": 100}}
+          application/json: {"data": [{"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}], "pagination": {"offset": 0, "limit": 1, "total": 100}}
     errorExample:
       parameters:
         query:
@@ -8493,10 +8493,10 @@ examples:
   EmployeeCreate:
     requestExample:
       requestBody:
-        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567"}
+        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
       responses:
         "201":
-          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567"}
+          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
         "400":
           application/json: {"error": {"code": "BadRequest", "message": "The request contains invalid parameters or malformed data", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
         "401":
@@ -8515,13 +8515,13 @@ examples:
           application/json: {"error": {"code": "BadRequest", "message": "The request contains invalid parameters or malformed data", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
     responseExample:
       requestBody:
-        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567"}
+        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
       responses:
         "201":
-          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567"}
+          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
     errorExample:
       requestBody:
-        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567"}
+        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
       responses:
         "400":
           application/json: {"error": {"code": "BadRequest", "message": "The request contains invalid parameters or malformed data", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
@@ -8539,7 +8539,7 @@ examples:
           application/json: {"error": {"code": "Internal", "message": "An unexpected server error occurred", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
     validationError:
       requestBody:
-        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567"}
+        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
       responses:
         "422":
           application/json: {"error": {"code": "UnprocessableEntity", "message": "Validation failed for Employee Create endpoint", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
@@ -8550,7 +8550,7 @@ examples:
           limit: 1
           offset: 0
       requestBody:
-        application/json: {"filter": {"equals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "notEquals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "greaterThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "greaterOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "contains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"]}, "notContains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"]}, "like": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "notLike": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "null": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true}, "notNull": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true}, "orCondition": true}}
+        application/json: {"filter": {"equals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "notEquals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "greaterThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "greaterOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "contains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"], "eduPersonPrincipalName": ["example"]}, "notContains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"], "eduPersonPrincipalName": ["example"]}, "like": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "notLike": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "null": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true, "eduPersonPrincipalName": true}, "notNull": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true, "eduPersonPrincipalName": true}, "orCondition": true}}
       responses:
         "200":
           application/json: {"data": [{"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567"}], "pagination": {"offset": 0, "limit": 1, "total": 100}}
@@ -8576,17 +8576,17 @@ examples:
           limit: 1
           offset: 0
       requestBody:
-        application/json: {"filter": {"equals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "notEquals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "greaterThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "greaterOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "contains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"]}, "notContains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"]}, "like": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "notLike": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "null": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true}, "notNull": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true}, "orCondition": true}}
+        application/json: {"filter": {"equals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "notEquals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "greaterThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "greaterOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "contains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"], "eduPersonPrincipalName": ["example"]}, "notContains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"], "eduPersonPrincipalName": ["example"]}, "like": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "notLike": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "null": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true, "eduPersonPrincipalName": true}, "notNull": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true, "eduPersonPrincipalName": true}, "orCondition": true}}
       responses:
         "200":
-          application/json: {"data": [{"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567"}], "pagination": {"offset": 0, "limit": 1, "total": 100}}
+          application/json: {"data": [{"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}], "pagination": {"offset": 0, "limit": 1, "total": 100}}
     errorExample:
       parameters:
         query:
           limit: 1
           offset: 0
       requestBody:
-        application/json: {"filter": {"equals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "notEquals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "greaterThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "greaterOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "contains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"]}, "notContains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"]}, "like": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "notLike": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "null": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true}, "notNull": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true}, "orCondition": true}}
+        application/json: {"filter": {"equals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "notEquals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "greaterThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "greaterOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "contains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"], "eduPersonPrincipalName": ["example"]}, "notContains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"], "eduPersonPrincipalName": ["example"]}, "like": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "notLike": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "null": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true, "eduPersonPrincipalName": true}, "notNull": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true, "eduPersonPrincipalName": true}, "orCondition": true}}
       responses:
         "400":
           application/json: {"error": {"code": "BadRequest", "message": "The request contains invalid parameters or malformed data", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
@@ -8608,7 +8608,7 @@ examples:
           limit: 1
           offset: 0
       requestBody:
-        application/json: {"filter": {"equals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "notEquals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "greaterThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "greaterOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "contains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"]}, "notContains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"]}, "like": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "notLike": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "null": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true}, "notNull": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true}, "orCondition": true}}
+        application/json: {"filter": {"equals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "notEquals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "greaterThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "greaterOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "contains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"], "eduPersonPrincipalName": ["example"]}, "notContains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"], "eduPersonPrincipalName": ["example"]}, "like": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "notLike": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "null": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true, "eduPersonPrincipalName": true}, "notNull": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true, "eduPersonPrincipalName": true}, "orCondition": true}}
       responses:
         "422":
           application/json: {"error": {"code": "UnprocessableEntity", "message": "Validation failed for Employee Search endpoint", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
@@ -8619,7 +8619,7 @@ examples:
           id: "123e4567-e89b-12d3-a456-426614174000"
       responses:
         "200":
-          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567"}
+          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
     errorExample:
       parameters:
         path:
@@ -8684,10 +8684,10 @@ examples:
         path:
           id: "123e4567-e89b-12d3-a456-426614174000"
       requestBody:
-        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567"}
+        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
       responses:
         "200":
-          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567"}
+          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
         "400":
           application/json: {"error": {"code": "BadRequest", "message": "The request contains invalid parameters or malformed data", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
         "401":
@@ -8709,16 +8709,16 @@ examples:
         path:
           id: "123e4567-e89b-12d3-a456-426614174000"
       requestBody:
-        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567"}
+        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
       responses:
         "200":
-          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567"}
+          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
     errorExample:
       parameters:
         path:
           id: "123e4567-e89b-12d3-a456-426614174000"
       requestBody:
-        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567"}
+        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
       responses:
         "400":
           application/json: {"error": {"code": "BadRequest", "message": "The request contains invalid parameters or malformed data", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
@@ -8739,7 +8739,7 @@ examples:
         path:
           id: "123e4567-e89b-12d3-a456-426614174000"
       requestBody:
-        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567"}
+        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "+46701234567", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
       responses:
         "422":
           application/json: {"error": {"code": "UnprocessableEntity", "message": "Validation failed for Employee Update endpoint", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
@@ -9315,7 +9315,7 @@ examples:
           offset: 0
       responses:
         "200":
-          application/json: {"data": [{"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example"}], "pagination": {"offset": 0, "limit": 1, "total": 100}}
+          application/json: {"data": [{"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}], "pagination": {"offset": 0, "limit": 1, "total": 100}}
     errorExample:
       parameters:
         query:
@@ -9339,10 +9339,10 @@ examples:
   StudentCreate:
     requestExample:
       requestBody:
-        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example"}
+        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
       responses:
         "201":
-          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example"}
+          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
         "400":
           application/json: {"error": {"code": "BadRequest", "message": "The request contains invalid parameters or malformed data", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
         "401":
@@ -9361,13 +9361,13 @@ examples:
           application/json: {"error": {"code": "BadRequest", "message": "The request contains invalid parameters or malformed data", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
     responseExample:
       requestBody:
-        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example"}
+        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
       responses:
         "201":
-          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example"}
+          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
     errorExample:
       requestBody:
-        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example"}
+        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
       responses:
         "400":
           application/json: {"error": {"code": "BadRequest", "message": "The request contains invalid parameters or malformed data", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
@@ -9385,7 +9385,7 @@ examples:
           application/json: {"error": {"code": "Internal", "message": "An unexpected server error occurred", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
     validationError:
       requestBody:
-        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example"}
+        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
       responses:
         "422":
           application/json: {"error": {"code": "UnprocessableEntity", "message": "Validation failed for Student Create endpoint", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
@@ -9396,7 +9396,7 @@ examples:
           limit: 1
           offset: 0
       requestBody:
-        application/json: {"filter": {"equals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "notEquals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "greaterThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "greaterOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "contains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"]}, "notContains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"]}, "like": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "notLike": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "null": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true}, "notNull": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true}, "orCondition": true}}
+        application/json: {"filter": {"equals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "notEquals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "greaterThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "greaterOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "contains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"], "eduPersonPrincipalName": ["example"]}, "notContains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"], "eduPersonPrincipalName": ["example"]}, "like": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "notLike": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "null": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true, "eduPersonPrincipalName": true}, "notNull": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true, "eduPersonPrincipalName": true}, "orCondition": true}}
       responses:
         "200":
           application/json: {"data": [{"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example"}], "pagination": {"offset": 0, "limit": 1, "total": 100}}
@@ -9422,17 +9422,17 @@ examples:
           limit: 1
           offset: 0
       requestBody:
-        application/json: {"filter": {"equals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "notEquals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "greaterThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "greaterOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "contains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"]}, "notContains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"]}, "like": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "notLike": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "null": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true}, "notNull": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true}, "orCondition": true}}
+        application/json: {"filter": {"equals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "notEquals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "greaterThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "greaterOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "contains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"], "eduPersonPrincipalName": ["example"]}, "notContains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"], "eduPersonPrincipalName": ["example"]}, "like": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "notLike": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "null": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true, "eduPersonPrincipalName": true}, "notNull": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true, "eduPersonPrincipalName": true}, "orCondition": true}}
       responses:
         "200":
-          application/json: {"data": [{"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example"}], "pagination": {"offset": 0, "limit": 1, "total": 100}}
+          application/json: {"data": [{"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}], "pagination": {"offset": 0, "limit": 1, "total": 100}}
     errorExample:
       parameters:
         query:
           limit: 1
           offset: 0
       requestBody:
-        application/json: {"filter": {"equals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "notEquals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "greaterThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "greaterOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "contains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"]}, "notContains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"]}, "like": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "notLike": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "null": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true}, "notNull": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true}, "orCondition": true}}
+        application/json: {"filter": {"equals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "notEquals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "greaterThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "greaterOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "contains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"], "eduPersonPrincipalName": ["example"]}, "notContains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"], "eduPersonPrincipalName": ["example"]}, "like": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "notLike": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "null": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true, "eduPersonPrincipalName": true}, "notNull": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true, "eduPersonPrincipalName": true}, "orCondition": true}}
       responses:
         "400":
           application/json: {"error": {"code": "BadRequest", "message": "The request contains invalid parameters or malformed data", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
@@ -9454,7 +9454,7 @@ examples:
           limit: 1
           offset: 0
       requestBody:
-        application/json: {"filter": {"equals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "notEquals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "greaterThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "greaterOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "contains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"]}, "notContains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"]}, "like": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "notLike": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example"}, "null": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true}, "notNull": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true}, "orCondition": true}}
+        application/json: {"filter": {"equals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "notEquals": {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "123e4567-e89b-12d3-a456-426614174000", "updatedAt": "2024-01-15T10:30:00Z", "updatedBy": "123e4567-e89b-12d3-a456-426614174000"}, "external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "identityTemporary": true, "firstName": "example", "lastName": "example", "dateOfBirth": "2024-01-15", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "greaterThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerThan": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "greaterOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "smallerOrEqual": {"meta": {"createdAt": "2024-01-15T10:30:00Z", "updatedAt": "2024-01-15T10:30:00Z"}, "dateOfBirth": "2024-01-15"}, "contains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"], "eduPersonPrincipalName": ["example"]}, "notContains": {"id": ["123e4567-e89b-12d3-a456-426614174000"], "meta": {"createdBy": ["123e4567-e89b-12d3-a456-426614174000"], "updatedBy": ["123e4567-e89b-12d3-a456-426614174000"]}, "external": {"sourceID": ["example"], "source": ["example"]}, "identityNumber": ["example"], "identityTemporary": [true], "firstName": ["example"], "lastName": ["example"], "dateOfBirth": ["2024-01-15"], "address": {"postalAddress": ["example"], "postalCode": ["example"], "postalCity": ["example"], "countryCode": ["example"], "municipalityCode": ["example"]}, "emailAddress1": ["example"], "emailAddress2": ["example"], "phoneNumber1": ["example"], "phoneNumber2": ["example"], "eduPersonPrincipalName": ["example"]}, "like": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "notLike": {"external": {"sourceID": "example", "source": "example"}, "identityNumber": "example", "firstName": "example", "lastName": "example", "address": {"postalAddress": "example", "postalCode": "example", "postalCity": "example", "countryCode": "example", "municipalityCode": "example"}, "emailAddress1": "example", "emailAddress2": "example", "phoneNumber1": "example", "phoneNumber2": "example", "eduPersonPrincipalName": "example"}, "null": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true, "eduPersonPrincipalName": true}, "notNull": {"meta": {"createdBy": true, "updatedAt": true, "updatedBy": true}, "external": {"sourceID": true, "source": true}, "gender": true, "dateOfBirth": true, "address": {"postalAddress": true, "postalCode": true, "postalCity": true, "countryCode": true, "municipalityCode": true}, "emailAddress1": true, "emailAddress2": true, "phoneNumber1": true, "phoneNumber2": true, "eduPersonPrincipalName": true}, "orCondition": true}}
       responses:
         "422":
           application/json: {"error": {"code": "UnprocessableEntity", "message": "Validation failed for Student Search endpoint", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
@@ -9465,7 +9465,7 @@ examples:
           id: "123e4567-e89b-12d3-a456-426614174000"
       responses:
         "200":
-          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example"}
+          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
     errorExample:
       parameters:
         path:
@@ -9530,10 +9530,10 @@ examples:
         path:
           id: "123e4567-e89b-12d3-a456-426614174000"
       requestBody:
-        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example"}
+        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
       responses:
         "200":
-          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example"}
+          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
         "400":
           application/json: {"error": {"code": "BadRequest", "message": "The request contains invalid parameters or malformed data", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
         "401":
@@ -9555,16 +9555,16 @@ examples:
         path:
           id: "123e4567-e89b-12d3-a456-426614174000"
       requestBody:
-        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example"}
+        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
       responses:
         "200":
-          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example"}
+          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "meta": {"createdAt": "2024-01-15T10:30:00Z", "createdBy": "987fcdeb-51a2-43d1-b567-123456789abc", "updatedAt": "2024-01-15T14:45:00Z", "updatedBy": "987fcdeb-51a2-43d1-b567-123456789abc"}, "external": {"sourceID": "12345678", "source": "ExternalIntegrationAPI"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
     errorExample:
       parameters:
         path:
           id: "123e4567-e89b-12d3-a456-426614174000"
       requestBody:
-        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example"}
+        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
       responses:
         "400":
           application/json: {"error": {"code": "BadRequest", "message": "The request contains invalid parameters or malformed data", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
@@ -9585,7 +9585,7 @@ examples:
         path:
           id: "123e4567-e89b-12d3-a456-426614174000"
       requestBody:
-        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example"}
+        application/json: {"external": {"sourceID": "12345678"}, "gender": "Female", "identityNumber": "20191216-1234", "identityTemporary": true, "firstName": "Lise", "lastName": "Meitner", "dateOfBirth": "2019-12-16", "address": {"postalAddress": "Dalvägen 14", "postalCode": "169 56", "postalCity": "Solna", "countryCode": "SWE", "municipalityCode": "0184"}, "emailAddress1": "lise@meitner.se", "emailAddress2": "lise@gmail.com", "phoneNumber1": "+46701234567", "phoneNumber2": "example", "eduPersonPrincipalName": "kalko@edu.goteborg.se"}
       responses:
         "422":
           application/json: {"error": {"code": "UnprocessableEntity", "message": "Validation failed for Student Update endpoint", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
@@ -10051,6 +10051,7 @@ examples:
         "500":
           application/json: {"error": {"code": "Internal", "message": "An unexpected server error occurred", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
 examplesVersion: 1.0.2
+releaseNotes: "## Csharp SDK Changes:\n* `Meitner.Employees.List()`:  `response.data[].EduPersonPrincipalName` **Added**\n* `Meitner.Employees.Create()`: \n  *  `request.EduPersonPrincipalName` **Added**\n  *  `response.eduPersonPrincipalName` **Added**\n* `Meitner.Employees.Search()`: \n  *  `request.employeeSearch.Filter` **Changed**\n  *  `response.data[].EduPersonPrincipalName` **Added**\n* `Meitner.Employees.Get()`:  `response.eduPersonPrincipalName` **Added**\n* `Meitner.Employees.Update()`: \n  *  `request.employeeUpdate.EduPersonPrincipalName` **Added**\n  *  `response.eduPersonPrincipalName` **Added**\n* `Meitner.Students.List()`:  `response.data[].EduPersonPrincipalName` **Added**\n* `Meitner.Students.Create()`: \n  *  `request.EduPersonPrincipalName` **Added**\n  *  `response.eduPersonPrincipalName` **Added**\n* `Meitner.Students.Search()`: \n  *  `request.studentSearch.Filter` **Changed**\n  *  `response.data[].EduPersonPrincipalName` **Added**\n* `Meitner.Students.Get()`:  `response.eduPersonPrincipalName` **Added**\n* `Meitner.Students.Update()`: \n  *  `request.studentUpdate.EduPersonPrincipalName` **Added**\n  *  `response.eduPersonPrincipalName` **Added**\n"
 generatedFiles:
   - .gitattributes
   - Meitner.sln

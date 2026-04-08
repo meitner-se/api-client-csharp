@@ -103,5 +103,12 @@ namespace Meitner.Models.Components
         /// </summary>
         [JsonProperty("phoneNumber2")]
         public string? PhoneNumber2 { get; set; } = null;
+
+        /// <summary>
+        /// The eduPersonPrincipalName (EPPN) of the employee, as defined in the SS12000:2020 standard (TK450). A globally unique, persistent identifier used to identify users across Swedish e-services (e-tjänster).<br/>
+        /// Format: `localIdentifier@domain` — e.g. `kalko@edu.goteborg.se`
+        /// </summary>
+        [JsonProperty("eduPersonPrincipalName")]
+        public string? EduPersonPrincipalName { get; set; } = null;
     }
 }
