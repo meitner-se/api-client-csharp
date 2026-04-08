@@ -107,6 +107,7 @@ EmployeeCreate req = new EmployeeCreate() {
     EmailAddress2 = "lise@gmail.com",
     PhoneNumber1 = "+46701234567",
     PhoneNumber2 = "+46701234567",
+    EduPersonPrincipalName = "kalko@edu.goteborg.se",
 };
 
 var res = await sdk.Employees.CreateAsync(req);
@@ -149,6 +150,7 @@ EmployeeCreate req = new EmployeeCreate() {
     EmailAddress2 = "lise@gmail.com",
     PhoneNumber1 = "+46701234567",
     PhoneNumber2 = "+46701234567",
+    EduPersonPrincipalName = "kalko@edu.goteborg.se",
 };
 
 var res = await sdk.Employees.CreateAsync(req);
@@ -191,6 +193,7 @@ EmployeeCreate req = new EmployeeCreate() {
     EmailAddress2 = "lise@gmail.com",
     PhoneNumber1 = "+46701234567",
     PhoneNumber2 = "+46701234567",
+    EduPersonPrincipalName = "kalko@edu.goteborg.se",
 };
 
 var res = await sdk.Employees.CreateAsync(req);
@@ -233,6 +236,7 @@ EmployeeCreate req = new EmployeeCreate() {
     EmailAddress2 = "lise@gmail.com",
     PhoneNumber1 = "+46701234567",
     PhoneNumber2 = "+46701234567",
+    EduPersonPrincipalName = "kalko@edu.goteborg.se",
 };
 
 var res = await sdk.Employees.CreateAsync(req);
@@ -315,6 +319,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = "example",
                 PhoneNumber1 = "example",
                 PhoneNumber2 = "example",
+                EduPersonPrincipalName = "example",
             },
             NotEquals = new EmployeeSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
@@ -344,6 +349,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = "example",
                 PhoneNumber1 = "example",
                 PhoneNumber2 = "example",
+                EduPersonPrincipalName = "example",
             },
             GreaterThan = new EmployeeSearchGreaterThan() {
                 Meta = new EmployeeSearchGreaterThanMeta() {
@@ -437,6 +443,9 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 PhoneNumber2 = new List<string>() {
                     "example",
                 },
+                EduPersonPrincipalName = new List<string>() {
+                    "example",
+                },
             },
             NotContains = new EmployeeSearchNotContains() {
                 Id = new List<string>() {
@@ -502,6 +511,9 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 PhoneNumber2 = new List<string>() {
                     "example",
                 },
+                EduPersonPrincipalName = new List<string>() {
+                    "example",
+                },
             },
             Like = new EmployeeSearchLike() {
                 External = new EmployeeSearchLikeExternal() {
@@ -522,6 +534,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = "example",
                 PhoneNumber1 = "example",
                 PhoneNumber2 = "example",
+                EduPersonPrincipalName = "example",
             },
             NotLike = new EmployeeSearchNotLike() {
                 External = new EmployeeSearchNotLikeExternal() {
@@ -542,6 +555,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = "example",
                 PhoneNumber1 = "example",
                 PhoneNumber2 = "example",
+                EduPersonPrincipalName = "example",
             },
             Null = new EmployeeSearchNull() {
                 Meta = new EmployeeSearchNullMeta() {
@@ -566,6 +580,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = true,
                 PhoneNumber1 = true,
                 PhoneNumber2 = true,
+                EduPersonPrincipalName = true,
             },
             NotNull = new EmployeeSearchNotNull() {
                 Meta = new EmployeeSearchNotNullMeta() {
@@ -590,6 +605,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = true,
                 PhoneNumber1 = true,
                 PhoneNumber2 = true,
+                EduPersonPrincipalName = true,
             },
             OrCondition = true,
         },
@@ -652,6 +668,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = "example",
                 PhoneNumber1 = "example",
                 PhoneNumber2 = "example",
+                EduPersonPrincipalName = "example",
             },
             NotEquals = new EmployeeSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
@@ -681,6 +698,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = "example",
                 PhoneNumber1 = "example",
                 PhoneNumber2 = "example",
+                EduPersonPrincipalName = "example",
             },
             GreaterThan = new EmployeeSearchGreaterThan() {
                 Meta = new EmployeeSearchGreaterThanMeta() {
@@ -774,6 +792,9 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 PhoneNumber2 = new List<string>() {
                     "example",
                 },
+                EduPersonPrincipalName = new List<string>() {
+                    "example",
+                },
             },
             NotContains = new EmployeeSearchNotContains() {
                 Id = new List<string>() {
@@ -839,6 +860,9 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 PhoneNumber2 = new List<string>() {
                     "example",
                 },
+                EduPersonPrincipalName = new List<string>() {
+                    "example",
+                },
             },
             Like = new EmployeeSearchLike() {
                 External = new EmployeeSearchLikeExternal() {
@@ -859,6 +883,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = "example",
                 PhoneNumber1 = "example",
                 PhoneNumber2 = "example",
+                EduPersonPrincipalName = "example",
             },
             NotLike = new EmployeeSearchNotLike() {
                 External = new EmployeeSearchNotLikeExternal() {
@@ -879,6 +904,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = "example",
                 PhoneNumber1 = "example",
                 PhoneNumber2 = "example",
+                EduPersonPrincipalName = "example",
             },
             Null = new EmployeeSearchNull() {
                 Meta = new EmployeeSearchNullMeta() {
@@ -903,6 +929,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = true,
                 PhoneNumber1 = true,
                 PhoneNumber2 = true,
+                EduPersonPrincipalName = true,
             },
             NotNull = new EmployeeSearchNotNull() {
                 Meta = new EmployeeSearchNotNullMeta() {
@@ -927,6 +954,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = true,
                 PhoneNumber1 = true,
                 PhoneNumber2 = true,
+                EduPersonPrincipalName = true,
             },
             OrCondition = true,
         },
@@ -989,6 +1017,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = "example",
                 PhoneNumber1 = "example",
                 PhoneNumber2 = "example",
+                EduPersonPrincipalName = "example",
             },
             NotEquals = new EmployeeSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
@@ -1018,6 +1047,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = "example",
                 PhoneNumber1 = "example",
                 PhoneNumber2 = "example",
+                EduPersonPrincipalName = "example",
             },
             GreaterThan = new EmployeeSearchGreaterThan() {
                 Meta = new EmployeeSearchGreaterThanMeta() {
@@ -1111,6 +1141,9 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 PhoneNumber2 = new List<string>() {
                     "example",
                 },
+                EduPersonPrincipalName = new List<string>() {
+                    "example",
+                },
             },
             NotContains = new EmployeeSearchNotContains() {
                 Id = new List<string>() {
@@ -1176,6 +1209,9 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 PhoneNumber2 = new List<string>() {
                     "example",
                 },
+                EduPersonPrincipalName = new List<string>() {
+                    "example",
+                },
             },
             Like = new EmployeeSearchLike() {
                 External = new EmployeeSearchLikeExternal() {
@@ -1196,6 +1232,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = "example",
                 PhoneNumber1 = "example",
                 PhoneNumber2 = "example",
+                EduPersonPrincipalName = "example",
             },
             NotLike = new EmployeeSearchNotLike() {
                 External = new EmployeeSearchNotLikeExternal() {
@@ -1216,6 +1253,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = "example",
                 PhoneNumber1 = "example",
                 PhoneNumber2 = "example",
+                EduPersonPrincipalName = "example",
             },
             Null = new EmployeeSearchNull() {
                 Meta = new EmployeeSearchNullMeta() {
@@ -1240,6 +1278,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = true,
                 PhoneNumber1 = true,
                 PhoneNumber2 = true,
+                EduPersonPrincipalName = true,
             },
             NotNull = new EmployeeSearchNotNull() {
                 Meta = new EmployeeSearchNotNullMeta() {
@@ -1264,6 +1303,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = true,
                 PhoneNumber1 = true,
                 PhoneNumber2 = true,
+                EduPersonPrincipalName = true,
             },
             OrCondition = true,
         },
@@ -1326,6 +1366,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = "example",
                 PhoneNumber1 = "example",
                 PhoneNumber2 = "example",
+                EduPersonPrincipalName = "example",
             },
             NotEquals = new EmployeeSearchNotEquals() {
                 Id = "123e4567-e89b-12d3-a456-426614174000",
@@ -1355,6 +1396,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = "example",
                 PhoneNumber1 = "example",
                 PhoneNumber2 = "example",
+                EduPersonPrincipalName = "example",
             },
             GreaterThan = new EmployeeSearchGreaterThan() {
                 Meta = new EmployeeSearchGreaterThanMeta() {
@@ -1448,6 +1490,9 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 PhoneNumber2 = new List<string>() {
                     "example",
                 },
+                EduPersonPrincipalName = new List<string>() {
+                    "example",
+                },
             },
             NotContains = new EmployeeSearchNotContains() {
                 Id = new List<string>() {
@@ -1513,6 +1558,9 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 PhoneNumber2 = new List<string>() {
                     "example",
                 },
+                EduPersonPrincipalName = new List<string>() {
+                    "example",
+                },
             },
             Like = new EmployeeSearchLike() {
                 External = new EmployeeSearchLikeExternal() {
@@ -1533,6 +1581,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = "example",
                 PhoneNumber1 = "example",
                 PhoneNumber2 = "example",
+                EduPersonPrincipalName = "example",
             },
             NotLike = new EmployeeSearchNotLike() {
                 External = new EmployeeSearchNotLikeExternal() {
@@ -1553,6 +1602,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = "example",
                 PhoneNumber1 = "example",
                 PhoneNumber2 = "example",
+                EduPersonPrincipalName = "example",
             },
             Null = new EmployeeSearchNull() {
                 Meta = new EmployeeSearchNullMeta() {
@@ -1577,6 +1627,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = true,
                 PhoneNumber1 = true,
                 PhoneNumber2 = true,
+                EduPersonPrincipalName = true,
             },
             NotNull = new EmployeeSearchNotNull() {
                 Meta = new EmployeeSearchNotNullMeta() {
@@ -1601,6 +1652,7 @@ Models.Requests.EmployeeSearchResponse? res = await sdk.Employees.SearchAsync(
                 EmailAddress2 = true,
                 PhoneNumber1 = true,
                 PhoneNumber2 = true,
+                EduPersonPrincipalName = true,
             },
             OrCondition = true,
         },
@@ -1777,6 +1829,7 @@ var res = await sdk.Employees.UpdateAsync(
         EmailAddress2 = "lise@gmail.com",
         PhoneNumber1 = "+46701234567",
         PhoneNumber2 = "+46701234567",
+        EduPersonPrincipalName = "kalko@edu.goteborg.se",
     }
 );
 
@@ -1820,6 +1873,7 @@ var res = await sdk.Employees.UpdateAsync(
         EmailAddress2 = "lise@gmail.com",
         PhoneNumber1 = "+46701234567",
         PhoneNumber2 = "+46701234567",
+        EduPersonPrincipalName = "kalko@edu.goteborg.se",
     }
 );
 
@@ -1863,6 +1917,7 @@ var res = await sdk.Employees.UpdateAsync(
         EmailAddress2 = "lise@gmail.com",
         PhoneNumber1 = "+46701234567",
         PhoneNumber2 = "+46701234567",
+        EduPersonPrincipalName = "kalko@edu.goteborg.se",
     }
 );
 
@@ -1906,6 +1961,7 @@ var res = await sdk.Employees.UpdateAsync(
         EmailAddress2 = "lise@gmail.com",
         PhoneNumber1 = "+46701234567",
         PhoneNumber2 = "+46701234567",
+        EduPersonPrincipalName = "kalko@edu.goteborg.se",
     }
 );
 
