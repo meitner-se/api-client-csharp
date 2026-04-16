@@ -1,0 +1,10 @@
+# GradeElementaryListResponse
+
+
+## Fields
+
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `HttpMeta`                                                                                | [HTTPMetadata](../../Models/Components/HTTPMetadata.md)                                   | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `GradeElementaryList`                                                                     | [GradeElementaryList](../../Models/Components/GradeElementaryList.md)                     | :heavy_minus_sign:                                                                        | Response for GradeElementary List operation - returns a paginated list of GradeElementary |
+| `Headers`                                                                                 | Dictionary<String, List<*string*>>                                                        | :heavy_check_mark:                                                                        | N/A                                                                                       |

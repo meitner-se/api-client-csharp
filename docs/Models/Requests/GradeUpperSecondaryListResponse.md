@@ -1,0 +1,10 @@
+# GradeUpperSecondaryListResponse
+
+
+## Fields
+
+| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `HttpMeta`                                                                                        | [HTTPMetadata](../../Models/Components/HTTPMetadata.md)                                           | :heavy_check_mark:                                                                                | N/A                                                                                               |
+| `GradeUpperSecondaryList`                                                                         | [GradeUpperSecondaryList](../../Models/Components/GradeUpperSecondaryList.md)                     | :heavy_minus_sign:                                                                                | Response for GradeUpperSecondary List operation - returns a paginated list of GradeUpperSecondary |
+| `Headers`                                                                                         | Dictionary<String, List<*string*>>                                                                | :heavy_check_mark:                                                                                | N/A                                                                                               |
