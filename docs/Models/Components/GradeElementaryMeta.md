@@ -1,0 +1,13 @@
+# GradeElementaryMeta
+
+Metadata information for the GradeElementary
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           | Example                                                                               |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `CreatedAt`                                                                           | [DateTime](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) | :heavy_check_mark:                                                                    | Timestamp when the resource was created                                               | 2024-01-15T10:30:00Z                                                                  |
+| `CreatedBy`                                                                           | *string*                                                                              | :heavy_minus_sign:                                                                    | User who created the resource                                                         | **Example 1:** 987fcdeb-51a2-43d1-b567-123456789abc<br/>**Example 2:** <nil>          |
+| `UpdatedAt`                                                                           | [DateTime](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) | :heavy_minus_sign:                                                                    | Timestamp when the resource was last updated                                          | **Example 1:** 2024-01-15T14:45:00Z<br/>**Example 2:** <nil>                          |
+| `UpdatedBy`                                                                           | *string*                                                                              | :heavy_minus_sign:                                                                    | User who last updated the resource                                                    | **Example 1:** 987fcdeb-51a2-43d1-b567-123456789abc<br/>**Example 2:** <nil>          |

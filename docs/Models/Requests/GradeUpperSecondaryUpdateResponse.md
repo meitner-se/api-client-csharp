@@ -1,0 +1,10 @@
+# GradeUpperSecondaryUpdateResponse
+
+
+## Fields
+
+| Field                                                                                       | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `HttpMeta`                                                                                  | [HTTPMetadata](../../Models/Components/HTTPMetadata.md)                                     | :heavy_check_mark:                                                                          | N/A                                                                                         |
+| `GradeUpperSecondary`                                                                       | [GradeUpperSecondary](../../Models/Components/GradeUpperSecondary.md)                       | :heavy_minus_sign:                                                                          | Response for GradeUpperSecondary Update operation - returns the updated GradeUpperSecondary |
+| `Headers`                                                                                   | Dictionary<String, List<*string*>>                                                          | :heavy_check_mark:                                                                          | N/A                                                                                         |

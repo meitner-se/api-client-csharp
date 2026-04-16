@@ -40,6 +40,10 @@ namespace Meitner
         public IStudentPlacements StudentPlacements { get; }
 
         public IAuditEvents AuditEvents { get; }
+
+        public IGradeElementaries GradeElementaries { get; }
+
+        public IGradeUpperSecondaries GradeUpperSecondaries { get; }
     }
 
     /// <summary>
@@ -83,6 +87,14 @@ namespace Meitner
         /// The AuditEvents sub-SDK.
         /// </summary>
         public IAuditEvents AuditEvents { get; private set; }
+        /// <summary>
+        /// The GradeElementaries sub-SDK.
+        /// </summary>
+        public IGradeElementaries GradeElementaries { get; private set; }
+        /// <summary>
+        /// The GradeUpperSecondaries sub-SDK.
+        /// </summary>
+        public IGradeUpperSecondaries GradeUpperSecondaries { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the SDK based on a <see cref="SDKConfig"/> configuration object.
@@ -108,6 +120,10 @@ namespace Meitner
             StudentPlacements = new StudentPlacements(SDKConfiguration);
 
             AuditEvents = new AuditEvents(SDKConfiguration);
+
+            GradeElementaries = new GradeElementaries(SDKConfiguration);
+
+            GradeUpperSecondaries = new GradeUpperSecondaries(SDKConfiguration);
         }
 
         /// <summary>
@@ -179,6 +195,10 @@ namespace Meitner
             StudentPlacements = new StudentPlacements(SDKConfiguration);
 
             AuditEvents = new AuditEvents(SDKConfiguration);
+
+            GradeElementaries = new GradeElementaries(SDKConfiguration);
+
+            GradeUpperSecondaries = new GradeUpperSecondaries(SDKConfiguration);
         }
 
         private void InitHooks()
