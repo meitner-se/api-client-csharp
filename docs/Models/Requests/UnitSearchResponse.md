@@ -1,0 +1,10 @@
+# UnitSearchResponse
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `HttpMeta`                                                                            | [HTTPMetadata](../../Models/Components/HTTPMetadata.md)                               | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `UnitSearch`                                                                          | [Models.Components.UnitSearchResponse](../../Models/Components/UnitSearchResponse.md) | :heavy_minus_sign:                                                                    | Response for Unit Search operation - returns filtered Unit results                    |
+| `Headers`                                                                             | Dictionary<String, List<*string*>>                                                    | :heavy_check_mark:                                                                    | N/A                                                                                   |

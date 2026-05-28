@@ -44,6 +44,8 @@ namespace Meitner
         public IGradeElementaries GradeElementaries { get; }
 
         public IGradeUpperSecondaries GradeUpperSecondaries { get; }
+
+        public IUnits Units { get; }
     }
 
     /// <summary>
@@ -95,6 +97,10 @@ namespace Meitner
         /// The GradeUpperSecondaries sub-SDK.
         /// </summary>
         public IGradeUpperSecondaries GradeUpperSecondaries { get; private set; }
+        /// <summary>
+        /// The Units sub-SDK.
+        /// </summary>
+        public IUnits Units { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the SDK based on a <see cref="SDKConfig"/> configuration object.
@@ -124,6 +130,8 @@ namespace Meitner
             GradeElementaries = new GradeElementaries(SDKConfiguration);
 
             GradeUpperSecondaries = new GradeUpperSecondaries(SDKConfiguration);
+
+            Units = new Units(SDKConfiguration);
         }
 
         /// <summary>
@@ -199,6 +207,8 @@ namespace Meitner
             GradeElementaries = new GradeElementaries(SDKConfiguration);
 
             GradeUpperSecondaries = new GradeUpperSecondaries(SDKConfiguration);
+
+            Units = new Units(SDKConfiguration);
         }
 
         private void InitHooks()
