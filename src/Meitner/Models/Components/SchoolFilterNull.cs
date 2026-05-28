@@ -31,6 +31,12 @@ namespace Meitner.Models.Components
         public SchoolFilterNullExternal? External { get; set; } = null;
 
         /// <summary>
+        /// The ID of the Unit the school belongs to. Null if the school is not assigned to a Unit.
+        /// </summary>
+        [JsonProperty("unitID")]
+        public bool? UnitID { get; set; } = null;
+
+        /// <summary>
         /// The School Unit Code provided by SCB, is used in reports and printed on grade documents.
         /// </summary>
         [JsonProperty("unitCode")]

@@ -256,6 +256,14 @@ while(res != null)
 * [Delete](docs/sdks/students/README.md#delete) - Delete a Student
 * [Update](docs/sdks/students/README.md#update) - Update a Student
 
+### [Units](docs/sdks/units/README.md)
+
+* [List](docs/sdks/units/README.md#list) - List Units
+* [Create](docs/sdks/units/README.md#create) - Create a new Unit
+* [Search](docs/sdks/units/README.md#search) - Search Units
+* [Get](docs/sdks/units/README.md#get) - Get a Unit
+* [Update](docs/sdks/units/README.md#update) - Update a Unit
+
 </details>
 <!-- End Available Resources and Operations [operations] -->
 
@@ -462,37 +470,40 @@ catch (System.Net.Http.HttpRequestException ex)
   * [`Error429ResponseBody`](./src/Meitner/Models/Errors/Error429ResponseBody.cs): Too Many Requests - When the rate limit has been exceeded. Status code `429`.
   * [`Error500ResponseBody`](./src/Meitner/Models/Errors/Error500ResponseBody.cs): Internal Server Error - An unexpected server error occurred. Status code `500`.
 
-<details><summary>Less common exceptions (28)</summary>
+<details><summary>Less common exceptions (31)</summary>
 
 * [`System.Net.Http.HttpRequestException`](https://learn.microsoft.com/en-us/dotnet/api/system.net.http.httprequestexception): Network connectivity error. For more details about the underlying cause, inspect the `ex.InnerException`.
 
 * Inheriting from [`MeitnerException`](./src/Meitner/Models/Errors/MeitnerException.cs):
-  * [`SchoolCreate422ResponseBodyException`](./src/Meitner/Models/Errors/SchoolCreate422ResponseBodyException.cs): Validation error for School Create operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`SchoolSearch422ResponseBodyException`](./src/Meitner/Models/Errors/SchoolSearch422ResponseBodyException.cs): Validation error for School Search operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`SchoolUpdate422ResponseBodyException`](./src/Meitner/Models/Errors/SchoolUpdate422ResponseBodyException.cs): Validation error for School Update operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`GroupCreate422ResponseBodyException`](./src/Meitner/Models/Errors/GroupCreate422ResponseBodyException.cs): Validation error for Group Create operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`GroupSearch422ResponseBodyException`](./src/Meitner/Models/Errors/GroupSearch422ResponseBodyException.cs): Validation error for Group Search operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`GroupUpdate422ResponseBodyException`](./src/Meitner/Models/Errors/GroupUpdate422ResponseBodyException.cs): Validation error for Group Update operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`EmployeeCreate422ResponseBodyException`](./src/Meitner/Models/Errors/EmployeeCreate422ResponseBodyException.cs): Validation error for Employee Create operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`EmployeeSearch422ResponseBodyException`](./src/Meitner/Models/Errors/EmployeeSearch422ResponseBodyException.cs): Validation error for Employee Search operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`EmployeeUpdate422ResponseBodyException`](./src/Meitner/Models/Errors/EmployeeUpdate422ResponseBodyException.cs): Validation error for Employee Update operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`EmployeePlacementCreate422ResponseBodyException`](./src/Meitner/Models/Errors/EmployeePlacementCreate422ResponseBodyException.cs): Validation error for EmployeePlacement Create operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`EmployeePlacementSearch422ResponseBodyException`](./src/Meitner/Models/Errors/EmployeePlacementSearch422ResponseBodyException.cs): Validation error for EmployeePlacement Search operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`EmployeePlacementUpdate422ResponseBodyException`](./src/Meitner/Models/Errors/EmployeePlacementUpdate422ResponseBodyException.cs): Validation error for EmployeePlacement Update operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`GuardianCreate422ResponseBodyException`](./src/Meitner/Models/Errors/GuardianCreate422ResponseBodyException.cs): Validation error for Guardian Create operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`GuardianSearch422ResponseBodyException`](./src/Meitner/Models/Errors/GuardianSearch422ResponseBodyException.cs): Validation error for Guardian Search operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`GuardianUpdate422ResponseBodyException`](./src/Meitner/Models/Errors/GuardianUpdate422ResponseBodyException.cs): Validation error for Guardian Update operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`StudentCreate422ResponseBodyException`](./src/Meitner/Models/Errors/StudentCreate422ResponseBodyException.cs): Validation error for Student Create operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`StudentSearch422ResponseBodyException`](./src/Meitner/Models/Errors/StudentSearch422ResponseBodyException.cs): Validation error for Student Search operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`StudentUpdate422ResponseBodyException`](./src/Meitner/Models/Errors/StudentUpdate422ResponseBodyException.cs): Validation error for Student Update operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`StudentPlacementCreate422ResponseBodyException`](./src/Meitner/Models/Errors/StudentPlacementCreate422ResponseBodyException.cs): Validation error for StudentPlacement Create operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`StudentPlacementSearch422ResponseBodyException`](./src/Meitner/Models/Errors/StudentPlacementSearch422ResponseBodyException.cs): Validation error for StudentPlacement Search operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`StudentPlacementUpdate422ResponseBodyException`](./src/Meitner/Models/Errors/StudentPlacementUpdate422ResponseBodyException.cs): Validation error for StudentPlacement Update operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`AuditEventSearch422ResponseBodyException`](./src/Meitner/Models/Errors/AuditEventSearch422ResponseBodyException.cs): Validation error for AuditEvent Search operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`GradeElementaryCreate422ResponseBodyException`](./src/Meitner/Models/Errors/GradeElementaryCreate422ResponseBodyException.cs): Validation error for GradeElementary Create operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`GradeElementaryUpdate422ResponseBodyException`](./src/Meitner/Models/Errors/GradeElementaryUpdate422ResponseBodyException.cs): Validation error for GradeElementary Update operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`GradeUpperSecondaryCreate422ResponseBodyException`](./src/Meitner/Models/Errors/GradeUpperSecondaryCreate422ResponseBodyException.cs): Validation error for GradeUpperSecondary Create operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
-  * [`GradeUpperSecondaryUpdate422ResponseBodyException`](./src/Meitner/Models/Errors/GradeUpperSecondaryUpdate422ResponseBodyException.cs): Validation error for GradeUpperSecondary Update operation - request data failed validation. Status code `422`. Applicable to 1 of 56 methods.*
+  * [`SchoolCreate422ResponseBodyException`](./src/Meitner/Models/Errors/SchoolCreate422ResponseBodyException.cs): Validation error for School Create operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`SchoolSearch422ResponseBodyException`](./src/Meitner/Models/Errors/SchoolSearch422ResponseBodyException.cs): Validation error for School Search operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`SchoolUpdate422ResponseBodyException`](./src/Meitner/Models/Errors/SchoolUpdate422ResponseBodyException.cs): Validation error for School Update operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`GroupCreate422ResponseBodyException`](./src/Meitner/Models/Errors/GroupCreate422ResponseBodyException.cs): Validation error for Group Create operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`GroupSearch422ResponseBodyException`](./src/Meitner/Models/Errors/GroupSearch422ResponseBodyException.cs): Validation error for Group Search operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`GroupUpdate422ResponseBodyException`](./src/Meitner/Models/Errors/GroupUpdate422ResponseBodyException.cs): Validation error for Group Update operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`EmployeeCreate422ResponseBodyException`](./src/Meitner/Models/Errors/EmployeeCreate422ResponseBodyException.cs): Validation error for Employee Create operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`EmployeeSearch422ResponseBodyException`](./src/Meitner/Models/Errors/EmployeeSearch422ResponseBodyException.cs): Validation error for Employee Search operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`EmployeeUpdate422ResponseBodyException`](./src/Meitner/Models/Errors/EmployeeUpdate422ResponseBodyException.cs): Validation error for Employee Update operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`EmployeePlacementCreate422ResponseBodyException`](./src/Meitner/Models/Errors/EmployeePlacementCreate422ResponseBodyException.cs): Validation error for EmployeePlacement Create operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`EmployeePlacementSearch422ResponseBodyException`](./src/Meitner/Models/Errors/EmployeePlacementSearch422ResponseBodyException.cs): Validation error for EmployeePlacement Search operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`EmployeePlacementUpdate422ResponseBodyException`](./src/Meitner/Models/Errors/EmployeePlacementUpdate422ResponseBodyException.cs): Validation error for EmployeePlacement Update operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`GuardianCreate422ResponseBodyException`](./src/Meitner/Models/Errors/GuardianCreate422ResponseBodyException.cs): Validation error for Guardian Create operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`GuardianSearch422ResponseBodyException`](./src/Meitner/Models/Errors/GuardianSearch422ResponseBodyException.cs): Validation error for Guardian Search operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`GuardianUpdate422ResponseBodyException`](./src/Meitner/Models/Errors/GuardianUpdate422ResponseBodyException.cs): Validation error for Guardian Update operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`StudentCreate422ResponseBodyException`](./src/Meitner/Models/Errors/StudentCreate422ResponseBodyException.cs): Validation error for Student Create operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`StudentSearch422ResponseBodyException`](./src/Meitner/Models/Errors/StudentSearch422ResponseBodyException.cs): Validation error for Student Search operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`StudentUpdate422ResponseBodyException`](./src/Meitner/Models/Errors/StudentUpdate422ResponseBodyException.cs): Validation error for Student Update operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`StudentPlacementCreate422ResponseBodyException`](./src/Meitner/Models/Errors/StudentPlacementCreate422ResponseBodyException.cs): Validation error for StudentPlacement Create operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`StudentPlacementSearch422ResponseBodyException`](./src/Meitner/Models/Errors/StudentPlacementSearch422ResponseBodyException.cs): Validation error for StudentPlacement Search operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`StudentPlacementUpdate422ResponseBodyException`](./src/Meitner/Models/Errors/StudentPlacementUpdate422ResponseBodyException.cs): Validation error for StudentPlacement Update operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`AuditEventSearch422ResponseBodyException`](./src/Meitner/Models/Errors/AuditEventSearch422ResponseBodyException.cs): Validation error for AuditEvent Search operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`GradeElementaryCreate422ResponseBodyException`](./src/Meitner/Models/Errors/GradeElementaryCreate422ResponseBodyException.cs): Validation error for GradeElementary Create operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`GradeElementaryUpdate422ResponseBodyException`](./src/Meitner/Models/Errors/GradeElementaryUpdate422ResponseBodyException.cs): Validation error for GradeElementary Update operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`GradeUpperSecondaryCreate422ResponseBodyException`](./src/Meitner/Models/Errors/GradeUpperSecondaryCreate422ResponseBodyException.cs): Validation error for GradeUpperSecondary Create operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`GradeUpperSecondaryUpdate422ResponseBodyException`](./src/Meitner/Models/Errors/GradeUpperSecondaryUpdate422ResponseBodyException.cs): Validation error for GradeUpperSecondary Update operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`UnitCreate422ResponseBodyException`](./src/Meitner/Models/Errors/UnitCreate422ResponseBodyException.cs): Validation error for Unit Create operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`UnitSearch422ResponseBodyException`](./src/Meitner/Models/Errors/UnitSearch422ResponseBodyException.cs): Validation error for Unit Search operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
+  * [`UnitUpdate422ResponseBodyException`](./src/Meitner/Models/Errors/UnitUpdate422ResponseBodyException.cs): Validation error for Unit Update operation - request data failed validation. Status code `422`. Applicable to 1 of 61 methods.*
   * [`ResponseValidationError`](./src/Meitner/Models/Errors/ResponseValidationError.cs): Thrown when the response data could not be deserialized into the expected type.
 </details>
 

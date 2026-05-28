@@ -89,6 +89,7 @@ SchoolCreate req = new SchoolCreate() {
         SourceID = "12345678",
     },
     Title = "Meitner Grundskola",
+    UnitID = "123e4567-e89b-12d3-a456-426614174000",
     UnitCode = "12345678",
     CsnSchoolCode = "12345",
     MunicipalityCode = "0184",
@@ -118,6 +119,7 @@ SchoolCreate req = new SchoolCreate() {
         SourceID = "12345678",
     },
     Title = "Meitner Grundskola",
+    UnitID = "123e4567-e89b-12d3-a456-426614174000",
     UnitCode = "12345678",
     CsnSchoolCode = "12345",
     MunicipalityCode = "0184",
@@ -147,6 +149,7 @@ SchoolCreate req = new SchoolCreate() {
         SourceID = "12345678",
     },
     Title = "Meitner Grundskola",
+    UnitID = "123e4567-e89b-12d3-a456-426614174000",
     UnitCode = "12345678",
     CsnSchoolCode = "12345",
     MunicipalityCode = "0184",
@@ -176,6 +179,7 @@ SchoolCreate req = new SchoolCreate() {
         SourceID = "12345678",
     },
     Title = "Meitner Grundskola",
+    UnitID = "123e4567-e89b-12d3-a456-426614174000",
     UnitCode = "12345678",
     CsnSchoolCode = "12345",
     MunicipalityCode = "0184",
@@ -247,6 +251,7 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                     Source = "example",
                 },
                 Title = "example",
+                UnitID = "123e4567-e89b-12d3-a456-426614174000",
                 UnitCode = "example",
                 CsnSchoolCode = "example",
                 MunicipalityCode = "example",
@@ -264,6 +269,7 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                     Source = "example",
                 },
                 Title = "example",
+                UnitID = "123e4567-e89b-12d3-a456-426614174000",
                 UnitCode = "example",
                 CsnSchoolCode = "example",
                 MunicipalityCode = "example",
@@ -315,6 +321,9 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                 Title = new List<string>() {
                     "example",
                 },
+                UnitID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
                 UnitCode = new List<string>() {
                     "example",
                 },
@@ -347,6 +356,9 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                 },
                 Title = new List<string>() {
                     "example",
+                },
+                UnitID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
                 },
                 UnitCode = new List<string>() {
                     "example",
@@ -388,6 +400,7 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                     SourceID = true,
                     Source = true,
                 },
+                UnitID = true,
                 UnitCode = true,
                 CsnSchoolCode = true,
                 MunicipalityCode = true,
@@ -402,6 +415,7 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                     SourceID = true,
                     Source = true,
                 },
+                UnitID = true,
                 UnitCode = true,
                 CsnSchoolCode = true,
                 MunicipalityCode = true,
@@ -452,6 +466,7 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                     Source = "example",
                 },
                 Title = "example",
+                UnitID = "123e4567-e89b-12d3-a456-426614174000",
                 UnitCode = "example",
                 CsnSchoolCode = "example",
                 MunicipalityCode = "example",
@@ -469,6 +484,7 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                     Source = "example",
                 },
                 Title = "example",
+                UnitID = "123e4567-e89b-12d3-a456-426614174000",
                 UnitCode = "example",
                 CsnSchoolCode = "example",
                 MunicipalityCode = "example",
@@ -520,6 +536,9 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                 Title = new List<string>() {
                     "example",
                 },
+                UnitID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
                 UnitCode = new List<string>() {
                     "example",
                 },
@@ -552,6 +571,9 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                 },
                 Title = new List<string>() {
                     "example",
+                },
+                UnitID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
                 },
                 UnitCode = new List<string>() {
                     "example",
@@ -593,6 +615,7 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                     SourceID = true,
                     Source = true,
                 },
+                UnitID = true,
                 UnitCode = true,
                 CsnSchoolCode = true,
                 MunicipalityCode = true,
@@ -607,6 +630,7 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                     SourceID = true,
                     Source = true,
                 },
+                UnitID = true,
                 UnitCode = true,
                 CsnSchoolCode = true,
                 MunicipalityCode = true,
@@ -657,6 +681,7 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                     Source = "example",
                 },
                 Title = "example",
+                UnitID = "123e4567-e89b-12d3-a456-426614174000",
                 UnitCode = "example",
                 CsnSchoolCode = "example",
                 MunicipalityCode = "example",
@@ -674,6 +699,7 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                     Source = "example",
                 },
                 Title = "example",
+                UnitID = "123e4567-e89b-12d3-a456-426614174000",
                 UnitCode = "example",
                 CsnSchoolCode = "example",
                 MunicipalityCode = "example",
@@ -725,6 +751,9 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                 Title = new List<string>() {
                     "example",
                 },
+                UnitID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
                 UnitCode = new List<string>() {
                     "example",
                 },
@@ -757,6 +786,9 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                 },
                 Title = new List<string>() {
                     "example",
+                },
+                UnitID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
                 },
                 UnitCode = new List<string>() {
                     "example",
@@ -798,6 +830,7 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                     SourceID = true,
                     Source = true,
                 },
+                UnitID = true,
                 UnitCode = true,
                 CsnSchoolCode = true,
                 MunicipalityCode = true,
@@ -812,6 +845,7 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                     SourceID = true,
                     Source = true,
                 },
+                UnitID = true,
                 UnitCode = true,
                 CsnSchoolCode = true,
                 MunicipalityCode = true,
@@ -862,6 +896,7 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                     Source = "example",
                 },
                 Title = "example",
+                UnitID = "123e4567-e89b-12d3-a456-426614174000",
                 UnitCode = "example",
                 CsnSchoolCode = "example",
                 MunicipalityCode = "example",
@@ -879,6 +914,7 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                     Source = "example",
                 },
                 Title = "example",
+                UnitID = "123e4567-e89b-12d3-a456-426614174000",
                 UnitCode = "example",
                 CsnSchoolCode = "example",
                 MunicipalityCode = "example",
@@ -930,6 +966,9 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                 Title = new List<string>() {
                     "example",
                 },
+                UnitID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
+                },
                 UnitCode = new List<string>() {
                     "example",
                 },
@@ -962,6 +1001,9 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                 },
                 Title = new List<string>() {
                     "example",
+                },
+                UnitID = new List<string>() {
+                    "123e4567-e89b-12d3-a456-426614174000",
                 },
                 UnitCode = new List<string>() {
                     "example",
@@ -1003,6 +1045,7 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                     SourceID = true,
                     Source = true,
                 },
+                UnitID = true,
                 UnitCode = true,
                 CsnSchoolCode = true,
                 MunicipalityCode = true,
@@ -1017,6 +1060,7 @@ Models.Requests.SchoolSearchResponse? res = await sdk.Schools.SearchAsync(
                     SourceID = true,
                     Source = true,
                 },
+                UnitID = true,
                 UnitCode = true,
                 CsnSchoolCode = true,
                 MunicipalityCode = true,
@@ -1133,6 +1177,7 @@ var res = await sdk.Schools.UpdateAsync(
             SourceID = "12345678",
         },
         Title = "Meitner Grundskola",
+        UnitID = "123e4567-e89b-12d3-a456-426614174000",
         UnitCode = "12345678",
         CsnSchoolCode = "12345",
         MunicipalityCode = "0184",
@@ -1162,6 +1207,7 @@ var res = await sdk.Schools.UpdateAsync(
             SourceID = "12345678",
         },
         Title = "Meitner Grundskola",
+        UnitID = "123e4567-e89b-12d3-a456-426614174000",
         UnitCode = "12345678",
         CsnSchoolCode = "12345",
         MunicipalityCode = "0184",
@@ -1191,6 +1237,7 @@ var res = await sdk.Schools.UpdateAsync(
             SourceID = "12345678",
         },
         Title = "Meitner Grundskola",
+        UnitID = "123e4567-e89b-12d3-a456-426614174000",
         UnitCode = "12345678",
         CsnSchoolCode = "12345",
         MunicipalityCode = "0184",
@@ -1220,6 +1267,7 @@ var res = await sdk.Schools.UpdateAsync(
             SourceID = "12345678",
         },
         Title = "Meitner Grundskola",
+        UnitID = "123e4567-e89b-12d3-a456-426614174000",
         UnitCode = "12345678",
         CsnSchoolCode = "12345",
         MunicipalityCode = "0184",
