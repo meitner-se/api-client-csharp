@@ -13,10 +13,12 @@ var value = StudentPlacementSearchNotEqualsSchoolType.Gr;
 
 ## Values
 
-| Name   | Value  |
-| ------ | ------ |
-| `Gr`   | GR     |
-| `Gran` | GRAN   |
-| `Gy`   | GY     |
-| `Gyan` | GYAN   |
-| `Fs`   | FS     |
+| Name     | Value    |
+| -------- | -------- |
+| `Gr`     | GR       |
+| `Gran`   | GRAN     |
+| `Gy`     | GY       |
+| `Gyan`   | GYAN     |
+| `Fs`     | FS       |
+| `Vux`    | VUX      |
+| `Vuxsfi` | VUXSFI   |

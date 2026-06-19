@@ -1,19 +1,19 @@
 lockVersion: 2.0.0
 id: 91388079-51e0-4fb6-b48a-dd78e186eddb
 management:
-  docChecksum: f6c85b72dff214f21fbc892cdd0e995f
+  docChecksum: 459cec0f949b1a4e07853cfbf74e648a
   docVersion: v1
-  speakeasyVersion: 1.768.2
-  generationVersion: 2.889.1
-  releaseVersion: 0.4.3
-  configChecksum: f6b224585b64deadec27b3f12612d81e
+  speakeasyVersion: 1.784.0
+  generationVersion: 2.911.0
+  releaseVersion: 0.4.4
+  configChecksum: 404c2df50851a120195a00e1bb3cff28
   repoURL: https://github.com/meitner-se/api-client-csharp.git
   installationURL: https://github.com/meitner-se/api-client-csharp
   published: true
 persistentEdits:
-  generation_id: b35dc739-4132-4c42-8bc6-4f7fe58c3000
-  pristine_commit_hash: f07f0bd30eb41f0cb8a6f81bb3b02e71f6913d9c
-  pristine_tree_hash: 41c27a3f8364ab3c1d9b3ace6712935b8cb08a55
+  generation_id: 977f2d6a-2277-459f-9030-bb7aac2877d9
+  pristine_commit_hash: 70ae328417c5147157dc75df78669df5e5a4337b
+  pristine_tree_hash: 428e4182f4143c70be9bb3b494d0e21c4cd4fcc6
 features:
   csharp:
     additionalDependencies: 0.1.0
@@ -31,7 +31,7 @@ features:
     oauth2ClientCredentials: 1.1.4
     pagination: 0.2.11
     responseFormat: 0.0.4
-    retries: 0.0.2
+    retries: 0.0.3
     sdkHooks: 0.3.0
     serverIDs: 2.82.1
 trackedFiles:
@@ -2957,8 +2957,8 @@ trackedFiles:
     pristine_git_object: 6f1684f69d11f335310e20e65e04f9afd1bfb8de
   docs/Models/Components/StudentPlacementCreateSchoolType.md:
     id: 8670b870f0c9
-    last_write_checksum: sha1:ed181bee893ad32cd74ff65976a8d4255df61a19
-    pristine_git_object: 023a0139e0f75629839a33db221fe620c6131b20
+    last_write_checksum: sha1:68da349b725e23433e36ea7f1b63de22b086872a
+    pristine_git_object: 00dee4cd38b799bb97cc7d08d20188149dc39adc
   docs/Models/Components/StudentPlacementCreateSchoolYear.md:
     id: 75464217c828
     last_write_checksum: sha1:bf3ee9699f784afb8df1b994c96b858491b5221a
@@ -3001,8 +3001,8 @@ trackedFiles:
     pristine_git_object: deadf7aeec2b3e6e394f22091e28ad4a8412259f
   docs/Models/Components/StudentPlacementFilterEqualsSchoolType.md:
     id: a710f5732538
-    last_write_checksum: sha1:e9a1b2cc5a7a52ae6de200021f89a40616bd17b1
-    pristine_git_object: 1920acdbba7a47111679dcc30fa38bdd7f14e14d
+    last_write_checksum: sha1:bc4479f54283b879ef9c61c3ba9bf29394e22762
+    pristine_git_object: 72ef2caaf80f3dd0ea2224f18857234e443d1d73
   docs/Models/Components/StudentPlacementFilterEqualsSchoolYear.md:
     id: 5bb5e4a18ac2
     last_write_checksum: sha1:e435a7f062675ac39f8c406b90d8f00bc3ddae33
@@ -3073,8 +3073,8 @@ trackedFiles:
     pristine_git_object: b609734f272ad8b494a83b56cafde00ae8ee140b
   docs/Models/Components/StudentPlacementFilterNotEqualsSchoolType.md:
     id: 9c978cb3100f
-    last_write_checksum: sha1:774b06ba46341c6d6ef6afa698ee1aeae4937889
-    pristine_git_object: 9261033b2696a9304dce1f3f31a3bd7eec67fffe
+    last_write_checksum: sha1:975967d969d6a0ebc454d5f0b3bec5b724596f5e
+    pristine_git_object: 3bdfeb01ef4b118dbc8fffdb87344daf0c4a5954
   docs/Models/Components/StudentPlacementFilterNotEqualsSchoolYear.md:
     id: 9d382d446a3c
     last_write_checksum: sha1:54ad0b76d3558ecd44b5f79ff97b30cc049f5d60
@@ -3157,12 +3157,12 @@ trackedFiles:
     pristine_git_object: 56e29e84ca689cc5d75d260281b46df71f5aa08c
   docs/Models/Components/StudentPlacementSchoolType.md:
     id: 6d925fbe09f2
-    last_write_checksum: sha1:1dfd6bdb9f4132d969186a81c4cad821582960f1
-    pristine_git_object: b606a82ae7661c63b22b2522256cd7a96ce5c2c9
+    last_write_checksum: sha1:b080b722813e06f16653b12b2302ddc8e40d6702
+    pristine_git_object: e11681a2025a16ea2bd796bc57644f29eaeb0a5c
   docs/Models/Components/StudentPlacementSchoolType1.md:
     id: 0836a32b1a2f
-    last_write_checksum: sha1:97bc4deba0bfc8e10d9c06c198eff14529abc2f9
-    pristine_git_object: 5f870b0a01adfed61dade9f5739d9ef886c566c8
+    last_write_checksum: sha1:8714ade8a24123325ba5c540a747fa74a316bcca
+    pristine_git_object: 4e47856742caa9263c8428f0c0ecafe09bb0427a
   docs/Models/Components/StudentPlacementSchoolYear.md:
     id: "178549304481"
     last_write_checksum: sha1:440d60f90f4fe5d3bde1eb334a297744b864996c
@@ -3201,8 +3201,8 @@ trackedFiles:
     pristine_git_object: 43a4dbf7b8bc26ad778caaf6c44cc1526f9d9797
   docs/Models/Components/StudentPlacementSearchEqualsSchoolType.md:
     id: 3c1d35644956
-    last_write_checksum: sha1:436aee21657e6521c243581ac000e3cf312b2575
-    pristine_git_object: a8dd64d2615b2bfaa780b409b00abfd096a603ea
+    last_write_checksum: sha1:5d0342265d27bf6dd48281f248ca5364a8fa7e43
+    pristine_git_object: 0ec888d149c618ed996555b310ba4996c0566747
   docs/Models/Components/StudentPlacementSearchEqualsSchoolYear.md:
     id: 26956154dbcd
     last_write_checksum: sha1:88a8e404d08b2bd3bbaae8a6ae76946725ca3da6
@@ -3277,8 +3277,8 @@ trackedFiles:
     pristine_git_object: b9da57ce6207ec132d5cea0bb234b1aab4199bc8
   docs/Models/Components/StudentPlacementSearchNotEqualsSchoolType.md:
     id: e9fd57cd6340
-    last_write_checksum: sha1:d11467479b71e1e468606174385348c9e9bde8ac
-    pristine_git_object: 9b704613578006193a7888b5916659a5e1613e76
+    last_write_checksum: sha1:a17fb2ee214950313842f80d004f75e34373458b
+    pristine_git_object: d4ce540f26318ad79f27ebf6fe436d195bb6940e
   docs/Models/Components/StudentPlacementSearchNotEqualsSchoolYear.md:
     id: d5d88a8f69aa
     last_write_checksum: sha1:3592d7debaa079afef8e21487db82e9c8e619d9e
@@ -3373,8 +3373,8 @@ trackedFiles:
     pristine_git_object: b13013760a0613661e7a4354cc47fac7ad892b48
   docs/Models/Components/StudentPlacementUpdateSchoolType.md:
     id: dec1b259c72c
-    last_write_checksum: sha1:760f7c8fd21df6c80108f789025b07946481f1e4
-    pristine_git_object: 3c24a25b5973f9abf3380fc05da1f9cf543239f2
+    last_write_checksum: sha1:f8c976d0db3d45a418609cb9f4322ff2d4731dd0
+    pristine_git_object: abf10d8f71d5b829531e076d0d6dea26070cf931
   docs/Models/Components/StudentPlacementUpdateSchoolYear.md:
     id: 8130673d2219
     last_write_checksum: sha1:44e6371b5f0d87ef74dd7e32850f9579f62b223d
@@ -4657,8 +4657,8 @@ trackedFiles:
     pristine_git_object: 867c04dc7849b48dca7a5f1d0fca617650390eca
   src/Meitner/Meitner.csproj:
     id: a4d633b7165a
-    last_write_checksum: sha1:c800d938ea847842008893127d41439a7c4548bc
-    pristine_git_object: d726060fb2937d6df5be473202d2d1c0a10146e2
+    last_write_checksum: sha1:32831d87b38baeecf8e1701609874ab4bc932b4f
+    pristine_git_object: c9b1aa0ab4401ca5cdaec5ce156f68d4bc82d29d
   src/Meitner/MeitnerSDK.cs:
     id: df60ef816859
     last_write_checksum: sha1:954a8e3247428d671438089cf868ba263127a441
@@ -7569,8 +7569,8 @@ trackedFiles:
     pristine_git_object: be851ca5dc634016c542f33dac94a0308e4717c3
   src/Meitner/Models/Components/StudentPlacementCreateSchoolType.cs:
     id: 7348149c21a3
-    last_write_checksum: sha1:cd74f1799e818e1f9176e4d31d55ee39d17df10a
-    pristine_git_object: f346944cf462d745a49666a8eba55caeaa08609e
+    last_write_checksum: sha1:ee788406eb23c356d46080d083dd162bdbbcc1a3
+    pristine_git_object: ba7ac50ebf67e708e607153af92ee9cbda2ae243
   src/Meitner/Models/Components/StudentPlacementCreateSchoolYear.cs:
     id: a26f9bc7029f
     last_write_checksum: sha1:86047b4ba0ce98c03d6fe6a6efe80fd5cd0782fb
@@ -7613,8 +7613,8 @@ trackedFiles:
     pristine_git_object: 83aea0e0e5b6109f41941b3b7c3b216f4b9a6879
   src/Meitner/Models/Components/StudentPlacementFilterEqualsSchoolType.cs:
     id: 289f1be97994
-    last_write_checksum: sha1:48de913cdbba7ba6f8949ee005eef5be9bcec9bf
-    pristine_git_object: f9c84b7088cb5b54ff1e1a36fe0797855fdf0793
+    last_write_checksum: sha1:39bd16b06fa6790143d158256acfd8476e695106
+    pristine_git_object: ab71f2bb789adb9428b04dec948f6122c99a0f4b
   src/Meitner/Models/Components/StudentPlacementFilterEqualsSchoolYear.cs:
     id: 182a51613db5
     last_write_checksum: sha1:5def883c8fa5507ea2cf72b5cc3107f9ec30e9b0
@@ -7685,8 +7685,8 @@ trackedFiles:
     pristine_git_object: 8cd721e2833cb1fd93d5bd07e9e043db89323033
   src/Meitner/Models/Components/StudentPlacementFilterNotEqualsSchoolType.cs:
     id: 8dde8edbf542
-    last_write_checksum: sha1:5bd8ec62b7342949c1811d0eed47bfaadd47dd1c
-    pristine_git_object: 01134c2420674af209b3aaaedf2977d2f81a15ce
+    last_write_checksum: sha1:207f907f13622a98e604f4be937fbec5dbba7e14
+    pristine_git_object: 922ef4ab1abc9c4e526f701a59dd54cde93b7228
   src/Meitner/Models/Components/StudentPlacementFilterNotEqualsSchoolYear.cs:
     id: fe858ec3ebd0
     last_write_checksum: sha1:18d56c586065b82f0ce9b2e33c8e6aab6b9a2af0
@@ -7769,12 +7769,12 @@ trackedFiles:
     pristine_git_object: 24dfbc95f73d639b4dd82995852cafe5d3c6626f
   src/Meitner/Models/Components/StudentPlacementSchoolType.cs:
     id: 065beb840f1b
-    last_write_checksum: sha1:9652f705e9d516da0f001363c33c1c01db0051d2
-    pristine_git_object: f6741a7984c8057bc0ac014dd6bc609cb8b327bf
+    last_write_checksum: sha1:d6af5ad37c93541d7d9fcdf733f560bc03bfe635
+    pristine_git_object: cbc28029c786a0117d96e893d4701a8f042094b6
   src/Meitner/Models/Components/StudentPlacementSchoolType1.cs:
     id: 787ccea16d42
-    last_write_checksum: sha1:a0ec8f4d4027a93a075c8c1b0faf87c8a3fc3b3d
-    pristine_git_object: ad50a3a2822bed93bb58fa6d734be0d2c077ae59
+    last_write_checksum: sha1:f328678a2f68afc84b6874bbd7097eb9a061e7d3
+    pristine_git_object: 3004163d443f017890b0490e4face1e05632b5cf
   src/Meitner/Models/Components/StudentPlacementSchoolYear.cs:
     id: 97fab825ceec
     last_write_checksum: sha1:c8b7c5186af3de0602703fd857be23e380880b98
@@ -7813,8 +7813,8 @@ trackedFiles:
     pristine_git_object: 3e3f0d5c5f880fd2766ad4b75d2c18af2c1c456e
   src/Meitner/Models/Components/StudentPlacementSearchEqualsSchoolType.cs:
     id: 30a5ff94f5ce
-    last_write_checksum: sha1:60794c73ec215c68f3211a0b936f90c827db691a
-    pristine_git_object: e17ee74681ba1280af6323a1f9ead92bbf2d54d8
+    last_write_checksum: sha1:87d068b0f804585fab45da7ed81b3c1eb31fd21c
+    pristine_git_object: c16039dcb4c21a2402cbc7c3279076da427d6077
   src/Meitner/Models/Components/StudentPlacementSearchEqualsSchoolYear.cs:
     id: 73da0cca9ace
     last_write_checksum: sha1:7f5510ff13efaf8c74e4035a459118f01550e623
@@ -7889,8 +7889,8 @@ trackedFiles:
     pristine_git_object: d20621991884773c95ece9aa403ac9e40044c067
   src/Meitner/Models/Components/StudentPlacementSearchNotEqualsSchoolType.cs:
     id: e54fbb9e085c
-    last_write_checksum: sha1:495fdcb7a4423e07179e1373eed2a7992e0c0dd6
-    pristine_git_object: 10607106bc5650adaeeb3d47e14f70d617ed2b4e
+    last_write_checksum: sha1:8becfa3fe9797feb8161c0f32a688b0cb290707e
+    pristine_git_object: a71528b59dedf0adcb008af84e0b2c01dc704576
   src/Meitner/Models/Components/StudentPlacementSearchNotEqualsSchoolYear.cs:
     id: aec32ec0b3e7
     last_write_checksum: sha1:f25aaa48d68c9f3b1f484be23f1a7c5f5bd6edf9
@@ -7985,8 +7985,8 @@ trackedFiles:
     pristine_git_object: b9145ddcc29e8bb0331b4efbc989a91604d0f3ee
   src/Meitner/Models/Components/StudentPlacementUpdateSchoolType.cs:
     id: e0efa9f1f45a
-    last_write_checksum: sha1:1667bd5e85fa1fdab75ecf40d6bb9bc5c3335c2e
-    pristine_git_object: f1804a997698f0a04094ba53ec0af236396cf8f7
+    last_write_checksum: sha1:46b00c9990a0009cec0e676c6871382d169ac4a6
+    pristine_git_object: 23f12c0bdcc158ded0d8d88ee186ab979cbc23e5
   src/Meitner/Models/Components/StudentPlacementUpdateSchoolYear.cs:
     id: 13f82364787a
     last_write_checksum: sha1:bb57998c047ac88a6ab1d271cfeafeabf3a4ba91
@@ -9193,8 +9193,8 @@ trackedFiles:
     pristine_git_object: 1ebf727673c37aa3ae83fef806fe8990bcd1f782
   src/Meitner/SDKConfig.cs:
     id: 76b7b2320f7e
-    last_write_checksum: sha1:29e5b629f707912a584bb5688873593b51342b4c
-    pristine_git_object: 54ae8d3c455f0017d438b5519e0300d57e5ec428
+    last_write_checksum: sha1:af4b1af8653e263a90e78865baba0e03b718d170
+    pristine_git_object: e210361ee81964bf492bd16686954f95cbfc1e8c
   src/Meitner/Schools.cs:
     id: 123ea3045683
     last_write_checksum: sha1:feea07e95e9d0265184983bfa8921bd99ae7e970
@@ -9221,8 +9221,8 @@ trackedFiles:
     pristine_git_object: b6fc27aa15229bb5ebefc4d9b9820f2b09458034
   src/Meitner/Utils/Constants.cs:
     id: 7bbeab0ba4b4
-    last_write_checksum: sha1:63d8389f14bf2baaf6613f8f768bc449c6a9c675
-    pristine_git_object: b7bbce494b7f7bb5ab60624eae2e9a5b4feab284
+    last_write_checksum: sha1:58aff03f8630b700fcecfe15c9448af7ccac372b
+    pristine_git_object: a71665461f7aba1fe62ae2bccca0d3d884fe60d8
   src/Meitner/Utils/DecimalStrConverter.cs:
     id: 42954e25c852
     last_write_checksum: sha1:e64015d0352c7041f3ec262e188f9c75ccc298f5
@@ -9265,8 +9265,8 @@ trackedFiles:
     pristine_git_object: 1bdcf76a5e537567661a9c486a5b4ca7ec9b2e06
   src/Meitner/Utils/Retries/Retries.cs:
     id: 6f8b2f99c808
-    last_write_checksum: sha1:8f70e5d3d34f8723c73013254407095a7aba2584
-    pristine_git_object: a42a2f33c4e91e9eb9495c33e36fb0c1b996081c
+    last_write_checksum: sha1:4a0470707e6914f6d8a9b89c06ec4992b761a33a
+    pristine_git_object: 023dffa3d251fa58a7e51baa44b24a0f4cc9b284
   src/Meitner/Utils/Retries/RetryConfig.cs:
     id: 85d275b9175a
     last_write_checksum: sha1:4b8da81d1b40cd9181d055f5ce3bf16e130a9de7
@@ -12072,7 +12072,7 @@ examples:
         "422":
           application/json: {"error": {"code": "UnprocessableEntity", "message": "Validation failed for Unit Update endpoint", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
 examplesVersion: 1.0.2
-releaseNotes: "## Csharp SDK Changes:\n* `Meitner.Units.List()`: **Added**\n* `Meitner.Units.Create()`: **Added**\n* `Meitner.Units.Search()`: **Added**\n* `Meitner.Units.Get()`: **Added**\n* `Meitner.Units.Update()`: **Added**\n* `Meitner.Schools.List()`:  `response.data[].UnitId` **Added**\n* `Meitner.Schools.Create()`: \n  *  `request.UnitId` **Added**\n  *  `response.unitId` **Added**\n* `Meitner.Schools.Search()`: \n  *  `request.schoolSearch.Filter` **Changed**\n  *  `response.data[].UnitId` **Added**\n* `Meitner.Schools.Get()`:  `response.unitId` **Added**\n* `Meitner.Schools.Update()`: \n  *  `request.schoolUpdate.UnitId` **Added**\n  *  `response.unitId` **Added**\n"
+releaseNotes: "## Csharp SDK Changes:\n* `Meitner.StudentPlacements.List()`:  `response.data[].SchoolType` **Changed** (Breaking ⚠️)\n* `Meitner.StudentPlacements.Create()`: \n  *  `request.SchoolType` **Changed**\n  *  `response.schoolType` **Changed** (Breaking ⚠️)\n* `Meitner.StudentPlacements.Search()`: \n  *  `request.studentPlacementSearch.Filter` **Changed**\n  *  `response.data[].SchoolType` **Changed** (Breaking ⚠️)\n* `Meitner.StudentPlacements.Get()`:  `response.schoolType` **Changed** (Breaking ⚠️)\n* `Meitner.StudentPlacements.Update()`: \n  *  `request.studentPlacementUpdate.SchoolType` **Changed**\n  *  `response.schoolType` **Changed** (Breaking ⚠️)\n* `Meitner.StudentPlacements.Archive()`:  `response.schoolType` **Changed** (Breaking ⚠️)\n* `Meitner.StudentPlacements.Restore()`:  `response.schoolType` **Changed** (Breaking ⚠️)\n"
 generatedFiles:
   - .gitattributes
   - Meitner.sln

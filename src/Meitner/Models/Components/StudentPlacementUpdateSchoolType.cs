@@ -28,6 +28,10 @@ namespace Meitner.Models.Components
         Gyan,
         [JsonProperty("FS")]
         Fs,
+        [JsonProperty("VUX")]
+        Vux,
+        [JsonProperty("VUXSFI")]
+        Vuxsfi,
     }
 
     public static class StudentPlacementUpdateSchoolTypeExtension
