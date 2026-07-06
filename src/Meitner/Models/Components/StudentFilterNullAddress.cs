@@ -36,7 +36,7 @@ namespace Meitner.Models.Components
         public bool? PostalCity { get; set; } = null;
 
         /// <summary>
-        /// The country code of the address.
+        /// The ISO 3166-1 alpha-3 country code of the address (e.g. "SWE" for Sweden).
         /// </summary>
         [JsonProperty("countryCode")]
         public bool? CountryCode { get; set; } = null;

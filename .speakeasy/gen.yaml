@@ -31,7 +31,7 @@ generation:
     generateNewTests: true
     skipResponseBodyAssertions: false
 csharp:
-  version: 0.4.4
+  version: 0.4.5
   additionalDependencies: []
   author: Speakeasy
   baseErrorName: MeitnerException
@@ -65,4 +65,5 @@ csharp:
   respectTitlesForPrimitiveUnionMembers: false
   responseFormat: envelope-http
   sourceDirectory: src
+  targetFramework: dotnetVersion
   useNodatime: false
