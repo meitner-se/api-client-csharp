@@ -42,7 +42,7 @@ namespace Meitner.Models.Components
         public string? CountryCode { get; set; } = null;
 
         /// <summary>
-        /// The municipality code of the address.
+        /// The Swedish municipality (kommun) code for the address — a four-digit code as defined by Statistics Sweden (SCB), e.g. "0184" for Solna. Identifies the administrative municipality the address belongs to.
         /// </summary>
         [JsonProperty("municipalityCode")]
         public string? MunicipalityCode { get; set; } = null;
