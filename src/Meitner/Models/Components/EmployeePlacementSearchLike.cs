@@ -31,7 +31,7 @@ namespace Meitner.Models.Components
         public EmployeePlacementSearchLikeExternal? External { get; set; } = null;
 
         /// <summary>
-        /// The signature of the employee.
+        /// The employee's signature — a short code, usually their initials, used to identify the employee within the school on schedules, grade documents, and other printed material (e.g. "LM" for Lise Meitner).
         /// </summary>
         [JsonProperty("signature")]
         public string? Signature { get; set; } = null;
