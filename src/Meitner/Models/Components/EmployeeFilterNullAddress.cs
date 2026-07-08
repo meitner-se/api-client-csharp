@@ -24,7 +24,7 @@ namespace Meitner.Models.Components
         public bool? PostalAddress { get; set; } = null;
 
         /// <summary>
-        /// The postal code of the address.
+        /// The postal code (also known as ZIP or postcode) of the address, used together with the city to identify the delivery area.
         /// </summary>
         [JsonProperty("postalCode")]
         public bool? PostalCode { get; set; } = null;

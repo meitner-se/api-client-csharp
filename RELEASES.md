@@ -129,3 +129,13 @@ Based on:
 - [csharp v0.4.5] .
 ### Releases
 - [NuGet v0.4.5] https://www.nuget.org/packages/Meitner/0.4.5 - .
+
+## 2026-07-08 00:45:22
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.789.0 (2.916.2) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [csharp v0.4.6] .
+### Releases
+- [NuGet v0.4.6] https://www.nuget.org/packages/Meitner/0.4.6 - .
