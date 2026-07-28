@@ -1084,7 +1084,7 @@ namespace Meitner
             Func<Task<Models.Requests.SchoolSearchResponse?>> nextFunc = async delegate()
             {
                 var body = JObject.Parse(await httpResponse.Content.ReadAsStringAsync());
-                var offset = request.Offset;
+                var offset = request.Offset ?? 0;
                 var firstResult = body.SelectToken("$.data.resultArray");
                 if (firstResult == null)
                 {
@@ -1095,7 +1095,7 @@ namespace Meitner
                 {
                     return null;
                 }
-                var limit = request.Limit;
+                var limit = request.Limit ?? 50;
                 if (firstResult.Children().Count() < limit)
                 {
                     return null;

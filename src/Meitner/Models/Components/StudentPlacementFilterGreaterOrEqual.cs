@@ -32,6 +32,12 @@ namespace Meitner.Models.Components
         public StudentPlacementFilterGreaterOrEqualExternal? External { get; set; } = null;
 
         /// <summary>
+        /// The maximum number of childcare hours per week for the student at this school.
+        /// </summary>
+        [JsonProperty("childcareMaxHours")]
+        public long? ChildcareMaxHours { get; set; } = null;
+
+        /// <summary>
         /// The start date of the placement.
         /// </summary>
         [JsonProperty("startDate")]

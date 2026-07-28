@@ -69,6 +69,12 @@ namespace Meitner.Models.Components
         public List<bool>? HasChildcare { get; set; }
 
         /// <summary>
+        /// The maximum number of childcare hours per week for the student at this school.
+        /// </summary>
+        [JsonProperty("childcareMaxHours")]
+        public List<long>? ChildcareMaxHours { get; set; }
+
+        /// <summary>
         /// The mother tongue of the student. Language codes follow the ISO 639-3 standard (three-letter codes).
         /// </summary>
         [JsonProperty("motherTongue")]
