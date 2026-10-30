@@ -519,7 +519,7 @@ You can override the default server globally by passing a server name to the `se
 
 | Name         | Server                                        | Description                                     |
 | ------------ | --------------------------------------------- | ----------------------------------------------- |
-| `production` | `https://api.meitner.se/directory/v1`         | Server to use in production                     |
+| `production` | `https://api.meitner.se/directory/v1`         | Server to use in production.                    |
 | `staging`    | `https://api.staging.meitner.se/directory/v1` | Server to use when building and testing the API |
 
 #### Example

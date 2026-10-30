@@ -287,6 +287,7 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 ChildcareMaxHours = 42,
                 MotherTongue = "example",
                 SwedishAsSecondLanguage = true,
+                MotherTongueEntitled = true,
                 MotherTongueParticipates = true,
                 ModernLanguageInSchoolChoice = "example",
                 ModernLanguageInLanguageChoice = "example",
@@ -313,6 +314,7 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 ChildcareMaxHours = 42,
                 MotherTongue = "example",
                 SwedishAsSecondLanguage = true,
+                MotherTongueEntitled = true,
                 MotherTongueParticipates = true,
                 ModernLanguageInSchoolChoice = "example",
                 ModernLanguageInLanguageChoice = "example",
@@ -399,6 +401,9 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 SwedishAsSecondLanguage = new List<bool>() {
                     true,
                 },
+                MotherTongueEntitled = new List<bool>() {
+                    true,
+                },
                 MotherTongueParticipates = new List<bool>() {
                     true,
                 },
@@ -454,6 +459,9 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                     "example",
                 },
                 SwedishAsSecondLanguage = new List<bool>() {
+                    true,
+                },
+                MotherTongueEntitled = new List<bool>() {
                     true,
                 },
                 MotherTongueParticipates = new List<bool>() {
@@ -586,6 +594,7 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 ChildcareMaxHours = 42,
                 MotherTongue = "example",
                 SwedishAsSecondLanguage = true,
+                MotherTongueEntitled = true,
                 MotherTongueParticipates = true,
                 ModernLanguageInSchoolChoice = "example",
                 ModernLanguageInLanguageChoice = "example",
@@ -612,6 +621,7 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 ChildcareMaxHours = 42,
                 MotherTongue = "example",
                 SwedishAsSecondLanguage = true,
+                MotherTongueEntitled = true,
                 MotherTongueParticipates = true,
                 ModernLanguageInSchoolChoice = "example",
                 ModernLanguageInLanguageChoice = "example",
@@ -698,6 +708,9 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 SwedishAsSecondLanguage = new List<bool>() {
                     true,
                 },
+                MotherTongueEntitled = new List<bool>() {
+                    true,
+                },
                 MotherTongueParticipates = new List<bool>() {
                     true,
                 },
@@ -753,6 +766,9 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                     "example",
                 },
                 SwedishAsSecondLanguage = new List<bool>() {
+                    true,
+                },
+                MotherTongueEntitled = new List<bool>() {
                     true,
                 },
                 MotherTongueParticipates = new List<bool>() {
@@ -885,6 +901,7 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 ChildcareMaxHours = 42,
                 MotherTongue = "example",
                 SwedishAsSecondLanguage = true,
+                MotherTongueEntitled = true,
                 MotherTongueParticipates = true,
                 ModernLanguageInSchoolChoice = "example",
                 ModernLanguageInLanguageChoice = "example",
@@ -911,6 +928,7 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 ChildcareMaxHours = 42,
                 MotherTongue = "example",
                 SwedishAsSecondLanguage = true,
+                MotherTongueEntitled = true,
                 MotherTongueParticipates = true,
                 ModernLanguageInSchoolChoice = "example",
                 ModernLanguageInLanguageChoice = "example",
@@ -997,6 +1015,9 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 SwedishAsSecondLanguage = new List<bool>() {
                     true,
                 },
+                MotherTongueEntitled = new List<bool>() {
+                    true,
+                },
                 MotherTongueParticipates = new List<bool>() {
                     true,
                 },
@@ -1052,6 +1073,9 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                     "example",
                 },
                 SwedishAsSecondLanguage = new List<bool>() {
+                    true,
+                },
+                MotherTongueEntitled = new List<bool>() {
                     true,
                 },
                 MotherTongueParticipates = new List<bool>() {
@@ -1184,6 +1208,7 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 ChildcareMaxHours = 42,
                 MotherTongue = "example",
                 SwedishAsSecondLanguage = true,
+                MotherTongueEntitled = true,
                 MotherTongueParticipates = true,
                 ModernLanguageInSchoolChoice = "example",
                 ModernLanguageInLanguageChoice = "example",
@@ -1210,6 +1235,7 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 ChildcareMaxHours = 42,
                 MotherTongue = "example",
                 SwedishAsSecondLanguage = true,
+                MotherTongueEntitled = true,
                 MotherTongueParticipates = true,
                 ModernLanguageInSchoolChoice = "example",
                 ModernLanguageInLanguageChoice = "example",
@@ -1296,6 +1322,9 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                 SwedishAsSecondLanguage = new List<bool>() {
                     true,
                 },
+                MotherTongueEntitled = new List<bool>() {
+                    true,
+                },
                 MotherTongueParticipates = new List<bool>() {
                     true,
                 },
@@ -1351,6 +1380,9 @@ Models.Requests.StudentPlacementSearchResponse? res = await sdk.StudentPlacement
                     "example",
                 },
                 SwedishAsSecondLanguage = new List<bool>() {
+                    true,
+                },
+                MotherTongueEntitled = new List<bool>() {
                     true,
                 },
                 MotherTongueParticipates = new List<bool>() {

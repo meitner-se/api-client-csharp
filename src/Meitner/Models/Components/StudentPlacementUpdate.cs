@@ -68,7 +68,13 @@ namespace Meitner.Models.Components
         public bool? SwedishAsSecondLanguage { get; set; } = false;
 
         /// <summary>
-        /// Whether the student participates in mother tongue education.
+        /// Whether the student is entitled to mother tongue education. Setting this to false also sets MotherTongueParticipates to false.
+        /// </summary>
+        [JsonProperty("motherTongueEntitled")]
+        public bool? MotherTongueEntitled { get; set; } = false;
+
+        /// <summary>
+        /// Whether the student participates in mother tongue education. Setting this to true also sets MotherTongueEntitled to true.
         /// </summary>
         [JsonProperty("motherTongueParticipates")]
         public bool? MotherTongueParticipates { get; set; } = false;
