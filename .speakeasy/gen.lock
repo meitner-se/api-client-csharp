@@ -1,24 +1,24 @@
 lockVersion: 2.0.0
 id: 91388079-51e0-4fb6-b48a-dd78e186eddb
 management:
-  docChecksum: fe25f803f7dd738e32a4f1291a1b4b9b
+  docChecksum: db5551877bdb0f688064aee6d6b5d776
   docVersion: v1
-  speakeasyVersion: 1.805.0
-  generationVersion: 2.954.8
-  releaseVersion: 0.4.10
-  configChecksum: b450c28eb604472a219f318a0b759d04
+  speakeasyVersion: 1.811.0
+  generationVersion: 2.968.1
+  releaseVersion: 0.4.11
+  configChecksum: 534d2d5c1b7f806e2ca9f5d33bd831b7
   repoURL: https://github.com/meitner-se/api-client-csharp.git
   installationURL: https://github.com/meitner-se/api-client-csharp
   published: true
 persistentEdits:
-  generation_id: e092df57-45ad-495a-96c5-6fc038d203e4
-  pristine_commit_hash: 8bd6934a2417d4863f0506cb072dcf6e8448c3a8
-  pristine_tree_hash: 3fb196e2175b197e30498a17a4be34edd650b794
+  generation_id: 7af7b495-5c0a-4c40-908c-4c37b213c663
+  pristine_commit_hash: 6e549db474ee52517eb40f46f50bead65ab9439d
+  pristine_tree_hash: a54a28a6ef8bade25c70ed3706064b579aa1c799
 features:
   csharp:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.0.3
-    core: 3.15.29
+    core: 3.15.31
     flattening: 2.81.3
     globalSecurity: 2.83.11
     globalSecurityCallbacks: 0.1.0
@@ -1245,8 +1245,8 @@ trackedFiles:
     pristine_git_object: 98f5500779f7321d93be11966cfabf380bbacef1
   docs/Models/Components/GradeElementaryCreateGrade.md:
     id: 03db13ef3067
-    last_write_checksum: sha1:416f512271a3c4209f82eeb4e1c3338956020f68
-    pristine_git_object: b091860317aec4bc020d06ce3205a70fd565c904
+    last_write_checksum: sha1:8b50bf24a61107882b6904caaf3afcc898277889
+    pristine_git_object: 7618da263dbb14469e3e7bc53a4d180c7c5d8167
   docs/Models/Components/GradeElementaryCreateSchoolYear.md:
     id: 18b36c331366
     last_write_checksum: sha1:083148fa7319eeb5566c7a7b304c38868e1fda03
@@ -1261,8 +1261,8 @@ trackedFiles:
     pristine_git_object: 9d3a78c51b6574a621b702ae473ea445ff7ff3db
   docs/Models/Components/GradeElementaryGrade.md:
     id: 5ce51589fb82
-    last_write_checksum: sha1:2fc7a2e9d1b11c58562f60a974d8175319bee704
-    pristine_git_object: 46da61a7ac8843e03b539e4ebdaa00fae91cbcfd
+    last_write_checksum: sha1:78835a9e1e8e0cba60d7946fd6fd87fb90ad0857
+    pristine_git_object: 15005cbb504f5cb6ca1c27a91c28e165b89063de
   docs/Models/Components/GradeElementaryList.md:
     id: 20aa29de6de7
     last_write_checksum: sha1:43d545a7a0f6b1da183bdb0413bf35ae02b0085c
@@ -1297,8 +1297,8 @@ trackedFiles:
     pristine_git_object: f254aa9b197e44a2274a9950ccae218cacf55b90
   docs/Models/Components/GradeElementaryUpdateGrade.md:
     id: 672393384dc2
-    last_write_checksum: sha1:40de538d72c946f65893416ac2930cfeb05cc702
-    pristine_git_object: a07428809e69c693ec64d3fa8e6363704be02718
+    last_write_checksum: sha1:ac07da04607b36ea2f5758eb7677f1fd3093ce41
+    pristine_git_object: 51bcba52ca5878a7c6fd8ef16444e011c8db4ffc
   docs/Models/Components/GradeElementaryUpdateSchoolYear.md:
     id: f7e305e7385f
     last_write_checksum: sha1:d610acc624041a84044f5a7d6927613e30f538cf
@@ -4657,8 +4657,8 @@ trackedFiles:
     pristine_git_object: 867c04dc7849b48dca7a5f1d0fca617650390eca
   src/Meitner/Meitner.csproj:
     id: a4d633b7165a
-    last_write_checksum: sha1:22997117a72bcbde49a90ab04ba1deca5c97fa43
-    pristine_git_object: 9b53feb234c7c79236c74efac245dc53e4b3b5a1
+    last_write_checksum: sha1:b0002b325b324a20a52673655d05bf8f4f8032e2
+    pristine_git_object: c0324334d342bcdae8d88b9a630bbb83f44e1002
   src/Meitner/MeitnerSDK.cs:
     id: df60ef816859
     last_write_checksum: sha1:954a8e3247428d671438089cf868ba263127a441
@@ -5857,8 +5857,8 @@ trackedFiles:
     pristine_git_object: db0d93d12312a24e060a77a88394f044504d3ad5
   src/Meitner/Models/Components/GradeElementaryCreateGrade.cs:
     id: 2362853ac5af
-    last_write_checksum: sha1:16f50053b6e14ea2e96850f6ac5731c39b1f494a
-    pristine_git_object: b8d670c491a5f13e34f8d38c1a29c40de9356b7d
+    last_write_checksum: sha1:b3a59929f6accad2fc0bfdc88edf3e0482ac0b9c
+    pristine_git_object: 5ed8682f0b0d6576428937f9c026ff15620813ca
   src/Meitner/Models/Components/GradeElementaryCreateSchoolYear.cs:
     id: ccde6eb082ac
     last_write_checksum: sha1:6dd51737c977c958d0883983e2ca5a9c823c8345
@@ -5873,8 +5873,8 @@ trackedFiles:
     pristine_git_object: 4f56b5b21fce3885ebb4089953d681df64d52af7
   src/Meitner/Models/Components/GradeElementaryGrade.cs:
     id: 5f26feba1aaf
-    last_write_checksum: sha1:98e021d3d0533f69cd92de51ad66cae17ffe3a86
-    pristine_git_object: b12fde0a9d7595e3d399e6b6d1256aa7c27c2fff
+    last_write_checksum: sha1:b7e06ba6cf32b6fa0a31a9bf914fc3019711e6a2
+    pristine_git_object: 154d765259eeb77ba29ae526c358ac67b7803db2
   src/Meitner/Models/Components/GradeElementaryList.cs:
     id: d9ba14edfcea
     last_write_checksum: sha1:cc51b7016e7f6fcbc8421ebca6a631558f504218
@@ -5909,8 +5909,8 @@ trackedFiles:
     pristine_git_object: 031294fbe144efacdc818d7aace6957bcb848245
   src/Meitner/Models/Components/GradeElementaryUpdateGrade.cs:
     id: f6ee278d12ae
-    last_write_checksum: sha1:a19e8ccace0fe82008a33a412818c201dca64504
-    pristine_git_object: aedbc3eb273f4b2e9a90e7ee31b937cd05e3ac7a
+    last_write_checksum: sha1:0acf7b38e7bceaf0cd0771937f9734b68fd3cc70
+    pristine_git_object: 88cd7258b873b8886737d3e963465b677efe55d9
   src/Meitner/Models/Components/GradeElementaryUpdateSchoolYear.cs:
     id: 58d42ecc8b47
     last_write_checksum: sha1:747f991b32c49aefeee6dfbf1dc51b1b206fe9c5
@@ -9193,8 +9193,8 @@ trackedFiles:
     pristine_git_object: 1ebf727673c37aa3ae83fef806fe8990bcd1f782
   src/Meitner/SDKConfig.cs:
     id: 76b7b2320f7e
-    last_write_checksum: sha1:69ee688e6c66b1d4d1b9ae3b2c0800c34717f74e
-    pristine_git_object: 9ee3a855197b419acb4c74b066bbb772d9f5c024
+    last_write_checksum: sha1:39de2a62d41b066e2ccdb802225c49380d212ed3
+    pristine_git_object: c9e4b68238b5c1e64c01251c6e66bf09f4167c47
   src/Meitner/Schools.cs:
     id: 123ea3045683
     last_write_checksum: sha1:362768d734803feeee3a9fe720b82c148054ab56
@@ -9221,8 +9221,8 @@ trackedFiles:
     pristine_git_object: b6fc27aa15229bb5ebefc4d9b9820f2b09458034
   src/Meitner/Utils/Constants.cs:
     id: 7bbeab0ba4b4
-    last_write_checksum: sha1:f7e718fc6fb95a64131def988b51ffd4c9035bc0
-    pristine_git_object: 350c43259c571e91baf5734d754e852793fbdcd2
+    last_write_checksum: sha1:1559d54f6ae63ede1216c9f745c42ec4364ef195
+    pristine_git_object: e192b6203c33f64137fbf339b2b27009ea851125
   src/Meitner/Utils/DecimalStrConverter.cs:
     id: 42954e25c852
     last_write_checksum: sha1:e64015d0352c7041f3ec262e188f9c75ccc298f5
@@ -12076,7 +12076,7 @@ examples:
         "422":
           application/json: {"error": {"code": "UnprocessableEntity", "message": "Validation failed for Unit Update endpoint", "requestID": "550e8400-e29b-41d4-a716-446655440000"}}
 examplesVersion: 1.0.2
-releaseNotes: "## Csharp SDK Changes:\n* `Meitner.StudentPlacements.List()`:  `response.data[].MotherTongueEntitled` **Added**\n* `Meitner.StudentPlacements.Create()`: \n  *  `request.MotherTongueEntitled` **Added**\n  *  `response.motherTongueEntitled` **Added**\n* `Meitner.StudentPlacements.Search()`: \n  *  `request.studentPlacementSearch.Filter` **Changed**\n  *  `response.data[].MotherTongueEntitled` **Added**\n* `Meitner.StudentPlacements.Get()`:  `response.motherTongueEntitled` **Added**\n* `Meitner.StudentPlacements.Update()`: \n  *  `request.studentPlacementUpdate.MotherTongueEntitled` **Added**\n  *  `response.motherTongueEntitled` **Added**\n* `Meitner.StudentPlacements.Archive()`:  `response.motherTongueEntitled` **Added**\n* `Meitner.StudentPlacements.Restore()`:  `response.motherTongueEntitled` **Added**\n"
+releaseNotes: "## Csharp SDK Changes:\n* `Meitner.GradeElementaries.List()`:  `response.data[].Grade.Enum(3)` **Added** (Breaking ⚠️)\n* `Meitner.GradeElementaries.Create()`: \n  *  `request.Grade.Enum(3)` **Added**\n  *  `response.grade.Enum(3)` **Added** (Breaking ⚠️)\n* `Meitner.GradeElementaries.Get()`:  `response.grade.Enum(3)` **Added** (Breaking ⚠️)\n* `Meitner.GradeElementaries.Update()`: \n  *  `request.gradeElementaryUpdate.Grade.Enum(3)` **Added**\n  *  `response.grade.Enum(3)` **Added** (Breaking ⚠️)\n"
 generatedFiles:
   - .gitattributes
   - Meitner.sln

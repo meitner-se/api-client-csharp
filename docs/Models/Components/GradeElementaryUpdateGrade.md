@@ -22,3 +22,4 @@ var value = GradeElementaryUpdateGrade.A;
 | `E`       | E         |
 | `F`       | F         |
 | `Missing` | MISSING   |
+| `Three`   | 3         |

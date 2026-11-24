@@ -32,6 +32,8 @@ namespace Meitner.Models.Components
         F,
         [JsonProperty("MISSING")]
         Missing,
+        [JsonProperty("3")]
+        Three,
     }
 
     public static class GradeElementaryGradeExtension

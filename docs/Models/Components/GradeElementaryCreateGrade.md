@@ -22,3 +22,4 @@ var value = GradeElementaryCreateGrade.A;
 | `E`       | E         |
 | `F`       | F         |
 | `Missing` | MISSING   |
+| `Three`   | 3         |
