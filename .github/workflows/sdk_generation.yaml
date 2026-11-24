@@ -33,10 +33,13 @@ jobs:
       speakeasy_api_key: ${{ secrets.SPEAKEASY_API_KEY }}
   # Speakeasy's executor may still run an internal "Publish C# SDK" job for C#
   # (empty git installation URL is treated as published). That job fails without
-  # nuget_api_key, so this job runs after generate even when that happens.
+  # nuget_api_key, so this job still runs when generate fails. Restrict to
+  # schedule/dispatch so PR label events cannot publish from main. A red
+  # Generate run still means generate failed and must be inspected; this job
+  # only packs whatever is already on main.
   publish-nuget:
     needs: generate
-    if: ${{ always() && !cancelled() }}
+    if: ${{ always() && !cancelled() && (github.event_name == 'workflow_dispatch' || github.event_name == 'schedule') }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
