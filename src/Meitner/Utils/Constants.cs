@@ -22,7 +22,7 @@ namespace Meitner.Utils
         /// <summary>
         /// The version of the SDK.
         /// </summary>
-        public const string SdkVersion = "0.4.11";
+        public const string SdkVersion = "0.4.12";
 
         /// <summary>
         /// The version of the SDK generator used to create this SDK.

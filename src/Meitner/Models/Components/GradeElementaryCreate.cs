@@ -44,7 +44,7 @@ namespace Meitner.Models.Components
         public string SubjectCode { get; set; } = default!;
 
         /// <summary>
-        /// The language code for the grade, used when the subject is taught in a specific language (e.g. mother tongue instruction).
+        /// The language code for the grade, used when the subject is taught in a specific language (e.g. modern language or mother tongue). Language codes follow the ISO 639-3 standard (three-letter codes).
         /// </summary>
         [JsonProperty("languageCode")]
         public string? LanguageCode { get; set; } = null;

@@ -104,13 +104,13 @@ namespace Meitner.Models.Components
         public bool? MotherTongueParticipates { get; set; } = false;
 
         /// <summary>
-        /// The language code for the student's modern language in school choice (Skolans val). Language codes follow the ISO 639-2 standard (three-letter codes).
+        /// The language code for the student's modern language in school choice (Skolans val, M1, C-språk). Language codes follow the ISO 639-3 standard (three-letter codes).
         /// </summary>
         [JsonProperty("modernLanguageInSchoolChoice")]
         public string? ModernLanguageInSchoolChoice { get; set; } = null;
 
         /// <summary>
-        /// The language code for the student's modern language in language choice (Språkval, M2, B-språk). Language codes follow the ISO 639-2 standard (three-letter codes).
+        /// The language code for the student's modern language in language choice (Språkval, M2, B-språk). Language codes follow the ISO 639-3 standard (three-letter codes).
         /// </summary>
         [JsonProperty("modernLanguageInLanguageChoice")]
         public string? ModernLanguageInLanguageChoice { get; set; } = null;

@@ -26,7 +26,7 @@ namespace Meitner.Models.Components
         public GradeUpperSecondaryUpdateExternal? External { get; set; }
 
         /// <summary>
-        /// The language code for the grade, used when the course is taught in a specific language.
+        /// The language code for the grade, used when the course is taught in a specific language. Language codes follow the ISO 639-3 standard (three-letter codes).
         /// </summary>
         [JsonProperty("languageCode")]
         public string? LanguageCode { get; set; } = null;

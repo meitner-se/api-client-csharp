@@ -134,7 +134,7 @@ GradeUpperSecondaryCreate req = new GradeUpperSecondaryCreate() {
     StudentID = "123e4567-e89b-12d3-a456-426614174000",
     SchoolID = "123e4567-e89b-12d3-a456-426614174000",
     CourseCode = "MATMAT01a",
-    LanguageCode = "SV",
+    LanguageCode = "FRA",
     Teacher1EmployeeID = "123e4567-e89b-12d3-a456-426614174000",
     Teacher2EmployeeID = "123e4567-e89b-12d3-a456-426614174000",
     Grade = GradeUpperSecondaryCreateGrade.A,
@@ -420,7 +420,7 @@ var res = await sdk.GradeUpperSecondaries.UpdateAsync(
         External = new GradeUpperSecondaryUpdateExternal() {
             SourceID = "12345678",
         },
-        LanguageCode = "SV",
+        LanguageCode = "FRA",
         Teacher1EmployeeID = "123e4567-e89b-12d3-a456-426614174000",
         Teacher2EmployeeID = "123e4567-e89b-12d3-a456-426614174000",
         Grade = GradeUpperSecondaryUpdateGrade.A,

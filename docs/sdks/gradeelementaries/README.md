@@ -131,7 +131,7 @@ GradeElementaryCreate req = new GradeElementaryCreate() {
     StudentID = "123e4567-e89b-12d3-a456-426614174000",
     SchoolID = "123e4567-e89b-12d3-a456-426614174000",
     SubjectCode = "MA",
-    LanguageCode = "SV",
+    LanguageCode = "FRA",
     AcademicYear = "2024/2025",
     Term = GradeElementaryCreateTerm.Ht,
     SchoolYear = GradeElementaryCreateSchoolYear.Nine,
@@ -405,7 +405,7 @@ var res = await sdk.GradeElementaries.UpdateAsync(
         External = new GradeElementaryUpdateExternal() {
             SourceID = "12345678",
         },
-        LanguageCode = "SV",
+        LanguageCode = "FRA",
         AcademicYear = "2024/2025",
         Term = GradeElementaryUpdateTerm.Ht,
         SchoolYear = GradeElementaryUpdateSchoolYear.Nine,
